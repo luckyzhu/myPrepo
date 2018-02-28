@@ -146,10 +146,6 @@
 				8521F7B820286C300073F119 /* 远程推送 */,
 				85226D85201477AF009F07EA /* NSInvocation */,
 				85226D842014779C009F07EA /* UILabel */,
-				44F5024E1FC32F0E00B10720 /* Assets.xcassets */,
-				44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */,
-				44F502531FC32F0E00B10720 /* Info.plist */,
-				858180AF1FC3DFFD000B9F56 /* AutoLayout */,
 				44F502421FC32F0E00B10720 /* Supporting Files */,
 			);
 			path = summary;
@@ -158,6 +154,9 @@
 		44F502421FC32F0E00B10720 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44F5024E1FC32F0E00B10720 /* Assets.xcassets */,
+				44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */,
+				44F502531FC32F0E00B10720 /* Info.plist */,
 				44F502431FC32F0E00B10720 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -223,13 +222,6 @@
 				859E8C542010A42600FDF043 /* NSInvocationViewController.m */,
 			);
 			path = NSInvocation;
-			sourceTree = "<group>";
-		};
-		858180AF1FC3DFFD000B9F56 /* AutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 		85CD07C120454A05005E0071 /* 引导页 */ = {

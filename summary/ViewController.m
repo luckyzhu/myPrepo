@@ -41,6 +41,8 @@
     button.exclusiveTouch = YES;
     [self.view addSubview:button];
 
+    NSMutableURLRequest
+
 
 
 ////    //调用有参无返回值的方法

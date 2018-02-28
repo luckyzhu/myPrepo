@@ -10,4 +10,8 @@
 
 @interface remoteViewController : UIViewController
 
+/*
+ 1> 远程推送原理
+
+ */
 @end

@@ -100,4 +100,25 @@
 }
 
 
+/***相关知识点******************************************************/
+// 1> 判断app首次打开或者更新新版之后显示引导页的条件
+-(void)showGuidePage{
+    //第一次打开该app或者版本更新之后，出现引导页
+    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+
+    //本地保存的版本号
+    NSUserDefaults *userDe = [NSUserDefaults standardUserDefaults];
+    NSString *localVersion = [userDe objectForKey:@"kAPP_Version"];
+    if ([currentVersion isEqualToString:localVersion]) {
+        //已经运行过该版本
+        [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[ViewController alloc] init]];
+    } else {
+        //更新本地存储的版本
+        [userDe setObject:currentVersion forKey:@"kAPP_Version"];
+        [userDe synchronize];
+    //已经运行过该版本
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[LXGuideViewController alloc] init]];
+    }
+}
+
 @end

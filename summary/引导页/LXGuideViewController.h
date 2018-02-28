@@ -10,4 +10,8 @@
 
 @interface LXGuideViewController : UIViewController
 
+/*
+ 相关:::
+ 1> 判断app首次打开或者更新新版之后显示引导页的条件
+ */
 @end
