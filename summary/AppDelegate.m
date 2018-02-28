@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "LXGuideViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    //第一次打开该app或者版本更新之后，出现引导页
+    NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSLog(@"currentVersion----%@",currentVersion);
+
+    //本地保存的版本号
+//    NSUserDefaults *userDe = [NSUserDefaults standardUserDefaults];
+//    NSString *localVersion = [userDe objectForKey:@"kAPP_Version"];
+//    if ([currentVersion isEqualToString:localVersion]) {
+//        //已经运行过该版本
+//        [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[ViewController alloc] init]];
+//    } else {
+//        //更新本地存储的版本
+//        [userDe setObject:currentVersion forKey:@"kAPP_Version"];
+//        [userDe synchronize];
+
+        //已经运行过该版本
+        [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[LXGuideViewController alloc] init]];
+//    }
+
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

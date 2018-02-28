@@ -1,26 +1,27 @@
 //
-//  FirstViewController.m
+//  subViewController.m
 //  summary
 //
-//  Created by NewBoy on 2018/1/18.
+//  Created by NewBoy on 2018/1/25.
 //  Copyright © 2018年 LX. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "subViewController.h"
 
-@interface FirstViewController ()
+@interface subViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation subViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)methodTest{
-    NSLog(@"methodTest");
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

@@ -10,14 +10,20 @@
 		44F502441FC32F0E00B10720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502431FC32F0E00B10720 /* main.m */; };
 		44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502461FC32F0E00B10720 /* AppDelegate.m */; };
 		44F5024A1FC32F0E00B10720 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502491FC32F0E00B10720 /* ViewController.m */; };
-		44F5024D1FC32F0E00B10720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F5024B1FC32F0E00B10720 /* Main.storyboard */; };
 		44F5024F1FC32F0E00B10720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F5024E1FC32F0E00B10720 /* Assets.xcassets */; };
 		44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */; };
 		44F5025D1FC32F0E00B10720 /* summaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5025C1FC32F0E00B10720 /* summaryTests.m */; };
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
-		859E8C552010A42600FDF043 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* FirstViewController.m */; };
+		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
+		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
+		859E8C552010A42600FDF043 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
+		85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07C320454A28005E0071 /* LXGuideViewController.m */; };
+		85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C52045670E005E0071 /* yindaoye-02.png */; };
+		85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C720456716005E0071 /* yindaoye-01.jpg */; };
+		85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C920456719005E0071 /* yindaoye-03.jpg */; };
 		85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D515F61FEB9A1600178B6A /* UILabelUsage.m */; };
+		85F9FAA62019F44200183DD2 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		CC4AD3796AD624C799F8F583 /* libPods-summary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A5851F6469173DD692E198 /* libPods-summary.a */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +53,6 @@
 		44F502461FC32F0E00B10720 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		44F502481FC32F0E00B10720 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		44F502491FC32F0E00B10720 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		44F5024C1FC32F0E00B10720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44F5024E1FC32F0E00B10720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44F502511FC32F0E00B10720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44F502531FC32F0E00B10720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,12 +63,23 @@
 		44F502671FC32F0E00B10720 /* summaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = summaryUITests.m; sourceTree = "<group>"; };
 		44F502691FC32F0E00B10720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.release.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.release.xcconfig"; sourceTree = "<group>"; };
-		859E8C532010A42600FDF043 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		859E8C542010A42600FDF043 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		8521F7B920286C4A0073F119 /* remoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remoteViewController.h; sourceTree = "<group>"; };
+		8521F7BA20286C4A0073F119 /* remoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteViewController.m; sourceTree = "<group>"; };
+		8521F7C2203047EB0073F119 /* appViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appViewController.h; sourceTree = "<group>"; };
+		8521F7C3203047EB0073F119 /* appViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appViewController.m; sourceTree = "<group>"; };
+		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
+		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		859E8C572010A52800FDF043 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		85CD07C220454A28005E0071 /* LXGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXGuideViewController.h; sourceTree = "<group>"; };
+		85CD07C320454A28005E0071 /* LXGuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXGuideViewController.m; sourceTree = "<group>"; };
+		85CD07C52045670E005E0071 /* yindaoye-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yindaoye-02.png"; sourceTree = "<group>"; };
+		85CD07C720456716005E0071 /* yindaoye-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yindaoye-01.jpg"; sourceTree = "<group>"; };
+		85CD07C920456719005E0071 /* yindaoye-03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yindaoye-03.jpg"; sourceTree = "<group>"; };
 		85D515F51FEB9A1600178B6A /* UILabelUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelUsage.h; sourceTree = "<group>"; };
 		85D515F61FEB9A1600178B6A /* UILabelUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelUsage.m; sourceTree = "<group>"; };
+		85F9FAA42019F44200183DD2 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
+		85F9FAA52019F44200183DD2 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +137,15 @@
 				44F502461FC32F0E00B10720 /* AppDelegate.m */,
 				44F502481FC32F0E00B10720 /* ViewController.h */,
 				44F502491FC32F0E00B10720 /* ViewController.m */,
-				859E8C532010A42600FDF043 /* FirstViewController.h */,
-				859E8C542010A42600FDF043 /* FirstViewController.m */,
+				85F9FAA42019F44200183DD2 /* subViewController.h */,
+				85F9FAA52019F44200183DD2 /* subViewController.m */,
 				859E8C562010A52800FDF043 /* Tool.h */,
 				859E8C572010A52800FDF043 /* Tool.m */,
-				85D515F51FEB9A1600178B6A /* UILabelUsage.h */,
-				85D515F61FEB9A1600178B6A /* UILabelUsage.m */,
-				44F5024B1FC32F0E00B10720 /* Main.storyboard */,
+				85CD07C120454A05005E0071 /* 引导页 */,
+				8521F7C1203047B10073F119 /* 应用程序周期 */,
+				8521F7B820286C300073F119 /* 远程推送 */,
+				85226D85201477AF009F07EA /* NSInvocation */,
+				85226D842014779C009F07EA /* UILabel */,
 				44F5024E1FC32F0E00B10720 /* Assets.xcassets */,
 				44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */,
 				44F502531FC32F0E00B10720 /* Info.plist */,
@@ -171,11 +189,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8521F7B820286C300073F119 /* 远程推送 */ = {
+			isa = PBXGroup;
+			children = (
+				8521F7B920286C4A0073F119 /* remoteViewController.h */,
+				8521F7BA20286C4A0073F119 /* remoteViewController.m */,
+			);
+			path = "远程推送";
+			sourceTree = "<group>";
+		};
+		8521F7C1203047B10073F119 /* 应用程序周期 */ = {
+			isa = PBXGroup;
+			children = (
+				8521F7C2203047EB0073F119 /* appViewController.h */,
+				8521F7C3203047EB0073F119 /* appViewController.m */,
+			);
+			path = "应用程序周期";
+			sourceTree = "<group>";
+		};
+		85226D842014779C009F07EA /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				85D515F51FEB9A1600178B6A /* UILabelUsage.h */,
+				85D515F61FEB9A1600178B6A /* UILabelUsage.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		85226D85201477AF009F07EA /* NSInvocation */ = {
+			isa = PBXGroup;
+			children = (
+				859E8C532010A42600FDF043 /* NSInvocationViewController.h */,
+				859E8C542010A42600FDF043 /* NSInvocationViewController.m */,
+			);
+			path = NSInvocation;
+			sourceTree = "<group>";
+		};
 		858180AF1FC3DFFD000B9F56 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		85CD07C120454A05005E0071 /* 引导页 */ = {
+			isa = PBXGroup;
+			children = (
+				85CD07C920456719005E0071 /* yindaoye-03.jpg */,
+				85CD07C720456716005E0071 /* yindaoye-01.jpg */,
+				85CD07C52045670E005E0071 /* yindaoye-02.png */,
+				85CD07C220454A28005E0071 /* LXGuideViewController.h */,
+				85CD07C320454A28005E0071 /* LXGuideViewController.m */,
+			);
+			path = "引导页";
 			sourceTree = "<group>";
 		};
 		E8B7409117AEEE2FEFD6BF22 /* Pods */ = {
@@ -257,7 +323,7 @@
 				TargetAttributes = {
 					44F5023E1FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					44F502571FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
@@ -296,9 +362,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */,
 				44F5024F1FC32F0E00B10720 /* Assets.xcassets in Resources */,
-				44F5024D1FC32F0E00B10720 /* Main.storyboard in Resources */,
+				85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */,
+				85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,11 +443,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
+				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				44F5024A1FC32F0E00B10720 /* ViewController.m in Sources */,
-				859E8C552010A42600FDF043 /* FirstViewController.m in Sources */,
+				85F9FAA62019F44200183DD2 /* subViewController.m in Sources */,
+				859E8C552010A42600FDF043 /* NSInvocationViewController.m in Sources */,
+				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
+				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,14 +487,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		44F5024B1FC32F0E00B10720 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44F5024C1FC32F0E00B10720 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -529,10 +593,13 @@
 			baseConfigurationReference = 43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = summary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -541,10 +608,13 @@
 			baseConfigurationReference = 766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = summary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

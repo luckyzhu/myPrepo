@@ -1,0 +1,103 @@
+//
+//  LXGuideViewController.m
+//  summary
+//
+//  Created by NewBoy on 2018/2/27.
+//  Copyright © 2018年 LX. All rights reserved.
+//
+
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#import "Masonry.h"
+#import "LXGuideViewController.h"
+#import "ViewController.h"
+
+@interface LXGuideViewController ()<UIScrollViewDelegate>
+@property (nonatomic,strong) UIPageControl *pageControl;
+
+@end
+
+@implementation LXGuideViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    NSArray *images = @[@"yindaoye-01",@"yindaoye-02",@"yindaoye-03",];
+
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.contentSize = CGSizeMake(images.count * SCREEN_WIDTH,0);
+    scrollView.delegate = self;
+    scrollView.backgroundColor = [UIColor redColor];
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.pagingEnabled = YES;
+    scrollView.bounces = NO;
+    [self.view addSubview:scrollView];
+    __weak typeof(self) weakself = self;
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        if (@available(iOS 11.0, *)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+            make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
+            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        } else {
+            make.edges.equalTo(weakself.view);
+        }
+    }];
+
+    for (int i = 0; i < images.count; i ++) {
+        UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.frame = CGRectMake(i * SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        imageView.image = [UIImage imageNamed:images[i]];
+        imageView.userInteractionEnabled = YES;
+        UIButton *button = [[UIButton alloc]init];
+        button.frame = CGRectMake(150, 600, 150, 50);
+        [button setTitle:[NSString stringWithFormat:@"第%zd个引导页",i] forState:UIControlStateNormal];
+        button.titleLabel.textColor = [UIColor redColor];
+        button.backgroundColor = [UIColor blueColor];
+        if (i == images.count - 1) {
+            [button addTarget:self action:@selector(clickLastBtn) forControlEvents:UIControlEventTouchUpInside];
+        }
+        [imageView addSubview:button];
+        [scrollView addSubview:imageView];
+    }
+
+
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 700, SCREEN_WIDTH, 20)];
+    self.pageControl.enabled = NO;
+    self.pageControl.numberOfPages = images.count;
+    self.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
+    self.pageControl.pageIndicatorTintColor = [UIColor blueColor];
+    [self.view addSubview:self.pageControl];
+
+    //右上角一直有个跳过的按钮
+    UIButton *rightBtn = [[UIButton alloc]init];
+    rightBtn.frame = CGRectMake(SCREEN_WIDTH-50, 40, 40, 30);
+    [rightBtn setTitle:@"跳过" forState:UIControlStateNormal];
+    rightBtn.titleLabel.textColor = [UIColor redColor];
+    rightBtn.backgroundColor = [UIColor blueColor];
+    [rightBtn addTarget:self action:@selector(clickLastBtn) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:rightBtn];
+
+}
+
+
+- (void)clickLastBtn{
+    NSLog(@"引导页最后一个按钮点击.... 切换到首页");
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[ViewController alloc] init]];
+}
+
+#pragma mark - scrollview delegate
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    int page = scrollView.contentOffset.x / SCREEN_WIDTH;
+
+    self.pageControl.currentPage = page;
+}
+
+
+@end
