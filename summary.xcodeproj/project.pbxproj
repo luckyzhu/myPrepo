@@ -22,6 +22,7 @@
 		85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C52045670E005E0071 /* yindaoye-02.png */; };
 		85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C720456716005E0071 /* yindaoye-01.jpg */; };
 		85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C920456719005E0071 /* yindaoye-03.jpg */; };
+		85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D22047FAC9005E0071 /* GCDViewController.m */; };
 		85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D515F61FEB9A1600178B6A /* UILabelUsage.m */; };
 		85F9FAA62019F44200183DD2 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		CC4AD3796AD624C799F8F583 /* libPods-summary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A5851F6469173DD692E198 /* libPods-summary.a */; };
@@ -76,6 +77,8 @@
 		85CD07C52045670E005E0071 /* yindaoye-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yindaoye-02.png"; sourceTree = "<group>"; };
 		85CD07C720456716005E0071 /* yindaoye-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yindaoye-01.jpg"; sourceTree = "<group>"; };
 		85CD07C920456719005E0071 /* yindaoye-03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yindaoye-03.jpg"; sourceTree = "<group>"; };
+		85CD07D12047FAC9005E0071 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		85CD07D22047FAC9005E0071 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		85D515F51FEB9A1600178B6A /* UILabelUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelUsage.h; sourceTree = "<group>"; };
 		85D515F61FEB9A1600178B6A /* UILabelUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelUsage.m; sourceTree = "<group>"; };
 		85F9FAA42019F44200183DD2 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
@@ -141,11 +144,7 @@
 				85F9FAA52019F44200183DD2 /* subViewController.m */,
 				859E8C562010A52800FDF043 /* Tool.h */,
 				859E8C572010A52800FDF043 /* Tool.m */,
-				85CD07C120454A05005E0071 /* 引导页 */,
-				8521F7C1203047B10073F119 /* 应用程序周期 */,
-				8521F7B820286C300073F119 /* 远程推送 */,
-				85226D85201477AF009F07EA /* NSInvocation */,
-				85226D842014779C009F07EA /* UILabel */,
+				85CD07CF2047EF91005E0071 /* New Group */,
 				44F502421FC32F0E00B10720 /* Supporting Files */,
 			);
 			path = summary;
@@ -234,6 +233,28 @@
 				85CD07C320454A28005E0071 /* LXGuideViewController.m */,
 			);
 			path = "引导页";
+			sourceTree = "<group>";
+		};
+		85CD07CF2047EF91005E0071 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				85CD07D02047FAB4005E0071 /* GCD */,
+				85CD07C120454A05005E0071 /* 引导页 */,
+				8521F7C1203047B10073F119 /* 应用程序周期 */,
+				8521F7B820286C300073F119 /* 远程推送 */,
+				85226D85201477AF009F07EA /* NSInvocation */,
+				85226D842014779C009F07EA /* UILabel */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		85CD07D02047FAB4005E0071 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				85CD07D12047FAC9005E0071 /* GCDViewController.h */,
+				85CD07D22047FAC9005E0071 /* GCDViewController.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		E8B7409117AEEE2FEFD6BF22 /* Pods */ = {
@@ -441,6 +462,7 @@
 				859E8C552010A42600FDF043 /* NSInvocationViewController.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
+				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,

@@ -31,19 +31,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+        NSLog(@"1========%@",[NSThread currentThread]);
+
+     dispatch_async(<#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>)
+     dispatch_sync(<#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>)
 
 
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(0, 0, 50, 50);
-    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor blueColor];
-    button.exclusiveTouch = YES;
-    [self.view addSubview:button];
-
-    NSMutableURLRequest
-
-
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSLog(@"2========%@",[NSThread currentThread]);
+        });
+        NSLog(@"3========%@",[NSThread currentThread]);
 
 ////    //调用有参无返回值的方法
 //    NSMethodSignature *signature = [[self class] methodSignatureForSelector:@selector(test1:str2:)];
