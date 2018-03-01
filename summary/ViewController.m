@@ -33,14 +33,35 @@
     // Do any additional setup after loading the view, typically from a nib.
         NSLog(@"1========%@",[NSThread currentThread]);
 
-     dispatch_async(<#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>)
-     dispatch_sync(<#dispatch_queue_t  _Nonnull queue#>, <#^(void)block#>)
 
 
-        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSLog(@"2========%@",[NSThread currentThread]);
-        });
-        NSLog(@"3========%@",[NSThread currentThread]);
+//    //创建一个串行队列
+    dispatch_queue_t queue = dispatch_queue_create("com.dispatch.serial", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_queue_t queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//
+    dispatch_sync(queue, ^{
+        NSLog(@"2222-------");
+    });
+//
+////    dispatch_sync(dispatch_get_main_queue(), ^{
+////        NSLog(@"2222---*****");
+////    });
+//
+    NSLog(@"3333---");
+//    return;
+
+    dispatch_queue_t serialdispatchQueue1 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t serialdispatchQueue2 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t serialdispatchQueue3 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t serialdispatchQueue4 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(serialdispatchQueue1, ^{NSLog(@"serialdispatchQueue1  %@", [NSThread currentThread]);});
+//    dispatch_async(serialdispatchQueue2, ^{NSLog(@"serialdispatchQueue2  %@", [NSThread currentThread]);});
+//    dispatch_async(serialdispatchQueue3, ^{NSLog(@"serialdispatchQueue3  %@", [NSThread currentThread]);});
+//    dispatch_async(serialdispatchQueue4, ^{NSLog(@"serialdispatchQueue4  %@", [NSThread currentThread]);});
+
+
+    return;
+
 
 ////    //调用有参无返回值的方法
 //    NSMethodSignature *signature = [[self class] methodSignatureForSelector:@selector(test1:str2:)];
@@ -82,5 +103,8 @@
 
     NSLog(@"无参无返回值");
 }
+
+
+
 
 @end
