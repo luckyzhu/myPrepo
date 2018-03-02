@@ -31,33 +31,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-        NSLog(@"1========%@",[NSThread currentThread]);
-
-
 
 //    //创建一个串行队列
-    dispatch_queue_t queue = dispatch_queue_create("com.dispatch.serial", DISPATCH_QUEUE_CONCURRENT);
-//    dispatch_queue_t queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//
-    dispatch_sync(queue, ^{
-        NSLog(@"2222-------");
+    dispatch_queue_t queue = dispatch_queue_create("com.dispatch.serial", DISPATCH_QUEUE_SERIAL);
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSLog(@"111111");
     });
-//
-////    dispatch_sync(dispatch_get_main_queue(), ^{
-////        NSLog(@"2222---*****");
-////    });
-//
-    NSLog(@"3333---");
-//    return;
-
-    dispatch_queue_t serialdispatchQueue1 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
-//    dispatch_queue_t serialdispatchQueue2 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
-//    dispatch_queue_t serialdispatchQueue3 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
-//    dispatch_queue_t serialdispatchQueue4 = dispatch_queue_create("com.Sky.serialTest", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(serialdispatchQueue1, ^{NSLog(@"serialdispatchQueue1  %@", [NSThread currentThread]);});
-//    dispatch_async(serialdispatchQueue2, ^{NSLog(@"serialdispatchQueue2  %@", [NSThread currentThread]);});
-//    dispatch_async(serialdispatchQueue3, ^{NSLog(@"serialdispatchQueue3  %@", [NSThread currentThread]);});
-//    dispatch_async(serialdispatchQueue4, ^{NSLog(@"serialdispatchQueue4  %@", [NSThread currentThread]);});
+    dispatch_async(queue, ^{
+        NSLog(@"2222");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"33333");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"44444");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"55555");
+    });
 
 
     return;
