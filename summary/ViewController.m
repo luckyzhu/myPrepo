@@ -8,6 +8,8 @@
 #import <objc/runtime.h>
 #import "Masonry.h"
 #import "ViewController.h"
+#import  "AFNetworking.h"
+
 
 
 @interface managerTool:NSObject
@@ -19,7 +21,6 @@
 @end
 
 @interface ViewController()
-@property(nonatomic, strong)UIPageControl *pageControl;
 
 @end
 
@@ -39,30 +40,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    __weak typeof(self) weakself = self;
+    /*
+     GET
+     https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
+     */
 
-    self.pageControl = [[UIPageControl alloc] init];
-    self.pageControl.enabled = NO;
-    self.pageControl.numberOfPages = 3;
-    self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
-    self.pageControl.pageIndicatorTintColor = [UIColor redColor];
-    [self.view addSubview:self.pageControl];
-    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(weakself.view);
-        make.bottom.mas_equalTo(weakself.view).offset(-60);
-        make.height.mas_equalTo(@20);
-    }];
+//    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
+//
+//    NSDictionary *dict = @{
+////                           @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+////                           @"usAccountID":@296,
+////                           @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+////                           @"userID":@"135956817",
+////                           @"username":@"m1359568172",
+//                           };
+//
+//    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+//    [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"responseObject----%@",responseObject);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"error--%@",error);
+//    }];
 
-    NSLog(@"%@",self.pageControl.subviews);
+
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:<#(nonnull NSURLSessionConfiguration *)#>];
 
 }
 
 
-- (void)testWithParams:(NSString *)str1 str2:(NSString *)str2 str3:(NSString *)str3{
-
-
-
-}
 
 
 @end

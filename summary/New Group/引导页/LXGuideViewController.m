@@ -14,6 +14,8 @@
 #import "LXGuideViewController.h"
 #import "ViewController.h"
 
+#define GuidePageV 1     //轮播图的版本号，当更换轮播的时候，此值可累计往上加1。  1.2.3.4.....
+
 @interface LXGuideViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong) UIPageControl *pageControl;
 
@@ -102,6 +104,8 @@
 
 /***相关知识点******************************************************/
 // 1> 判断app首次打开或者更新新版之后显示引导页的条件
+// 2> 用引导页的版本号判定:只要用户看过以后就永远不要看了，与app版本无关。 theSecondShowLogic
+
 -(void)showGuidePage{
     //第一次打开该app或者版本更新之后，出现引导页
     NSString *currentVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
@@ -120,5 +124,20 @@
     [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[LXGuideViewController alloc] init]];
     }
 }
+
+    - (void)theSecondShowLogic{
+        NSUserDefaults *userDe = [NSUserDefaults standardUserDefaults];
+        NSString *saveVersion = [userDe objectForKey:@"GuidePageVersion"];
+        if ([saveVersion intValue] == GuidePageV) {//已经运行过该版本
+            [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[ViewController alloc] init]];
+        }else{
+            //    更新本地存储的版本
+            [userDe setObject:@(GuidePageV) forKey:@"GuidePageVersion"];
+            [userDe synchronize];
+
+            [[[[UIApplication sharedApplication] delegate] window] setRootViewController:[[LXGuideViewController alloc] init]];
+        }
+
+    }
 
 @end

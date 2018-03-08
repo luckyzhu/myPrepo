@@ -25,6 +25,7 @@
         官方地址:https://guides.cocoapods.org/using/pod-install-vs-update.html
      区别：
      pod install :下载并安装pod
+
      1> 当pod file文件中有“增加pod，删除pod，修改pod”的操作之后使用
      2> pod install执行完之后会将已下载的依赖库的版本号添加进podfile.lock文件
      3> pod install根据podfile.lock文件列出的已安装的pod的版本信息，只负责下载安装podfile.lock中不存在的pod，不会自动更新已安装的pod的版本
@@ -47,11 +48,6 @@
      pod A ---> 1.0.2 （更新一个小的版本）
      pod B ---> 1.0.0
      pod C ---> 1.0.0  (版本变更太大，有限制，所以还是1.0.0)
-
-
-
-
-
 
      */
 
