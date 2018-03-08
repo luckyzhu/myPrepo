@@ -16,6 +16,7 @@
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
+		8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */; };
 		859E8C552010A42600FDF043 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07C320454A28005E0071 /* LXGuideViewController.m */; };
@@ -23,6 +24,7 @@
 		85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C720456716005E0071 /* yindaoye-01.jpg */; };
 		85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C920456719005E0071 /* yindaoye-03.jpg */; };
 		85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D22047FAC9005E0071 /* GCDViewController.m */; };
+		85CD07D7204963D2005E0071 /* singletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D6204963D2005E0071 /* singletonClass.m */; };
 		85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D515F61FEB9A1600178B6A /* UILabelUsage.m */; };
 		85F9FAA62019F44200183DD2 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		CC4AD3796AD624C799F8F583 /* libPods-summary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A5851F6469173DD692E198 /* libPods-summary.a */; };
@@ -68,6 +70,8 @@
 		8521F7BA20286C4A0073F119 /* remoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteViewController.m; sourceTree = "<group>"; };
 		8521F7C2203047EB0073F119 /* appViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appViewController.h; sourceTree = "<group>"; };
 		8521F7C3203047EB0073F119 /* appViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appViewController.m; sourceTree = "<group>"; };
+		8523F0C5204FDF1A0099531B /* cocoaPodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cocoaPodsViewController.h; sourceTree = "<group>"; };
+		8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoaPodsViewController.m; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		85CD07C920456719005E0071 /* yindaoye-03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yindaoye-03.jpg"; sourceTree = "<group>"; };
 		85CD07D12047FAC9005E0071 /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		85CD07D22047FAC9005E0071 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		85CD07D5204963D2005E0071 /* singletonClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass.h; sourceTree = "<group>"; };
+		85CD07D6204963D2005E0071 /* singletonClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass.m; sourceTree = "<group>"; };
 		85D515F51FEB9A1600178B6A /* UILabelUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelUsage.h; sourceTree = "<group>"; };
 		85D515F61FEB9A1600178B6A /* UILabelUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelUsage.m; sourceTree = "<group>"; };
 		85F9FAA42019F44200183DD2 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
@@ -223,6 +229,15 @@
 			path = NSInvocation;
 			sourceTree = "<group>";
 		};
+		8523F0C4204FDF020099531B /* cocoapods */ = {
+			isa = PBXGroup;
+			children = (
+				8523F0C5204FDF1A0099531B /* cocoaPodsViewController.h */,
+				8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */,
+			);
+			path = cocoapods;
+			sourceTree = "<group>";
+		};
 		85CD07C120454A05005E0071 /* 引导页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +253,8 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				8523F0C4204FDF020099531B /* cocoapods */,
+				85CD07D420496394005E0071 /* 单例 */,
 				85CD07D02047FAB4005E0071 /* GCD */,
 				85CD07C120454A05005E0071 /* 引导页 */,
 				8521F7C1203047B10073F119 /* 应用程序周期 */,
@@ -255,6 +272,15 @@
 				85CD07D22047FAC9005E0071 /* GCDViewController.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		85CD07D420496394005E0071 /* 单例 */ = {
+			isa = PBXGroup;
+			children = (
+				85CD07D5204963D2005E0071 /* singletonClass.h */,
+				85CD07D6204963D2005E0071 /* singletonClass.m */,
+			);
+			path = "单例";
 			sourceTree = "<group>";
 		};
 		E8B7409117AEEE2FEFD6BF22 /* Pods */ = {
@@ -445,7 +471,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -457,12 +483,14 @@
 			files = (
 				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
+				8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */,
 				44F5024A1FC32F0E00B10720 /* ViewController.m in Sources */,
 				85F9FAA62019F44200183DD2 /* subViewController.m in Sources */,
 				859E8C552010A42600FDF043 /* NSInvocationViewController.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
+				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
