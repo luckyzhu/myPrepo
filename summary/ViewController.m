@@ -9,9 +9,8 @@
 #import "Masonry.h"
 #import "ViewController.h"
 #import  "AFNetworking.h"
-
-
-
+#import "singletonClass.h"
+#import "singletonClass2.h"
 
 @interface managerTool:NSObject
 
@@ -41,6 +40,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+
+    singletonClass2 *obj1 = [[singletonClass2 alloc]init];
+    singletonClass2 *obj2 = [[singletonClass2 alloc]init];
+    singletonClass2 *obj3 = [singletonClass2 sharesingletonClass2];
+
+
+    NSLog(@" %p  %p %p",obj1,obj2,obj3);
+
+    return;
     /*
      GET
      https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
@@ -66,9 +74,6 @@
     NSLog(@"requestSerializer.HTTPRequestHeaders---%@",requestSerializer.HTTPRequestHeaders);
     [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"task.response----%@",task.response);
-
-
-
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error--%@",error);
