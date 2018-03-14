@@ -199,6 +199,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		851728E820591EB7009C17BF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8523F148205144750099531B /* NSURLSession */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		8521F7B820286C300073F119 /* 远程推送 */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +285,7 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				8523F148205144750099531B /* NSURLSession */,
+				851728E820591EB7009C17BF /* Network */,
 				8523F144205129B60099531B /* UIImageView */,
 				8523F0C4204FDF020099531B /* cocoapods */,
 				85CD07D420496394005E0071 /* 单例 */,
@@ -388,7 +396,8 @@
 				TargetAttributes = {
 					44F5023E1FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 64LYUUGALF;
+						ProvisioningStyle = Automatic;
 					};
 					44F502571FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
@@ -589,6 +598,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -637,6 +647,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -663,12 +674,16 @@
 			baseConfigurationReference = 43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64LYUUGALF;
 				INFOPLIST_FILE = summary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -678,9 +693,12 @@
 			baseConfigurationReference = 766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64LYUUGALF;
 				INFOPLIST_FILE = summary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,4 +10,16 @@
 
 @interface NSURLSessionViewController : UIViewController
 
+    /*
+     1>网络缓存:NSURLCache : http://blog.csdn.net/jason_chen13/article/details/51984823
+
+     */
+
+/*
+2.把域名解析成ip地址
+
+ */
+
+
+
 @end

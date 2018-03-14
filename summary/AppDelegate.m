@@ -25,6 +25,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+
+    NSLog(@"磁盘缓存---%zd",[[NSURLCache sharedURLCache] diskCapacity]);
+    NSLog(@"内存缓存---%zd",[[NSURLCache sharedURLCache] memoryCapacity]);
+
+
+
+
     return YES;
 }
 
