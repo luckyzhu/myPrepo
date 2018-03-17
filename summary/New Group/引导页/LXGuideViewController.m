@@ -39,14 +39,14 @@
     __weak typeof(self) weakself = self;
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
 
-        if (@available(iOS 11.0, *)) {
-            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-            make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
-            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
-            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
-        } else {
+//        if (@available(iOS 11.0, *)) {
+//            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+//            make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
+//            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
+//            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+//        } else {
             make.edges.equalTo(weakself.view);
-        }
+//        }
     }];
 
     for (int i = 0; i < images.count; i ++) {
