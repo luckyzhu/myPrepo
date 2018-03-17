@@ -10,6 +10,4 @@
 
 @interface Tool : NSObject
 
-
-
 @end

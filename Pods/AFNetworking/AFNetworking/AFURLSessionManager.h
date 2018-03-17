@@ -85,6 +85,12 @@
  @warning Managers for background sessions must be owned for the duration of their use. This can be accomplished by creating an application-wide or shared singleton instance.
  */
 
+/*
+ 1> NS_ASSUME_NONNULL_BEGIN && NS_ASSUME_NONNULL_END
+   __nullable指代对象可以为NULL或者为NIL
+   __nonnull指代对象不能为null
+     在这两个宏之间的代码，所有指针对象都被假定为nonnull
+ */
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AFURLSessionManager : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate, NSSecureCoding, NSCopying>

@@ -20,6 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+/*
+ 1> https://huang303513.github.io/2017/04/14/AFNetWorking源码之NSURLSession系列概述.html
+ 2> https://www.jianshu.com/p/e15592ce40ae
+ 3> https://github.com/huang303513/SourceCodeResearchAndExploration
+
+ */
 #import <Foundation/Foundation.h>
 #import <Availability.h>
 #import <TargetConditionals.h>
