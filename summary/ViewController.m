@@ -7,7 +7,6 @@
 //
 #import <objc/message.h>
 #import "ViewController.h"
-<<<<<<< HEAD
 #import "Student.h"
 
 //@interface Student:NSObject
@@ -17,11 +16,9 @@
 //    
 //}
 //@end
-=======
 #import  "AFNetworking.h"
 #import "singletonClass.h"
 #import "singletonClass2.h"
->>>>>>> 917feec42dbc4c693677e943ab814167e3325073
 
 @interface managerTool:NSObject
 
@@ -39,19 +36,6 @@
 
 @implementation ViewController
 
-<<<<<<< HEAD
-
-=======
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
->>>>>>> 917feec42dbc4c693677e943ab814167e3325073
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -62,15 +46,6 @@
     
 //    NSString* str = @"Hello World";
     
-    
-
-<<<<<<< HEAD
-   
-
-
-}
-=======
-
     singletonClass2 *obj1 = [[singletonClass2 alloc]init];
     singletonClass2 *obj2 = [[singletonClass2 alloc]init];
     singletonClass2 *obj3 = [singletonClass2 sharesingletonClass2];
@@ -116,8 +91,6 @@
 
 
 }
-
->>>>>>> 917feec42dbc4c693677e943ab814167e3325073
 
 
 
