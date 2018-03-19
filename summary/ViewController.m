@@ -20,18 +20,7 @@
 #import "singletonClass.h"
 #import "singletonClass2.h"
 
-@interface Student:NSObject
 
-@property (nonatomic,copy) NSString *stuName;
-- (void)test;
-@end
-
-@implementation Student
-//- (void)test{
-//    NSLog(@"1111");
-//}
-
-@end
 
 @interface ViewController()
 
@@ -39,11 +28,8 @@
 @end
 
 
-@end
-
 @implementation ViewController
 
-}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {

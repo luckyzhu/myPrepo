@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		446261FE205CF7BD00242775 /* tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 446261FD205CF7BD00242775 /* tool.m */; };
-		4492F49F20504462007D915F /* memoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F49E20504462007D915F /* memoryViewController.m */; };
-		4492F4A3205183B0007D915F /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F4A2205183B0007D915F /* Student.m */; };
-		4492F4F720551797007D915F /* runtimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F4F620551797007D915F /* runtimeViewController.m */; };
 		44D3819B205D0B5F00107174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502491FC32F0E00B10720 /* ViewController.m */; };
 		44D3819C205D0B6900107174 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		44F502441FC32F0E00B10720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502431FC32F0E00B10720 /* main.m */; };
@@ -58,14 +54,6 @@
 /* Begin PBXFileReference section */
 		18A5851F6469173DD692E198 /* libPods-summary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-summary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.debug.xcconfig"; sourceTree = "<group>"; };
-		446261FC205CF7BD00242775 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
-		446261FD205CF7BD00242775 /* tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool.m; sourceTree = "<group>"; };
-		4492F49D20504462007D915F /* memoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memoryViewController.h; sourceTree = "<group>"; };
-		4492F49E20504462007D915F /* memoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = memoryViewController.m; sourceTree = "<group>"; };
-		4492F4A1205183B0007D915F /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
-		4492F4A2205183B0007D915F /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
-		4492F4F520551797007D915F /* runtimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtimeViewController.h; sourceTree = "<group>"; };
-		4492F4F620551797007D915F /* runtimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = runtimeViewController.m; sourceTree = "<group>"; };
 		44F5023F1FC32F0E00B10720 /* summary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = summary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F502431FC32F0E00B10720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44F502451FC32F0E00B10720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,35 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		446261FB205CF7AE00242775 /* 工具 */ = {
-			isa = PBXGroup;
-			children = (
-				446261FC205CF7BD00242775 /* tool.h */,
-				446261FD205CF7BD00242775 /* tool.m */,
-			);
-			name = "工具";
-			sourceTree = "<group>";
-		};
-		4492F4A020504467007D915F /* 内存相关 */ = {
-			isa = PBXGroup;
-			children = (
-				4492F49D20504462007D915F /* memoryViewController.h */,
-				4492F49E20504462007D915F /* memoryViewController.m */,
-			);
-			name = "内存相关";
-			sourceTree = "<group>";
-		};
-		4492F4F42055177B007D915F /* runtime */ = {
-			isa = PBXGroup;
-			children = (
-				4492F4A1205183B0007D915F /* Student.h */,
-				4492F4A2205183B0007D915F /* Student.m */,
-				4492F4F520551797007D915F /* runtimeViewController.h */,
-				4492F4F620551797007D915F /* runtimeViewController.m */,
-			);
-			name = runtime;
-			sourceTree = "<group>";
-		};
 		44F502361FC32F0E00B10720 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +139,7 @@
 				44F502401FC32F0E00B10720 /* Products */,
 				E8B7409117AEEE2FEFD6BF22 /* Pods */,
 				6B017C5A9BF42320F02EEF13 /* Frameworks */,
+				85165F79205FA1FE0071D431 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,6 +214,13 @@
 				85165F77205FA13A0071D431 /* DSYM.m */,
 			);
 			path = dsym;
+			sourceTree = "<group>";
+		};
+		85165F79205FA1FE0071D431 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		851728E820591EB7009C17BF /* Network */ = {
@@ -581,8 +548,6 @@
 				44D3819B205D0B5F00107174 /* ViewController.m in Sources */,
 				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
-				4492F4A3205183B0007D915F /* Student.m in Sources */,
-				446261FE205CF7BD00242775 /* tool.m in Sources */,
 				8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
 				859E8C552010A42600FDF043 /* NSInvocationViewController.m in Sources */,
@@ -594,10 +559,8 @@
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
-				4492F49F20504462007D915F /* memoryViewController.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
-				4492F4F720551797007D915F /* runtimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
