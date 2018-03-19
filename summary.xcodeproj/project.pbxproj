@@ -14,6 +14,7 @@
 		44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */; };
 		44F5025D1FC32F0E00B10720 /* summaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5025C1FC32F0E00B10720 /* summaryTests.m */; };
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
+		85165F78205FA13A0071D431 /* DSYM.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F77205FA13A0071D431 /* DSYM.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
@@ -69,6 +70,8 @@
 		44F502671FC32F0E00B10720 /* summaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = summaryUITests.m; sourceTree = "<group>"; };
 		44F502691FC32F0E00B10720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.release.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.release.xcconfig"; sourceTree = "<group>"; };
+		85165F76205FA13A0071D431 /* DSYM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYM.h; sourceTree = "<group>"; };
+		85165F77205FA13A0071D431 /* DSYM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYM.m; sourceTree = "<group>"; };
 		851728E920592692009C17BF /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		851728EA20592949009C17BF /* singletonClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass2.h; sourceTree = "<group>"; };
 		851728EB20592949009C17BF /* singletonClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass2.m; sourceTree = "<group>"; };
@@ -203,6 +206,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85165F75205FA1240071D431 /* dsym */ = {
+			isa = PBXGroup;
+			children = (
+				85165F76205FA13A0071D431 /* DSYM.h */,
+				85165F77205FA13A0071D431 /* DSYM.m */,
+			);
+			path = dsym;
+			sourceTree = "<group>";
+		};
 		851728E820591EB7009C17BF /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,10 +301,11 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				85165F75205FA1240071D431 /* dsym */,
 				851728E820591EB7009C17BF /* Network */,
 				8523F144205129B60099531B /* UIImageView */,
 				8523F0C4204FDF020099531B /* cocoapods */,
-				85CD07D420496394005E0071 /* 单例 */,
+				85CD07D420496394005E0071 /* singleton */,
 				85CD07D02047FAB4005E0071 /* GCD */,
 				85CD07C120454A05005E0071 /* 引导页 */,
 				8521F7C1203047B10073F119 /* 应用程序周期 */,
@@ -312,7 +325,7 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
-		85CD07D420496394005E0071 /* 单例 */ = {
+		85CD07D420496394005E0071 /* singleton */ = {
 			isa = PBXGroup;
 			children = (
 				851728E920592692009C17BF /* singleton.h */,
@@ -321,7 +334,7 @@
 				85CD07D5204963D2005E0071 /* singletonClass.h */,
 				85CD07D6204963D2005E0071 /* singletonClass.m */,
 			);
-			path = "单例";
+			path = singleton;
 			sourceTree = "<group>";
 		};
 		E8B7409117AEEE2FEFD6BF22 /* Pods */ = {
@@ -534,6 +547,7 @@
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
+				85165F78205FA13A0071D431 /* DSYM.m in Sources */,
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,

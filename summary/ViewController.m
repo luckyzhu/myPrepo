@@ -12,16 +12,22 @@
 #import "singletonClass.h"
 #import "singletonClass2.h"
 
-@interface managerTool:NSObject
+@interface Student:NSObject
 
+@property (nonatomic,copy) NSString *stuName;
+- (void)test;
 @end
 
-@implementation managerTool
+@implementation Student
+//- (void)test{
+//    NSLog(@"1111");
+//}
 
 @end
 
 @interface ViewController()
 
+@property (nonatomic,strong) NSMutableArray *array;
 @end
 
 @implementation ViewController
@@ -36,17 +42,23 @@
     [super viewWillDisappear:animated];
 
 }
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"array=====%@",self.array[100]);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
 
-    singletonClass2 *obj1 = [[singletonClass2 alloc]init];
-    singletonClass2 *obj2 = [[singletonClass2 alloc]init];
-    singletonClass2 *obj3 = [singletonClass2 sharesingletonClass2];
+    __block NSMutableArray *array = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4", nil];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [array addObject:@"5555"];
+    });
 
-
-    NSLog(@" %p  %p %p",obj1,obj2,obj3);
+    self.array = array;
 
     return;
     /*
