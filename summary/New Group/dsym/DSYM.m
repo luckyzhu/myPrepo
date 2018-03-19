@@ -14,6 +14,10 @@
  原理： http://foggry.com/blog/2015/08/10/ru-he-shou-dong-jie-xi-crashlogzhi-yuan-li-pian/
 
  方法： http://foggry.com/blog/2015/07/27/ru-he-shou-dong-jie-xi-crashlog/
+
+ //2.symbolicatecrash 解析log
+ http://blog.csdn.net/qq_26544491/article/details/54909043
+
  */
 
 @end
