@@ -1,14 +1,16 @@
 //
-//  Student.h
+//  Person.m
 //  summary
 //
 //  Created by NewBoy on 2018/3/19.
 //  Copyright © 2018年 LX. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "Person.h"
 
-@interface Student :Person
-
+@implementation Person
++(void)initialize
+{
+    NSLog(@"Person---initialize");
+}
 @end

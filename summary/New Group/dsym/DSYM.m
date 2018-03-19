@@ -10,6 +10,14 @@
 
 @implementation DSYM
 
+
+-(instancetype)init
+{
+    if (self = [super init]) {
+        NSLog(@"iiasfasfas");
+    }
+    return self;
+}
 /**1. 手动解析CrashLog
  原理： http://foggry.com/blog/2015/08/10/ru-he-shou-dong-jie-xi-crashlogzhi-yuan-li-pian/
 

@@ -1,5 +1,5 @@
 //
-//  Student.h
+//  Person.h
 //  summary
 //
 //  Created by NewBoy on 2018/3/19.
@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Person.h"
 
-@interface Student :Person
+@interface Person : NSObject
 
 @end

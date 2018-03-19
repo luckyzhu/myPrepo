@@ -2,25 +2,21 @@
 //  Student.m
 //  summary
 //
-//  Created by ZhuLuxi on 2018/3/8.
+//  Created by NewBoy on 2018/3/19.
 //  Copyright © 2018年 LX. All rights reserved.
 //
 
 #import "Student.h"
 
-@interface Student()
-//{
-//    NSString *_name;
-//    int _age;
-//    
-//}
-@end
-
 @implementation Student
+//+(void)initialize
+//{
+//    NSLog(@"Student---initialize");
+//}
 
-- (void)eat{
-    
-   NSLog(@"student的eat方法...");
-}
+//- (void)subPersonTestMethod{
+//    NSLog(@"Student---subPersonTestMethod");
+//}
+
 
 @end

@@ -8,6 +8,9 @@
 #import <objc/message.h>
 #import "ViewController.h"
 #import "Student.h"
+#import "Person.h"
+#import "subPerson.h"
+
 
 //@interface Student:NSObject
 //{
@@ -17,8 +20,7 @@
 //}
 //@end
 #import  "AFNetworking.h"
-#import "singletonClass.h"
-#import "singletonClass2.h"
+
 
 
 
@@ -39,14 +41,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+//    Person *p = [Person new];
 
-    __block NSMutableArray *array = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4", nil];
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [array addObject:@"5555"];
-    });
+//    Student *stu = [Student new];
 
-    self.array = array;
+    subPerson *sub = [subPerson new];
+
+    [sub subPersonTestMethod];
+
 
     return;
     /*

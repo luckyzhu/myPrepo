@@ -7,6 +7,7 @@
 //
 
 #import "NSInvocationViewController.h"
+#import "DSYM.h"
 
 @interface NSInvocationViewController ()
 
@@ -24,6 +25,7 @@
   2.5> 获取方法返回值
 
  */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -52,24 +54,24 @@
 //    [invocation invoke];
 
     //3.有参有返回值
-    NSMethodSignature  *signature = [[self class] instanceMethodSignatureForSelector:@selector(methodTest:num2:num3:)];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = self;
-    invocation.selector = @selector(methodTest:num2:num3:);
-    int num1 = 1;
-    int num2 = 3;
-    int num3 = 4;
-
-    [invocation setArgument:&num1 atIndex:2];
-    [invocation setArgument:&num2 atIndex:3];
-    [invocation setArgument:&num3 atIndex:4];
-
-    [invocation invoke];
-
-    int resulet = 0;
-    [invocation setReturnValue:&resulet];
-
-    NSLog(@"resulet------%d",resulet);
+//    NSMethodSignature  *signature = [[self class] instanceMethodSignatureForSelector:@selector(methodTest:num2:num3:)];
+//    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+//    invocation.target = self;
+//    invocation.selector = @selector(methodTest:num2:num3:);
+//    int num1 = 1;
+//    int num2 = 3;
+//    int num3 = 4;
+//
+//    [invocation setArgument:&num1 atIndex:2];
+//    [invocation setArgument:&num2 atIndex:3];
+//    [invocation setArgument:&num3 atIndex:4];
+//
+//    [invocation invoke];
+//
+//    int resulet = 0;
+//    [invocation setReturnValue:&resulet];
+//
+//    NSLog(@"resulet------%d",resulet);
 
 
 }
