@@ -5,9 +5,17 @@
 //  Created by ZhuLuxi on 2017/11/20.
 //  Copyright © 2017年 LX. All rights reserved.
 //
-#import <objc/runtime.h>
-#import "Masonry.h"
+#import <objc/message.h>
 #import "ViewController.h"
+#import "Student.h"
+
+//@interface Student:NSObject
+//{
+//    NSString *_name;
+//    int _age;
+//    
+//}
+//@end
 #import  "AFNetworking.h"
 #import "singletonClass.h"
 #import "singletonClass2.h"
@@ -30,16 +38,10 @@
 @property (nonatomic,strong) NSMutableArray *array;
 @end
 
+
+@end
+
 @implementation ViewController
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
 
 }
 
@@ -98,7 +100,6 @@
 
 
 }
-
 
 
 
