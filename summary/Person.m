@@ -13,4 +13,8 @@
 {
     NSLog(@"Person---initialize");
 }
+
+- (void)subPersonTestMethod{
+    NSLog(@"Person---subPersonTestMethod");
+}
 @end

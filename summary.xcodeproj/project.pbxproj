@@ -178,10 +178,6 @@
 				85165F80205FC6B30071D431 /* Person.m */,
 				85165F82205FC6C30071D431 /* Student.h */,
 				85165F83205FC6C30071D431 /* Student.m */,
-				85165F85205FC7C10071D431 /* subPerson.h */,
-				85165F86205FC7C10071D431 /* subPerson.m */,
-				859E8C562010A52800FDF043 /* Tool.h */,
-				859E8C572010A52800FDF043 /* Tool.m */,
 				85CD07CF2047EF91005E0071 /* New Group */,
 				44F502421FC32F0E00B10720 /* Supporting Files */,
 			);
@@ -244,10 +240,21 @@
 		85165F7B205FC34B0071D431 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				85165F85205FC7C10071D431 /* subPerson.h */,
+				85165F86205FC7C10071D431 /* subPerson.m */,
 				85165F7C205FC3640071D431 /* NSObjectViewController.h */,
 				85165F7D205FC3640071D431 /* NSObjectViewController.m */,
 			);
 			path = NSObject;
+			sourceTree = "<group>";
+		};
+		85165F882060B9F90071D431 /* mac常用软件 */ = {
+			isa = PBXGroup;
+			children = (
+				859E8C562010A52800FDF043 /* Tool.h */,
+				859E8C572010A52800FDF043 /* Tool.m */,
+			);
+			path = "mac常用软件";
 			sourceTree = "<group>";
 		};
 		851728E820591EB7009C17BF /* Network */ = {
@@ -336,6 +343,7 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				85165F882060B9F90071D431 /* mac常用软件 */,
 				85165F7B205FC34B0071D431 /* NSObject */,
 				85165F75205FA1240071D431 /* dsym */,
 				851728E820591EB7009C17BF /* Network */,
