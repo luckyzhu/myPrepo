@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface NSInvocationViewController : UIViewController
 
 @end

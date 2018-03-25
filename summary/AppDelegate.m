@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "LXGuideViewController.h"
-
+#import "NSInvocationViewController.h"
 @interface AppDelegate ()
 
 @end

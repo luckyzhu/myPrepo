@@ -8,6 +8,9 @@
 #import <objc/message.h>
 #import "ViewController.h"
 #import "Student.h"
+#import "Person.h"
+#import "subPerson.h"
+
 
 //@interface Student:NSObject
 //{
@@ -17,41 +20,35 @@
 //}
 //@end
 #import  "AFNetworking.h"
-#import "singletonClass.h"
-#import "singletonClass2.h"
 
-@interface managerTool:NSObject
 
-@end
 
-@implementation managerTool
-
-@end
 
 @interface ViewController()
 
-
-
+@property (nonatomic,strong) NSMutableArray *array;
 @end
+
 
 @implementation ViewController
 
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"array=====%@",self.array[100]);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    
-    Student *stu = [[Student alloc]init];
-    NSLog(@"111--%@",stu.class);
-    
-//    NSString* str = @"Hello World";
-    
-    singletonClass2 *obj1 = [[singletonClass2 alloc]init];
-    singletonClass2 *obj2 = [[singletonClass2 alloc]init];
-    singletonClass2 *obj3 = [singletonClass2 sharesingletonClass2];
 
+//    Person *p = [Person new];
 
-    NSLog(@" %p  %p %p",obj1,obj2,obj3);
+//    Student *stu = [Student new];
+
+    subPerson *sub = [subPerson new];
+
+    [sub subPersonTestMethod];
+
 
     return;
     /*
