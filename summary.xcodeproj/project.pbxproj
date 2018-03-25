@@ -11,6 +11,7 @@
 		4492F49F20504462007D915F /* memoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F49E20504462007D915F /* memoryViewController.m */; };
 		4492F4A3205183B0007D915F /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F4A2205183B0007D915F /* Student.m */; };
 		4492F4F720551797007D915F /* runtimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F4F620551797007D915F /* runtimeViewController.m */; };
+		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
 		44D3819B205D0B5F00107174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502491FC32F0E00B10720 /* ViewController.m */; };
 		44D3819C205D0B6900107174 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		44F502441FC32F0E00B10720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502431FC32F0E00B10720 /* main.m */; };
@@ -65,6 +66,8 @@
 		4492F4A2205183B0007D915F /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
 		4492F4F520551797007D915F /* runtimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtimeViewController.h; sourceTree = "<group>"; };
 		4492F4F620551797007D915F /* runtimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = runtimeViewController.m; sourceTree = "<group>"; };
+		44C575F9205E6C790058D457 /* linuxObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linuxObj.h; sourceTree = "<group>"; };
+		44C575FA205E6C790058D457 /* linuxObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = linuxObj.m; sourceTree = "<group>"; };
 		44F5023F1FC32F0E00B10720 /* summary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = summary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F502431FC32F0E00B10720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44F502451FC32F0E00B10720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +169,15 @@
 				4492F4F620551797007D915F /* runtimeViewController.m */,
 			);
 			name = runtime;
+			sourceTree = "<group>";
+		};
+		44C575F8205E6C5E0058D457 /* Linux */ = {
+			isa = PBXGroup;
+			children = (
+				44C575F9205E6C790058D457 /* linuxObj.h */,
+				44C575FA205E6C790058D457 /* linuxObj.m */,
+			);
+			path = Linux;
 			sourceTree = "<group>";
 		};
 		44F502361FC32F0E00B10720 = {
@@ -330,6 +342,7 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				44C575F8205E6C5E0058D457 /* Linux */,
 				446261FB205CF7AE00242775 /* 工具 */,
 				4492F4F42055177B007D915F /* runtime */,
 				4492F4A020504467007D915F /* 内存相关 */,
@@ -447,16 +460,18 @@
 				TargetAttributes = {
 					44F5023E1FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 64LYUUGALF;
+						DevelopmentTeam = 3PQNBBA9BL;
 						ProvisioningStyle = Automatic;
 					};
 					44F502571FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 3PQNBBA9BL;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 44F5023E1FC32F0E00B10720;
 					};
 					44F502621FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 3PQNBBA9BL;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 44F5023E1FC32F0E00B10720;
 					};
@@ -569,6 +584,7 @@
 			files = (
 				44D3819C205D0B6900107174 /* subViewController.m in Sources */,
 				44D3819B205D0B5F00107174 /* ViewController.m in Sources */,
+				44C575FB205E6C790058D457 /* linuxObj.m in Sources */,
 				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				4492F4A3205183B0007D915F /* Student.m in Sources */,
@@ -658,6 +674,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3PQNBBA9BL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -707,6 +724,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3PQNBBA9BL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -733,12 +751,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64LYUUGALF;
+				DEVELOPMENT_TEAM = 3PQNBBA9BL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -753,12 +771,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64LYUUGALF;
+				DEVELOPMENT_TEAM = 3PQNBBA9BL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
