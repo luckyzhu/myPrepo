@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSInvocationViewController.h"
+#import "drawViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,7 +22,7 @@
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[ViewController alloc]init];
+    self.window.rootViewController = [[drawViewController alloc]init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

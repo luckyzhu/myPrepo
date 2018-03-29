@@ -41,12 +41,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+
+    return;
 //    Person *p = [Person new];
 
 //    Student *stu = [Student new];
 
     subPerson *sub = [subPerson new];
-
     [sub subPersonTestMethod];
 
 

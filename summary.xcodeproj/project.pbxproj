@@ -21,6 +21,10 @@
 		85165F81205FC6B30071D431 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F80205FC6B30071D431 /* Person.m */; };
 		85165F84205FC6C30071D431 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F83205FC6C30071D431 /* Student.m */; };
 		85165F87205FC7C10071D431 /* subPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F86205FC7C10071D431 /* subPerson.m */; };
+		85165F9020638F330071D431 /* mainshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F8F20638F330071D431 /* mainshViewController.m */; };
+		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
+		85165F972064E91A0071D431 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F962064E91A0071D431 /* drawView.m */; };
+		85165F9B206A1C780071D431 /* gitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F9A206A1C780071D431 /* gitViewController.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
@@ -84,6 +88,14 @@
 		85165F83205FC6C30071D431 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		85165F85205FC7C10071D431 /* subPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subPerson.h; sourceTree = "<group>"; };
 		85165F86205FC7C10071D431 /* subPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subPerson.m; sourceTree = "<group>"; };
+		85165F8E20638F330071D431 /* mainshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainshViewController.h; sourceTree = "<group>"; };
+		85165F8F20638F330071D431 /* mainshViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainshViewController.m; sourceTree = "<group>"; };
+		85165F922064E9080071D431 /* drawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawViewController.h; sourceTree = "<group>"; };
+		85165F932064E9080071D431 /* drawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = drawViewController.m; sourceTree = "<group>"; };
+		85165F952064E91A0071D431 /* drawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawView.h; sourceTree = "<group>"; };
+		85165F962064E91A0071D431 /* drawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = drawView.m; sourceTree = "<group>"; };
+		85165F99206A1C780071D431 /* gitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gitViewController.h; sourceTree = "<group>"; };
+		85165F9A206A1C780071D431 /* gitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gitViewController.m; sourceTree = "<group>"; };
 		851728E920592692009C17BF /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		851728EA20592949009C17BF /* singletonClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass2.h; sourceTree = "<group>"; };
 		851728EB20592949009C17BF /* singletonClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass2.m; sourceTree = "<group>"; };
@@ -257,6 +269,35 @@
 			path = "mac常用软件";
 			sourceTree = "<group>";
 		};
+		85165F8D20638F260071D431 /* mainsh */ = {
+			isa = PBXGroup;
+			children = (
+				85165F8E20638F330071D431 /* mainshViewController.h */,
+				85165F8F20638F330071D431 /* mainshViewController.m */,
+			);
+			path = mainsh;
+			sourceTree = "<group>";
+		};
+		85165F912064E85F0071D431 /* Quartzs_2D */ = {
+			isa = PBXGroup;
+			children = (
+				85165F922064E9080071D431 /* drawViewController.h */,
+				85165F932064E9080071D431 /* drawViewController.m */,
+				85165F952064E91A0071D431 /* drawView.h */,
+				85165F962064E91A0071D431 /* drawView.m */,
+			);
+			path = Quartzs_2D;
+			sourceTree = "<group>";
+		};
+		85165F98206A1C440071D431 /* commonLine */ = {
+			isa = PBXGroup;
+			children = (
+				85165F99206A1C780071D431 /* gitViewController.h */,
+				85165F9A206A1C780071D431 /* gitViewController.m */,
+			);
+			path = commonLine;
+			sourceTree = "<group>";
+		};
 		851728E820591EB7009C17BF /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +384,9 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				85165F98206A1C440071D431 /* commonLine */,
+				85165F912064E85F0071D431 /* Quartzs_2D */,
+				85165F8D20638F260071D431 /* mainsh */,
 				85165F882060B9F90071D431 /* mac常用软件 */,
 				85165F7B205FC34B0071D431 /* NSObject */,
 				85165F75205FA1240071D431 /* dsym */,
@@ -590,9 +634,12 @@
 				85165F84205FC6C30071D431 /* Student.m in Sources */,
 				8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
+				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
+				85165F9B206A1C780071D431 /* gitViewController.m in Sources */,
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
+				85165F972064E91A0071D431 /* drawView.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
 				85165F78205FA13A0071D431 /* DSYM.m in Sources */,
@@ -600,6 +647,7 @@
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
+				85165F9020638F330071D431 /* mainshViewController.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,7 +703,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -704,7 +752,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;

@@ -38,7 +38,7 @@
     scrollView.pagingEnabled = YES;
     scrollView.bounces = NO;
     [self.view addSubview:scrollView];
-    __weak typeof(self) weakself = self;
+   
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
 
 //        if (@available(iOS 11.0, *)) {
@@ -47,7 +47,7 @@
 //            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
 //            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
 //        } else {
-            make.edges.equalTo(weakself.view);
+            make.edges.equalTo(self.view);
 //        }
     }];
 
