@@ -1,5 +1,5 @@
 //
-//  gitViewController.h
+//  TESTViewController.h
 //  summary
 //
 //  Created by NewBoy on 2018/3/29.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface gitViewController : UIViewController
+@interface TESTViewController : UIViewController
 
-/*
- 1.设置gitignore 全局忽略DS_Store.等文件
-
- */
 @end

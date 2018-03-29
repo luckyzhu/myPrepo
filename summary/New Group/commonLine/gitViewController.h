@@ -12,6 +12,6 @@
 
 /*
  1.https://blog.csdn.net/hijiankang/article/details/47254179
-
+ 2..设置gitignore 全局忽略DS_Store.等文件
  */
 @end

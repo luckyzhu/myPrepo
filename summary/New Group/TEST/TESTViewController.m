@@ -1,18 +1,18 @@
 //
-//  gitViewController.m
+//  TESTViewController.m
 //  summary
 //
 //  Created by NewBoy on 2018/3/29.
 //  Copyright © 2018年 LX. All rights reserved.
 //
 
-#import "gitViewController.h"
+#import "TESTViewController.h"
 
-@interface gitViewController ()
+@interface TESTViewController ()
 
 @end
 
-@implementation gitViewController
+@implementation TESTViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
