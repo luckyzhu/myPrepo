@@ -32,6 +32,8 @@
 		8523F147205129CD0099531B /* UIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F146205129CD0099531B /* UIImageViewController.m */; };
 		8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F14A2051448A0099531B /* NSURLSessionViewController.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
+		85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C56206CE0EC00CE865D /* details_attention.png */; };
+		85BD1C59206CE23600CE865D /* 22.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C58206CE23600CE865D /* 22.jpeg */; };
 		85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07C320454A28005E0071 /* LXGuideViewController.m */; };
 		85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C52045670E005E0071 /* yindaoye-02.png */; };
 		85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C720456716005E0071 /* yindaoye-01.jpg */; };
@@ -123,6 +125,8 @@
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		859E8C572010A52800FDF043 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		85BD1C56206CE0EC00CE865D /* details_attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = details_attention.png; sourceTree = "<group>"; };
+		85BD1C58206CE23600CE865D /* 22.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpeg; sourceTree = "<group>"; };
 		85CD07C220454A28005E0071 /* LXGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXGuideViewController.h; sourceTree = "<group>"; };
 		85CD07C320454A28005E0071 /* LXGuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXGuideViewController.m; sourceTree = "<group>"; };
 		85CD07C52045670E005E0071 /* yindaoye-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yindaoye-02.png"; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 		44F502411FC32F0E00B10720 /* summary */ = {
 			isa = PBXGroup;
 			children = (
+				85BD1C55206CE0DD00CE865D /* Resources */,
 				44F502451FC32F0E00B10720 /* AppDelegate.h */,
 				44F502461FC32F0E00B10720 /* AppDelegate.m */,
 				44F502481FC32F0E00B10720 /* ViewController.h */,
@@ -417,6 +422,15 @@
 			path = NSURLSession;
 			sourceTree = "<group>";
 		};
+		85BD1C55206CE0DD00CE865D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				85BD1C56206CE0EC00CE865D /* details_attention.png */,
+				85BD1C58206CE23600CE865D /* 22.jpeg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		85CD07C120454A05005E0071 /* 引导页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +613,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
+				85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */,
+				85BD1C59206CE23600CE865D /* 22.jpeg in Resources */,
 				44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */,
 				44F5024F1FC32F0E00B10720 /* Assets.xcassets in Resources */,
 				85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */,
