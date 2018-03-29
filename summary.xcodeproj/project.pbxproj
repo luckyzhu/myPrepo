@@ -34,6 +34,7 @@
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85BD1C41206CD5E600CE865D /* TESTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD1C40206CD5E600CE865D /* TESTViewController.m */; };
 		85BD1C4C206CDA3300CE865D /* 22ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD1C4B206CDA3300CE865D /* 22ViewController.m */; };
+		85BD1C50206CDB4F00CE865D /* hhhViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD1C4F206CDB4F00CE865D /* hhhViewController.m */; };
 		85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07C320454A28005E0071 /* LXGuideViewController.m */; };
 		85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C52045670E005E0071 /* yindaoye-02.png */; };
 		85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C720456716005E0071 /* yindaoye-01.jpg */; };
@@ -129,6 +130,8 @@
 		85BD1C40206CD5E600CE865D /* TESTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TESTViewController.m; sourceTree = "<group>"; };
 		85BD1C4A206CDA3300CE865D /* 22ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 22ViewController.h; sourceTree = "<group>"; };
 		85BD1C4B206CDA3300CE865D /* 22ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 22ViewController.m; sourceTree = "<group>"; };
+		85BD1C4E206CDB4F00CE865D /* hhhViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hhhViewController.h; sourceTree = "<group>"; };
+		85BD1C4F206CDB4F00CE865D /* hhhViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hhhViewController.m; sourceTree = "<group>"; };
 		85CD07C220454A28005E0071 /* LXGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXGuideViewController.h; sourceTree = "<group>"; };
 		85CD07C320454A28005E0071 /* LXGuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXGuideViewController.m; sourceTree = "<group>"; };
 		85CD07C52045670E005E0071 /* yindaoye-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yindaoye-02.png"; sourceTree = "<group>"; };
@@ -448,6 +451,15 @@
 			path = test01;
 			sourceTree = "<group>";
 		};
+		85BD1C4D206CDB4400CE865D /* 03 */ = {
+			isa = PBXGroup;
+			children = (
+				85BD1C4E206CDB4F00CE865D /* hhhViewController.h */,
+				85BD1C4F206CDB4F00CE865D /* hhhViewController.m */,
+			);
+			path = 03;
+			sourceTree = "<group>";
+		};
 		85CD07C120454A05005E0071 /* 引导页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +475,7 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				85BD1C4D206CDB4400CE865D /* 03 */,
 				85BD1C42206CD95D00CE865D /* test02 */,
 				85BD1C46206CDA1E00CE865D /* test01 */,
 				85BD1C3E206CD5DF00CE865D /* TEST */,
@@ -733,6 +746,7 @@
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
 				85165F78205FA13A0071D431 /* DSYM.m in Sources */,
+				85BD1C50206CDB4F00CE865D /* hhhViewController.m in Sources */,
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
