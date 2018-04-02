@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "NSInvocationViewController.h"
 #import "drawViewController.h"
+#import "responderChainViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,7 @@
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[drawViewController alloc]init];
+    self.window.rootViewController = [[responderChainViewController alloc]init];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

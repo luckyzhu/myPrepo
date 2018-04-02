@@ -19,6 +19,12 @@
     // Do any additional setup after loading the view.
 
     /*
+     git 命令行相关:
+     新建一个分支 关联到远程分支
+     git branch xxx  新建一个分支
+     git push -u origin xxx 关联到这个分支
+     */
+    /*
      1>>  设置gitignore 全局忽略DS_Store.等文件
 
      在git中如果想忽略掉某个文件，不让这个文件提交到版本库中，可以使用修改根目录中 .gitignore 文件的方法（如无，则需自己手工建立此文件）。这个文件每一行保存了一个匹配的规则例如：
