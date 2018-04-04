@@ -32,6 +32,8 @@
 		8523F147205129CD0099531B /* UIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F146205129CD0099531B /* UIImageViewController.m */; };
 		8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F14A2051448A0099531B /* NSURLSessionViewController.m */; };
 		852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA420720A5200B62367 /* responderChainViewController.m */; };
+		852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA8207228B100B62367 /* CoreAnimationViewController.m */; };
+		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C56206CE0EC00CE865D /* details_attention.png */; };
 		85BD1C59206CE23600CE865D /* 22.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C58206CE23600CE865D /* 22.jpeg */; };
@@ -124,6 +126,10 @@
 		8523F14A2051448A0099531B /* NSURLSessionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionViewController.m; sourceTree = "<group>"; };
 		852B0DA320720A5200B62367 /* responderChainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = responderChainViewController.h; sourceTree = "<group>"; };
 		852B0DA420720A5200B62367 /* responderChainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = responderChainViewController.m; sourceTree = "<group>"; };
+		852B0DA7207228B100B62367 /* CoreAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationViewController.h; sourceTree = "<group>"; };
+		852B0DA8207228B100B62367 /* CoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationViewController.m; sourceTree = "<group>"; };
+		852B0DAA2072290000B62367 /* testCoreAnimantionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCoreAnimantionViewController.h; sourceTree = "<group>"; };
+		852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCoreAnimantionViewController.m; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
@@ -434,6 +440,17 @@
 			path = ResponderChain;
 			sourceTree = "<group>";
 		};
+		852B0DA62072289300B62367 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				852B0DA7207228B100B62367 /* CoreAnimationViewController.h */,
+				852B0DA8207228B100B62367 /* CoreAnimationViewController.m */,
+				852B0DAA2072290000B62367 /* testCoreAnimantionViewController.h */,
+				852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */,
+			);
+			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
 		85BD1C55206CE0DD00CE865D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +475,7 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				852B0DA62072289300B62367 /* CoreAnimation */,
 				852B0DA220720A0900B62367 /* ResponderChain */,
 				85165F98206A1C440071D431 /* commonLine */,
 				85165F912064E85F0071D431 /* Quartzs_2D */,
@@ -714,9 +732,11 @@
 				44C575FB205E6C790058D457 /* linuxObj.m in Sources */,
 				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
 				85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */,
+				852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				85165F84205FC6C30071D431 /* Student.m in Sources */,
 				8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */,
+				852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
