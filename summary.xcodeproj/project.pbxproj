@@ -16,6 +16,7 @@
 		44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */; };
 		44F5025D1FC32F0E00B10720 /* summaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5025C1FC32F0E00B10720 /* summaryTests.m */; };
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
+		8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513E8C22074C7B0004BD362 /* NSArray+Extension.m */; };
 		85165F78205FA13A0071D431 /* DSYM.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F77205FA13A0071D431 /* DSYM.m */; };
 		85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
 		85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F7D205FC3640071D431 /* NSObjectViewController.m */; };
@@ -93,6 +94,8 @@
 		44F502671FC32F0E00B10720 /* summaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = summaryUITests.m; sourceTree = "<group>"; };
 		44F502691FC32F0E00B10720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.release.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.release.xcconfig"; sourceTree = "<group>"; };
+		8513E8C12074C7B0004BD362 /* NSArray+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		8513E8C22074C7B0004BD362 /* NSArray+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		85165F76205FA13A0071D431 /* DSYM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYM.h; sourceTree = "<group>"; };
 		85165F77205FA13A0071D431 /* DSYM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYM.m; sourceTree = "<group>"; };
 		85165F7C205FC3640071D431 /* NSObjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectViewController.h; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 			children = (
 				85165F8E20638F330071D431 /* mainshViewController.h */,
 				85165F8F20638F330071D431 /* mainshViewController.m */,
+				8513E8C12074C7B0004BD362 /* NSArray+Extension.h */,
+				8513E8C22074C7B0004BD362 /* NSArray+Extension.m */,
 			);
 			path = mainsh;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */,
 				85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */,
 				44D3819C205D0B6900107174 /* subViewController.m in Sources */,
 				85165F81205FC6B30071D431 /* Person.m in Sources */,
@@ -898,6 +904,7 @@
 			baseConfigurationReference = 43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -918,6 +925,7 @@
 			baseConfigurationReference = 766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

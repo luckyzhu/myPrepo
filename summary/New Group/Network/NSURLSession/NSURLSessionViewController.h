@@ -12,6 +12,7 @@
 
     /*
      1>网络缓存:NSURLCache : http://blog.csdn.net/jason_chen13/article/details/51984823
+     2>NSURLSession : https://blog.csdn.net/codywangziham01/article/details/38066543
 
      */
 

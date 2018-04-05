@@ -7,9 +7,12 @@
 //
 
 #import "mainshViewController.h"
+#import "NSArray+Extension.h"
+#include <objc/runtime.h>
+
 
 @interface mainshViewController ()
-
+@property (nonatomic,weak) NSArray *array;
 @end
 
 @implementation mainshViewController
@@ -29,23 +32,33 @@
      NSLog(@"%@", string);
      [pool release];
      }
-
      */
+
+//    NSArray *array = @[@"1",@"1",@"1",@"1",@"1",@"2",@"3",@"4",@"5",@"5",@"5",@"6",];
+//    NSMutableArray *newArray = [NSMutableArray array];
+    //2.使用KVO 去重
+//    NSArray *array = @[@"mgen", @"tom", @"martin"];
+//    //选择所有字符串的length为新的数组
+//    NSLog(@"11--%@", [array valueForKeyPath:@"length"]);
+//    //选择最大长度
+//    NSLog(@"22--%@", [array valueForKeyPath:@"@max.length"]);
+
+    //遍历一个类的所有属性
+    unsigned int count = 0;
+    NSMutableArray *array = [NSMutableArray array];
+    objc_property_t *properties =  class_copyPropertyList([NSArray class], &count);
+    for (int i = 0; i < count; i ++) {
+        objc_property_t property = properties[i];
+        NSString *propertyName = [[NSString alloc]initWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+        [array addObject:propertyName];
+    }
+    NSLog(@"这个类的属性 ----%@",array);
+    free(properties);
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

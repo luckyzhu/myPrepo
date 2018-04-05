@@ -12,6 +12,7 @@
 #import "drawViewController.h"
 #import "responderChainViewController.h"
 #import "CoreAnimationViewController.h"
+#import "mainshViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,7 @@
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[CoreAnimationViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mainshViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
@@ -56,6 +57,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+- (UIBackgroundTaskIdentifier)beginBackgroundTaskWithName:(nullable NSString *)taskName expirationHandler:(void(^ __nullable)(void))handler{
+
+    NSLog(@"beginBackgroundTaskWithName---%@",taskName);
+    return 0;
 }
 
 
