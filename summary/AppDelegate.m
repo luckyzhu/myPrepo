@@ -13,7 +13,6 @@
 #import "drawViewController.h"
 #import "responderChainViewController.h"
 #import "CoreAnimationViewController.h"
-#import "mainshViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,7 +26,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[mianshiViewController alloc]init];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mainshViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mianshiViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

@@ -51,6 +51,16 @@
     free(properties);
 }
 
+- (void)traverseClassIvarList{
+    unsigned int count = 0;
+    Ivar *ivars =  class_copyIvarList([UIButton class], &count);
+    for (int i = 0; i < count; i ++ ) {
+        Ivar ivar = ivars[i];
+        NSString *ivarString = [[NSString alloc]initWithCString:ivar_getName(ivar) encoding:NSUTF8StringEncoding];
+        NSLog(@"该类的成员变量----%@",ivarString);
+    }
+    free(ivars);
+}
 
 
 

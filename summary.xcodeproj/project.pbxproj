@@ -11,7 +11,6 @@
 		4457D03E2073D62A00B30934 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = 4457D03D2073D62A00B30934 /* 111.png */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
 		44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FE206BD56C0058D457 /* mianshiViewController.m */; };
-		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
 		44D3819B205D0B5F00107174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502491FC32F0E00B10720 /* ViewController.m */; };
 		44D3819C205D0B6900107174 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		44F502441FC32F0E00B10720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502431FC32F0E00B10720 /* main.m */; };
@@ -27,7 +26,6 @@
 		85165F81205FC6B30071D431 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F80205FC6B30071D431 /* Person.m */; };
 		85165F84205FC6C30071D431 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F83205FC6C30071D431 /* Student.m */; };
 		85165F87205FC7C10071D431 /* subPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F86205FC7C10071D431 /* subPerson.m */; };
-		85165F9020638F330071D431 /* mainshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F8F20638F330071D431 /* mainshViewController.m */; };
 		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
 		85165F972064E91A0071D431 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F962064E91A0071D431 /* drawView.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
@@ -115,8 +113,6 @@
 		85165F83205FC6C30071D431 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		85165F85205FC7C10071D431 /* subPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subPerson.h; sourceTree = "<group>"; };
 		85165F86205FC7C10071D431 /* subPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subPerson.m; sourceTree = "<group>"; };
-		85165F8E20638F330071D431 /* mainshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainshViewController.h; sourceTree = "<group>"; };
-		85165F8F20638F330071D431 /* mainshViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainshViewController.m; sourceTree = "<group>"; };
 		85165F922064E9080071D431 /* drawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawViewController.h; sourceTree = "<group>"; };
 		85165F932064E9080071D431 /* drawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = drawViewController.m; sourceTree = "<group>"; };
 		85165F952064E91A0071D431 /* drawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawView.h; sourceTree = "<group>"; };
@@ -198,6 +194,15 @@
 			name = "工具";
 			sourceTree = "<group>";
 		};
+		44705EA82076663400610649 /* 自定义控件 */ = {
+			isa = PBXGroup;
+			children = (
+				4457D03A2073D35A00B30934 /* LXControl.h */,
+				4457D03B2073D35A00B30934 /* LXControl.m */,
+			);
+			path = "自定义控件";
+			sourceTree = "<group>";
+		};
 		4492F4A020504467007D915F /* 内存相关 */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,8 +237,8 @@
 			children = (
 				44C575FD206BD56C0058D457 /* mianshiViewController.h */,
 				44C575FE206BD56C0058D457 /* mianshiViewController.m */,
-				4457D03A2073D35A00B30934 /* LXControl.h */,
-				4457D03B2073D35A00B30934 /* LXControl.m */,
+				8513E8C12074C7B0004BD362 /* NSArray+Extension.h */,
+				8513E8C22074C7B0004BD362 /* NSArray+Extension.m */,
 			);
 			path = "面试题";
 			sourceTree = "<group>";
@@ -353,17 +358,6 @@
 				859E8C572010A52800FDF043 /* Tool.m */,
 			);
 			path = "mac常用软件";
-			sourceTree = "<group>";
-		};
-		85165F8D20638F260071D431 /* mainsh */ = {
-			isa = PBXGroup;
-			children = (
-				85165F8E20638F330071D431 /* mainshViewController.h */,
-				85165F8F20638F330071D431 /* mainshViewController.m */,
-				8513E8C12074C7B0004BD362 /* NSArray+Extension.h */,
-				8513E8C22074C7B0004BD362 /* NSArray+Extension.m */,
-			);
-			path = mainsh;
 			sourceTree = "<group>";
 		};
 		85165F912064E85F0071D431 /* Quartzs_2D */ = {
@@ -501,12 +495,12 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				44705EA82076663400610649 /* 自定义控件 */,
 				44C575FC206BD5530058D457 /* 面试题 */,
 				852B0DA62072289300B62367 /* CoreAnimation */,
 				852B0DA220720A0900B62367 /* ResponderChain */,
 				85165F98206A1C440071D431 /* commonLine */,
 				85165F912064E85F0071D431 /* Quartzs_2D */,
-				85165F8D20638F260071D431 /* mainsh */,
 				44C575F8205E6C5E0058D457 /* Linux */,
 				446261FB205CF7AE00242775 /* 工具 */,
 				4492F4F42055177B007D915F /* runtime */,
@@ -782,7 +776,6 @@
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
-				85165F9020638F330071D431 /* mainshViewController.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
