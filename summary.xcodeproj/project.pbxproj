@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		446261FE205CF7BD00242775 /* tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 446261FD205CF7BD00242775 /* tool.m */; };
-		4492F49F20504462007D915F /* memoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F49E20504462007D915F /* memoryViewController.m */; };
-		4492F4A3205183B0007D915F /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F4A2205183B0007D915F /* Student.m */; };
-		4492F4F720551797007D915F /* runtimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492F4F620551797007D915F /* runtimeViewController.m */; };
+		4457D03C2073D35A00B30934 /* LXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457D03B2073D35A00B30934 /* LXControl.m */; };
+		4457D03E2073D62A00B30934 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = 4457D03D2073D62A00B30934 /* 111.png */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
-
+		44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FE206BD56C0058D457 /* mianshiViewController.m */; };
 		44D3819B205D0B5F00107174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502491FC32F0E00B10720 /* ViewController.m */; };
 		44D3819C205D0B6900107174 /* subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F9FAA52019F44200183DD2 /* subViewController.m */; };
 		44F502441FC32F0E00B10720 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502431FC32F0E00B10720 /* main.m */; };
@@ -64,6 +62,9 @@
 /* Begin PBXFileReference section */
 		18A5851F6469173DD692E198 /* libPods-summary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-summary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.debug.xcconfig"; sourceTree = "<group>"; };
+		4457D03A2073D35A00B30934 /* LXControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXControl.h; sourceTree = "<group>"; };
+		4457D03B2073D35A00B30934 /* LXControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXControl.m; sourceTree = "<group>"; };
+		4457D03D2073D62A00B30934 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
 		446261FC205CF7BD00242775 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
 		446261FD205CF7BD00242775 /* tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool.m; sourceTree = "<group>"; };
 		4492F49D20504462007D915F /* memoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memoryViewController.h; sourceTree = "<group>"; };
@@ -74,7 +75,8 @@
 		4492F4F620551797007D915F /* runtimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = runtimeViewController.m; sourceTree = "<group>"; };
 		44C575F9205E6C790058D457 /* linuxObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linuxObj.h; sourceTree = "<group>"; };
 		44C575FA205E6C790058D457 /* linuxObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = linuxObj.m; sourceTree = "<group>"; };
-
+		44C575FD206BD56C0058D457 /* mianshiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mianshiViewController.h; sourceTree = "<group>"; };
+		44C575FE206BD56C0058D457 /* mianshiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mianshiViewController.m; sourceTree = "<group>"; };
 		44F5023F1FC32F0E00B10720 /* summary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = summary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F502431FC32F0E00B10720 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44F502451FC32F0E00B10720 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,7 +161,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
 		446261FB205CF7AE00242775 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +199,17 @@
 			path = Linux;
 			sourceTree = "<group>";
 		};
+		44C575FC206BD5530058D457 /* 面试题 */ = {
+			isa = PBXGroup;
+			children = (
+				44C575FD206BD56C0058D457 /* mianshiViewController.h */,
+				44C575FE206BD56C0058D457 /* mianshiViewController.m */,
+				4457D03A2073D35A00B30934 /* LXControl.h */,
+				4457D03B2073D35A00B30934 /* LXControl.m */,
+			);
+			path = "面试题";
+			sourceTree = "<group>";
+		};
 		44F502361FC32F0E00B10720 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +236,7 @@
 		44F502411FC32F0E00B10720 /* summary */ = {
 			isa = PBXGroup;
 			children = (
+				4457D03D2073D62A00B30934 /* 111.png */,
 				44F502451FC32F0E00B10720 /* AppDelegate.h */,
 				44F502461FC32F0E00B10720 /* AppDelegate.m */,
 				44F502481FC32F0E00B10720 /* ViewController.h */,
@@ -399,6 +412,7 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				44C575FC206BD5530058D457 /* 面试题 */,
 				44C575F8205E6C5E0058D457 /* Linux */,
 				446261FB205CF7AE00242775 /* 工具 */,
 				4492F4F42055177B007D915F /* runtime */,
@@ -565,6 +579,7 @@
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */,
 				44F5024F1FC32F0E00B10720 /* Assets.xcassets in Resources */,
+				4457D03E2073D62A00B30934 /* 111.png in Resources */,
 				85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */,
 				85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */,
 			);
@@ -644,6 +659,7 @@
 			files = (
 				85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */,
 				44D3819C205D0B6900107174 /* subViewController.m in Sources */,
+				44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */,
 				85165F81205FC6B30071D431 /* Person.m in Sources */,
 				44D3819B205D0B5F00107174 /* ViewController.m in Sources */,
 				44C575FB205E6C790058D457 /* linuxObj.m in Sources */,
@@ -652,6 +668,7 @@
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				85165F84205FC6C30071D431 /* Student.m in Sources */,
 				8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */,
+				4457D03C2073D35A00B30934 /* LXControl.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
