@@ -42,11 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-<<<<<<< HEAD
-
     return;
-=======
->>>>>>> b3a2837d92a72bd55632bb4307768026dc0551cc
     /*
      GET
      https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
