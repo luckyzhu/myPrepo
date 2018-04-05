@@ -1,2 +1,6 @@
 .DS_Store
+<<<<<<< HEAD
 .UserInterfaceState.xcuserstate
+=======
+xcuserdata/
+>>>>>>> b3a2837d92a72bd55632bb4307768026dc0551cc

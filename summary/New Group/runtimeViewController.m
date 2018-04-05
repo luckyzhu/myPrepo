@@ -39,7 +39,17 @@
      */
 }
 
-
+- (void)traverseClassProperty{
+    //遍历一个类的所有属性
+    unsigned int count = 0;
+    objc_property_t *properties =  class_copyPropertyList([UIButton class], &count);
+    for (int i = 0; i < count; i ++) {
+        objc_property_t property = properties[i];
+        NSString *propertyName = [[NSString alloc]initWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
+        NSLog(@"这个类的属性 ----%@",propertyName);
+    }
+    free(properties);
+}
 
 
 

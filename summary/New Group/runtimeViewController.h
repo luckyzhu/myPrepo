@@ -10,4 +10,9 @@
 
 @interface runtimeViewController : UIViewController
 
+//遍历一个类的所有属性
+- (void)traverseClassProperty;
+
+
+
 @end

@@ -9,7 +9,14 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSInvocationViewController.h"
+<<<<<<< HEAD
 #import "mianshiViewController.h"
+=======
+#import "drawViewController.h"
+#import "responderChainViewController.h"
+#import "CoreAnimationViewController.h"
+#import "mainshViewController.h"
+>>>>>>> b3a2837d92a72bd55632bb4307768026dc0551cc
 
 @interface AppDelegate ()
 
@@ -22,7 +29,11 @@
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+<<<<<<< HEAD
     self.window.rootViewController = [[mianshiViewController alloc]init];
+=======
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mainshViewController alloc]init]];
+>>>>>>> b3a2837d92a72bd55632bb4307768026dc0551cc
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
@@ -54,6 +65,13 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+- (UIBackgroundTaskIdentifier)beginBackgroundTaskWithName:(nullable NSString *)taskName expirationHandler:(void(^ __nullable)(void))handler{
+
+    NSLog(@"beginBackgroundTaskWithName---%@",taskName);
+    return 0;
 }
 
 
