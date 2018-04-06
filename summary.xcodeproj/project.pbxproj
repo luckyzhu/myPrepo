@@ -376,13 +376,13 @@
 			path = Quartzs_2D;
 			sourceTree = "<group>";
 		};
-		85165F98206A1C440071D431 /* commonLine */ = {
+		85165F98206A1C440071D431 /* git */ = {
 			isa = PBXGroup;
 			children = (
 				85165F99206A1C780071D431 /* gitViewController.h */,
 				85165F9A206A1C780071D431 /* gitViewController.m */,
 			);
-			path = commonLine;
+			path = git;
 			sourceTree = "<group>";
 		};
 		851728E820591EB7009C17BF /* Network */ = {
@@ -504,7 +504,7 @@
 				44C575FC206BD5530058D457 /* mianshi */,
 				852B0DA62072289300B62367 /* CoreAnimation */,
 				852B0DA220720A0900B62367 /* ResponderChain */,
-				85165F98206A1C440071D431 /* commonLine */,
+				85165F98206A1C440071D431 /* git */,
 				85165F912064E85F0071D431 /* Quartzs_2D */,
 				44C575F8205E6C5E0058D457 /* Linux */,
 				446261FB205CF7AE00242775 /* 工具 */,
