@@ -10,7 +10,8 @@
 
 @interface NSArray (Extension)
 
-//去重数组
+//数组去重的4种方法
+//4种方法中只有containObject去重 会按顺序输出。其他三种都是无序的
 + (NSArray *)removeTheSameElementInArray:(NSArray *)originArray;
 
 @end
