@@ -10,17 +10,15 @@
 #import "LXControl.h"
 #import <Masonry.h>
 #import <objc/runtime.h>
-#import "test.h"
+#import "Person.h"
 #import "NSArray+Extension.h"
-
-
 
 @interface mianshiViewController ()
 @property(nonatomic,strong)  NSArray *resuletArray;
 @property(nonatomic,strong)  NSArray *array1;
 @property(nonatomic,strong)  NSArray *array2;
 @property(nonatomic,strong)  NSArray *array1AndArray2;
-
+@property(nonatomic,copy)    NSString *lastName;
 
 @end
 
@@ -28,53 +26,59 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    test *model1 = [[test alloc]init];
-    model1.name = @"小明";
-    model1.height = 12.01;
-    model1.age = [NSNumber numberWithInteger:20];
 
-    
-    test *model2 = [[test alloc]init];
-    model2.name = @"小王";
-    model2.height = 77.68;
-    model2.age = [NSNumber numberWithInteger:50];
+    Person *testModel = [Person new];
+    [testModel setValue:@(10) forKey:@"age"];
 
-    test *model3 = [[test alloc]init];
-    model3.name = @"小三";
-    model3.height = 189.99;
-    model3.age = [NSNumber numberWithInteger:13];
-    
-    
-    test *model4 = [[test alloc]init];
-    model4.name = @"小四";
-    model4.height = 77.68;
-    model4.age = [NSNumber numberWithInteger:20];
-    
-    
-    test *model5 = [[test alloc]init];
-    model5.name = @"小五";
-    model5.height = 189.99;
-    model5.age = [NSNumber numberWithInteger:50];
-    
-    test *model6 = [[test alloc]init];
-    model6.name = @"小六";
-    model6.height = 8.19;
-    model6.age = [NSNumber numberWithInteger:13];
+//    testModel.name = @"小明name";
+//    testModel->_name = @"小明_name";
+//    testModel->_isName = @"小明_isName";
+//    testModel->isName = @"小明isName";
 
-    self.array1 = @[model1,model2,model3];
-    self.array2 = @[model4,model5,model6];
-    self.array1AndArray2 = @[self.array1,self.array2];
-    self.resuletArray = [self.array1AndArray2 valueForKeyPath:@"height"];
-    NSLog(@"1111----%@",self.resuletArray);
-    
-    //使用字典去重
-    self.array1 = @[@"1",@"1",@"2",@"2",@"3",@"4",@"1",];
-    NSArray *resuArray = [NSArray removeTheSameElementInArray:self.array1];
-    NSLog(@"去重后的数组---%@",resuArray);
-    
-    
-    
+    NSLog(@"111---%@",[[testModel valueForKey:@"age"] class]);
+
 }
+
+
+/**
+ KVC:Key-value coding.键值编码.在iOS中允许开发者通过key名（字符串）访问对象的属性（读写某个对象的属性）
+ 1> setValue:forKey是怎么通过字符串key找到对象内部的key？
+     以level为例
+   1.1 如果类声明了该属性，首先调用setLevel:(set方法)
+   1.2 找不到set方法.找_level成员变量
+   1.3 找不到_level成员变量.找_isLevel成员变量
+   1.4 找不到_isLevel成员变量.找isLevel成员变量
+   1.5 找不到isLevel成员变量.调用setValue:forUndefinedKey: 找不到这个key
+ 
+ 2.使用KVC应该注意什么？
+   2.1 调用setValue:forKey 和valueForKey 方法时。如果传的key不存在，如果不重写方法，会崩溃
+   2.2 对非对象属性传递一个nil的值。比如对int类型的age传递nil，如果不重写setNilValueForKey，会崩溃。
+ 
+ */
+- (void)howKVCLookForTheKey{
+    Person *testModel = [Person new];
+    [testModel setValue:@"哈哈" forKey:@"level"];
+    //    NSLog(@"level的值----%@",testModel.level);
+    NSLog(@"_level的值----%@",testModel->_level);
+    NSLog(@"isLevel的值----%@",testModel->isLevel);
+    NSLog(@"_isLevel的值----%@",testModel->_isLevel);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

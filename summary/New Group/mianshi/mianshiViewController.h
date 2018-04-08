@@ -10,4 +10,7 @@
 
 @interface mianshiViewController : UIViewController
 
+//1.KVC：setValue:forKey是怎么通过字符串key找到对象内部的key？ http://ios.jobbole.com/84954/
+//2.ValueforKey:
+
 @end
