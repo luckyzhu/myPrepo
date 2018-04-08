@@ -281,7 +281,7 @@
 				85F9FAA52019F44200183DD2 /* subViewController.m */,
 				85165F82205FC6C30071D431 /* Student.h */,
 				85165F83205FC6C30071D431 /* Student.m */,
-				85CD07CF2047EF91005E0071 /* New Group */,
+				85CD07CF2047EF91005E0071 /* Summary */,
 				44F502421FC32F0E00B10720 /* Supporting Files */,
 			);
 			path = summary;
@@ -492,7 +492,7 @@
 			path = "引导页";
 			sourceTree = "<group>";
 		};
-		85CD07CF2047EF91005E0071 /* New Group */ = {
+		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
 				44705EA82076663400610649 /* 自定义控件 */,
@@ -519,7 +519,7 @@
 				85226D85201477AF009F07EA /* NSInvocation */,
 				85226D842014779C009F07EA /* UILabel */,
 			);
-			path = "New Group";
+			path = Summary;
 			sourceTree = "<group>";
 		};
 		85CD07D02047FAB4005E0071 /* GCD */ = {
