@@ -28,12 +28,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+    
+}
+
+- (void)testModel{
     test *model1 = [[test alloc]init];
     model1.name = @"小明";
     model1.height = 12.01;
     model1.age = [NSNumber numberWithInteger:20];
 
-    
+
     test *model2 = [[test alloc]init];
     model2.name = @"小王";
     model2.height = 77.68;
@@ -43,19 +49,19 @@
     model3.name = @"小三";
     model3.height = 189.99;
     model3.age = [NSNumber numberWithInteger:13];
-    
-    
+
+
     test *model4 = [[test alloc]init];
     model4.name = @"小四";
     model4.height = 77.68;
     model4.age = [NSNumber numberWithInteger:20];
-    
-    
+
+
     test *model5 = [[test alloc]init];
     model5.name = @"小五";
     model5.height = 189.99;
     model5.age = [NSNumber numberWithInteger:50];
-    
+
     test *model6 = [[test alloc]init];
     model6.name = @"小六";
     model6.height = 8.19;
@@ -66,15 +72,10 @@
     self.array1AndArray2 = @[self.array1,self.array2];
     self.resuletArray = [self.array1AndArray2 valueForKeyPath:@"height"];
     NSLog(@"1111----%@",self.resuletArray);
-    
+
     //使用字典去重
     self.array1 = @[@"1",@"1",@"2",@"2",@"3",@"4",@"1",];
     NSArray *resuArray = [NSArray removeTheSameElementInArray:self.array1];
     NSLog(@"去重后的数组---%@",resuArray);
-    
-    
-    
 }
-
-
 @end

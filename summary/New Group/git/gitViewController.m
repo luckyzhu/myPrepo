@@ -20,7 +20,19 @@
 
     /*
      git 命令行相关:
-     新建一个分支 关联到远程分支
+     1.创建分支并拉取远程分支。然后切换到当前创建的分支
+     git checkout -b xxx origin/xxx
+
+     2.The following untracked working tree files would be overwritten by merge:
+     .DS_Store
+
+     git clean  -d  -fx "xxx"
+     x  -----删除忽略文件已经对git来说不识别的文件
+     d  -----删除未被添加到git的路径中的文件
+     f  -----强制运行
+
+
+     3.新建一个分支 关联到远程分支
      git branch xxx  新建一个分支
      git push -u origin xxx 关联到这个分支
      */

@@ -30,6 +30,11 @@
 		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
 		85165F972064E91A0071D431 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F962064E91A0071D431 /* drawView.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
+		851C482F207EF42C004E0B99 /* moreToBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C482E207EF42C004E0B99 /* moreToBViewController.m */; };
+		851C483320805D8C004E0B99 /* UIResponderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C483220805D8C004E0B99 /* UIResponderViewController.m */; };
+		851C483620809749004E0B99 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C483520809749004E0B99 /* LXView.m */; };
+		851C4839208098DD004E0B99 /* LXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C4838208098DD004E0B99 /* LXButton.m */; };
+		851C483C20809923004E0B99 /* LXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C483B20809923004E0B99 /* LXLabel.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
 		8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */; };
@@ -125,6 +130,16 @@
 		851728E920592692009C17BF /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		851728EA20592949009C17BF /* singletonClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass2.h; sourceTree = "<group>"; };
 		851728EB20592949009C17BF /* singletonClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass2.m; sourceTree = "<group>"; };
+		851C482D207EF42C004E0B99 /* moreToBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = moreToBViewController.h; sourceTree = "<group>"; };
+		851C482E207EF42C004E0B99 /* moreToBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moreToBViewController.m; sourceTree = "<group>"; };
+		851C483120805D8C004E0B99 /* UIResponderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIResponderViewController.h; sourceTree = "<group>"; };
+		851C483220805D8C004E0B99 /* UIResponderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIResponderViewController.m; sourceTree = "<group>"; };
+		851C483420809749004E0B99 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
+		851C483520809749004E0B99 /* LXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXView.m; sourceTree = "<group>"; };
+		851C4837208098DD004E0B99 /* LXButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXButton.h; sourceTree = "<group>"; };
+		851C4838208098DD004E0B99 /* LXButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXButton.m; sourceTree = "<group>"; };
+		851C483A20809923004E0B99 /* LXLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXLabel.h; sourceTree = "<group>"; };
+		851C483B20809923004E0B99 /* LXLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXLabel.m; sourceTree = "<group>"; };
 		8521F7B920286C4A0073F119 /* remoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remoteViewController.h; sourceTree = "<group>"; };
 		8521F7BA20286C4A0073F119 /* remoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteViewController.m; sourceTree = "<group>"; };
 		8521F7C2203047EB0073F119 /* appViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appViewController.h; sourceTree = "<group>"; };
@@ -393,6 +408,30 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		851C482C207EF40F004E0B99 /* moreToBs */ = {
+			isa = PBXGroup;
+			children = (
+				851C482D207EF42C004E0B99 /* moreToBViewController.h */,
+				851C482E207EF42C004E0B99 /* moreToBViewController.m */,
+			);
+			path = moreToBs;
+			sourceTree = "<group>";
+		};
+		851C483020805D6F004E0B99 /* UIResponder */ = {
+			isa = PBXGroup;
+			children = (
+				851C483120805D8C004E0B99 /* UIResponderViewController.h */,
+				851C483220805D8C004E0B99 /* UIResponderViewController.m */,
+				851C483420809749004E0B99 /* LXView.h */,
+				851C483520809749004E0B99 /* LXView.m */,
+				851C4837208098DD004E0B99 /* LXButton.h */,
+				851C4838208098DD004E0B99 /* LXButton.m */,
+				851C483A20809923004E0B99 /* LXLabel.h */,
+				851C483B20809923004E0B99 /* LXLabel.m */,
+			);
+			path = UIResponder;
+			sourceTree = "<group>";
+		};
 		8521F7B820286C300073F119 /* 远程推送 */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,6 +539,8 @@
 		85CD07CF2047EF91005E0071 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				851C483020805D6F004E0B99 /* UIResponder */,
+				851C482C207EF40F004E0B99 /* moreToBs */,
 				44705EA82076663400610649 /* 自定义控件 */,
 				44C575FC206BD5530058D457 /* mianshi */,
 				852B0DA62072289300B62367 /* CoreAnimation */,
@@ -752,15 +793,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851C483C20809923004E0B99 /* LXLabel.m in Sources */,
 				8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */,
 				85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */,
+				851C483320805D8C004E0B99 /* UIResponderViewController.m in Sources */,
 				44D3819C205D0B6900107174 /* subViewController.m in Sources */,
 				44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */,
 				85165F81205FC6B30071D431 /* Person.m in Sources */,
+				851C483620809749004E0B99 /* LXView.m in Sources */,
 				44D3819B205D0B5F00107174 /* ViewController.m in Sources */,
 				44C575FB205E6C790058D457 /* linuxObj.m in Sources */,
 				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
+				851C4839208098DD004E0B99 /* LXButton.m in Sources */,
 				85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */,
+				851C482F207EF42C004E0B99 /* moreToBViewController.m in Sources */,
 				852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				85165F84205FC6C30071D431 /* Student.m in Sources */,
