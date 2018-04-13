@@ -69,6 +69,11 @@
     }
 
 
+    //如果要自定义图片，使用kVC替换图片
+    /*
+     [self.pageControl setValue:[UIImage imageNamed:@"point-cycle"] forKeyPath:@"pageImage"];
+     [self.pageControl setValue:[UIImage imageNamed:@"point"] forKeyPath:@"currentPageImage"];
+     */
     self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 700, SCREEN_WIDTH, 20)];
     self.pageControl.enabled = NO;
     self.pageControl.numberOfPages = images.count;

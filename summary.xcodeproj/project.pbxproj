@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4457D03C2073D35A00B30934 /* LXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457D03B2073D35A00B30934 /* LXControl.m */; };
 		4457D03E2073D62A00B30934 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = 4457D03D2073D62A00B30934 /* 111.png */; };
-		44705EAB207672F900610649 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 44705EAA207672F900610649 /* test.m */; };
+		44705EAE2078832F00610649 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 44705EAD2078832F00610649 /* Person.m */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
 		44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FE206BD56C0058D457 /* mianshiViewController.m */; };
 		44D3819B205D0B5F00107174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502491FC32F0E00B10720 /* ViewController.m */; };
@@ -24,7 +24,6 @@
 		85165F78205FA13A0071D431 /* DSYM.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F77205FA13A0071D431 /* DSYM.m */; };
 		85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
 		85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F7D205FC3640071D431 /* NSObjectViewController.m */; };
-		85165F81205FC6B30071D431 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F80205FC6B30071D431 /* Person.m */; };
 		85165F84205FC6C30071D431 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F83205FC6C30071D431 /* Student.m */; };
 		85165F87205FC7C10071D431 /* subPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F86205FC7C10071D431 /* subPerson.m */; };
 		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
@@ -81,8 +80,8 @@
 		4457D03D2073D62A00B30934 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
 		446261FC205CF7BD00242775 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
 		446261FD205CF7BD00242775 /* tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool.m; sourceTree = "<group>"; };
-		44705EA9207672F800610649 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		44705EAA207672F900610649 /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		44705EAC2078832F00610649 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		44705EAD2078832F00610649 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		4492F49D20504462007D915F /* memoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memoryViewController.h; sourceTree = "<group>"; };
 		4492F49E20504462007D915F /* memoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = memoryViewController.m; sourceTree = "<group>"; };
 		4492F4A1205183B0007D915F /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
@@ -115,8 +114,6 @@
 		85165F77205FA13A0071D431 /* DSYM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSYM.m; sourceTree = "<group>"; };
 		85165F7C205FC3640071D431 /* NSObjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectViewController.h; sourceTree = "<group>"; };
 		85165F7D205FC3640071D431 /* NSObjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectViewController.m; sourceTree = "<group>"; };
-		85165F7F205FC6B30071D431 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		85165F80205FC6B30071D431 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		85165F82205FC6C30071D431 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		85165F83205FC6C30071D431 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		85165F85205FC7C10071D431 /* subPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subPerson.h; sourceTree = "<group>"; };
@@ -257,8 +254,8 @@
 				44C575FE206BD56C0058D457 /* mianshiViewController.m */,
 				8513E8C12074C7B0004BD362 /* NSArray+Extension.h */,
 				8513E8C22074C7B0004BD362 /* NSArray+Extension.m */,
-				44705EA9207672F800610649 /* test.h */,
-				44705EAA207672F900610649 /* test.m */,
+				44705EAC2078832F00610649 /* Person.h */,
+				44705EAD2078832F00610649 /* Person.m */,
 			);
 			path = mianshi;
 			sourceTree = "<group>";
@@ -297,11 +294,9 @@
 				44F502491FC32F0E00B10720 /* ViewController.m */,
 				85F9FAA42019F44200183DD2 /* subViewController.h */,
 				85F9FAA52019F44200183DD2 /* subViewController.m */,
-				85165F7F205FC6B30071D431 /* Person.h */,
-				85165F80205FC6B30071D431 /* Person.m */,
 				85165F82205FC6C30071D431 /* Student.h */,
 				85165F83205FC6C30071D431 /* Student.m */,
-				85CD07CF2047EF91005E0071 /* New Group */,
+				85CD07CF2047EF91005E0071 /* Summary */,
 				44F502421FC32F0E00B10720 /* Supporting Files */,
 			);
 			path = summary;
@@ -536,7 +531,7 @@
 			path = "引导页";
 			sourceTree = "<group>";
 		};
-		85CD07CF2047EF91005E0071 /* New Group */ = {
+		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
 				851C483020805D6F004E0B99 /* UIResponder */,
@@ -565,7 +560,7 @@
 				85226D85201477AF009F07EA /* NSInvocation */,
 				85226D842014779C009F07EA /* UILabel */,
 			);
-			path = "New Group";
+			path = Summary;
 			sourceTree = "<group>";
 		};
 		85CD07D02047FAB4005E0071 /* GCD */ = {
@@ -817,13 +812,13 @@
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
-				44705EAB207672F900610649 /* test.m in Sources */,
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				85165F972064E91A0071D431 /* drawView.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
 				85165F78205FA13A0071D431 /* DSYM.m in Sources */,
+				44705EAE2078832F00610649 /* Person.m in Sources */,
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
