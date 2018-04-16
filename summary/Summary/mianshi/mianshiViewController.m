@@ -12,6 +12,8 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "NSArray+Extension.h"
+#import "LXButton.h"
+
 
 @interface mianshiViewController ()
 {
@@ -33,10 +35,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
+    LXButton *button = [LXButton new];
+    button.frame =CGRectMake(0, 100, 600, 100);
+    button.backgroundColor = [UIColor blueColor];
+//    [button setImage:[UIImage imageNamed:@"111.png"] forState:UIControlStateNormal];
+    [button setTitle:@"xxxxx" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:button];
     
-    self.lastName = @"哈哈哈";
-
-
 }
 
 

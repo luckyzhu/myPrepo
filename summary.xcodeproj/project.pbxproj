@@ -29,6 +29,7 @@
 		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
 		85165F972064E91A0071D431 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F962064E91A0071D431 /* drawView.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
+		851C484220820309004E0B99 /* LXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C484120820309004E0B99 /* LXButton.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
 		8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */; };
@@ -122,6 +123,8 @@
 		851728E920592692009C17BF /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		851728EA20592949009C17BF /* singletonClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass2.h; sourceTree = "<group>"; };
 		851728EB20592949009C17BF /* singletonClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass2.m; sourceTree = "<group>"; };
+		851C484020820309004E0B99 /* LXButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXButton.h; sourceTree = "<group>"; };
+		851C484120820309004E0B99 /* LXButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXButton.m; sourceTree = "<group>"; };
 		8521F7B920286C4A0073F119 /* remoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remoteViewController.h; sourceTree = "<group>"; };
 		8521F7BA20286C4A0073F119 /* remoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteViewController.m; sourceTree = "<group>"; };
 		8521F7C2203047EB0073F119 /* appViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appViewController.h; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 			children = (
 				44C575FD206BD56C0058D457 /* mianshiViewController.h */,
 				44C575FE206BD56C0058D457 /* mianshiViewController.m */,
+				851C484020820309004E0B99 /* LXButton.h */,
+				851C484120820309004E0B99 /* LXButton.m */,
 				8513E8C12074C7B0004BD362 /* NSArray+Extension.h */,
 				8513E8C22074C7B0004BD362 /* NSArray+Extension.m */,
 				44705EAC2078832F00610649 /* Person.h */,
@@ -776,6 +781,7 @@
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
+				851C484220820309004E0B99 /* LXButton.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
