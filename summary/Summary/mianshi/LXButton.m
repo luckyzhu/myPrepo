@@ -10,16 +10,38 @@
 
 @implementation LXButton
 
+-(instancetype)init
+{
+    if (self = [super init]) {
+        NSLog(@"LXButton----init");
+    }
+
+    return self;
+}
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        NSLog(@"LXButton----initWithFrame");
+
+    }
+    return self;
+}
+
 -(void)layoutSubviews
 {
     [super layoutSubviews];
 
-     CGRect labelFrame = self.titleLabel.frame;
-    labelFrame.origin.y = 100;
-    self.titleLabel.frame = labelFrame;
+    NSLog(@"LXButton-----layoutSubviews");
+
+//     CGRect labelFrame = self.titleLabel.frame;
+//    labelFrame.origin.y = 100;
+//    self.titleLabel.frame = labelFrame;
 //
 //    [super layoutSubviews];
 
 }
+
+
 
 @end

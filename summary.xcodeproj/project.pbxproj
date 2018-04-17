@@ -38,9 +38,12 @@
 		852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA420720A5200B62367 /* responderChainViewController.m */; };
 		852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA8207228B100B62367 /* CoreAnimationViewController.m */; };
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
+		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
+		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C56206CE0EC00CE865D /* details_attention.png */; };
 		85BD1C59206CE23600CE865D /* 22.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C58206CE23600CE865D /* 22.jpeg */; };
+		85C2CF5220848EDE0088AC95 /* makeFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C2CF5120848EDE0088AC95 /* makeFrameViewController.m */; };
 		85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07C320454A28005E0071 /* LXGuideViewController.m */; };
 		85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C52045670E005E0071 /* yindaoye-02.png */; };
 		85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C720456716005E0071 /* yindaoye-01.jpg */; };
@@ -141,12 +144,18 @@
 		852B0DA8207228B100B62367 /* CoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationViewController.m; sourceTree = "<group>"; };
 		852B0DAA2072290000B62367 /* testCoreAnimantionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCoreAnimantionViewController.h; sourceTree = "<group>"; };
 		852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCoreAnimantionViewController.m; sourceTree = "<group>"; };
+		8569A0632084FD6500652D59 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
+		8569A0642084FD6500652D59 /* LXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXView.m; sourceTree = "<group>"; };
+		8569A066208506B700652D59 /* LXScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXScrollView.h; sourceTree = "<group>"; };
+		8569A067208506B700652D59 /* LXScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXScrollView.m; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		859E8C572010A52800FDF043 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		85BD1C56206CE0EC00CE865D /* details_attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = details_attention.png; sourceTree = "<group>"; };
 		85BD1C58206CE23600CE865D /* 22.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpeg; sourceTree = "<group>"; };
+		85C2CF5020848EDE0088AC95 /* makeFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = makeFrameViewController.h; sourceTree = "<group>"; };
+		85C2CF5120848EDE0088AC95 /* makeFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = makeFrameViewController.m; sourceTree = "<group>"; };
 		85CD07C220454A28005E0071 /* LXGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXGuideViewController.h; sourceTree = "<group>"; };
 		85CD07C320454A28005E0071 /* LXGuideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXGuideViewController.m; sourceTree = "<group>"; };
 		85CD07C52045670E005E0071 /* yindaoye-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yindaoye-02.png"; sourceTree = "<group>"; };
@@ -197,13 +206,13 @@
 			name = "工具";
 			sourceTree = "<group>";
 		};
-		44705EA82076663400610649 /* 自定义控件 */ = {
+		44705EA82076663400610649 /* customControl */ = {
 			isa = PBXGroup;
 			children = (
 				4457D03A2073D35A00B30934 /* LXControl.h */,
 				4457D03B2073D35A00B30934 /* LXControl.m */,
 			);
-			path = "自定义控件";
+			path = customControl;
 			sourceTree = "<group>";
 		};
 		4492F4A020504467007D915F /* 内存相关 */ = {
@@ -240,8 +249,12 @@
 			children = (
 				44C575FD206BD56C0058D457 /* mianshiViewController.h */,
 				44C575FE206BD56C0058D457 /* mianshiViewController.m */,
+				8569A066208506B700652D59 /* LXScrollView.h */,
+				8569A067208506B700652D59 /* LXScrollView.m */,
 				851C484020820309004E0B99 /* LXButton.h */,
 				851C484120820309004E0B99 /* LXButton.m */,
+				8569A0632084FD6500652D59 /* LXView.h */,
+				8569A0642084FD6500652D59 /* LXView.m */,
 				8513E8C12074C7B0004BD362 /* NSArray+Extension.h */,
 				8513E8C22074C7B0004BD362 /* NSArray+Extension.m */,
 				44705EAC2078832F00610649 /* Person.h */,
@@ -485,6 +498,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		85C2CF4F20848E480088AC95 /* MakeFrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				85C2CF5020848EDE0088AC95 /* makeFrameViewController.h */,
+				85C2CF5120848EDE0088AC95 /* makeFrameViewController.m */,
+			);
+			path = MakeFrameWork;
+			sourceTree = "<group>";
+		};
 		85CD07C120454A05005E0071 /* 引导页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,7 +522,8 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				44705EA82076663400610649 /* 自定义控件 */,
+				85C2CF4F20848E480088AC95 /* MakeFrameWork */,
+				44705EA82076663400610649 /* customControl */,
 				44C575FC206BD5530058D457 /* mianshi */,
 				852B0DA62072289300B62367 /* CoreAnimation */,
 				852B0DA220720A0900B62367 /* ResponderChain */,
@@ -767,6 +790,7 @@
 				4457D03C2073D35A00B30934 /* LXControl.m in Sources */,
 				852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
+				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
@@ -780,9 +804,11 @@
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
+				85C2CF5220848EDE0088AC95 /* makeFrameViewController.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
 				851C484220820309004E0B99 /* LXButton.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
+				8569A0652084FD6500652D59 /* LXView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

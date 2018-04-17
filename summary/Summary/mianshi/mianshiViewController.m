@@ -13,7 +13,8 @@
 #import "Person.h"
 #import "NSArray+Extension.h"
 #import "LXButton.h"
-
+#import "LXView.h"
+#import "LXScrollView.h"
 
 @interface mianshiViewController ()
 {
@@ -25,7 +26,7 @@
 //@property(nonatomic,strong)  NSArray *array2;
 //@property(nonatomic,strong)  NSArray *array1AndArray2;
 @property(nonatomic,copy)    NSString *lastName;
-
+@property(nonatomic,strong)   LXView *blueView;
 @end
 
 @implementation mianshiViewController
@@ -36,17 +37,65 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+//    LXButton *button = [[LXButton alloc]initWithFrame:CGRectMake(0, 100, 600, 100)];
+////    button.frame =CGRectMake(0, 100, 600, 100);
+//    button.backgroundColor = [UIColor blueColor];
+////    [button setImage:[UIImage imageNamed:@"111.png"] forState:UIControlStateNormal];
+//    [button setTitle:@"xxxxx" forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
 
-    LXButton *button = [LXButton new];
-    button.frame =CGRectMake(0, 100, 600, 100);
-    button.backgroundColor = [UIColor blueColor];
-//    [button setImage:[UIImage imageNamed:@"111.png"] forState:UIControlStateNormal];
-    [button setTitle:@"xxxxx" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [self.view addSubview:button];
-    
+    LXScrollView *scrollView = [[LXScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1000);
+    [self.view addSubview:scrollView];
+
+    LXView *view = [[LXView alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick)];
+    [view addGestureRecognizer:tap];
+//    view.frame = CGRectMake(100, 100, 100, 100);
+    view.backgroundColor = [UIColor blueColor];
+    [scrollView addSubview:view];
+    self.blueView = view;
+
+
+    UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(0, 100, 100, 100)];
+    redView.backgroundColor = [UIColor redColor];
+    [scrollView addSubview:redView];
+
 }
 
+- (void)viewClick{
+
+    NSLog(@"viewClick");
+
+//    self.blueView.frame = CGRectMake(50, 100, 100, 100); //改变x值，不触发
+//    self.blueView.frame = CGRectMake(-10, 200, 100, 100); //改变y值.不与导航栏想交叉，不触发。交叉会触发。
+//    self.blueView.frame = CGRectMake(100, 100, 50, 100); //会触发
+//    self.blueView.frame = CGRectMake(100, 100, 100, 50);//会触发
+
+      self.blueView.frame = CGRectMake(100, 400, 50, 100);
+
+}
+
+
+/*
+ 知识点:[alloc init] 方法的调用顺序
+ 先调用initWithFrame
+ 再调用init
+
+ 3.layoutSubviews 什么调用
+   3.0> init方法不会触发layoutSubviews
+   3.1> addSubview 会触发
+   3.2> frame发生改变的时候。可能会触发。
+        改变x，不会触发。
+        改变y，不一定触发。不与导航栏想交叉，不触发。交叉会触发
+        改变宽和高任何一个。会触发
+   3.3> 滚动一个UIScrollView会触发layoutSubviews
+   3.4>改变一个UIView大小的时候也会触发父UIView上的layoutSubviews事件
+ 
+
+ */
 
 
 /*
