@@ -12,7 +12,6 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "NSArray+Extension.h"
-#import "LXButton.h"
 #import "LXView.h"
 #import "LXScrollView.h"
 
@@ -37,46 +36,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    LXButton *button = [[LXButton alloc]initWithFrame:CGRectMake(0, 100, 600, 100)];
-////    button.frame =CGRectMake(0, 100, 600, 100);
-//    button.backgroundColor = [UIColor blueColor];
-////    [button setImage:[UIImage imageNamed:@"111.png"] forState:UIControlStateNormal];
-//    [button setTitle:@"xxxxx" forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-//    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:button];
-
-    LXScrollView *scrollView = [[LXScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1000);
-    [self.view addSubview:scrollView];
-
-    LXView *view = [[LXView alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick)];
-    [view addGestureRecognizer:tap];
-//    view.frame = CGRectMake(100, 100, 100, 100);
-    view.backgroundColor = [UIColor blueColor];
-    [scrollView addSubview:view];
-    self.blueView = view;
 
 
-    UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(0, 100, 100, 100)];
-    redView.backgroundColor = [UIColor redColor];
-    [scrollView addSubview:redView];
 
 }
 
-- (void)viewClick{
-
-    NSLog(@"viewClick");
-
-//    self.blueView.frame = CGRectMake(50, 100, 100, 100); //改变x值，不触发
-//    self.blueView.frame = CGRectMake(-10, 200, 100, 100); //改变y值.不与导航栏想交叉，不触发。交叉会触发。
-//    self.blueView.frame = CGRectMake(100, 100, 50, 100); //会触发
-//    self.blueView.frame = CGRectMake(100, 100, 100, 50);//会触发
-
-      self.blueView.frame = CGRectMake(100, 400, 50, 100);
-
-}
 
 
 /*
@@ -96,6 +60,37 @@
  
 
  */
+
+- (void)testLayoutSubViews{
+
+
+
+    LXScrollView *scrollView = [[LXScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1000);
+    [self.view addSubview:scrollView];
+
+    LXView *view = [[LXView alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick)];
+    [view addGestureRecognizer:tap];
+    //    view.frame = CGRectMake(100, 100, 100, 100);
+    view.backgroundColor = [UIColor blueColor];
+    [scrollView addSubview:view];
+    self.blueView = view;
+
+
+    UIView *redView = [[UIView alloc]initWithFrame:CGRectMake(0, 100, 100, 100)];
+    redView.backgroundColor = [UIColor redColor];
+    [scrollView addSubview:redView];
+
+
+    //    self.blueView.frame = CGRectMake(50, 100, 100, 100); //改变x值，不触发
+    //    self.blueView.frame = CGRectMake(-10, 200, 100, 100); //改变y值.不与导航栏想交叉，不触发。交叉会触发。
+    //    self.blueView.frame = CGRectMake(100, 100, 50, 100); //会触发
+    //    self.blueView.frame = CGRectMake(100, 100, 100, 50);//会触发
+
+    self.blueView.frame = CGRectMake(100, 400, 50, 100);
+
+}
 
 
 /*
