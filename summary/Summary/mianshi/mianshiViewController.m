@@ -15,6 +15,9 @@
 #import "LXView.h"
 #import "LXScrollView.h"
 
+//typedef NS_ENUM(){
+//
+//};
 @interface mianshiViewController ()
 {
     NSString *_lastName;
@@ -35,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 
 
 

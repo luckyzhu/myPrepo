@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4457D03C2073D35A00B30934 /* LXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457D03B2073D35A00B30934 /* LXControl.m */; };
-		4457D03E2073D62A00B30934 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = 4457D03D2073D62A00B30934 /* 111.png */; };
 		44705EAE2078832F00610649 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 44705EAD2078832F00610649 /* Person.m */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
 		44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FE206BD56C0058D457 /* mianshiViewController.m */; };
@@ -39,6 +38,7 @@
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
 		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
 		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
+		85828FBB20874D6400EC116A /* git.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85828FBA20874D6400EC116A /* git.jpg */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C56206CE0EC00CE865D /* details_attention.png */; };
 		85BD1C59206CE23600CE865D /* 22.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C58206CE23600CE865D /* 22.jpeg */; };
@@ -75,7 +75,6 @@
 		43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.debug.xcconfig"; sourceTree = "<group>"; };
 		4457D03A2073D35A00B30934 /* LXControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXControl.h; sourceTree = "<group>"; };
 		4457D03B2073D35A00B30934 /* LXControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXControl.m; sourceTree = "<group>"; };
-		4457D03D2073D62A00B30934 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
 		446261FC205CF7BD00242775 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
 		446261FD205CF7BD00242775 /* tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool.m; sourceTree = "<group>"; };
 		44705EAC2078832F00610649 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		8569A0642084FD6500652D59 /* LXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXView.m; sourceTree = "<group>"; };
 		8569A066208506B700652D59 /* LXScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXScrollView.h; sourceTree = "<group>"; };
 		8569A067208506B700652D59 /* LXScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXScrollView.m; sourceTree = "<group>"; };
+		85828FBA20874D6400EC116A /* git.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = git.jpg; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		44F502411FC32F0E00B10720 /* summary */ = {
 			isa = PBXGroup;
 			children = (
-				4457D03D2073D62A00B30934 /* 111.png */,
+				85828FBC20874D7100EC116A /* knowledgeImage */,
 				85BD1C55206CE0DD00CE865D /* Resources */,
 				44F502451FC32F0E00B10720 /* AppDelegate.h */,
 				44F502461FC32F0E00B10720 /* AppDelegate.m */,
@@ -482,6 +482,14 @@
 				852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */,
 			);
 			path = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		85828FBC20874D7100EC116A /* knowledgeImage */ = {
+			isa = PBXGroup;
+			children = (
+				85828FBA20874D6400EC116A /* git.jpg */,
+			);
+			path = knowledgeImage;
 			sourceTree = "<group>";
 		};
 		85BD1C55206CE0DD00CE865D /* Resources */ = {
@@ -689,10 +697,10 @@
 			files = (
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */,
+				85828FBB20874D6400EC116A /* git.jpg in Resources */,
 				85BD1C59206CE23600CE865D /* 22.jpeg in Resources */,
 				44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */,
 				44F5024F1FC32F0E00B10720 /* Assets.xcassets in Resources */,
-				4457D03E2073D62A00B30934 /* 111.png in Resources */,
 				85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */,
 				85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */,
 			);
