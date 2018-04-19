@@ -8,9 +8,7 @@
 
 #import "Person.h"
 
-@interface subPerson : NSObject
+@interface subPerson : Person
 
-
-- (void)subPersonTestMethod;
 
 @end

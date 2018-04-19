@@ -13,7 +13,7 @@
 #import "drawViewController.h"
 #import "responderChainViewController.h"
 #import "CoreAnimationViewController.h"
-
+#import "labelViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -28,6 +28,10 @@
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+
+    NSLog(@"当前设备---%@",[[UIDevice currentDevice] name]);
+//    NSLog(@"111----%@",[[NSBundle mainBundle] infoDictionary]);
 
     return YES;
 }

@@ -21,6 +21,8 @@
 //@end
 #import  "AFNetworking.h"
 #import <objc/runtime.h>
+#import "Person.h"
+#import "subPerson.h"
 
 
 
@@ -52,15 +54,17 @@
     [self.view addSubview:tableview];
     self.tableView = tableview;
     
-    
     return;
-    
     /*
      GET
      https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
      */
 
 
+//    Person *p = [Person new];
+    subPerson *subP = [subPerson new];
+
+    return;
 
 //    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
     NSString *urlStr1 = @"https://news.l.qq.com/app?";
@@ -133,7 +137,7 @@
     NSLog(@"heightForRowAtIndexPath");
 
     return 44;
-    
+
 }
 
 
