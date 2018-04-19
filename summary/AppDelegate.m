@@ -13,7 +13,7 @@
 #import "drawViewController.h"
 #import "responderChainViewController.h"
 #import "CoreAnimationViewController.h"
-
+#import "labelViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -26,9 +26,13 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mianshiViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[labelViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
+
+    NSLog(@"当前设备---%@",[[UIDevice currentDevice] name]);
+//    NSLog(@"111----%@",[[NSBundle mainBundle] infoDictionary]);
 
     return YES;
 }

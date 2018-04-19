@@ -16,7 +16,11 @@
 
 +(void)load
 {
-
+    NSLog(@"subPerson----load");
+}
++(void)initialize
+{
+    NSLog(@"subPerson----initialize");
 }
 
 /*第一步拦截: 调用时机为当被调用的方法实现部分没有找到，而消息转发机制启动之前的这个中间时刻。*/

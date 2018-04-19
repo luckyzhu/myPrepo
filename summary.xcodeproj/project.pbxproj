@@ -39,6 +39,9 @@
 		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
 		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
 		85828FBB20874D6400EC116A /* git.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85828FBA20874D6400EC116A /* git.jpg */; };
+		85828FC02088434F00EC116A /* loginLogicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FBF2088434F00EC116A /* loginLogicViewController.m */; };
+		85828FC420886ACA00EC116A /* shortCutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FC320886ACA00EC116A /* shortCutViewController.m */; };
+		85828FC720886B2100EC116A /* labelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FC620886B2100EC116A /* labelViewController.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C56206CE0EC00CE865D /* details_attention.png */; };
 		85BD1C59206CE23600CE865D /* 22.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C58206CE23600CE865D /* 22.jpeg */; };
@@ -49,7 +52,6 @@
 		85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C920456719005E0071 /* yindaoye-03.jpg */; };
 		85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D22047FAC9005E0071 /* GCDViewController.m */; };
 		85CD07D7204963D2005E0071 /* singletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D6204963D2005E0071 /* singletonClass.m */; };
-		85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D515F61FEB9A1600178B6A /* UILabelUsage.m */; };
 		CC4AD3796AD624C799F8F583 /* libPods-summary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A5851F6469173DD692E198 /* libPods-summary.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,12 @@
 		8569A066208506B700652D59 /* LXScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXScrollView.h; sourceTree = "<group>"; };
 		8569A067208506B700652D59 /* LXScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXScrollView.m; sourceTree = "<group>"; };
 		85828FBA20874D6400EC116A /* git.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = git.jpg; sourceTree = "<group>"; };
+		85828FBE2088434F00EC116A /* loginLogicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loginLogicViewController.h; sourceTree = "<group>"; };
+		85828FBF2088434F00EC116A /* loginLogicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginLogicViewController.m; sourceTree = "<group>"; };
+		85828FC220886ACA00EC116A /* shortCutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shortCutViewController.h; sourceTree = "<group>"; };
+		85828FC320886ACA00EC116A /* shortCutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shortCutViewController.m; sourceTree = "<group>"; };
+		85828FC520886B2100EC116A /* labelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelViewController.h; sourceTree = "<group>"; };
+		85828FC620886B2100EC116A /* labelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = labelViewController.m; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
@@ -162,8 +170,6 @@
 		85CD07D22047FAC9005E0071 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		85CD07D5204963D2005E0071 /* singletonClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass.h; sourceTree = "<group>"; };
 		85CD07D6204963D2005E0071 /* singletonClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass.m; sourceTree = "<group>"; };
-		85D515F51FEB9A1600178B6A /* UILabelUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelUsage.h; sourceTree = "<group>"; };
-		85D515F61FEB9A1600178B6A /* UILabelUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelUsage.m; sourceTree = "<group>"; };
 		85F9FAA42019F44200183DD2 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
 		85F9FAA52019F44200183DD2 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -422,8 +428,8 @@
 		85226D842014779C009F07EA /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
-				85D515F51FEB9A1600178B6A /* UILabelUsage.h */,
-				85D515F61FEB9A1600178B6A /* UILabelUsage.m */,
+				85828FC520886B2100EC116A /* labelViewController.h */,
+				85828FC620886B2100EC116A /* labelViewController.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -492,6 +498,24 @@
 			path = knowledgeImage;
 			sourceTree = "<group>";
 		};
+		85828FBD2088432D00EC116A /* projectLogic */ = {
+			isa = PBXGroup;
+			children = (
+				85828FBE2088434F00EC116A /* loginLogicViewController.h */,
+				85828FBF2088434F00EC116A /* loginLogicViewController.m */,
+			);
+			path = projectLogic;
+			sourceTree = "<group>";
+		};
+		85828FC120886A9500EC116A /* shortcutCode */ = {
+			isa = PBXGroup;
+			children = (
+				85828FC220886ACA00EC116A /* shortCutViewController.h */,
+				85828FC320886ACA00EC116A /* shortCutViewController.m */,
+			);
+			path = shortcutCode;
+			sourceTree = "<group>";
+		};
 		85BD1C55206CE0DD00CE865D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +549,8 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				85828FC120886A9500EC116A /* shortcutCode */,
+				85828FBD2088432D00EC116A /* projectLogic */,
 				85C2CF4F20848E480088AC95 /* MakeFrameWork */,
 				44705EA82076663400610649 /* customControl */,
 				44C575FC206BD5530058D457 /* mianshi */,
@@ -784,7 +810,6 @@
 				44C575FF206BD56C0058D457 /* mianshiViewController.m in Sources */,
 				44D3819B205D0B5F00107174 /* ViewController.m in Sources */,
 				44C575FB205E6C790058D457 /* linuxObj.m in Sources */,
-				85D515F71FEB9A1600178B6A /* UILabelUsage.m in Sources */,
 				85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */,
 				852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
@@ -807,10 +832,13 @@
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
+				85828FC420886ACA00EC116A /* shortCutViewController.m in Sources */,
 				85C2CF5220848EDE0088AC95 /* makeFrameViewController.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
+				85828FC02088434F00EC116A /* loginLogicViewController.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 				8569A0652084FD6500652D59 /* LXView.m in Sources */,
+				85828FC720886B2100EC116A /* labelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

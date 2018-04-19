@@ -21,6 +21,8 @@
 //@end
 #import  "AFNetworking.h"
 #import <objc/runtime.h>
+#import "Person.h"
+#import "subPerson.h"
 
 
 
@@ -42,13 +44,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    return;
+
+
     /*
      GET
      https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
      */
 
 
+//    Person *p = [Person new];
+    subPerson *subP = [subPerson new];
+
+    return;
 
     NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
 //
@@ -59,7 +66,6 @@
 //                           @"userID":@"135956817",
 //                           @"username":@"m1359568172",
                            };
-
 
 
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
@@ -73,6 +79,9 @@
                 NSLog(@"error--%@",error);
             }];
         });
+
+    
+
 
 }
 
