@@ -14,6 +14,7 @@
 #import "responderChainViewController.h"
 #import "CoreAnimationViewController.h"
 #import "labelViewController.h"
+#import "testTableViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -25,7 +26,7 @@
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[testTableViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
