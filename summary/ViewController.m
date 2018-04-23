@@ -52,36 +52,25 @@
      */
 
 
-//    Person *p = [Person new];
-    subPerson *subP = [subPerson new];
-
-    return;
-
     NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
 //
     NSDictionary *dict = @{
-//                           @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
-//                           @"usAccountID":@296,
-//                           @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
-//                           @"userID":@"135956817",
-//                           @"username":@"m1359568172",
+                           @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+                           @"usAccountID":@296,
+                           @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+                           @"userID":@"135956817",
+                           @"username":@"m1359568172",
                            };
 
 
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     [session.requestSerializer setValue:@"Fri, 12 May 2006 18:53:33 GMT" forHTTPHeaderField:@"If-Modified-Since"];
-    NSLog(@"requestSerializer.HTTPRequestHeaders---%@",session.requestSerializer.HTTPRequestHeaders);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSLog(@"task.response----%@",task.response);
 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"error--%@",error);
             }];
-        });
-
-    
-
 
 }
 
