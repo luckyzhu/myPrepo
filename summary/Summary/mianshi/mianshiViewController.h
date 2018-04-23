@@ -15,6 +15,8 @@
 
 //2.@synthesize 和 @dynamic作用
 
-//3.layoutSubviews 什么调用
+//3.frame和bounds
+
+//4.layoutSubviews 什么调用
 
 @end

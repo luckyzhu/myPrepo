@@ -27,9 +27,11 @@
 
 
 
-@interface ViewController()
+@interface ViewController()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) NSMutableArray *array;
+@property (nonatomic,weak) UITableView *tableView;
+
 @end
 
 
@@ -38,14 +40,21 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"array=====%@",self.array[100]);
+    
+   
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-
-
+    UITableView *tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-64)];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    [self.view addSubview:tableview];
+    self.tableView = tableview;
+    
+    return;
     /*
      GET
      https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
@@ -69,7 +78,7 @@
                 NSLog(@"task.response----%@",task.response);
 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSLog(@"error--%@",error);
+                NSLog(@"error111--%@",error);
             }];
 
 }

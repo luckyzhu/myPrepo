@@ -28,7 +28,8 @@
 //@property(nonatomic,strong)  NSArray *array2;
 //@property(nonatomic,strong)  NSArray *array1AndArray2;
 @property(nonatomic,copy)    NSString *lastName;
-@property(nonatomic,strong)   LXView *blueView;
+@property(nonatomic,weak)    UIView *redView;
+@property(nonatomic,weak)    UIView *blueView;
 @end
 
 @implementation mianshiViewController
@@ -39,13 +40,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 红色的背景view
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
+    view.backgroundColor = [UIColor redColor];
+//    view.bounds = CGRectMake(50, 0, 200, 200);
+    view.layer.backgroundColor = [UIColor greenColor].CGColor;
+    [self.view addSubview:view];
+    self.redView = view;
+    
+//    unsigned int count = 0;
+//    Ivar *ivars =  class_copyIvarList([UIView class], &count);
+//    for (int i = 0; i < count; i ++ ) {
+//        Ivar ivar = ivars[i];
+//        NSString *ivarString = [[NSString alloc]initWithCString:ivar_getName(ivar) encoding:NSUTF8StringEncoding];
+//        NSLog(@"该类的成员变量----%@",ivarString);
+//    }
+    
+    
+    
+//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(30, 30, 100, 20)];
+//    label.text = @"我是label";
+//    label.font = [UIFont systemFontOfSize:13];
+//    label.textAlignment = NSTextAlignmentCenter;
+//    [self.redView addSubview:label];
+    
+    
+//    return;
 
-
-
+    
+    // 单击手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClick:)];
+    [tap setNumberOfTouchesRequired:1];
+    [view addGestureRecognizer:tap];
+    
+    // 蓝色的子view
+    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 190, 10, 10)];
+    subView.backgroundColor = [UIColor blueColor];
+    [view addSubview:subView];
+    self.blueView = subView;
 
 
 }
+- (void)viewClick:(UITapGestureRecognizer *)gesture
+{
+    // 获取红色view
+    UIView *view = gesture.view;
 
+    // 修改bounds的值
+    CGRect bounds = view.bounds;
+    bounds.origin.y += 5;
+    view.bounds = bounds;
+    
+    // 展示bounds的值
+    NSLog(@"bounds:%@",NSStringFromCGRect(view.bounds));
+    
+    NSLog(@"红色view的frame---%@",NSStringFromCGRect(self.redView.frame));
+    NSLog(@"蓝色view的frame---%@",NSStringFromCGRect(self.blueView.frame));
+    
+    NSLog(@"蓝色view中心点---%@",NSStringFromCGPoint(self.blueView.center));
+}
 
 
 /*
