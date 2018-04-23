@@ -31,7 +31,6 @@
     [self.window makeKeyAndVisible];
 
 
-    NSLog(@"当前设备---%@",[[UIDevice currentDevice] name]);
 //    NSLog(@"111----%@",[[NSBundle mainBundle] infoDictionary]);
 
     return YES;

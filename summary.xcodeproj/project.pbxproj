@@ -697,7 +697,7 @@
 				TargetAttributes = {
 					44F5023E1FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 64LYUUGALF;
+						DevelopmentTeam = 3PQNBBA9BL;
 						ProvisioningStyle = Automatic;
 					};
 					44F502571FC32F0E00B10720 = {
@@ -1008,7 +1008,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64LYUUGALF;
+				DEVELOPMENT_TEAM = 3PQNBBA9BL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1029,7 +1029,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 64LYUUGALF;
+				DEVELOPMENT_TEAM = 3PQNBBA9BL;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
