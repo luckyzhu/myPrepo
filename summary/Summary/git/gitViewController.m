@@ -94,6 +94,13 @@
 
 
 
+     6.基于当前分支创建一个新的分支
+       git checkout -b 新分支名
+
+     7.删除本地分支和远程分支
+     删除本地分支 git branch -d xxx
+     删除远程分支 git push origin -d xxx
+
      */
 
 
