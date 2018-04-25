@@ -90,8 +90,6 @@
 		4492F4A2205183B0007D915F /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
 		4492F4F520551797007D915F /* runtimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtimeViewController.h; sourceTree = "<group>"; };
 		4492F4F620551797007D915F /* runtimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = runtimeViewController.m; sourceTree = "<group>"; };
-		44AB1EF5208B287000B3D539 /* testTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testTableViewController.m; sourceTree = "<group>"; };
-		44AB1EF8208B288E00B3D539 /* customTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customTableViewCell.m; sourceTree = "<group>"; };
 		44C575F9205E6C790058D457 /* linuxObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linuxObj.h; sourceTree = "<group>"; };
 		44C575FA205E6C790058D457 /* linuxObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = linuxObj.m; sourceTree = "<group>"; };
 		44C575FD206BD56C0058D457 /* mianshiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mianshiViewController.h; sourceTree = "<group>"; };
@@ -368,8 +366,6 @@
 		85165F79205FA1FE0071D431 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				44AB1EF8208B288E00B3D539 /* customTableViewCell.m */,
-				44AB1EF5208B287000B3D539 /* testTableViewController.m */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
