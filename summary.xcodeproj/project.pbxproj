@@ -38,6 +38,7 @@
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
 		853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF310208D7F6200C8CA7A /* catogoryViewController.m */; };
 		853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */; };
+		8546219D20902168007D5697 /* testTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8546219C20902168007D5697 /* testTableViewController.m */; };
 		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
 		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
 		85828FBB20874D6400EC116A /* git.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85828FBA20874D6400EC116A /* git.jpg */; };
@@ -149,6 +150,8 @@
 		853EF310208D7F6200C8CA7A /* catogoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catogoryViewController.m; sourceTree = "<group>"; };
 		853EF312208D7FBD00C8CA7A /* UIViewController+getCurrentVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+getCurrentVc.h"; sourceTree = "<group>"; };
 		853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getCurrentVc.m"; sourceTree = "<group>"; };
+		8546219B20902168007D5697 /* testTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewController.h; sourceTree = "<group>"; };
+		8546219C20902168007D5697 /* testTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewController.m; sourceTree = "<group>"; };
 		8569A0632084FD6500652D59 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
 		8569A0642084FD6500652D59 /* LXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXView.m; sourceTree = "<group>"; };
 		8569A066208506B700652D59 /* LXScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXScrollView.h; sourceTree = "<group>"; };
@@ -512,6 +515,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		8546219A2090212D007D5697 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				8546219B20902168007D5697 /* testTableViewController.h */,
+				8546219C20902168007D5697 /* testTableViewController.m */,
+			);
+			name = UITableView;
+			path = UIT;
+			sourceTree = "<group>";
+		};
 		85828FBC20874D7100EC116A /* knowledgeImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +584,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				8546219A2090212D007D5697 /* UITableView */,
 				853EF30E208D7F4E00C8CA7A /* Category */,
 				85828FC120886A9500EC116A /* shortcutCode */,
 				85828FBD2088432D00EC116A /* projectLogic */,
@@ -850,6 +864,7 @@
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				85165F972064E91A0071D431 /* drawView.m in Sources */,
+				8546219D20902168007D5697 /* testTableViewController.m in Sources */,
 				853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
