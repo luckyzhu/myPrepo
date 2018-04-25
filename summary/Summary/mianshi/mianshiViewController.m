@@ -41,14 +41,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self testLayoutSubViews];
     // 红色的背景view
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
-    view.backgroundColor = [UIColor redColor];
-//    view.bounds = CGRectMake(50, 0, 200, 200);
-    view.layer.backgroundColor = [UIColor greenColor].CGColor;
-    [self.view addSubview:view];
-    self.redView = view;
-    
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
+//    view.backgroundColor = [UIColor redColor];
+////    view.bounds = CGRectMake(50, 0, 200, 200);
+//    view.layer.backgroundColor = [UIColor greenColor].CGColor;
+//    [self.view addSubview:view];
+//    self.redView = view;
+//
 //    unsigned int count = 0;
 //    Ivar *ivars =  class_copyIvarList([UIView class], &count);
 //    for (int i = 0; i < count; i ++ ) {
@@ -70,17 +71,24 @@
 
     
     // 单击手势
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClick:)];
-    [tap setNumberOfTouchesRequired:1];
-    [view addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewClick:)];
+//    [tap setNumberOfTouchesRequired:1];
+//    [view addGestureRecognizer:tap];
+//
+//    // 蓝色的子view
+//    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 190, 10, 10)];
+//    subView.backgroundColor = [UIColor blueColor];
+//    [view addSubview:subView];
+//    self.blueView = subView;
+
+
+}
+
+- (void)viewClick2:(UITapGestureRecognizer *)gesture{
     
-    // 蓝色的子view
-    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 190, 10, 10)];
-    subView.backgroundColor = [UIColor blueColor];
-    [view addSubview:subView];
-    self.blueView = subView;
-
-
+//    [self.blueView setNeedsLayout];
+    [self.blueView layoutIfNeeded];
+    
 }
 - (void)viewClick:(UITapGestureRecognizer *)gesture
 {
@@ -129,7 +137,7 @@
     [self.view addSubview:scrollView];
 
     LXView *view = [[LXView alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClick2:)];
     [view addGestureRecognizer:tap];
     //    view.frame = CGRectMake(100, 100, 100, 100);
     view.backgroundColor = [UIColor blueColor];

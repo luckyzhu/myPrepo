@@ -47,7 +47,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    
+    NSLog(@"111----%@",NSStringFromCGRect(self.view.frame));
+    
     /*
      GET
      https://transformer-web--develop.bbaecache.com/api/v2/trade/positions?paged=0&usAccountID=296
@@ -72,6 +74,9 @@
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"error111--%@",error);
             }];
+    
+    
+    
 
 }
 
