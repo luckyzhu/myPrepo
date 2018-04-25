@@ -14,10 +14,7 @@
 
 @implementation subPerson
 
-+(void)load
-{
-    NSLog(@"subPerson----load");
-}
+
 +(void)initialize
 {
     NSLog(@"subPerson----initialize");

@@ -8,7 +8,7 @@
 
 #import "testTableViewController.h"
 #import "customTableViewCell.h"
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
 @interface testTableViewController ()
 
 @end
@@ -21,7 +21,7 @@
     self.navigationController.navigationBar.hidden = YES;
     
 //    self.tableView.frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-    
+//
 //    NSLog(@"屏幕高度---%f",[UIScreen mainScreen].bounds.size.height);
 //    NSLog(@"view高度---%f",self.view.frame.size.height);
 //
@@ -40,11 +40,10 @@
    1.可见cell 4个
    2.可重用cell 12个
    */
-//   NSLog(@"111----%@",self.tableView.visibleCells);
-//
-//   NSLog(@"444-数量--%zd",[[[self.tableView valueForKeyPath:@"_reusableTableCells"] objectForKey:@"cellxxx"] count]);
-//
-//     NSLog(@"可重用cell--%@",[[self.tableView valueForKeyPath:@"_reusableTableCells"] objectForKey:@"cellxxx"]);
+   NSLog(@"111----%@",self.tableView.visibleCells);
+   NSLog(@"444-数量--%zd",[[[self.tableView valueForKeyPath:@"_reusableTableCells"] objectForKey:@"cellxxx"] count]);
+
+     NSLog(@"可重用cell--%@",[[self.tableView valueForKeyPath:@"_reusableTableCells"] objectForKey:@"cellxxx"]);
 
 }
 
@@ -59,7 +58,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     
-    NSLog(@"cellForRowAtIndexPath");
+//    NSLog(@"cellForRowAtIndexPath");
     static NSString *cellId = @"cellxxx";
     customTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     static int countNumber = 0;
@@ -79,7 +78,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
     //    [self.tableView layoutIfNeeded];
     //    NSLog(@"222222");
     //    dispatch_async(dispatch_get_main_queue(), ^{
@@ -87,8 +86,8 @@
     //        NSLog(@"11111");
     //    });
     
-//    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-//    NSLog(@"高度----%f",cell.frame.size.height);
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    NSLog(@"高度----%f",cell.frame.size.height);
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,7 +95,7 @@
 //        NSLog(@"heightForRowAtIndexPath---%f",[super tableView:tableView heightForRowAtIndexPath:indexPath]);
 //
 //    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
-    NSLog(@"heightForRowAtIndexPath");
+//    NSLog(@"heightForRowAtIndexPath");
     return 450;
 
 }
