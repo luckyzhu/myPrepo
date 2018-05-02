@@ -39,6 +39,7 @@
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
 		853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF310208D7F6200C8CA7A /* catogoryViewController.m */; };
 		853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */; };
+		853F4AEA209A061B002AE71E /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853F4AE9209A061A002AE71E /* UITextFieldViewController.m */; };
 		8549CB05209231E00007813B /* AFN01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB04209231E00007813B /* AFN01.png */; };
 		8549CB07209231E60007813B /* AFN02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB06209231E60007813B /* AFN02.png */; };
 		8549CB0B209232990007813B /* AFNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB0A209232990007813B /* AFNViewController.m */; };
@@ -155,6 +156,8 @@
 		853EF310208D7F6200C8CA7A /* catogoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catogoryViewController.m; sourceTree = "<group>"; };
 		853EF312208D7FBD00C8CA7A /* UIViewController+getCurrentVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+getCurrentVc.h"; sourceTree = "<group>"; };
 		853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getCurrentVc.m"; sourceTree = "<group>"; };
+		853F4AE8209A061A002AE71E /* UITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldViewController.h; sourceTree = "<group>"; };
+		853F4AE9209A061A002AE71E /* UITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
 		8549CB04209231E00007813B /* AFN01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN01.png; sourceTree = "<group>"; };
 		8549CB06209231E60007813B /* AFN02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN02.png; sourceTree = "<group>"; };
 		8549CB09209232990007813B /* AFNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNViewController.h; sourceTree = "<group>"; };
@@ -532,6 +535,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		853F4AE7209A05FD002AE71E /* UITextFieldVc */ = {
+			isa = PBXGroup;
+			children = (
+				853F4AE8209A061A002AE71E /* UITextFieldViewController.h */,
+				853F4AE9209A061A002AE71E /* UITextFieldViewController.m */,
+			);
+			path = UITextFieldVc;
+			sourceTree = "<group>";
+		};
 		8549CB082092327D0007813B /* AFN */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +614,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				853F4AE7209A05FD002AE71E /* UITextFieldVc */,
 				8549CB082092327D0007813B /* AFN */,
 				44D553EB208E2811005BCA54 /* UITableView */,
 				853EF30E208D7F4E00C8CA7A /* Category */,
@@ -877,6 +890,7 @@
 				85AEE04320899D6A009C55E7 /* testControlViewController.m in Sources */,
 				852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */,
 				853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */,
+				853F4AEA209A061B002AE71E /* UITextFieldViewController.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
 				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
