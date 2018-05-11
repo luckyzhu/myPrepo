@@ -8,6 +8,7 @@
 
 #import "Masonry.h"
 #import "testTableViewController.h"
+#import "testTableViewCell.h"
 
 @interface testTableViewController ()
 
@@ -61,12 +62,14 @@
 {
     
     static NSString *cellId = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    testTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[testTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.textLabel.text = [NSString stringWithFormat:@"测试数据－－－－－%zd",indexPath.row];
+    cell.detailTextLabel.text = @"111";
     return cell;
     
 }

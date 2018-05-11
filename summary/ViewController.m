@@ -43,23 +43,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    NSString *str1 = @"11111111";
-    
-    NSString *str2 = @"222222";
-
-    if ([str1 compare:str2] == NSOrderedDescending) {
-      NSLog(@"str1比str2大...");
-    }else{
-      NSLog(@"str1不大于str2...");
-    }
-
-//    if ([str1 longLongValue] > [str2 longLongValue]) {
-//        NSLog(@"str2比str1大...");
-//    }else{
-//        NSLog(@"str2不大于。。str1不大于...");
-//    }
-
-    
     
     
 

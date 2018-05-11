@@ -40,6 +40,7 @@
 		853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF310208D7F6200C8CA7A /* catogoryViewController.m */; };
 		853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */; };
 		853F4AEA209A061B002AE71E /* UITextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853F4AE9209A061A002AE71E /* UITextFieldViewController.m */; };
+		853F4AED209A0ED3002AE71E /* testTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853F4AEC209A0ED3002AE71E /* testTableViewCell.m */; };
 		8549CB05209231E00007813B /* AFN01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB04209231E00007813B /* AFN01.png */; };
 		8549CB07209231E60007813B /* AFN02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB06209231E60007813B /* AFN02.png */; };
 		8549CB0B209232990007813B /* AFNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB0A209232990007813B /* AFNViewController.m */; };
@@ -158,6 +159,8 @@
 		853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getCurrentVc.m"; sourceTree = "<group>"; };
 		853F4AE8209A061A002AE71E /* UITextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldViewController.h; sourceTree = "<group>"; };
 		853F4AE9209A061A002AE71E /* UITextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldViewController.m; sourceTree = "<group>"; };
+		853F4AEB209A0ED3002AE71E /* testTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewCell.h; sourceTree = "<group>"; };
+		853F4AEC209A0ED3002AE71E /* testTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewCell.m; sourceTree = "<group>"; };
 		8549CB04209231E00007813B /* AFN01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN01.png; sourceTree = "<group>"; };
 		8549CB06209231E60007813B /* AFN02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN02.png; sourceTree = "<group>"; };
 		8549CB09209232990007813B /* AFNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNViewController.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 			children = (
 				44D553EC208E2847005BCA54 /* testTableViewController.h */,
 				44D553ED208E2847005BCA54 /* testTableViewController.m */,
+				853F4AEB209A0ED3002AE71E /* testTableViewCell.h */,
+				853F4AEC209A0ED3002AE71E /* testTableViewCell.m */,
 			);
 			name = UITableView;
 			path = "New Group";
@@ -896,6 +901,7 @@
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
+				853F4AED209A0ED3002AE71E /* testTableViewCell.m in Sources */,
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				85165F972064E91A0071D431 /* drawView.m in Sources */,
