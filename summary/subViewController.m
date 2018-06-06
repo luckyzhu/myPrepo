@@ -17,7 +17,9 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
+
+    NSLog(@"000000");
 }
 
 -(void)viewWillDisappear:(BOOL)animated
