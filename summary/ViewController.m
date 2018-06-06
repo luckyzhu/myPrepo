@@ -111,10 +111,13 @@ CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float ce
     trans = CGAffineTransformRotate(trans,angle);
     trans = CGAffineTransformTranslate(trans,-x, -y);
     return trans;
+
+
 }
 
 //弹出相机
 - (void)btnClick{
+    NSLog(@"888");
 
     /*
      锚点  (0,0)  代表试图左上角
