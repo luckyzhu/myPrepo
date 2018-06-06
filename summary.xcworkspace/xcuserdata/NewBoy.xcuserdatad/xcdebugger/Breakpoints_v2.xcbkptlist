@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "summary/Summary/Camera/BBAECutomCameraViewController.m"
-            timestampString = "549446481.32039"
+            timestampString = "549563110.303381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "-leftBtnImageClick"
             landmarkType = "7">
          </BreakpointContent>

@@ -33,13 +33,9 @@
 -(UIView*)createOverlayView
 {
     UIView *superView = [[UIView alloc]init];
-    [self.view addSubview:superView];
     superView.backgroundColor = [UIColor clearColor];
-    [superView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_top).mas_offset(44);
-        make.left.mas_equalTo(self.view.mas_left).mas_offset(0);
-        make.size.mas_equalTo(@(CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)));//暂时写成100
-    }];
+    superView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+
 
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"camera_border"]];
     imageView.frame = CGRectMake((self.view.frame.size.width - imageView.frame.size.width)/2, (self.view.frame.size.height-100 - imageView.frame.size.height)/2, imageView.frame.size.width, imageView.frame.size.height);
@@ -50,7 +46,7 @@
     CGFloat takeCameraBtnHeight = 40;
 
     UIButton *takeCameraBtn = [[UIButton alloc]init];
-    takeCameraBtn.frame = CGRectMake((self.view.frame.size.width - takeCameraBtnWidth)/2, self.view.frame.size.height - 64, takeCameraBtnWidth, takeCameraBtnHeight);
+    takeCameraBtn.frame = CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 100);
     [takeCameraBtn setTitle:@"照相" forState:UIControlStateNormal];
     takeCameraBtn.backgroundColor = [UIColor blueColor];
     [takeCameraBtn addTarget:self action:@selector(takeCameraBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -186,11 +182,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+//
     self.overlayView = [self createOverlayView];
     self.cameraOverlayView = self.overlayView;
 
-//    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor blueColor];
 
 
 //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(leftBtnClick)];
@@ -207,9 +203,12 @@
 //    free(ivarList);
 
 
-    for (UIView *view  in self.view.subviews) {
-        NSLog(@"子控件----%@",view);
-    }
+    CGSize screenBounds = [UIScreen mainScreen].bounds.size;
+    CGFloat cameraAspectRatio = 4.0f/3.0f;
+    CGFloat camViewHeight = screenBounds.width * cameraAspectRatio;
+    CGFloat scale = screenBounds.height / camViewHeight;
+    self.cameraViewTransform = CGAffineTransformMakeTranslation(0, (screenBounds.height - camViewHeight) / 2.0);
+    self.cameraViewTransform = CGAffineTransformScale(self.cameraViewTransform, scale, scale);
 
 }
 
