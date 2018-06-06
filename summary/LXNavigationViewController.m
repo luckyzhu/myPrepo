@@ -28,6 +28,8 @@
     button.exclusiveTouch = YES;
     [self.view addSubview:button];
 
+    
+
 }
 
 - (void)btnClick {
