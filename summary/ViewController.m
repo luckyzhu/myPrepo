@@ -48,7 +48,7 @@
 {
     [super viewWillAppear:animated];
 
-
+    NSLog(@"44444");
 }
 
 - (void)viewDidLoad {
