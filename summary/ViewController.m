@@ -96,6 +96,9 @@
     [self.view addSubview:topLabel1];
 
 
+    NSLog(@"77777");
+
+
 
 }
 
