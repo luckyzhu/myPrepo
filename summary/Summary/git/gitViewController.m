@@ -101,6 +101,16 @@
      删除本地分支 git branch -d xxx
      删除远程分支 git push origin -d xxx
 
+
+     8.merge代码
+     线上的分支1.0
+     当前打包的分支2.0
+     紧急修复bug 1.1 基于1.0打的分支
+
+     在打包2.0的时候，会提示存在未merge的内容
+     来到2.0分支 git merge master 即可。
+
+
      */
 
 
