@@ -26,6 +26,10 @@
  https://www.jianshu.com/p/af0bc1883752
  http://www.jb51.net/article/81318.htm
 
+ //截屏分享
+ https://blog.csdn.net/studying_ios/article/details/71092763
+
+
  */
 
 @end

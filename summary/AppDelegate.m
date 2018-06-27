@@ -37,6 +37,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+    NSMutableArray *array = [NSMutableArray array];
+
+    [array addObject:nil];
+
 
     NSLog(@"111111");
 

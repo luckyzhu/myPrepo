@@ -55,6 +55,7 @@
 		85828FC02088434F00EC116A /* loginLogicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FBF2088434F00EC116A /* loginLogicViewController.m */; };
 		85828FC420886ACA00EC116A /* shortCutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FC320886ACA00EC116A /* shortCutViewController.m */; };
 		85828FC720886B2100EC116A /* labelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FC620886B2100EC116A /* labelViewController.m */; };
+		858EBFAA20E392CB002C38F0 /* 订单逻辑.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85AEE04320899D6A009C55E7 /* testControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE04220899D6A009C55E7 /* testControlViewController.m */; };
 		85BC785220BE4EF80090CD3E /* back_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BC785120BE4EF80090CD3E /* back_white@2x.png */; };
@@ -195,6 +196,7 @@
 		85828FC320886ACA00EC116A /* shortCutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shortCutViewController.m; sourceTree = "<group>"; };
 		85828FC520886B2100EC116A /* labelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelViewController.h; sourceTree = "<group>"; };
 		85828FC620886B2100EC116A /* labelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = labelViewController.m; sourceTree = "<group>"; };
+		858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "订单逻辑.pdf"; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
@@ -627,6 +629,14 @@
 			path = shortcutCode;
 			sourceTree = "<group>";
 		};
+		858EBFA820E392B8002C38F0 /* CompanyLogic */ = {
+			isa = PBXGroup;
+			children = (
+				858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */,
+			);
+			path = CompanyLogic;
+			sourceTree = "<group>";
+		};
 		85BD1C55206CE0DD00CE865D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +676,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				858EBFA820E392B8002C38F0 /* CompanyLogic */,
 				851B90EC20BCB7D100287758 /* Camera */,
 				853F4AE7209A05FD002AE71E /* UITextFieldVc */,
 				8549CB082092327D0007813B /* AFN */,
@@ -849,6 +860,7 @@
 				85828FBB20874D6400EC116A /* git.jpg in Resources */,
 				85BC785220BE4EF80090CD3E /* back_white@2x.png in Resources */,
 				85BD1C59206CE23600CE865D /* 22.jpeg in Resources */,
+				858EBFAA20E392CB002C38F0 /* 订单逻辑.pdf in Resources */,
 				44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */,
 				8549CB07209231E60007813B /* AFN02.png in Resources */,
 				851B90F520BD2F0800287758 /* camera_border@2x.png in Resources */,
