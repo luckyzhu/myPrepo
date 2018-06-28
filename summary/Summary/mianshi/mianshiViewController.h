@@ -21,4 +21,7 @@
 
 //5.layoutifneed 作用？？？
 
+//6.masonry的三个方法什么时候用？区别?
+
+
 @end

@@ -14,6 +14,7 @@
 #import "NSArray+Extension.h"
 #import "LXView.h"
 #import "LXScrollView.h"
+#import "Masonry.h"
 
 //typedef NS_ENUM(){
 //
@@ -28,7 +29,7 @@
 //@property(nonatomic,strong)  NSArray *array2;
 //@property(nonatomic,strong)  NSArray *array1AndArray2;
 @property(nonatomic,copy)    NSString *lastName;
-@property(nonatomic,weak)    UIView *redView;
+@property(nonatomic,weak)    UILabel *redView;
 @property(nonatomic,weak)    UIView *blueView;
 @end
 
@@ -40,8 +41,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self testLayoutSubViews];
+    UILabel *redView = [[UILabel alloc] init];
+    redView.backgroundColor = [UIColor redColor];
+    redView.numberOfLines = 0;
+    [self.view addSubview:redView];
+//    [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.view).offset(100);
+//        make.left.equalTo(self.view).offset(100);
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//    }];
+    self.redView = redView;
+
+
+    UIButton *button = [[UIButton alloc]init];
+    button.frame = CGRectMake(100, 400, 50, 50);
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor redColor];
+    button.backgroundColor = [UIColor blueColor];
+    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    button.exclusiveTouch = YES;
+    [self.view addSubview:button];
+
+
     // 红色的背景view
 //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 200, 200)];
 //    view.backgroundColor = [UIColor redColor];
@@ -81,6 +102,38 @@
 //    [view addSubview:subView];
 //    self.blueView = subView;
 
+
+}
+
+
+- (void)btnClick:(UIButton *)button{
+
+    /*
+     结论1: 数据驱动，如果每一次数据都会变化，用mas_makeConstraints 会有问题。
+     make用第一次添加的， update用最新的， remake不光用最新的还得把老的全干掉，
+
+                           make    update    remake
+     已有某类型约束，再添加    不更新    更新    更新
+     没有某类型约束，再添加    更新     更新    更新
+     是否删除已有约束        不删除    不删除    全删
+
+     */
+
+    NSArray *array = @[
+                       @"11已有size约束， 再添加size约束， 不修改",
+                       @"22将初始的size移除掉， 其他不变， 会发现屏幕上本来没有View（因为没有size）， 2秒后出现200*100View， 即没有size约束， 添加size， 会更新这个约束",
+                       @"33",
+                       @"44其他两种按这种",
+                       ];
+
+    self.redView.text = array[arc4random()%4];
+    [self.redView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(100);
+        make.left.equalTo(self.view).offset(100);
+//        make.width.lessThanOrEqualTo(@100);
+        make.size.mas_equalTo(CGSizeMake(200, 100+arc4random()%200));
+//        NSLog(@"高度的值 ----%zd",100+arc4random()%200);
+    }];
 
 }
 
@@ -226,6 +279,8 @@
     NSLog(@"_isLevel的值----%@",testModel->_isLevel);
 }
 
+
+//6.masonry的三个方法什么时候用？区别?
 
 
 
