@@ -58,7 +58,8 @@
      ......
 
      然后再提交：
-     git rm -r --cached
+
+     git rm -r --cached xxx  //远程删除已经push到远程的不想被push的文件
      git add -A
      git commit -m 'XXX'
 
@@ -69,6 +70,20 @@
      */
 
 
+    /*
+
+     如果一直提示一个不想push的文件
+     Untracked files:
+     (use "git add <file>..." to include in what will be committed)
+
+     SwiftDemo.xcodeproj/project.xcworkspace/xcuserdata/
+q
+     用命令行:
+     # 连 untracked 的目录也一起删掉
+     git clean -fd
+
+
+     */
 
     /*
      4.版本回退

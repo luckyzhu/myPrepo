@@ -31,6 +31,9 @@
 @property(nonatomic,copy)    NSString *lastName;
 @property(nonatomic,weak)    UILabel *redView;
 @property(nonatomic,weak)    UIView *blueView;
+
+@property(nonatomic,strong) UIView *containView;
+@property(nonatomic,strong) UIScrollView *scrollView;
 @end
 
 @implementation mianshiViewController
@@ -39,28 +42,60 @@
 @dynamic lastName;
 
 
+-(void)loadView
+{
+    [super loadView];
+
+//    UIScrollView *scrollView = [[UIScrollView alloc]init];
+//    scrollView.showsVerticalScrollIndicator = NO;
+//    scrollView.alwaysBounceVertical = YES;
+//    [self.view addSubview:scrollView];
+//    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(self.view);
+//    }];
+//    self.scrollView = scrollView;
+//
+//    UIView *containView = [[UIView alloc]init];
+//    [scrollView addSubview:containView];
+//    [containView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(scrollView);
+//        make.width.equalTo(scrollView);
+//    }];
+//    self.containView = containView;
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *redView = [[UILabel alloc] init];
-    redView.backgroundColor = [UIColor redColor];
-    redView.numberOfLines = 0;
-    [self.view addSubview:redView];
-//    [redView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.view).offset(100);
-//        make.left.equalTo(self.view).offset(100);
-//        make.size.mas_equalTo(CGSizeMake(100, 100));
-//    }];
-    self.redView = redView;
+//    UILabel *redView = [[UILabel alloc] init];
+//    redView.backgroundColor = [UIColor redColor];
+//    redView.numberOfLines = 0;
+//    [self.view addSubview:redView];
+////    [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+////        make.top.equalTo(self.view).offset(100);
+////        make.left.equalTo(self.view).offset(100);
+////        make.size.mas_equalTo(CGSizeMake(100, 100));
+////    }];
+//    self.redView = redView;
 
+//    self.scrollView.backgroundColor = [UIColor redColor];
 
+//
     UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 400, 50, 50);
+//    button.frame = CGRectMake(100, 400, 50, 50);
     [button setTitle:@"按钮" forState:UIControlStateNormal];
     button.titleLabel.textColor = [UIColor redColor];
     button.backgroundColor = [UIColor blueColor];
     [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
     [self.view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.view.mas_top).offset(200);
+        make.left.mas_equalTo(self.view.mas_left).offset(16);
+        make.right.mas_equalTo(self.view.mas_right).offset(-16);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-30);
+        make.height.mas_equalTo(@44);
+    }];
+
+
 
 
     // 红色的背景view
@@ -106,9 +141,19 @@
 }
 
 
+-(void)updateViewConstraints
+{
+    [super updateViewConstraints];
+
+    NSLog(@"updateViewConstraints");
+}
+
 - (void)btnClick:(UIButton *)button{
 
+    NSLog(@"btnClickbtnClick");
+
     /*
+
      结论1: 数据驱动，如果每一次数据都会变化，用mas_makeConstraints 会有问题。
      make用第一次添加的， update用最新的， remake不光用最新的还得把老的全干掉，
 
@@ -134,6 +179,8 @@
         make.size.mas_equalTo(CGSizeMake(200, 100+arc4random()%200));
 //        NSLog(@"高度的值 ----%zd",100+arc4random()%200);
     }];
+
+//    [self.view setNeedsUpdateConstraints];
 
 }
 
