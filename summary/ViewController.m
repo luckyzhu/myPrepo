@@ -5,11 +5,14 @@
 //  Created by ZhuLuxi on 2017/11/20.
 //  Copyright © 2017年 LX. All rights reserved.
 //
+
 #import <objc/message.h>
 #import "ViewController.h"
 #import "Student.h"
 #import "Person.h"
 #import "subPerson.h"
+#import "summary-Bridging-Header.h"
+
 
 
 //@interface Student:NSObject
@@ -49,6 +52,10 @@
     [super viewWillAppear:animated];
 
     NSLog(@"44444");
+
+
+    
+    
 }
 
 - (void)viewDidLoad {
@@ -56,7 +63,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
 
-    NSLog(@"555555");
+
 //    self.view.backgroundColor = [UIColor colorWithRed: 17/225.0 green:28/225.0 blue:36/225.0 alpha:1.0];
 //    self.view.backgroundColor = [UIColor lightGrayColor];
 //
