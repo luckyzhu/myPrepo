@@ -688,6 +688,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				85828FBD2088432D00EC116A /* projectLogic */,
 				85273EE920EE26B100355215 /* SwiftBridge */,
 				858EBFA820E392B8002C38F0 /* CompanyLogic */,
 				851B90EC20BCB7D100287758 /* Camera */,
@@ -696,7 +697,6 @@
 				44D553EB208E2811005BCA54 /* UITableView */,
 				853EF30E208D7F4E00C8CA7A /* Category */,
 				85828FC120886A9500EC116A /* shortcutCode */,
-				85828FBD2088432D00EC116A /* projectLogic */,
 				85C2CF4F20848E480088AC95 /* MakeFrameWork */,
 				44705EA82076663400610649 /* customControl */,
 				44C575FC206BD5530058D457 /* mianshi */,
