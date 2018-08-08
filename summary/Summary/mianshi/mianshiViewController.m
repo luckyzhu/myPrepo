@@ -15,6 +15,7 @@
 #import "LXView.h"
 #import "LXScrollView.h"
 #import "Masonry.h"
+#import "ViewController.h"
 
 //typedef NS_ENUM(){
 //
@@ -66,7 +67,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    UILabel *redView = [[UILabel alloc] init];
+
 //    redView.backgroundColor = [UIColor redColor];
 //    redView.numberOfLines = 0;
 //    [self.view addSubview:redView];
@@ -151,6 +152,12 @@
 - (void)btnClick:(UIButton *)button{
 
     NSLog(@"btnClickbtnClick");
+
+
+
+    [self.navigationController pushViewController:[ViewController new] animated:YES];
+
+//    [self presentViewController:[ViewController new] animated:YES completion:nil];
 
     /*
 

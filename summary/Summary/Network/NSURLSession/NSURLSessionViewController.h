@@ -18,9 +18,10 @@
 
 /*
 2.把域名解析成ip地址
-
  */
 
-
+/*3. session的理解 网络地址:
+ https://blog.csdn.net/xueqinna/article/details/51628984
+ */
 
 @end

@@ -22,45 +22,7 @@
 
 - (void)btnClick{
 
-    double abc = 128.0000;
-    NSNumber *num = [NSNumber numberWithFloat:abc];
-    NSLog(@"num---%@",num);
-    NSString *testNumber = [NSString stringWithFormat:@"%@",[NSNumber numberWithFloat:abc]];
-//    NSString * testNumber = [NSString stringWithFormat:@"%@",@([@"128.00000" floatValue])];
-//    NSString * outNumber = [NSString stringWithFormat:@"%@",@(testNumber.floatValue)];
-    NSLog(@"outNumber---%@",testNumber);
-
-    return;
-        NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
-        NSDictionary *dict = @{
-                               @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
-                               @"usAccountID":@296,
-                               @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
-                               @"userID":@"135956817",
-                               @"username":@"m1359568172",
-                               };
-    [NSThread sleepForTimeInterval:2.0];
-    // 执行异步任务1
-    NSURLSessionDataTask *task = [self.session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"11111");
-        self.isRequest = NO;
-
-
-        // 请求成功之后，取数组最后一个发送网络请求
-        NSURLSessionDataTask *lastTask = self.taskArray.lastObject;
-        [lastTask resume];
-
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"22222");
-    }];
-
-//    [self.taskArray addObject:task];
-    NSLog(@"333-----%zd",self.taskArray.count);
-//    if (self.isRequest) return;
-//    self.isRequest = YES;
 //    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
-//
-//    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
 //    NSDictionary *dict = @{
 //                           @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
 //                           @"usAccountID":@296,
@@ -68,15 +30,35 @@
 //                           @"userID":@"135956817",
 //                           @"username":@"m1359568172",
 //                           };
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        // 执行异步任务1
-//        [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//            self.isRequest = NO;
-//            NSLog(@"11111");
-//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//            NSLog(@"22222");
-//        }];
-//    });
+//
+//    // 执行异步任务1
+//    NSURLSessionDataTask *task = [self.session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"11111");
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"22222");
+//    }];
+//    task.
+//
+//    [task resume];
+
+    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
+
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+//    session.requestSerializer.timeoutInterval = 0.01;
+    NSDictionary *dict = @{
+                           @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+                           @"usAccountID":@296,
+                           @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+                           @"userID":@"135956817",
+                           @"username":@"m1359568172",
+                           };
+        // 执行异步任务1
+        [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"11111");
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"22222");
+        }];
 
 }
 - (void)viewDidLoad {
@@ -99,6 +81,10 @@
 
    self.session = [AFHTTPSessionManager manager];
 
+
+    [NSTimer scheduledTimerWithTimeInterval:2.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self btnClick];
+    }];
 
 
 

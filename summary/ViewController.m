@@ -32,6 +32,8 @@
 #import "BBAECutomCameraViewController.h"
 #import "BBAEPreviewPhotoViewController.h"
 #import "LXNavigationViewController.h"
+#import "mianshiViewController.h"
+
 
 @interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -61,6 +63,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
 
 
 
@@ -147,9 +150,13 @@ CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float ce
     NSLog(@"888");
 
 
-    LXNavigationViewController *imageVc = [LXNavigationViewController new];
-    imageVc.view.backgroundColor = [UIColor blueColor];
-    [self presentViewController:imageVc animated:YES completion:nil];
+    mianshiViewController *vc = [mianshiViewController new];
+   
+    [self.navigationController pushViewController:vc animated:YES];
+
+//    LXNavigationViewController *imageVc = [LXNavigationViewController new];
+//    imageVc.view.backgroundColor = [UIColor blueColor];
+//    [self presentViewController:imageVc animated:YES completion:nil];
 
     /*
      锚点  (0,0)  代表试图左上角
@@ -252,7 +259,6 @@ CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float ce
 ////相机弹出的“取消”按钮。如果实现此方法，相当于拦截取消方法
 //- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
 //
-//   NSLog(@"33333--");
 //}
 
 
