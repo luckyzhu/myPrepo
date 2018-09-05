@@ -8,7 +8,7 @@
 
 #import "subViewController.h"
 
-@interface subViewController ()
+@interface subViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -17,7 +17,6 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
 
     NSLog(@"000000");
 }
@@ -28,29 +27,51 @@
     NSLog(@"viewWillDisappear应该程序-----%zd",[UIApplication sharedApplication].applicationState);
     
 }
+
+-(void)loadView
+{
+    [super loadView];
+
+    UITableView *tableView = [[UITableView alloc]init];
+    tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-88-78);
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    tableView.rowHeight = 44;
+    [self.view addSubview:tableView];
+
+//    CALayer *layer = [CALayer layer];
+//    layer.position = CGPointMake(0, 0);
+//    layer.frame = CGRectMake(0, -30, self.view.frame.size.width, 30);
+//    [layer setBackgroundColor:[UIColor greenColor].CGColor];
+//    [self.middleContainerView.layer addSublayer:layer];
+
+    UIView *layer = [UIView new];
+    layer.frame = CGRectMake(0, -30, self.view.frame.size.width, 30);
+    layer.backgroundColor = [UIColor redColor];
+    [self.view addSubview:layer];
+
+
+//    [self.view addSubview:tableView];
+
+//    UILabel *topLabel = [[UILabel alloc]init];
+//    topLabel.text = @"subVc 的label 1111";
+//    topLabel.frame = CGRectMake(0, 98, 375,30);
+//    topLabel.textAlignment = NSTextAlignmentCenter;
+//    topLabel.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:topLabel];
+//
+//    UIView *topView = [[UILabel alloc]init];
+//    topView.textColor = JCOLOR(@"C3");
+//    topView.frame =CGRectMake(100, 100, 100, <#CGFloat height#>)
+//    topView.textAlignment = NSTextAlignmentCenter;
+//    [self.view addSubview:topView];
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    //    //创建一个串行队列
-    dispatch_queue_t queue = dispatch_queue_create("com.dispatch.serial", DISPATCH_QUEUE_SERIAL);
-    //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(queue, ^{
-        NSLog(@"111111");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"2222");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"33333");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"44444");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"55555");
-    });
-    
+
+
 
     return;
     
@@ -84,25 +105,39 @@
     //    [invocation invoke];
     
 }
-- (void)methodWithArg1:(NSString *)arg1 arg2:(int)arg2 {
-    
-    NSLog(@"我叫%@，今年%d岁。", arg1, arg2);
-}
-+(void)test1:(NSString *)str str2:(int)str2{
-    NSLog(@"test函数测试...%@---%zd",str,str2);
-}
-- (void)method {
-    
-    NSLog(@"无参无返回值");
-}
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return 100;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    static NSString * identifer = @"UITableViewCell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+    }
+
+    cell.textLabel.text = [NSString stringWithFormat:@"测试数据第%zd行",indexPath.row];
+    return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    UIView *headerView = [[UIView alloc]init];
+//    headerView.frame = CGRectMake(0, 0, 375, 44);
+//    headerView.backgroundColor = [UIColor redColor];
+//    return headerView;
+//}
+
+
 
 @end

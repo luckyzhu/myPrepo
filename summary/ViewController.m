@@ -29,6 +29,7 @@
 #import "BBAECutomCameraViewController.h"
 #import "BBAEPreviewPhotoViewController.h"
 #import "LXNavigationViewController.h"
+#import "Masonry.h"
 
 @interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -36,19 +37,98 @@
 @property (nonatomic,weak) UITableView *tableView;
 @property (nonatomic,strong) UIButton *button;
 @property (nonatomic,strong) UILabel *topLabel;
+@property (nonatomic,strong) UILabel *bottomLabel;
 
 @property (nonatomic,strong)UIImageView *lastImage;
 @property (nonatomic,strong)UIImageView *originImage;
+
+
+
+
+
 
 @end
 
 @implementation ViewController
 
+-(instancetype)init{
+
+    if (self = [super init]) {
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PostAction) name:@"调用ViewController里的loadview方法" object:nil];
+    }
+    return self;
+}
+
+//- (void)PostAction{
+//
+//    NSLog(@"接收到通知...要调用loadview方法..");
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
+//
+//    __weak typeof(self)weakSelf = self;
+//    [self.view addSubview:self.topLabel];
+//    [self.topLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.left.right.equalTo(weakSelf.view).offset(0);
+//        make.height.equalTo(@30);
+//    }];
+//
+//    [self.view addSubview:self.bottomLabel];
+//    [self.bottomLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.equalTo(weakSelf.view).offset(0);
+//        make.bottom.equalTo(weakSelf.view.mas_safeAreaLayoutGuideBottom).offset(0);
+//        make.height.equalTo(@30);
+//    }];
+//
+//
+//}
+
+//调用时机：[super loadView]  第一次访问view的时候。
+-(void)setView:(UIView *)view
+{
+    [super setView:view];
+
+    NSLog(@"setViewsetViewsetView");
+}
+-(UILabel *)topLabel
+{
+    if (_topLabel == nil) {
+        _topLabel = [[UILabel alloc]init];
+        _topLabel.text = @"父vc的label...";
+        _topLabel.textColor = [UIColor cyanColor];
+        _topLabel.textAlignment = NSTextAlignmentCenter;
+        _topLabel.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _topLabel;
+}
+
+-(UILabel *)bottomLabel
+{
+    if (_bottomLabel == nil) {
+        _bottomLabel = [[UILabel alloc]init];
+        _bottomLabel.text = @"父vc的bottom label...";
+        _bottomLabel.textColor = [UIColor blueColor];
+        _bottomLabel.textAlignment = NSTextAlignmentCenter;
+        _bottomLabel.backgroundColor = [UIColor cyanColor];
+    }
+    return _bottomLabel;
+}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
-    NSLog(@"44444");
+//    if ([self.view.subviews containsObject:self.topLabel]) {
+//        [self.view addSubview:self.topLabel];
+//    }
+
+
+}
+
+-(void)loadView
+{
+    [super loadView];
+
+
+
+
 }
 
 - (void)viewDidLoad {
@@ -56,7 +136,47 @@
     // Do any additional setup after loading the view, typically from a nib.
 
 
-    NSLog(@"555555");
+//    if ([self respondsToSelector:@selector(loadView)]) {
+//        NSLog(@"这个类调用了loadView...");
+//        [self loadView];
+//    }
+
+//    [self.view addSubview:self.topLabel];
+
+//    CGRect viewFrame = self.view.frame;
+//    self.view.bounds = CGRectMake(viewFrame.origin.x, viewFrame.origin.y-30, viewFrame.size.width, viewFrame.size.height-30-30);
+//
+//    _bottomLabel = [[UILabel alloc]init];
+//    _bottomLabel.text = @"父vc的bottom label...";
+//    _bottomLabel.textColor = [UIColor cyanColor];
+//    _bottomLabel.textAlignment = NSTextAlignmentCenter;
+//    _bottomLabel.backgroundColor = [UIColor cyanColor];
+//    _bottomLabel.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds)-88-34, CGRectGetWidth(self.view.bounds), 30);
+//    [self.view addSubview:_bottomLabel];
+
+
+
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    __weak typeof(self)weakSelf = self;
+    [self.view addSubview:self.topLabel];
+    [self.topLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(weakSelf.view).offset(0);
+        make.height.equalTo(@30);
+    }];
+
+    [self.view addSubview:self.bottomLabel];
+    [self.bottomLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(weakSelf.view).offset(0);
+        make.bottom.equalTo(weakSelf.view.mas_safeAreaLayoutGuideBottom).offset(0);
+        make.height.equalTo(@30);
+    }];
+
+
+
+
+
+
 //    self.view.backgroundColor = [UIColor colorWithRed: 17/225.0 green:28/225.0 blue:36/225.0 alpha:1.0];
 //    self.view.backgroundColor = [UIColor lightGrayColor];
 //
@@ -73,14 +193,14 @@
 //    [self.view addSubview:toolBar];
 //
 //    return;
-
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(30, 100, 300, 200);
-    [button setTitle:@"跳转" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    self.button = button;
+//
+//    UIButton *button = [[UIButton alloc]init];
+//    button.frame = CGRectMake(30, 100, 300, 200);
+//    [button setTitle:@"跳转" forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor blueColor];
+//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
+//    self.button = button;
 //
 //    UIImageView *originImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"123"]];
 //    originImage.frame = CGRectMake(0, 120, originImage.frame.size.width, originImage.frame.size.height);
@@ -115,10 +235,7 @@
 //    topLabel1.frame = CGRectMake(50, 300, 200, 30);
 //    [self.view addSubview:topLabel1];
 
-
     NSLog(@"77777");
-
-
 
 }
 

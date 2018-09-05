@@ -20,6 +20,8 @@
 		44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F502501FC32F0E00B10720 /* LaunchScreen.storyboard */; };
 		44F5025D1FC32F0E00B10720 /* summaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5025C1FC32F0E00B10720 /* summaryTests.m */; };
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
+		8509A613213A26C100901832 /* middleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A612213A26C100901832 /* middleViewController.m */; };
+		8509A616213C364A00901832 /* UIViewController+headerAndFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */; };
 		8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513E8C22074C7B0004BD362 /* NSArray+Extension.m */; };
 		85165F78205FA13A0071D431 /* DSYM.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F77205FA13A0071D431 /* DSYM.m */; };
 		85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
@@ -41,6 +43,8 @@
 		852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA420720A5200B62367 /* responderChainViewController.m */; };
 		852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA8207228B100B62367 /* CoreAnimationViewController.m */; };
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
+		852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BD8BC2136853A00C0EE0D /* firstViewController.m */; };
+		852BD8C02136864900C0EE0D /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BD8BF2136864900C0EE0D /* testViewController.m */; };
 		853D605320C1BE0900C0CA30 /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 853D605220C1BE0900C0CA30 /* 123.png */; };
 		853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF310208D7F6200C8CA7A /* catogoryViewController.m */; };
 		853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */; };
@@ -129,6 +133,10 @@
 		44F502671FC32F0E00B10720 /* summaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = summaryUITests.m; sourceTree = "<group>"; };
 		44F502691FC32F0E00B10720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.release.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.release.xcconfig"; sourceTree = "<group>"; };
+		8509A611213A26C100901832 /* middleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = middleViewController.h; sourceTree = "<group>"; };
+		8509A612213A26C100901832 /* middleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = middleViewController.m; sourceTree = "<group>"; };
+		8509A614213C364A00901832 /* UIViewController+headerAndFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+headerAndFooter.h"; sourceTree = "<group>"; };
+		8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+headerAndFooter.m"; sourceTree = "<group>"; };
 		8513E8C12074C7B0004BD362 /* NSArray+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		8513E8C22074C7B0004BD362 /* NSArray+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		85165F76205FA13A0071D431 /* DSYM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYM.h; sourceTree = "<group>"; };
@@ -172,6 +180,10 @@
 		852B0DA8207228B100B62367 /* CoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationViewController.m; sourceTree = "<group>"; };
 		852B0DAA2072290000B62367 /* testCoreAnimantionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCoreAnimantionViewController.h; sourceTree = "<group>"; };
 		852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCoreAnimantionViewController.m; sourceTree = "<group>"; };
+		852BD8BB2136853A00C0EE0D /* firstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
+		852BD8BC2136853A00C0EE0D /* firstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
+		852BD8BE2136864900C0EE0D /* testViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		852BD8BF2136864900C0EE0D /* testViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 		853D605220C1BE0900C0CA30 /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
 		853EF30F208D7F6200C8CA7A /* catogoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = catogoryViewController.h; sourceTree = "<group>"; };
 		853EF310208D7F6200C8CA7A /* catogoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catogoryViewController.m; sourceTree = "<group>"; };
@@ -362,10 +374,18 @@
 				44F502461FC32F0E00B10720 /* AppDelegate.m */,
 				44F502481FC32F0E00B10720 /* ViewController.h */,
 				44F502491FC32F0E00B10720 /* ViewController.m */,
+				8509A614213C364A00901832 /* UIViewController+headerAndFooter.h */,
+				8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */,
+				8509A611213A26C100901832 /* middleViewController.h */,
+				8509A612213A26C100901832 /* middleViewController.m */,
 				85FD7D9120C3189F002FE0F7 /* LXNavigationViewController.h */,
 				85FD7D9220C318A0002FE0F7 /* LXNavigationViewController.m */,
 				85F9FAA42019F44200183DD2 /* subViewController.h */,
 				85F9FAA52019F44200183DD2 /* subViewController.m */,
+				852BD8BB2136853A00C0EE0D /* firstViewController.h */,
+				852BD8BC2136853A00C0EE0D /* firstViewController.m */,
+				852BD8BE2136864900C0EE0D /* testViewController.h */,
+				852BD8BF2136864900C0EE0D /* testViewController.m */,
 				85165F82205FC6C30071D431 /* Student.h */,
 				85165F83205FC6C30071D431 /* Student.m */,
 				85CD07CF2047EF91005E0071 /* Summary */,
@@ -964,10 +984,12 @@
 				853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */,
 				853F4AEA209A061B002AE71E /* UITextFieldViewController.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
+				852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */,
 				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
+				8509A613213A26C100901832 /* middleViewController.m in Sources */,
 				853F4AED209A0ED3002AE71E /* testTableViewCell.m in Sources */,
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
@@ -975,10 +997,12 @@
 				44D553EE208E2847005BCA54 /* testTableViewController.m in Sources */,
 				851B90F820BD975C00287758 /* BBAEPreviewPhotoViewController.m in Sources */,
 				853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */,
+				852BD8C02136864900C0EE0D /* testViewController.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				8549CB0B209232990007813B /* AFNViewController.m in Sources */,
 				851B90EF20BCB80100287758 /* CameraViewController.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
+				8509A616213C364A00901832 /* UIViewController+headerAndFooter.m in Sources */,
 				85165F78205FA13A0071D431 /* DSYM.m in Sources */,
 				44705EAE2078832F00610649 /* Person.m in Sources */,
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,

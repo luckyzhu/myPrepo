@@ -20,6 +20,9 @@
 #import "AFNViewController.h"
 #import "UITextFieldViewController.h"
 #import "CameraViewController.h"
+#import "subViewController.h"
+#import "testViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -33,7 +36,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mianshiViewController  alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[testViewController  alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
