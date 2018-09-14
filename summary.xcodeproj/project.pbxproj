@@ -45,6 +45,8 @@
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
 		852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BD8BC2136853A00C0EE0D /* firstViewController.m */; };
 		852BD8C02136864900C0EE0D /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BD8BF2136864900C0EE0D /* testViewController.m */; };
+		853B4DD8214B5C980053EE35 /* Reveal17.zip in Resources */ = {isa = PBXBuildFile; fileRef = 853B4DD7214B5C980053EE35 /* Reveal17.zip */; };
+		853B4DDA214B5CA00053EE35 /* Reveal17(10807)Patcher.zip in Resources */ = {isa = PBXBuildFile; fileRef = 853B4DD9214B5CA00053EE35 /* Reveal17(10807)Patcher.zip */; };
 		853D605320C1BE0900C0CA30 /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = 853D605220C1BE0900C0CA30 /* 123.png */; };
 		853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF310208D7F6200C8CA7A /* catogoryViewController.m */; };
 		853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */; };
@@ -184,6 +186,9 @@
 		852BD8BC2136853A00C0EE0D /* firstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
 		852BD8BE2136864900C0EE0D /* testViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
 		852BD8BF2136864900C0EE0D /* testViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
+		853B4DD7214B5C980053EE35 /* Reveal17.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Reveal17.zip; sourceTree = "<group>"; };
+		853B4DD9214B5CA00053EE35 /* Reveal17(10807)Patcher.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "Reveal17(10807)Patcher.zip"; sourceTree = "<group>"; };
+		853B4DDB214B5CAD0053EE35 /* 用法说明.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "用法说明.h"; sourceTree = "<group>"; };
 		853D605220C1BE0900C0CA30 /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
 		853EF30F208D7F6200C8CA7A /* catogoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = catogoryViewController.h; sourceTree = "<group>"; };
 		853EF310208D7F6200C8CA7A /* catogoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catogoryViewController.m; sourceTree = "<group>"; };
@@ -592,6 +597,16 @@
 			path = CoreAnimation;
 			sourceTree = "<group>";
 		};
+		853B4DD6214B5C890053EE35 /* Reveal */ = {
+			isa = PBXGroup;
+			children = (
+				853B4DD9214B5CA00053EE35 /* Reveal17(10807)Patcher.zip */,
+				853B4DD7214B5C980053EE35 /* Reveal17.zip */,
+				853B4DDB214B5CAD0053EE35 /* 用法说明.h */,
+			);
+			path = Reveal;
+			sourceTree = "<group>";
+		};
 		853EF30E208D7F4E00C8CA7A /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +711,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				853B4DD6214B5C890053EE35 /* Reveal */,
 				858EBFA820E392B8002C38F0 /* CompanyLogic */,
 				851B90EC20BCB7D100287758 /* Camera */,
 				853F4AE7209A05FD002AE71E /* UITextFieldVc */,
@@ -876,6 +892,8 @@
 			files = (
 				853D605320C1BE0900C0CA30 /* 123.png in Resources */,
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
+				853B4DD8214B5C980053EE35 /* Reveal17.zip in Resources */,
+				853B4DDA214B5CA00053EE35 /* Reveal17(10807)Patcher.zip in Resources */,
 				85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */,
 				85828FBB20874D6400EC116A /* git.jpg in Resources */,
 				85BC785220BE4EF80090CD3E /* back_white@2x.png in Resources */,
