@@ -77,6 +77,10 @@
 		85CD07CA20456719005E0071 /* yindaoye-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C920456719005E0071 /* yindaoye-03.jpg */; };
 		85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D22047FAC9005E0071 /* GCDViewController.m */; };
 		85CD07D7204963D2005E0071 /* singletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07D6204963D2005E0071 /* singletonClass.m */; };
+		85E6893A214FFDE00036F51C /* weiyiEnumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E68939214FFDE00036F51C /* weiyiEnumViewController.m */; };
+		85E6893D214FFE6B0036F51C /* edgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E6893C214FFE6B0036F51C /* edgeView.m */; };
+		85E6893F2150A09D0036F51C /* BBAESDK 接入.md in Resources */ = {isa = PBXBuildFile; fileRef = 85E6893E2150A09D0036F51C /* BBAESDK 接入.md */; };
+		85E689412150A0A50036F51C /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = 85E689402150A0A50036F51C /* TODO.md */; };
 		85FD7D9320C318A0002FE0F7 /* LXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FD7D9220C318A0002FE0F7 /* LXNavigationViewController.m */; };
 		CC4AD3796AD624C799F8F583 /* libPods-summary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A5851F6469173DD692E198 /* libPods-summary.a */; };
 /* End PBXBuildFile section */
@@ -237,6 +241,12 @@
 		85CD07D22047FAC9005E0071 /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		85CD07D5204963D2005E0071 /* singletonClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass.h; sourceTree = "<group>"; };
 		85CD07D6204963D2005E0071 /* singletonClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass.m; sourceTree = "<group>"; };
+		85E68938214FFDE00036F51C /* weiyiEnumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weiyiEnumViewController.h; sourceTree = "<group>"; };
+		85E68939214FFDE00036F51C /* weiyiEnumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weiyiEnumViewController.m; sourceTree = "<group>"; };
+		85E6893B214FFE6B0036F51C /* edgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edgeView.h; sourceTree = "<group>"; };
+		85E6893C214FFE6B0036F51C /* edgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = edgeView.m; sourceTree = "<group>"; };
+		85E6893E2150A09D0036F51C /* BBAESDK 接入.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "BBAESDK 接入.md"; sourceTree = "<group>"; };
+		85E689402150A0A50036F51C /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = ../../../../TODO.md; sourceTree = "<group>"; };
 		85F9FAA42019F44200183DD2 /* subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subViewController.h; sourceTree = "<group>"; };
 		85F9FAA52019F44200183DD2 /* subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subViewController.m; sourceTree = "<group>"; };
 		85FD7D9120C3189F002FE0F7 /* LXNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXNavigationViewController.h; sourceTree = "<group>"; };
@@ -711,6 +721,9 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
+				85E689402150A0A50036F51C /* TODO.md */,
+				85E68937214FFDB30036F51C /* 位移枚举 */,
 				853B4DD6214B5C890053EE35 /* Reveal */,
 				858EBFA820E392B8002C38F0 /* CompanyLogic */,
 				851B90EC20BCB7D100287758 /* Camera */,
@@ -767,6 +780,17 @@
 				85CD07D6204963D2005E0071 /* singletonClass.m */,
 			);
 			path = singleton;
+			sourceTree = "<group>";
+		};
+		85E68937214FFDB30036F51C /* 位移枚举 */ = {
+			isa = PBXGroup;
+			children = (
+				85E68938214FFDE00036F51C /* weiyiEnumViewController.h */,
+				85E68939214FFDE00036F51C /* weiyiEnumViewController.m */,
+				85E6893B214FFE6B0036F51C /* edgeView.h */,
+				85E6893C214FFE6B0036F51C /* edgeView.m */,
+			);
+			path = "位移枚举";
 			sourceTree = "<group>";
 		};
 		E8B7409117AEEE2FEFD6BF22 /* Pods */ = {
@@ -908,7 +932,9 @@
 				85BC785820BE65510090CD3E /* auto.png in Resources */,
 				85BC785720BE65510090CD3E /* auto@2x.png in Resources */,
 				8549CB05209231E00007813B /* AFN01.png in Resources */,
+				85E6893F2150A09D0036F51C /* BBAESDK 接入.md in Resources */,
 				85CD07C820456716005E0071 /* yindaoye-01.jpg in Resources */,
+				85E689412150A0A50036F51C /* TODO.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +1018,7 @@
 				44D3819B205D0B5F00107174 /* ViewController.m in Sources */,
 				44C575FB205E6C790058D457 /* linuxObj.m in Sources */,
 				85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */,
+				85E6893A214FFDE00036F51C /* weiyiEnumViewController.m in Sources */,
 				852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				85165F84205FC6C30071D431 /* Student.m in Sources */,
@@ -1012,6 +1039,7 @@
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,
 				8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */,
 				85165F972064E91A0071D431 /* drawView.m in Sources */,
+				85E6893D214FFE6B0036F51C /* edgeView.m in Sources */,
 				44D553EE208E2847005BCA54 /* testTableViewController.m in Sources */,
 				851B90F820BD975C00287758 /* BBAEPreviewPhotoViewController.m in Sources */,
 				853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */,

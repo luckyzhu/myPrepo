@@ -22,6 +22,7 @@
 #import "CameraViewController.h"
 #import "subViewController.h"
 #import "testViewController.h"
+#import "weiyiEnumViewController.h"
 
 
 @interface AppDelegate ()
@@ -36,7 +37,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[testViewController  alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[weiyiEnumViewController  alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
