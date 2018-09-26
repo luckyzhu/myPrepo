@@ -35,6 +35,7 @@
 		851B90F320BD069600287758 /* BBAECutomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B90F220BD069600287758 /* BBAECutomCameraViewController.m */; };
 		851B90F520BD2F0800287758 /* camera_border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 851B90F420BD2F0800287758 /* camera_border@2x.png */; };
 		851B90F820BD975C00287758 /* BBAEPreviewPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B90F720BD975C00287758 /* BBAEPreviewPhotoViewController.m */; };
+		851E0771215B8D4700E8E15E /* 待解决问题.md in Resources */ = {isa = PBXBuildFile; fileRef = 851E0770215B8D4700E8E15E /* 待解决问题.md */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
 		8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */; };
@@ -182,6 +183,7 @@
 		851B90F420BD2F0800287758 /* camera_border@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_border@2x.png"; sourceTree = "<group>"; };
 		851B90F620BD975C00287758 /* BBAEPreviewPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAEPreviewPhotoViewController.h; sourceTree = "<group>"; };
 		851B90F720BD975C00287758 /* BBAEPreviewPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAEPreviewPhotoViewController.m; sourceTree = "<group>"; };
+		851E0770215B8D4700E8E15E /* 待解决问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "待解决问题.md"; sourceTree = "<group>"; };
 		8521F7B920286C4A0073F119 /* remoteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remoteViewController.h; sourceTree = "<group>"; };
 		8521F7BA20286C4A0073F119 /* remoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteViewController.m; sourceTree = "<group>"; };
 		8521F7C2203047EB0073F119 /* appViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appViewController.h; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				851E0770215B8D4700E8E15E /* 待解决问题.md */,
 				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
 				85E68937214FFDB30036F51C /* 位移枚举 */,
 				853B4DD6214B5C890053EE35 /* Reveal */,
@@ -957,6 +960,7 @@
 			files = (
 				853D605320C1BE0900C0CA30 /* 123.png in Resources */,
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
+				851E0771215B8D4700E8E15E /* 待解决问题.md in Resources */,
 				853B4DD8214B5C980053EE35 /* Reveal17.zip in Resources */,
 				853B4DDA214B5CA00053EE35 /* Reveal17(10807)Patcher.zip in Resources */,
 				85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */,
