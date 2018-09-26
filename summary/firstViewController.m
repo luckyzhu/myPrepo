@@ -14,6 +14,10 @@
 
 @implementation firstViewController
 
+-(void)loadView
+{
+    [super loadView];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -43,9 +47,14 @@
     middleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:middleLabel];
 
-    
 
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    NSLog(@"viewWillAppear");
 }
 
 

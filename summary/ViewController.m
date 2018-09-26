@@ -29,6 +29,7 @@
 #import "BBAECutomCameraViewController.h"
 #import "BBAEPreviewPhotoViewController.h"
 #import "LXNavigationViewController.h"
+#import "firstViewController.h"
 #import "Masonry.h"
 
 @interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -81,13 +82,7 @@
 //
 //}
 
-//调用时机：[super loadView]  第一次访问view的时候。
--(void)setView:(UIView *)view
-{
-    [super setView:view];
 
-    NSLog(@"setViewsetViewsetView");
-}
 -(UILabel *)topLabel
 {
     if (_topLabel == nil) {
@@ -122,20 +117,17 @@
 
 }
 
--(void)loadView
-{
-    [super loadView];
 
-
-
-
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
 
+    
+    firstViewController *firstVc = [[firstViewController alloc]init];
+    [self.view addSubview:firstVc.view];
+    [self addChildViewController:firstVc];
 //    if ([self respondsToSelector:@selector(loadView)]) {
 //        NSLog(@"这个类调用了loadView...");
 //        [self loadView];
@@ -155,6 +147,7 @@
 //    [self.view addSubview:_bottomLabel];
 
 
+    return;
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
