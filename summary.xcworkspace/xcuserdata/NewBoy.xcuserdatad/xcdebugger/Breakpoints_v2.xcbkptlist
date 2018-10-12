@@ -186,7 +186,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "559133537.041186"
+                  timestampString = "560862020.014786"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -201,7 +201,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "559133537.047256"
+                  timestampString = "560862020.017646"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -216,7 +216,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "559133537.052369"
+                  timestampString = "560862020.020748"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -335,6 +335,38 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "-initWithOriginView:type:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "summary/BannerScrollView.m"
+            timestampString = "560862017.801028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "-scrollViewDidEndDecelerating:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "summary/BannerScrollView.m"
+            timestampString = "560862022.5786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "-scrollViewWillBeginDragging:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

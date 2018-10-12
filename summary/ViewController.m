@@ -31,8 +31,11 @@
 #import "LXNavigationViewController.h"
 #import "firstViewController.h"
 #import "Masonry.h"
+#import "BBAESlideShowView.h"
+#import "BannerScrollView.h"
 
-@interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,BBAESlideShowViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray *array;
 @property (nonatomic,weak) UITableView *tableView;
@@ -123,113 +126,40 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    NSArray *imageArray =  @[
+                             @"http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg",
+                             @"http://img.zcool.cn/community/01f09e577b85450000012e7e182cf0.jpg@1280w_1l_2o_100sh.jpg",
+                             @"http://img.zcool.cn/community/0125fd5770dfa50000018c1b486f15.jpg@1280w_1l_2o_100sh.jpg",
+                             @"http://img05.tooopen.com/images/20141217/sy_77493739982.jpg",
+                             @"http://img.zcool.cn/community/01102d57d161e80000012e7e57d0c9.jpg@1280w_1l_2o_100sh.jpg",
+                             @"http://pic.58pic.com/58pic/15/57/84/70H58PICCJt_1024.jpg",
+                             @"http://pic38.nipic.com/20140212/17942401_101320663138_2.jpg",
+                             ];
 
-    
-    firstViewController *firstVc = [[firstViewController alloc]init];
-    [self.view addSubview:firstVc.view];
-    [self addChildViewController:firstVc];
-//    if ([self respondsToSelector:@selector(loadView)]) {
-//        NSLog(@"这个类调用了loadView...");
-//        [self loadView];
-//    }
+    BannerScrollView *slideView = [[BannerScrollView alloc]initWithImageUrls:imageArray clickBlock:^(NSInteger index) {
 
-//    [self.view addSubview:self.topLabel];
-
-//    CGRect viewFrame = self.view.frame;
-//    self.view.bounds = CGRectMake(viewFrame.origin.x, viewFrame.origin.y-30, viewFrame.size.width, viewFrame.size.height-30-30);
-//
-//    _bottomLabel = [[UILabel alloc]init];
-//    _bottomLabel.text = @"父vc的bottom label...";
-//    _bottomLabel.textColor = [UIColor cyanColor];
-//    _bottomLabel.textAlignment = NSTextAlignmentCenter;
-//    _bottomLabel.backgroundColor = [UIColor cyanColor];
-//    _bottomLabel.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds)-88-34, CGRectGetWidth(self.view.bounds), 30);
-//    [self.view addSubview:_bottomLabel];
-
-
-    return;
-
-    self.edgesForExtendedLayout = UIRectEdgeNone;
-
-    __weak typeof(self)weakSelf = self;
-    [self.view addSubview:self.topLabel];
-    [self.topLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(weakSelf.view).offset(0);
-        make.height.equalTo(@30);
+        NSLog(@"index---%zd",index);
+    }];
+    [self.view addSubview:slideView];
+    [slideView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).offset(100);
+        make.left.right.mas_equalTo(self.view).offset(0);
+        make.height.mas_equalTo(@200);
     }];
 
-    [self.view addSubview:self.bottomLabel];
-    [self.bottomLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(weakSelf.view).offset(0);
-        make.bottom.equalTo(weakSelf.view.mas_safeAreaLayoutGuideBottom).offset(0);
-        make.height.equalTo(@30);
-    }];
+//    BBAESlideShowView *slideView = [[BBAESlideShowView alloc]initWithCGSize:CGSizeMake(self.view.frame.size.width, 200) dataArray:imageArray];
+////    slideView.hasPageControl = YES;
+////    slideView.scrollType = BBAESlideShowViewScrollType_Timer;
+//    slideView.delegate = self;
+////    slideView.frame = CGRectMake(0, 100, self.view.frame.size.width, 200);
+//    [self.view addSubview:slideView];
 
 
+}
 
+-(void)slideShowViewDidClick:(NSInteger)index{
 
-
-
-//    self.view.backgroundColor = [UIColor colorWithRed: 17/225.0 green:28/225.0 blue:36/225.0 alpha:1.0];
-//    self.view.backgroundColor = [UIColor lightGrayColor];
-//
-//
-//
-//    UIImageView *imageView = [[UIImageView alloc]init];
-//    imageView.image = [UIImage imageNamed:@"22.jpeg"];
-//    imageView.frame = CGRectMake(0, 100, 200, 200);
-//    [self.view addSubview:imageView];
-//
-//    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 100, 200, 200)];
-//    toolBar.barStyle = UIBarStyleBlackTranslucent;
-//    toolBar.backgroundColor = [UIColor colorWithRed: 17/225.0 green:28/225.0 blue:36/225.0 alpha:0.6];
-//    [self.view addSubview:toolBar];
-//
-//    return;
-//
-//    UIButton *button = [[UIButton alloc]init];
-//    button.frame = CGRectMake(30, 100, 300, 200);
-//    [button setTitle:@"跳转" forState:UIControlStateNormal];
-//    button.backgroundColor = [UIColor blueColor];
-//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:button];
-//    self.button = button;
-//
-//    UIImageView *originImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"123"]];
-//    originImage.frame = CGRectMake(0, 120, originImage.frame.size.width, originImage.frame.size.height);
-//    [self.view addSubview:originImage];
-//    self.originImage = originImage;
-//
-//    //449, 291
-//    NSLog(@"originImage---%@",NSStringFromCGRect(originImage.frame));
-//
-//
-//    UIImageView *lastImage = [[UIImageView alloc]init];
-//    lastImage.frame = CGRectMake(0, self.view.frame.size.height-200,300, 100);
-//    [self.view addSubview:lastImage];
-//    self.lastImage = lastImage;
-
-
-//
-//    UILabel *topLabel = [[UILabel alloc]init];
-//    topLabel.text = @"您的升级申请已提交";
-//    topLabel.textColor = [UIColor blueColor];
-//    topLabel.font = [UIFont systemFontOfSize:13];
-//    topLabel.frame = CGRectMake(50, 300, 200, 30);
-//    topLabel.backgroundColor = [UIColor lightGrayColor];
-//    [self.view addSubview:topLabel];
-//    self.topLabel = topLabel;
-//
-//    UILabel *topLabel1 = [[UILabel alloc]init];
-//    topLabel1.text = @"您的升级申请已提交";
-//    topLabel1.textColor = [UIColor whiteColor];
-//    topLabel1.font = [UIFont systemFontOfSize:13];
-//    topLabel1.backgroundColor = [UIColor redColor];
-//    topLabel1.frame = CGRectMake(50, 300, 200, 30);
-//    [self.view addSubview:topLabel1];
-
-    NSLog(@"77777");
-
+    NSLog(@"点击的是第%zd个图片...",index);
 }
 
 CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float centerY ,float x ,float y ,float angle)
