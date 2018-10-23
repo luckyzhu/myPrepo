@@ -33,7 +33,7 @@
 #import "Masonry.h"
 #import "BBAESlideShowView.h"
 #import "BannerScrollView.h"
-
+#import "BBAESlideIntervalView.h"
 
 @interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,BBAESlideShowViewDelegate>
 
@@ -136,10 +136,12 @@
                              @"http://pic38.nipic.com/20140212/17942401_101320663138_2.jpg",
                              ];
 
-    BannerScrollView *slideView = [[BannerScrollView alloc]initWithImageUrls:imageArray clickBlock:^(NSInteger index) {
+//    BannerScrollView *slideView = [[BannerScrollView alloc]initWithImageUrls:imageArray clickBlock:^(NSInteger index) {
+//
+//        NSLog(@"index---%zd",index);
+//    }];
 
-        NSLog(@"index---%zd",index);
-    }];
+    BBAESlideIntervalView *slideView = [[BBAESlideIntervalView alloc]initWithCGSize:CGSizeMake(375, 200) dataArray:imageArray];
     [self.view addSubview:slideView];
     [slideView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(100);

@@ -172,7 +172,6 @@
     if (self.hasPageControl) {
         self.pageControl.currentPage = self.currentPage;
     }
-
 }
 
 -(void)setImageByIndex:(int)currentIndex array:(NSArray *)array

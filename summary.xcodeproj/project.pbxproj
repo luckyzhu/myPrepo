@@ -73,6 +73,8 @@
 		85BC785820BE65510090CD3E /* auto.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BC785620BE65510090CD3E /* auto.png */; };
 		85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C56206CE0EC00CE865D /* details_attention.png */; };
 		85BD1C59206CE23600CE865D /* 22.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85BD1C58206CE23600CE865D /* 22.jpeg */; };
+		85BFF0B82170502A00500C98 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BFF0B72170502A00500C98 /* MasonryViewController.m */; };
+		85BFF0BE2173131600500C98 /* BBAESlideIntervalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BFF0BD2173131600500C98 /* BBAESlideIntervalView.m */; };
 		85C2CF5220848EDE0088AC95 /* makeFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C2CF5120848EDE0088AC95 /* makeFrameViewController.m */; };
 		85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD07C320454A28005E0071 /* LXGuideViewController.m */; };
 		85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CD07C52045670E005E0071 /* yindaoye-02.png */; };
@@ -250,6 +252,10 @@
 		85BC785620BE65510090CD3E /* auto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = auto.png; sourceTree = "<group>"; };
 		85BD1C56206CE0EC00CE865D /* details_attention.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = details_attention.png; sourceTree = "<group>"; };
 		85BD1C58206CE23600CE865D /* 22.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpeg; sourceTree = "<group>"; };
+		85BFF0B62170502A00500C98 /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		85BFF0B72170502A00500C98 /* MasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		85BFF0BC2173131600500C98 /* BBAESlideIntervalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAESlideIntervalView.h; sourceTree = "<group>"; };
+		85BFF0BD2173131600500C98 /* BBAESlideIntervalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAESlideIntervalView.m; sourceTree = "<group>"; };
 		85C2CF5020848EDE0088AC95 /* makeFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = makeFrameViewController.h; sourceTree = "<group>"; };
 		85C2CF5120848EDE0088AC95 /* makeFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = makeFrameViewController.m; sourceTree = "<group>"; };
 		85CD07C220454A28005E0071 /* LXGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXGuideViewController.h; sourceTree = "<group>"; };
@@ -421,6 +427,8 @@
 				851E079A216E11D700E8E15E /* BannerScrollView.m */,
 				851E0772215B8FFC00E8E15E /* BBAESlideShowView.h */,
 				851E0773215B8FFC00E8E15E /* BBAESlideShowView.m */,
+				85BFF0BC2173131600500C98 /* BBAESlideIntervalView.h */,
+				85BFF0BD2173131600500C98 /* BBAESlideIntervalView.m */,
 				8509A614213C364A00901832 /* UIViewController+headerAndFooter.h */,
 				8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */,
 				8509A611213A26C100901832 /* middleViewController.h */,
@@ -729,6 +737,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		85BFF0B52170500600500C98 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				85BFF0B62170502A00500C98 /* MasonryViewController.h */,
+				85BFF0B72170502A00500C98 /* MasonryViewController.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
 		85C2CF4F20848E480088AC95 /* MakeFrameWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +772,7 @@
 			children = (
 				851E0770215B8D4700E8E15E /* 待解决问题.md */,
 				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
+				85BFF0B52170500600500C98 /* Masonry */,
 				85E68937214FFDB30036F51C /* 位移枚举 */,
 				853B4DD6214B5C890053EE35 /* Reveal */,
 				858EBFA820E392B8002C38F0 /* CompanyLogic */,
@@ -1064,6 +1082,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BFF0B82170502A00500C98 /* MasonryViewController.m in Sources */,
 				8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */,
 				85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */,
 				851E0774215B8FFC00E8E15E /* BBAESlideShowView.m in Sources */,
@@ -1100,6 +1119,7 @@
 				851B90F820BD975C00287758 /* BBAEPreviewPhotoViewController.m in Sources */,
 				853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */,
 				852BD8C02136864900C0EE0D /* testViewController.m in Sources */,
+				85BFF0BE2173131600500C98 /* BBAESlideIntervalView.m in Sources */,
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				8549CB0B209232990007813B /* AFNViewController.m in Sources */,
 				851B90EF20BCB80100287758 /* CameraViewController.m in Sources */,
