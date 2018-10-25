@@ -126,6 +126,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    NSLog(@"1111-----%@",NSStringFromCGRect([[UIScreen mainScreen] bounds]));
+    NSLog(@"2222-----%@",NSStringFromCGRect([[[UIScreen mainScreen] fixedCoordinateSpace] bounds]));
+
+    return;
+
     NSArray *imageArray =  @[
                              @"http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg",
                              @"http://img.zcool.cn/community/01f09e577b85450000012e7e182cf0.jpg@1280w_1l_2o_100sh.jpg",

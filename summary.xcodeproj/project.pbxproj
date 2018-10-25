@@ -43,6 +43,7 @@
 		8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */; };
 		8523F147205129CD0099531B /* UIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F146205129CD0099531B /* UIImageViewController.m */; };
 		8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F14A2051448A0099531B /* NSURLSessionViewController.m */; };
+		85257A45217ECD0300EDEB86 /* project.md in Resources */ = {isa = PBXBuildFile; fileRef = 85257A44217ECD0300EDEB86 /* project.md */; };
 		852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA420720A5200B62367 /* responderChainViewController.m */; };
 		852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DA8207228B100B62367 /* CoreAnimationViewController.m */; };
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
@@ -202,6 +203,7 @@
 		8523F146205129CD0099531B /* UIImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageViewController.m; sourceTree = "<group>"; };
 		8523F1492051448A0099531B /* NSURLSessionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSURLSessionViewController.h; sourceTree = "<group>"; };
 		8523F14A2051448A0099531B /* NSURLSessionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionViewController.m; sourceTree = "<group>"; };
+		85257A44217ECD0300EDEB86 /* project.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = project.md; path = summary/Summary/project.md; sourceTree = SOURCE_ROOT; };
 		852B0DA320720A5200B62367 /* responderChainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = responderChainViewController.h; sourceTree = "<group>"; };
 		852B0DA420720A5200B62367 /* responderChainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = responderChainViewController.m; sourceTree = "<group>"; };
 		852B0DA7207228B100B62367 /* CoreAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAnimationViewController.h; sourceTree = "<group>"; };
@@ -627,6 +629,14 @@
 			path = NSURLSession;
 			sourceTree = "<group>";
 		};
+		85257A43217ECCDB00EDEB86 /* 项目 */ = {
+			isa = PBXGroup;
+			children = (
+				85257A44217ECD0300EDEB86 /* project.md */,
+			);
+			path = "项目";
+			sourceTree = "<group>";
+		};
 		852B0DA220720A0900B62367 /* ResponderChain */ = {
 			isa = PBXGroup;
 			children = (
@@ -772,6 +782,7 @@
 			children = (
 				851E0770215B8D4700E8E15E /* 待解决问题.md */,
 				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
+				85257A43217ECCDB00EDEB86 /* 项目 */,
 				85BFF0B52170500600500C98 /* Masonry */,
 				85E68937214FFDB30036F51C /* 位移枚举 */,
 				853B4DD6214B5C890053EE35 /* Reveal */,
@@ -996,6 +1007,7 @@
 				85BC785220BE4EF80090CD3E /* back_white@2x.png in Resources */,
 				85BD1C59206CE23600CE865D /* 22.jpeg in Resources */,
 				858EBFAA20E392CB002C38F0 /* 订单逻辑.pdf in Resources */,
+				85257A45217ECD0300EDEB86 /* project.md in Resources */,
 				44F502521FC32F0E00B10720 /* LaunchScreen.storyboard in Resources */,
 				8549CB07209231E60007813B /* AFN02.png in Resources */,
 				851B90F520BD2F0800287758 /* camera_border@2x.png in Resources */,
