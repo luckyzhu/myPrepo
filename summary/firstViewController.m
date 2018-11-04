@@ -7,6 +7,8 @@
 //
 
 #import "firstViewController.h"
+#import "subViewController.h"
+
 
 @interface firstViewController ()
 
@@ -18,11 +20,27 @@
 {
     [super loadView];
 }
+
+- (void)btnClick{
+    subViewController *subVc = [[subViewController alloc]init];
+    UINavigationController *NAV = [[UINavigationController alloc]initWithRootViewController:subVc];
+    [self presentViewController:NAV animated:YES completion:nil];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
 //    self.view.backgroundColor = [UIColor redColor];
+
+    UIButton *button = [[UIButton alloc]init];
+    button.frame = CGRectMake(100, 400, 50, 50);
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor redColor];
+    button.backgroundColor = [UIColor blueColor];
+    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    button.exclusiveTouch = YES;
+    [self.view addSubview:button];
+
 
     UILabel *topLabel = [[UILabel alloc]init];
     topLabel.text = @"firstVc 的label 2222";

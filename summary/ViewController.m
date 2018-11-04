@@ -120,14 +120,33 @@
 
 }
 
+- (void)dismiss{
 
+    [self dismissViewControllerAnimated:YES completion:nil];
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    NSLog(@"1111-----%@",NSStringFromCGRect([[UIScreen mainScreen] bounds]));
-    NSLog(@"2222-----%@",NSStringFromCGRect([[[UIScreen mainScreen] fixedCoordinateSpace] bounds]));
+
+    NSLog(@"3331111-----%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]);
+
+
+
+    UIButton *button = [[UIButton alloc]init];
+    button.frame = CGRectMake(100, 400, 50, 50);
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor redColor];
+    button.backgroundColor = [UIColor blueColor];
+    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    button.exclusiveTouch = YES;
+    [self.view addSubview:button];
+
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"第一个vc dismiss" object:nil];
+
+
 
     return;
 
@@ -184,12 +203,15 @@ CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float ce
 
 //弹出相机
 - (void)btnClick{
-    NSLog(@"888");
 
 
-    LXNavigationViewController *imageVc = [LXNavigationViewController new];
-    imageVc.view.backgroundColor = [UIColor blueColor];
-    [self presentViewController:imageVc animated:YES completion:nil];
+    firstViewController *firstVc = [[firstViewController alloc]init];
+    [self presentViewController:firstVc animated:YES completion:nil];
+
+
+//    LXNavigationViewController *imageVc = [LXNavigationViewController new];
+//    imageVc.view.backgroundColor = [UIColor blueColor];
+//    [self presentViewController:imageVc animated:YES completion:nil];
 
     /*
      锚点  (0,0)  代表试图左上角

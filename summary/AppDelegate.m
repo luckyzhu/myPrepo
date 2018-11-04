@@ -6,6 +6,8 @@
 //  Copyright © 2017年 LX. All rights reserved.
 //
 
+#import "openCCViewController.h"
+#import "NSArrayViewController.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSInvocationViewController.h"
@@ -24,7 +26,6 @@
 #import "testViewController.h"
 #import "weiyiEnumViewController.h"
 
-
 @interface AppDelegate ()
 
 @end
@@ -37,7 +38,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[ViewController  alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[openCCViewController  alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

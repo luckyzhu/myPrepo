@@ -67,11 +67,31 @@
 //    [self.view addSubview:topView];
 
 }
+
+- (void)dismissBtn{
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)btnClick{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"第一个vc dismiss" object:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    UIButton *button = [[UIButton alloc]init];
+    button.frame = CGRectMake(100, 400, 50, 50);
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor redColor];
+    button.backgroundColor = [UIColor blueColor];
+    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    button.exclusiveTouch = YES;
+    [self.view addSubview:button];
 
+
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"dismiss" style:UIBarButtonItemStyleDone target:self action:@selector(dismissBtn)];
 
     return;
     
