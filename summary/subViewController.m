@@ -80,7 +80,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-<<<<<<< HEAD
     
     
     self.title = @"subSB";
@@ -103,7 +102,6 @@
         NSLog(@"55555");
     });
     
-=======
 
     UIButton *button = [[UIButton alloc]init];
     button.frame = CGRectMake(100, 400, 50, 50);
@@ -116,7 +114,6 @@
 
 
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"dismiss" style:UIBarButtonItemStyleDone target:self action:@selector(dismissBtn)];
->>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
 
     return;
     

@@ -19,17 +19,13 @@
 #import "catogoryViewController.h"
 #import "testControlViewController.h"
 #import "testTableViewController.h"
-<<<<<<< HEAD
 #import "BlockViewController.h"
-
-=======
 #import "AFNViewController.h"
 #import "UITextFieldViewController.h"
 #import "CameraViewController.h"
 #import "subViewController.h"
 #import "testViewController.h"
 #import "weiyiEnumViewController.h"
->>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
 
 @interface AppDelegate ()
 
@@ -43,11 +39,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-<<<<<<< HEAD
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[BlockViewController alloc]init]];
-=======
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[openCCViewController  alloc]init]];
->>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

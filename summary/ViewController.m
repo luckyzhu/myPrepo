@@ -24,9 +24,7 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "subPerson.h"
-<<<<<<< HEAD
 #import "subViewController.h"
-=======
 #import "CameraViewController.h"
 #import <AVFoundation/AVCaptureDevice.h>
 #import "BBAECutomCameraViewController.h"
@@ -37,7 +35,6 @@
 #import "BBAESlideShowView.h"
 #import "BannerScrollView.h"
 #import "BBAESlideIntervalView.h"
->>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
 
 @interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,BBAESlideShowViewDelegate>
 
@@ -140,7 +137,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-<<<<<<< HEAD
     
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     [button setTitle:@"按钮一" forState:UIControlStateNormal];
@@ -150,24 +146,6 @@
     
     
     return;
-    NSLog(@"111----%@",NSStringFromCGRect(self.view.frame));
-    
-=======
-
-
-    NSLog(@"3331111-----%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]);
-
-
-
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 400, 50, 50);
-    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
-    [self.view addSubview:button];
-
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"第一个vc dismiss" object:nil];
 
@@ -238,7 +216,6 @@ CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float ce
 //    imageVc.view.backgroundColor = [UIColor blueColor];
 //    [self presentViewController:imageVc animated:YES completion:nil];
 
->>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
     /*
      锚点  (0,0)  代表试图左上角
      */
