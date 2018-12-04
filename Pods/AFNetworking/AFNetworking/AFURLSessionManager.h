@@ -178,6 +178,7 @@ NS_ASSUME_NONNULL_BEGIN
  Whether to attempt to retry creation of upload tasks for background sessions when initial call returns `nil`. `NO` by default.
 
  @bug As of iOS 7.0, there is a bug where upload tasks created for background tasks are sometimes `nil`. As a workaround, if this property is `YES`, AFNetworking will follow Apple's recommendation to try creating the task again.
+ //在创建后台上传任务时，有时候会返回nil，所以为了解决这个问题，AFNetworking遵照了苹果的建议，在创建失败的时候，会重新尝试创建，次数默认为3次，所以你的应用如果有场景会有在后台上传的情况的话，记得将该值设为YES，避免出现上传失败的问题
 
  @see https://github.com/AFNetworking/AFNetworking/issues/1675
  */
@@ -453,6 +454,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Notifications
 ///--------------------
 
+//FOUNDATION_EXPORT在c文件编译下是和extern等同
 /**
  Posted when a task resumes.
  */

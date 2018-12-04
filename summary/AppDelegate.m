@@ -6,6 +6,8 @@
 //  Copyright © 2017年 LX. All rights reserved.
 //
 
+#import "openCCViewController.h"
+#import "NSArrayViewController.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "NSInvocationViewController.h"
@@ -17,8 +19,17 @@
 #import "catogoryViewController.h"
 #import "testControlViewController.h"
 #import "testTableViewController.h"
+<<<<<<< HEAD
 #import "BlockViewController.h"
 
+=======
+#import "AFNViewController.h"
+#import "UITextFieldViewController.h"
+#import "CameraViewController.h"
+#import "subViewController.h"
+#import "testViewController.h"
+#import "weiyiEnumViewController.h"
+>>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
 
 @interface AppDelegate ()
 
@@ -32,9 +43,14 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
+<<<<<<< HEAD
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[BlockViewController alloc]init]];
+=======
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[openCCViewController  alloc]init]];
+>>>>>>> 878e2d4217871a9105e7c7e81a8aa3615b03ae94
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -42,12 +58,19 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+
+    NSLog(@"222222");
+
+
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    NSLog(@"33333");
+
 }
 
 

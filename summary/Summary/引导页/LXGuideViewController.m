@@ -38,6 +38,8 @@
     scrollView.pagingEnabled = YES;
     scrollView.bounces = NO;
     [self.view addSubview:scrollView];
+
+  
    
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
 
