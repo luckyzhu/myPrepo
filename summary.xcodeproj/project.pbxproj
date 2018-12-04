@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442AECD320BA8B4C007D06B5 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442AECD220BA8B4C007D06B5 /* BlockViewController.m */; };
 		4457D03C2073D35A00B30934 /* LXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457D03B2073D35A00B30934 /* LXControl.m */; };
 		44705EAE2078832F00610649 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 44705EAD2078832F00610649 /* Person.m */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
@@ -39,7 +40,6 @@
 		852B0DAC2072290000B62367 /* testCoreAnimantionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */; };
 		853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF310208D7F6200C8CA7A /* catogoryViewController.m */; };
 		853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */; };
-		8546219D20902168007D5697 /* testTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8546219C20902168007D5697 /* testTableViewController.m */; };
 		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
 		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
 		85828FBB20874D6400EC116A /* git.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85828FBA20874D6400EC116A /* git.jpg */; };
@@ -80,6 +80,8 @@
 /* Begin PBXFileReference section */
 		18A5851F6469173DD692E198 /* libPods-summary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-summary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.debug.xcconfig"; sourceTree = "<group>"; };
+		442AECD120BA8B4C007D06B5 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		442AECD220BA8B4C007D06B5 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		4457D03A2073D35A00B30934 /* LXControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXControl.h; sourceTree = "<group>"; };
 		4457D03B2073D35A00B30934 /* LXControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXControl.m; sourceTree = "<group>"; };
 		446261FC205CF7BD00242775 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
@@ -153,8 +155,6 @@
 		853EF310208D7F6200C8CA7A /* catogoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = catogoryViewController.m; sourceTree = "<group>"; };
 		853EF312208D7FBD00C8CA7A /* UIViewController+getCurrentVc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+getCurrentVc.h"; sourceTree = "<group>"; };
 		853EF313208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+getCurrentVc.m"; sourceTree = "<group>"; };
-		8546219B20902168007D5697 /* testTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTableViewController.h; sourceTree = "<group>"; };
-		8546219C20902168007D5697 /* testTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTableViewController.m; sourceTree = "<group>"; };
 		8569A0632084FD6500652D59 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
 		8569A0642084FD6500652D59 /* LXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXView.m; sourceTree = "<group>"; };
 		8569A066208506B700652D59 /* LXScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXScrollView.h; sourceTree = "<group>"; };
@@ -253,6 +253,15 @@
 				4492F4F620551797007D915F /* runtimeViewController.m */,
 			);
 			name = runtime;
+			sourceTree = "<group>";
+		};
+		44A7596020BA891C0088CD21 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				442AECD120BA8B4C007D06B5 /* BlockViewController.h */,
+				442AECD220BA8B4C007D06B5 /* BlockViewController.m */,
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 		44C575F8205E6C5E0058D457 /* Linux */ = {
@@ -528,16 +537,6 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		8546219A2090212D007D5697 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				8546219B20902168007D5697 /* testTableViewController.h */,
-				8546219C20902168007D5697 /* testTableViewController.m */,
-			);
-			name = UITableView;
-			path = UIT;
-			sourceTree = "<group>";
-		};
 		85828FBC20874D7100EC116A /* knowledgeImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +596,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				44A7596020BA891C0088CD21 /* Block */,
 				44D553EB208E2811005BCA54 /* UITableView */,
 				853EF30E208D7F4E00C8CA7A /* Category */,
 				85828FC120886A9500EC116A /* shortcutCode */,
@@ -872,6 +872,7 @@
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
 				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
+				442AECD320BA8B4C007D06B5 /* BlockViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
 				851728EC20592949009C17BF /* singletonClass2.m in Sources */,

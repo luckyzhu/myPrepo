@@ -17,6 +17,8 @@
 #import "catogoryViewController.h"
 #import "testControlViewController.h"
 #import "testTableViewController.h"
+#import "BlockViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -30,7 +32,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[mianshiViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[BlockViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

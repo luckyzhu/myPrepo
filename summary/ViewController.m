@@ -23,6 +23,7 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "subPerson.h"
+#import "subViewController.h"
 
 
 
@@ -44,10 +45,26 @@
    
     
 }
+
+- (void)buttonClick{
+    
+    subViewController *subVc = [subViewController new];
+    subVc.view.backgroundColor = [UIColor redColor];
+    subVc.title = nil;
+    [self.navigationController pushViewController:subVc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [button setTitle:@"按钮一" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    
+    return;
     NSLog(@"111----%@",NSStringFromCGRect(self.view.frame));
     
     /*
