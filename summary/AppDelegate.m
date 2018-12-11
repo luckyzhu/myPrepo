@@ -19,6 +19,7 @@
 #import "catogoryViewController.h"
 #import "testControlViewController.h"
 #import "testTableViewController.h"
+#import "BlockViewController.h"
 #import "AFNViewController.h"
 #import "UITextFieldViewController.h"
 #import "CameraViewController.h"
@@ -40,7 +41,11 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
+<<<<<<< HEAD
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[UICameraViewController  alloc]init]];
+=======
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[BlockViewController alloc]init]];
+>>>>>>> c65fbb8dbdf6028ec5db165076dfc997087197b4
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442AECD320BA8B4C007D06B5 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442AECD220BA8B4C007D06B5 /* BlockViewController.m */; };
 		4457D03C2073D35A00B30934 /* LXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457D03B2073D35A00B30934 /* LXControl.m */; };
 		44705EAE2078832F00610649 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 44705EAD2078832F00610649 /* Person.m */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
@@ -182,6 +183,8 @@
 /* Begin PBXFileReference section */
 		18A5851F6469173DD692E198 /* libPods-summary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-summary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-summary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-summary/Pods-summary.debug.xcconfig"; sourceTree = "<group>"; };
+		442AECD120BA8B4C007D06B5 /* BlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		442AECD220BA8B4C007D06B5 /* BlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		4457D03A2073D35A00B30934 /* LXControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXControl.h; sourceTree = "<group>"; };
 		4457D03B2073D35A00B30934 /* LXControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXControl.m; sourceTree = "<group>"; };
 		446261FC205CF7BD00242775 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
@@ -522,6 +525,15 @@
 				4492F4F620551797007D915F /* runtimeViewController.m */,
 			);
 			name = runtime;
+			sourceTree = "<group>";
+		};
+		44A7596020BA891C0088CD21 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				442AECD120BA8B4C007D06B5 /* BlockViewController.h */,
+				442AECD220BA8B4C007D06B5 /* BlockViewController.m */,
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 		44C575F8205E6C5E0058D457 /* Linux */ = {
@@ -1165,6 +1177,7 @@
 			isa = PBXGroup;
 			children = (
 				851B71E121AD421D002F4EBC /* 相机 */,
+				44A7596020BA891C0088CD21 /* Block */,
 				851E0770215B8D4700E8E15E /* 待解决问题.md */,
 				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
 				85257A43217ECCDB00EDEB86 /* 项目 */,
@@ -1544,6 +1557,7 @@
 				852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */,
 				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
+				442AECD320BA8B4C007D06B5 /* BlockViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
 				8509A613213A26C100901832 /* middleViewController.m in Sources */,

@@ -24,6 +24,7 @@
 #import <objc/runtime.h>
 #import "Person.h"
 #import "subPerson.h"
+#import "subViewController.h"
 #import "CameraViewController.h"
 #import <AVFoundation/AVCaptureDevice.h>
 #import "BBAECutomCameraViewController.h"
@@ -125,24 +126,26 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
+
+- (void)buttonClick{
+    
+    subViewController *subVc = [subViewController new];
+    subVc.view.backgroundColor = [UIColor redColor];
+    subVc.title = nil;
+    [self.navigationController pushViewController:subVc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
-
-    NSLog(@"3331111-----%@",[[[UIDevice currentDevice] identifierForVendor] UUIDString]);
-
-
-
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 400, 50, 50);
-    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [button setTitle:@"按钮一" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-
+    
+    
+    return;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"第一个vc dismiss" object:nil];
 

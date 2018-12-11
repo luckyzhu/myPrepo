@@ -14,6 +14,8 @@
  相关文章 ：
   https://github.com/geeeeeeeeek/git-recipes/wiki
   https://blog.csdn.net/hijiankang/article/details/47254179
+ 
+ https://legacy.gitbook.com/@bingohuang
 
 
  2 设置gitignore 全局忽略DS_Store.等文件
