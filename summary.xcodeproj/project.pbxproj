@@ -22,6 +22,7 @@
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
 		8509A613213A26C100901832 /* middleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A612213A26C100901832 /* middleViewController.m */; };
 		8509A616213C364A00901832 /* UIViewController+headerAndFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */; };
+		850C9F4221A7E80B0077BFDC /* app全局弹出的页面分析.md in Resources */ = {isa = PBXBuildFile; fileRef = 850C9F4121A7E80B0077BFDC /* app全局弹出的页面分析.md */; };
 		8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513E8C22074C7B0004BD362 /* NSArray+Extension.m */; };
 		85165F78205FA13A0071D431 /* DSYM.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F77205FA13A0071D431 /* DSYM.m */; };
 		85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
@@ -31,6 +32,7 @@
 		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
 		85165F972064E91A0071D431 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F962064E91A0071D431 /* drawView.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
+		851B71E421AD423B002F4EBC /* UICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B71E321AD423B002F4EBC /* UICameraViewController.m */; };
 		851B90EF20BCB80100287758 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B90EE20BCB80100287758 /* CameraViewController.m */; };
 		851B90F320BD069600287758 /* BBAECutomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B90F220BD069600287758 /* BBAECutomCameraViewController.m */; };
 		851B90F520BD2F0800287758 /* camera_border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 851B90F420BD2F0800287758 /* camera_border@2x.png */; };
@@ -105,6 +107,7 @@
 		8549CB05209231E00007813B /* AFN01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB04209231E00007813B /* AFN01.png */; };
 		8549CB07209231E60007813B /* AFN02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB06209231E60007813B /* AFN02.png */; };
 		8549CB0B209232990007813B /* AFNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB0A209232990007813B /* AFNViewController.m */; };
+		8566DAF921940D550081DF97 /* SUMTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566DAF821940D550081DF97 /* SUMTestView.m */; };
 		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
 		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
 		85828FBB20874D6400EC116A /* git.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85828FBA20874D6400EC116A /* git.jpg */; };
@@ -215,6 +218,7 @@
 		8509A612213A26C100901832 /* middleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = middleViewController.m; sourceTree = "<group>"; };
 		8509A614213C364A00901832 /* UIViewController+headerAndFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+headerAndFooter.h"; sourceTree = "<group>"; };
 		8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+headerAndFooter.m"; sourceTree = "<group>"; };
+		850C9F4121A7E80B0077BFDC /* app全局弹出的页面分析.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "app全局弹出的页面分析.md"; path = "summary/Summary/app全局弹出的页面分析.md"; sourceTree = SOURCE_ROOT; };
 		8513E8C12074C7B0004BD362 /* NSArray+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		8513E8C22074C7B0004BD362 /* NSArray+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		85165F76205FA13A0071D431 /* DSYM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYM.h; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 		851728E920592692009C17BF /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		851728EA20592949009C17BF /* singletonClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass2.h; sourceTree = "<group>"; };
 		851728EB20592949009C17BF /* singletonClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass2.m; sourceTree = "<group>"; };
+		851B71E221AD423B002F4EBC /* UICameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICameraViewController.h; sourceTree = "<group>"; };
+		851B71E321AD423B002F4EBC /* UICameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICameraViewController.m; sourceTree = "<group>"; };
 		851B90ED20BCB80100287758 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		851B90EE20BCB80100287758 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		851B90F020BD063D00287758 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -395,6 +401,8 @@
 		8549CB06209231E60007813B /* AFN02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN02.png; sourceTree = "<group>"; };
 		8549CB09209232990007813B /* AFNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNViewController.h; sourceTree = "<group>"; };
 		8549CB0A209232990007813B /* AFNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNViewController.m; sourceTree = "<group>"; };
+		8566DAF721940D550081DF97 /* SUMTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUMTestView.h; sourceTree = "<group>"; };
+		8566DAF821940D550081DF97 /* SUMTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUMTestView.m; sourceTree = "<group>"; };
 		8569A0632084FD6500652D59 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
 		8569A0642084FD6500652D59 /* LXView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXView.m; sourceTree = "<group>"; };
 		8569A066208506B700652D59 /* LXScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXScrollView.h; sourceTree = "<group>"; };
@@ -608,6 +616,8 @@
 				852BD8BC2136853A00C0EE0D /* firstViewController.m */,
 				852BD8BE2136864900C0EE0D /* testViewController.h */,
 				852BD8BF2136864900C0EE0D /* testViewController.m */,
+				8566DAF721940D550081DF97 /* SUMTestView.h */,
+				8566DAF821940D550081DF97 /* SUMTestView.m */,
 				85165F82205FC6C30071D431 /* Student.h */,
 				85165F83205FC6C30071D431 /* Student.m */,
 				85CD07CF2047EF91005E0071 /* Summary */,
@@ -716,6 +726,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		851B71E121AD421D002F4EBC /* 相机 */ = {
+			isa = PBXGroup;
+			children = (
+				851B71E221AD423B002F4EBC /* UICameraViewController.h */,
+				851B71E321AD423B002F4EBC /* UICameraViewController.m */,
+			);
+			path = "相机";
+			sourceTree = "<group>";
+		};
 		851B90EC20BCB7D100287758 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -795,6 +814,7 @@
 		85257A43217ECCDB00EDEB86 /* 项目 */ = {
 			isa = PBXGroup;
 			children = (
+				850C9F4121A7E80B0077BFDC /* app全局弹出的页面分析.md */,
 				85257A44217ECD0300EDEB86 /* project.md */,
 			);
 			path = "项目";
@@ -1144,6 +1164,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				851B71E121AD421D002F4EBC /* 相机 */,
 				851E0770215B8D4700E8E15E /* 待解决问题.md */,
 				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
 				85257A43217ECCDB00EDEB86 /* 项目 */,
@@ -1152,12 +1173,12 @@
 				853B4DD6214B5C890053EE35 /* Reveal */,
 				858EBFA820E392B8002C38F0 /* CompanyLogic */,
 				851B90EC20BCB7D100287758 /* Camera */,
+				85828FBD2088432D00EC116A /* projectLogic */,
 				853F4AE7209A05FD002AE71E /* UITextFieldVc */,
 				8549CB082092327D0007813B /* AFN */,
 				44D553EB208E2811005BCA54 /* UITableView */,
 				853EF30E208D7F4E00C8CA7A /* Category */,
 				85828FC120886A9500EC116A /* shortcutCode */,
-				85828FBD2088432D00EC116A /* projectLogic */,
 				85C2CF4F20848E480088AC95 /* MakeFrameWork */,
 				44705EA82076663400610649 /* customControl */,
 				44C575FC206BD5530058D457 /* mianshi */,
@@ -1365,6 +1386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				853D605320C1BE0900C0CA30 /* 123.png in Resources */,
+				850C9F4221A7E80B0077BFDC /* app全局弹出的页面分析.md in Resources */,
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				853DF06D218C5BC000E00E5E /* t2tw.json in Resources */,
 				851E0771215B8D4700E8E15E /* 待解决问题.md in Resources */,
@@ -1544,6 +1566,8 @@
 				859E8C582010A52800FDF043 /* Tool.m in Sources */,
 				8549CB0B209232990007813B /* AFNViewController.m in Sources */,
 				851B90EF20BCB80100287758 /* CameraViewController.m in Sources */,
+				851B71E421AD423B002F4EBC /* UICameraViewController.m in Sources */,
+				8566DAF921940D550081DF97 /* SUMTestView.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,
 				8509A616213C364A00901832 /* UIViewController+headerAndFooter.m in Sources */,
 				85165F78205FA13A0071D431 /* DSYM.m in Sources */,

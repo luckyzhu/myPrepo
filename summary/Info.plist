@@ -2,11 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -29,6 +29,16 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Make an easy way to take photos and upload</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Use to access your account</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Make an easy way to contact us by talking</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Use to save wire transfer information</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Make an easy way to take photos and upload</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
