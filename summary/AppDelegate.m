@@ -27,6 +27,7 @@
 #import "testViewController.h"
 #import "weiyiEnumViewController.h"
 #import "UICameraViewController.h"
+#import "OCUseSwiftViewController.h"
 
 
 @interface AppDelegate ()
@@ -41,11 +42,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-<<<<<<< HEAD
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[UICameraViewController  alloc]init]];
-=======
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[BlockViewController alloc]init]];
->>>>>>> c65fbb8dbdf6028ec5db165076dfc997087197b4
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[testViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

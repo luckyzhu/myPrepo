@@ -43,6 +43,9 @@
 		851E079B216E11D700E8E15E /* BannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851E079A216E11D700E8E15E /* BannerScrollView.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
 		8521F7C4203047EB0073F119 /* appViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7C3203047EB0073F119 /* appViewController.m */; };
+		8522C64921C0E2A100AA9AFD /* OCUseSwiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8522C64821C0E2A100AA9AFD /* OCUseSwiftViewController.m */; };
+		8522C64E21C0E5F200AA9AFD /* swiftFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8522C64D21C0E5F200AA9AFD /* swiftFileModel.swift */; };
+		8522C65F21C7799E00AA9AFD /* BBAECaculateYAxisSpaceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8522C65E21C7799E00AA9AFD /* BBAECaculateYAxisSpaceTool.swift */; };
 		8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */; };
 		8523F147205129CD0099531B /* UIImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F146205129CD0099531B /* UIImageViewController.m */; };
 		8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8523F14A2051448A0099531B /* NSURLSessionViewController.m */; };
@@ -260,6 +263,11 @@
 		8521F7BA20286C4A0073F119 /* remoteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteViewController.m; sourceTree = "<group>"; };
 		8521F7C2203047EB0073F119 /* appViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appViewController.h; sourceTree = "<group>"; };
 		8521F7C3203047EB0073F119 /* appViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appViewController.m; sourceTree = "<group>"; };
+		8522C64721C0E2A100AA9AFD /* OCUseSwiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCUseSwiftViewController.h; sourceTree = "<group>"; };
+		8522C64821C0E2A100AA9AFD /* OCUseSwiftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCUseSwiftViewController.m; sourceTree = "<group>"; };
+		8522C64A21C0E2EC00AA9AFD /* summary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "summary-Bridging-Header.h"; sourceTree = "<group>"; };
+		8522C64D21C0E5F200AA9AFD /* swiftFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftFileModel.swift; sourceTree = "<group>"; };
+		8522C65E21C7799E00AA9AFD /* BBAECaculateYAxisSpaceTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBAECaculateYAxisSpaceTool.swift; sourceTree = "<group>"; };
 		8523F0C5204FDF1A0099531B /* cocoaPodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cocoaPodsViewController.h; sourceTree = "<group>"; };
 		8523F0C6204FDF1A0099531B /* cocoaPodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cocoaPodsViewController.m; sourceTree = "<group>"; };
 		8523F145205129CD0099531B /* UIImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageViewController.h; sourceTree = "<group>"; };
@@ -602,6 +610,7 @@
 		44F502411FC32F0E00B10720 /* summary */ = {
 			isa = PBXGroup;
 			children = (
+				8522C65B21C7788600AA9AFD /* swift */,
 				853DF098218C5D1800E00E5E /* string.plist */,
 				853DEFF3218C5BC000E00E5E /* OpenCC */,
 				85828FBC20874D7100EC116A /* knowledgeImage */,
@@ -794,6 +803,25 @@
 				859E8C542010A42600FDF043 /* NSInvocationViewController.m */,
 			);
 			path = NSInvocation;
+			sourceTree = "<group>";
+		};
+		8522C64621C0E27200AA9AFD /* oc swift混编 */ = {
+			isa = PBXGroup;
+			children = (
+				8522C64721C0E2A100AA9AFD /* OCUseSwiftViewController.h */,
+				8522C64821C0E2A100AA9AFD /* OCUseSwiftViewController.m */,
+				8522C64D21C0E5F200AA9AFD /* swiftFileModel.swift */,
+				8522C64A21C0E2EC00AA9AFD /* summary-Bridging-Header.h */,
+			);
+			path = "oc swift混编";
+			sourceTree = "<group>";
+		};
+		8522C65B21C7788600AA9AFD /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				8522C65E21C7799E00AA9AFD /* BBAECaculateYAxisSpaceTool.swift */,
+			);
+			path = swift;
 			sourceTree = "<group>";
 		};
 		8523F0C4204FDF020099531B /* cocoapods */ = {
@@ -1176,6 +1204,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				8522C64621C0E27200AA9AFD /* oc swift混编 */,
 				851B71E121AD421D002F4EBC /* 相机 */,
 				44A7596020BA891C0088CD21 /* Block */,
 				851E0770215B8D4700E8E15E /* 待解决问题.md */,
@@ -1357,6 +1386,7 @@
 					44F5023E1FC32F0E00B10720 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 64LYUUGALF;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					44F502571FC32F0E00B10720 = {
@@ -1537,10 +1567,12 @@
 				85165F7E205FC3640071D431 /* NSObjectViewController.m in Sources */,
 				85E6893A214FFDE00036F51C /* weiyiEnumViewController.m in Sources */,
 				852B0DA9207228B100B62367 /* CoreAnimationViewController.m in Sources */,
+				8522C64921C0E2A100AA9AFD /* OCUseSwiftViewController.m in Sources */,
 				853DF090218C5BC100E00E5E /* Config.cpp in Sources */,
 				85CD07C420454A28005E0071 /* LXGuideViewController.m in Sources */,
 				853DF089218C5BC100E00E5E /* Segmentation.cpp in Sources */,
 				85165F84205FC6C30071D431 /* Student.m in Sources */,
+				8522C65F21C7799E00AA9AFD /* BBAECaculateYAxisSpaceTool.swift in Sources */,
 				853DF08E218C5BC100E00E5E /* DartsDict.cpp in Sources */,
 				8523F0C7204FDF1A0099531B /* cocoaPodsViewController.m in Sources */,
 				853DF087218C5BC100E00E5E /* Converter.cpp in Sources */,
@@ -1601,6 +1633,7 @@
 				853DF08A218C5BC100E00E5E /* Dict.cpp in Sources */,
 				8569A0652084FD6500652D59 /* LXView.m in Sources */,
 				85828FC720886B2100EC116A /* labelViewController.m in Sources */,
+				8522C64E21C0E5F200AA9AFD /* swiftFileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1754,19 +1787,25 @@
 			baseConfigurationReference = 43809021046DF75CE9BE5DB3 /* Pods-summary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 64LYUUGALF;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = summary;
+				PRODUCT_NAME = summary;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "summary/Summary/oc swift混编/summary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1775,24 +1814,30 @@
 			baseConfigurationReference = 766663B72F35E04093989F96 /* Pods-summary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 64LYUUGALF;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = summary;
+				PRODUCT_NAME = summary;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "summary/Summary/oc swift混编/summary-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		44F502701FC32F0E00B10720 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = summaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1805,6 +1850,7 @@
 		44F502711FC32F0E00B10720 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = summaryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1817,6 +1863,7 @@
 		44F502731FC32F0E00B10720 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = summaryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summaryUITests;
@@ -1828,6 +1875,7 @@
 		44F502741FC32F0E00B10720 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = summaryUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summaryUITests;

@@ -10,6 +10,7 @@
 #import "subViewController.h"
 #import "firstViewController.h"
 #import "SUMTestView.h"
+#import "Student.h"
 
 @interface testViewController ()
 @property (nonatomic,strong) NSDecimalNumber *number1;
@@ -30,16 +31,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+//    Student *stu = [Student new];
+//    stu.name = @"小明";
+//    stu.classNo = @"2";
+//
+//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:stu];
+//
+//    [[NSUserDefaults standardUserDefaults] setValue:data forKey:@"student"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//
+//
+//    Student *obj = [[NSUserDefaults standardUserDefaults] objectForKey:@"student"];
+//    NSLog(@"111---%@",obj.name);
+//    NSLog(@"222---%@",obj.classNo);
 
+//    SUMTestView *testView = [[SUMTestView alloc]init];
+//    testView.backgroundColor = [UIColor lightGrayColor];
+//    testView.frame = CGRectMake(0, 100, 375, 100);
+//    [self.view addSubview:testView];
+
+    return;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
 
-    SUMTestView *testView = [[SUMTestView alloc]initWithFrame:self.view.bounds];
-    testView.backgroundColor = [UIColor lightGrayColor];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(testViewClick:)];
-    [testView addGestureRecognizer:tap];
-    [self.view addSubview:testView];
+//    SUMTestView *testView = [[SUMTestView alloc]initWithFrame:self.view.bounds];
+//    testView.backgroundColor = [UIColor lightGrayColor];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(testViewClick:)];
+//    [testView addGestureRecognizer:tap];
+//    [self.view addSubview:testView];
 //
 //
 //    UIButton *button2 = [[UIButton alloc]init];
@@ -73,28 +93,25 @@
 ////    [button2 addTarget:self action:@selector(button2Click) forControlEvents:UIControlEventTouchUpInside];
 //    [self.view addSubview:button2];
 
-
-
-
-    UIView *subView = [[SUMTestView alloc]initWithFrame:CGRectMake(30, 90, 400, 300)];
-    subView.backgroundColor = [UIColor blueColor];
-//    testView.userInteractionEnabled = NO;
-    [testView addSubview:subView];
-    self.subView = subView;
-
+//    UIView *subView = [[SUMTestView alloc]initWithFrame:CGRectMake(30, 90, 400, 300)];
+//    subView.backgroundColor = [UIColor blueColor];
+////    testView.userInteractionEnabled = NO;
+//    [testView addSubview:subView];
+//    self.subView = subView;
 //
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(30, 400, 400, 30)];
-    button.backgroundColor = [UIColor redColor];
-//    button.userInteractionEnabled = YES;
-    [testView addSubview:button];
-
-
-    UIControl *control = [[UIControl alloc]initWithFrame:CGRectMake(30, 450, 400, 30)];
-    control.backgroundColor = [UIColor yellowColor];
-//    control.userInteractionEnabled = NO;
-    [control addTarget:self action:@selector(controlClick) forControlEvents:UIControlEventTouchUpInside];
-    [testView addSubview:control];
-    self.control = control;
+////
+//    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(30, 400, 400, 30)];
+//    button.backgroundColor = [UIColor redColor];
+////    button.userInteractionEnabled = YES;
+//    [testView addSubview:button];
+//
+//
+//    UIControl *control = [[UIControl alloc]initWithFrame:CGRectMake(30, 450, 400, 30)];
+//    control.backgroundColor = [UIColor yellowColor];
+////    control.userInteractionEnabled = NO;
+//    [control addTarget:self action:@selector(controlClick) forControlEvents:UIControlEventTouchUpInside];
+//    [testView addSubview:control];
+//    self.control = control;
 
 }
 

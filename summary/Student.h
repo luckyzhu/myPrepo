@@ -11,4 +11,10 @@
 
 @interface Student :Person
 
+@property (nonatomic,copy) NSString *name;
+
+@property (nonatomic,copy) NSString *classNo;
+
+- (void)subPersonTestMethod;
+
 @end
