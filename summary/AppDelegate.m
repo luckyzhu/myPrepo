@@ -28,6 +28,7 @@
 #import "weiyiEnumViewController.h"
 #import "UICameraViewController.h"
 #import "OCUseSwiftViewController.h"
+#import "summary-Swift.h"
 
 
 @interface AppDelegate ()

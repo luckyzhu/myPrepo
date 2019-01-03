@@ -11,6 +11,8 @@
 #import "firstViewController.h"
 #import "SUMTestView.h"
 #import "Student.h"
+#import "summary-Swift.h"
+
 
 @interface testViewController ()
 @property (nonatomic,strong) NSDecimalNumber *number1;
@@ -30,6 +32,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    swiftTestView *testView = [[swiftTestView alloc]init];
+    testView.tempStr = @"123";
+    [self.view addSubview:testView];
 
 //    Student *stu = [Student new];
 //    stu.name = @"小明";
