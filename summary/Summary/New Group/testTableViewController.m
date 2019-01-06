@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    self.tableView.editing = YES;
+
     UIView *superView = [[UIView alloc]init];
     superView.backgroundColor = [UIColor redColor];
     self.tableView.tableHeaderView = superView;
@@ -65,7 +67,7 @@
     testTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (cell == nil) {
-        cell = [[testTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+        cell = [[testTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.textLabel.text = [NSString stringWithFormat:@"测试数据－－－－－%zd",indexPath.row];
@@ -84,6 +86,24 @@
     return 44;
     
 }
+
+//-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return YES;
+//}
+
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+
+ NSLog(@"moveRowAtIndexPath-----fromIndex--%@-----toIndex---%@",sourceIndexPath,destinationIndexPath);
+
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleInsert;
+}
+
 
 
 @end
