@@ -186,7 +186,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "568475779.19575"
+                  timestampString = "568607731.256371"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -201,7 +201,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "568475779.198828"
+                  timestampString = "568607731.273384"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -216,7 +216,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "568475779.2011991"
+                  timestampString = "568607731.2826999"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -265,23 +265,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "summary/testViewController.m"
-            timestampString = "567687527.798331"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "-StringChangeToDoubleForJingdu:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "summary/testViewController.m"
-            timestampString = "567687527.801181"
+            timestampString = "568557253.055928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "191"

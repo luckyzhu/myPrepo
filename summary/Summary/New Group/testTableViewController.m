@@ -10,7 +10,7 @@
 #import "testTableViewController.h"
 #import "testTableViewCell.h"
 
-@interface testTableViewController ()
+@interface testTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -19,7 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.tableView.editing = YES;
+//    self.tableView.editing = YES;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+
+//    [self.tableView setEditing:YES animated:YES];
 
     UIView *superView = [[UIView alloc]init];
     superView.backgroundColor = [UIColor redColor];
@@ -50,6 +54,8 @@
     }];
     
     [self.tableView layoutIfNeeded];
+
+
 }
 
 
@@ -78,8 +84,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
+
+    NSIndexPath *testIndexPath = [NSIndexPath indexPathForRow:100 inSection:0];
+    NSLog(@"1111----%@",testIndexPath);
+
+    [tableView scrollToRowAtIndexPath:testIndexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

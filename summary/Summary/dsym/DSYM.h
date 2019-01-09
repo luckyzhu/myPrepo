@@ -10,7 +10,7 @@
 
 @interface DSYM : NSObject
 
-/*
+/* 符号表
  1.dSYM 文件路径。 /Users/<用户名>/Library/Developer/Xcode/Archives
     正常用xcode打包的时候，会在上述路径有dsym路径。
  */
