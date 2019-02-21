@@ -43,7 +43,7 @@
 		851C0ACE21D62B8C0075931F /* SimpleLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C0ACC21D62B8C0075931F /* SimpleLayoutViewController.swift */; };
 		851C0AD021D62CF40075931F /* swiftTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C0ACF21D62CF40075931F /* swiftTestView.swift */; };
 		851C0AD321D6389F0075931F /* swiftSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C0AD221D6389F0075931F /* swiftSummary.swift */; };
-		851E0771215B8D4700E8E15E /* 待解决问题.md in Resources */ = {isa = PBXBuildFile; fileRef = 851E0770215B8D4700E8E15E /* 待解决问题.md */; };
+		851E0771215B8D4700E8E15E /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = 851E0770215B8D4700E8E15E /* TODO.md */; };
 		851E0774215B8FFC00E8E15E /* BBAESlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851E0773215B8FFC00E8E15E /* BBAESlideShowView.m */; };
 		851E079B216E11D700E8E15E /* BannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851E079A216E11D700E8E15E /* BannerScrollView.m */; };
 		8521F7BB20286C4A0073F119 /* remoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8521F7BA20286C4A0073F119 /* remoteViewController.m */; };
@@ -266,7 +266,7 @@
 		851C0ACC21D62B8C0075931F /* SimpleLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLayoutViewController.swift; sourceTree = "<group>"; };
 		851C0ACF21D62CF40075931F /* swiftTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTestView.swift; sourceTree = "<group>"; };
 		851C0AD221D6389F0075931F /* swiftSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftSummary.swift; sourceTree = "<group>"; };
-		851E0770215B8D4700E8E15E /* 待解决问题.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "待解决问题.md"; sourceTree = "<group>"; };
+		851E0770215B8D4700E8E15E /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		851E0772215B8FFC00E8E15E /* BBAESlideShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAESlideShowView.h; sourceTree = "<group>"; };
 		851E0773215B8FFC00E8E15E /* BBAESlideShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAESlideShowView.m; sourceTree = "<group>"; };
 		851E0799216E11D700E8E15E /* BannerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerScrollView.h; sourceTree = "<group>"; };
@@ -1251,7 +1251,7 @@
 				8522C64621C0E27200AA9AFD /* oc swift混编 */,
 				851B71E121AD421D002F4EBC /* 相机 */,
 				44A7596020BA891C0088CD21 /* Block */,
-				851E0770215B8D4700E8E15E /* 待解决问题.md */,
+				851E0770215B8D4700E8E15E /* TODO.md */,
 				85E6893E2150A09D0036F51C /* BBAESDK 接入.md */,
 				85257A43217ECCDB00EDEB86 /* 项目 */,
 				85BFF0B52170500600500C98 /* Masonry */,
@@ -1477,7 +1477,7 @@
 				850C9F4221A7E80B0077BFDC /* app全局弹出的页面分析.md in Resources */,
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				853DF06D218C5BC000E00E5E /* t2tw.json in Resources */,
-				851E0771215B8D4700E8E15E /* 待解决问题.md in Resources */,
+				851E0771215B8D4700E8E15E /* TODO.md in Resources */,
 				853B4DD8214B5C980053EE35 /* Reveal17.zip in Resources */,
 				853DF07C218C5BC100E00E5E /* STPhrases.txt in Resources */,
 				85BD1C57206CE0EC00CE865D /* details_attention.png in Resources */,

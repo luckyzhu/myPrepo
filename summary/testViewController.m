@@ -33,9 +33,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    swiftTestView *testView = [[swiftTestView alloc]init];
-    testView.tempStr = @"123";
+    SUMTestView *testView = [SUMTestView new];
+    testView.frame = CGRectMake(0, 64, 375, 500);
+    testView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:testView];
+
+//    swiftTestView *testView = [[swiftTestView alloc]init];
+//    testView.tempStr = @"123";
+//    [self.view addSubview:testView];
 
 //    Student *stu = [Student new];
 //    stu.name = @"小明";
