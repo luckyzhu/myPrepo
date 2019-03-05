@@ -20,12 +20,36 @@
 
 @implementation AFNViewController
 
+
 - (void)btnClick{
 
-<NSCoding>
-         //用AFN发送网络请求
+//    //1. 用原生的NSURLSession请求
+//    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
+//    NSDictionary *dict = @{
+//                          @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+//                          @"usAccountID":@296,
+//                          @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+//                          @"userID":@"135956817",
+//                          @"username":@"m1359568172",
+//                          };
+//
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+//    request.HTTPMethod = @"POST";
+//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    // 执行异步任务1
+//    NSURLSessionDataTask *task =  [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        NSLog(@"11111----%@",response);
+//    }];
+//    [task resume];
+
+
+
+         //2.用AFN发送网络请求
         NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
         AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    NSLog(@"session-----%@",session);
 
         NSDictionary *dict = @{
                                @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
@@ -36,7 +60,9 @@
                                };
         // 执行异步任务1
         [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"11111---%@",responseObject);
+
+            NSLog(@"11111---%@",(NSHTTPURLResponse *)task.response);
+            
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"error111--%@",error);
         }];
@@ -171,14 +197,19 @@
     //        NSLog(@"完成...");
     //    });
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//7.用户访问网站的原理过程
+-(void)summary1{
+
+    /*
+     01. DNS域名解析，获悉域名对应IP地址
+     02. 根据IP地址访问网站服务器，TCP三次握手过程
+     03. 用户向网站服务请求信息，HTTP请求过程（HTTP请求报文）
+     04. 网站服务对用户请求进行响应，HTTP响应过程（HTTP响应报文）
+      说明：03 04步骤就称为HTTP协议原理过程
+     05. 断开网络连接，TCP四次挥手过程
+
+     */
 }
-*/
 
 @end

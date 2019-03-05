@@ -426,6 +426,21 @@
 		8549CB06209231E60007813B /* AFN02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN02.png; sourceTree = "<group>"; };
 		8549CB09209232990007813B /* AFNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNViewController.h; sourceTree = "<group>"; };
 		8549CB0A209232990007813B /* AFNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNViewController.m; sourceTree = "<group>"; };
+		855343DF222E6E4F001CCAB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		855343E0222E6E4F001CCAB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		855343E2222E6E4F001CCAB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		855343E3222E6E4F001CCAB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		855343E6222E6E4F001CCAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		855343E8222E6E51001CCAB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		855343EB222E6E52001CCAB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		855343ED222E6E52001CCAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		855343EE222E6E52001CCAB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		855343F8222E6E52001CCAB2 /* targetOneUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = targetOneUITests.m; sourceTree = "<group>"; };
+		855343FA222E6E52001CCAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85534407222E6E85001CCAB2 /* summarySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = summarySDK.h; sourceTree = "<group>"; };
+		85534408222E6E85001CCAB2 /* summarySDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = summarySDK.m; sourceTree = "<group>"; };
+		85534414222E6ECF001CCAB2 /* summarySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = summarySDK.h; sourceTree = "<group>"; };
+		85534415222E6ECF001CCAB2 /* summarySDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = summarySDK.m; sourceTree = "<group>"; };
 		8566DAF721940D550081DF97 /* SUMTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUMTestView.h; sourceTree = "<group>"; };
 		8566DAF821940D550081DF97 /* SUMTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUMTestView.m; sourceTree = "<group>"; };
 		8569A0632084FD6500652D59 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
@@ -604,6 +619,10 @@
 				44F502661FC32F0E00B10720 /* summaryUITests */,
 				85E689472150A83C0036F51C /* 1 */,
 				85E6895B2150A84F0036F51C /* 1 */,
+				855343DE222E6E4F001CCAB2 /* targetOne */,
+				855343F7222E6E52001CCAB2 /* targetOneUITests */,
+				85534406222E6E85001CCAB2 /* summarySDK */,
+				85534413222E6ECF001CCAB2 /* summarySDK */,
 				44F502401FC32F0E00B10720 /* Products */,
 				E8B7409117AEEE2FEFD6BF22 /* Pods */,
 				6B017C5A9BF42320F02EEF13 /* Frameworks */,
@@ -1159,6 +1178,56 @@
 			path = AFN;
 			sourceTree = "<group>";
 		};
+		855343DE222E6E4F001CCAB2 /* targetOne */ = {
+			isa = PBXGroup;
+			children = (
+				855343DF222E6E4F001CCAB2 /* AppDelegate.h */,
+				855343E0222E6E4F001CCAB2 /* AppDelegate.m */,
+				855343E2222E6E4F001CCAB2 /* ViewController.h */,
+				855343E3222E6E4F001CCAB2 /* ViewController.m */,
+				855343E5222E6E4F001CCAB2 /* Main.storyboard */,
+				855343E8222E6E51001CCAB2 /* Assets.xcassets */,
+				855343EA222E6E51001CCAB2 /* LaunchScreen.storyboard */,
+				855343ED222E6E52001CCAB2 /* Info.plist */,
+				855343EE222E6E52001CCAB2 /* main.m */,
+			);
+			path = targetOne;
+			sourceTree = "<group>";
+		};
+		855343F7222E6E52001CCAB2 /* targetOneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				855343F8222E6E52001CCAB2 /* targetOneUITests.m */,
+				855343FA222E6E52001CCAB2 /* Info.plist */,
+			);
+			path = targetOneUITests;
+			sourceTree = "<group>";
+		};
+		85534406222E6E85001CCAB2 /* summarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				85534407222E6E85001CCAB2 /* summarySDK.h */,
+				85534408222E6E85001CCAB2 /* summarySDK.m */,
+			);
+			path = summarySDK;
+			sourceTree = "<group>";
+		};
+		85534413222E6ECF001CCAB2 /* summarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				85534414222E6ECF001CCAB2 /* summarySDK.h */,
+				85534415222E6ECF001CCAB2 /* summarySDK.m */,
+			);
+			path = summarySDK;
+			sourceTree = "<group>";
+		};
+		857563EE2227B58000E1AE60 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
 		85828FBC20874D7100EC116A /* knowledgeImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1246,6 +1315,7 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				857563EE2227B58000E1AE60 /* 分类 */,
 				8526CDA621DDAC2B005C46CF /* mac 电脑相关 */,
 				851C0AD121D638880075931F /* swift */,
 				8522C64621C0E27200AA9AFD /* oc swift混编 */,
@@ -1712,6 +1782,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				44F502511FC32F0E00B10720 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		855343E5222E6E4F001CCAB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855343E6222E6E4F001CCAB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		855343EA222E6E51001CCAB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855343EB222E6E52001CCAB2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
