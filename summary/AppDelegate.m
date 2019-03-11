@@ -46,6 +46,7 @@
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[AFNViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    NSLog(@"1111");
 
     return YES;
 }
