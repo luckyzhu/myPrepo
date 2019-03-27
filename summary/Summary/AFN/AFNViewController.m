@@ -8,14 +8,23 @@
 
 #import "AFNViewController.h"
 #import <AFNetworking.h>
+#import "markdown_lib.h"
+#import "markdown_peg.h"
+#import "Masonry.h"
 
-@interface AFNViewController ()
+@interface AFNViewController ()<UITextViewDelegate>
 @property (nonatomic,strong) NSOperationQueue  *queue;
 @property (nonatomic,strong) dispatch_queue_t serialQueue;
 @property (nonatomic,strong) AFHTTPSessionManager *session;
 @property (nonatomic,strong) NSMutableArray *taskArray;
 
 @property (nonatomic,assign) BOOL isRequest;
+
+@property (strong, nonatomic) NSAttributedString *string;
+@property (strong, nonatomic) UITextView *textView;
+
+
+
 @end
 
 @implementation AFNViewController
@@ -72,27 +81,178 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 400, 50, 50);
-    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
-    [self.view addSubview:button];
+//    UIView *superView = [UIView new];
+//
+//    UIImageView *settingImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"auto"]];
+//    [settingImage addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(settingImageClick)]];
+//    [self.view addSubview:settingImage];
+//    [settingImage mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerY.mas_equalTo(self.totalAssetsLabel.centerY);
+//        make.right.mas_equalTo(tipImage.left).offset(-10);
+//        make.size.mas_equalTo(CGSizeMake(settingImage.frame.size.width, settingImage.frame.size.height));
+//    }];
 
-    self.queue = [[NSOperationQueue alloc]init];
-    dispatch_queue_t queue = dispatch_queue_create("123", DISPATCH_QUEUE_SERIAL);
-    self.serialQueue = queue;
+    //markdown 格式转属性字符串
+    /*
+     AttributedMarkdown 框架
+     https://github.com/iwasrobbed/Down
+     */
 
-    self.taskArray = [NSMutableArray array];
+    NSMutableDictionary* attributes = [[NSMutableDictionary alloc]init];
 
-   self.session = [AFHTTPSessionManager manager];
+    // p
+
+    UIFont *paragraphFont = [UIFont fontWithName:@"AvenirNext-Medium" size:15.0];
+    NSMutableParagraphStyle* pParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+
+    pParagraphStyle.paragraphSpacing = 12;
+    pParagraphStyle.paragraphSpacingBefore = 12;
+    NSDictionary *pAttributes = @{
+                                  NSFontAttributeName : paragraphFont,
+                                  NSParagraphStyleAttributeName : pParagraphStyle,
+                                  };
+
+    [attributes setObject:pAttributes forKey:@(PARA)];
+
+    // h1
+    UIFont *h1Font = [UIFont fontWithName:@"AvenirNext-Bold" size:24.0];
+    [attributes setObject:@{NSFontAttributeName : h1Font} forKey:@(H1)];
+
+    // h2
+    UIFont *h2Font = [UIFont fontWithName:@"AvenirNext-Bold" size:18.0];
+    [attributes setObject:@{NSFontAttributeName : h2Font} forKey:@(H2)];
+
+    // h3
+    UIFont *h3Font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:17.0];
+    [attributes setObject:@{NSFontAttributeName : h3Font} forKey:@(H3)];
+
+    // em
+    UIFont *emFont = [UIFont fontWithName:@"AvenirNext-MediumItalic" size:15.0];
+    [attributes setObject:@{NSFontAttributeName : emFont} forKey:@(EMPH)];
+
+    // strong
+    UIFont *strongFont = [UIFont fontWithName:@"AvenirNext-Bold" size:15.0];
+    [attributes setObject:@{NSFontAttributeName : strongFont} forKey:@(STRONG)];
+
+    // ul
+    NSMutableParagraphStyle* listParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+    listParagraphStyle.headIndent = 16.0;
+    [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listParagraphStyle} forKey:@(BULLETLIST)];
+
+    // li
+    NSMutableParagraphStyle* listItemParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+    listItemParagraphStyle.headIndent = 16.0;
+    [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listItemParagraphStyle} forKey:@(LISTITEM)];
+
+    // a
+    UIColor *linkColor = [UIColor blueColor];
+    [attributes setObject:@{NSForegroundColorAttributeName : linkColor} forKey:@(LINK)];
+
+    // blockquote
+    NSMutableParagraphStyle* blockquoteParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+    blockquoteParagraphStyle.headIndent = 16.0;
+    blockquoteParagraphStyle.tailIndent = 16.0;
+    blockquoteParagraphStyle.firstLineHeadIndent = 16.0;
+    [attributes setObject:@{NSFontAttributeName : [emFont fontWithSize:18.0], NSParagraphStyleAttributeName : pParagraphStyle} forKey:@(BLOCKQUOTE)];
+
+    // verbatim (code)
+    NSMutableParagraphStyle* verbatimParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+    verbatimParagraphStyle.headIndent = 12.0;
+    verbatimParagraphStyle.firstLineHeadIndent = 12.0;
+    UIFont *verbatimFont = [UIFont fontWithName:@"CourierNewPSMT" size:14.0];
+    [attributes setObject:@{NSFontAttributeName : verbatimFont, NSParagraphStyleAttributeName : verbatimParagraphStyle} forKey:@(VERBATIM)];
+
+
+//    NSError* error;
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"README" ofType:@"markdown"];
+//    NSString* inputText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+//    NSString* inputText =  @"- [Rob Phillips](https://github.com/iwasrobbed)"; <br/>
+    NSString* inputText =  @"Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML ![avatar](https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=dog%20picture&step_word=&hs=2&pn=1&spn=0&di=67470099620&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=2022767672%2C792259952&os=2275055259%2C1928930628&simid=3339461201%2C154105304&adpicid=0&lpn=0&ln=814&fr=&fmq=1553601713773_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fanimal-world.com%2Fdogs%2FHound-Dog-Breeds%2Fimages%2FBeagle2WDHo_Ap6D.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3F152f_z%26e3Bwgt4ws-o56s1_z%26e3Bv54AzdH3F152fAzdH3FH57g1-D52-B6jj1fAzdH3FH57g1D52B6jj1f_z%26e3Brir&gsm=0&rpstart=0&rpnum=0&islist=&querylist=&force=undefined)code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextView`, `DTAttributedLabel` and `DTAttributedTextCell`.Hello, world. *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextView`, `DTAttributedLabel` and `DTAttributedTextCell`.Hello, world. *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextView`, `DTAttributedLabel` and `DTAttributedTextCell`.Hello, world. *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextVie *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code" ;
+    NSMutableAttributedString* attr_out = markdown_to_attr_string(inputText,0,attributes);
+    self.string = attr_out;
+
+
+    UITextView *textView = [[UITextView alloc]init];
+    textView.attributedText = self.string;
+    textView.delegate = self;
+//    textView.frame = CGRectMake(0,100, self.view.frame.size.width, 50);
+    textView.scrollEnabled = NO;
+    textView.editable = NO;
+    textView.backgroundColor = [UIColor lightGrayColor];
+    textView.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:textView];
+    self.textView = textView;
+
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        make.left.right.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view).offset(64);
+        make.height.mas_greaterThanOrEqualTo(20);
+    }];
+
+    [self.textView layoutIfNeeded];
+    if (self.textView.frame.size.height > self.view.frame.size.height - 64 - 78) {
+        textView.scrollEnabled = YES;
+        [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+            make.left.right.mas_equalTo(self.view);
+            make.top.mas_equalTo(self.view.mas_top).offset(64);
+            make.bottom.mas_equalTo(self.view.mas_bottom).offset(-78);
+        }];
+    }
+
+
+
+//
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
+//    [self.textView addGestureRecognizer:tap];
+
+
+
+//    UIButton *button = [[UIButton alloc]init];
+//    button.frame = CGRectMake(100, 400, 50, 50);
+//    [button setTitle:@"按钮" forState:UIControlStateNormal];
+//    button.titleLabel.textColor = [UIColor redColor];
+//    button.backgroundColor = [UIColor blueColor];
+//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+//    button.exclusiveTouch = YES;
+//    [self.view addSubview:button];
+//
+//    self.queue = [[NSOperationQueue alloc]init];
+//    dispatch_queue_t queue = dispatch_queue_create("123", DISPATCH_QUEUE_SERIAL);
+//    self.serialQueue = queue;
+//
+//    self.taskArray = [NSMutableArray array];
+//
+//   self.session = [AFHTTPSessionManager manager];
 
 
 }
 
+//-(void)handleTap:(UITapGestureRecognizer*)tap
+//{
+//
+//    NSLog(@"9999");
+//    UITextRange *characterRange = [self.textView characterRangeAtPoint:[tap locationInView:self.textView]];
+//    NSInteger startOffset = [self.textView offsetFromPosition:self.textView.beginningOfDocument toPosition:characterRange.start];
+//    NSInteger endOffset = [self.textView offsetFromPosition:self.textView.beginningOfDocument toPosition:characterRange.end];
+//    NSRange offsetRange = NSMakeRange(startOffset, endOffset - startOffset);
+//    [self.string enumerateAttributesInRange:offsetRange options:0 usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
+//        NSURL *link = [attrs objectForKey:@"attributedMarkdownURL"];
+//        if (link) {
+//            NSLog(@"%@",link);
+//            [[UIApplication sharedApplication] openURL:link];
+//        }
+//    }];
+//}
 
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction NS_AVAILABLE_IOS(10_0){
+
+
+    NSLog(@"shouldInteractWithURL---%@",URL);
+    return YES;
+
+}
 -(void)testCode{
 
     //        NSDictionary *dict = @{

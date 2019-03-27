@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "640CEAA034670A41E024AB1FB6E4E623"
-               BlueprintName = "Pods-summary"
+               BlueprintIdentifier = "7141816A76ED6AEC70970069473F2A2B"
+               BlueprintName = "AttributedMarkdown"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-summary.a">
+               BuildableName = "libAttributedMarkdown.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

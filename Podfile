@@ -8,5 +8,6 @@ pod 'SDWebImage', '~> 4.2.0'
 pod 'MJRefresh', '~> 3.1.15.3'
 pod 'MJExtension', '~> 3.0.13'
 pod 'SnapKit', '~> 4.2.0'
+pod 'AttributedMarkdown', :git => 'https://github.com/dreamwieber/AttributedMarkdown.git'
 
 end
