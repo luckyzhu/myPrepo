@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		442AECD320BA8B4C007D06B5 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442AECD220BA8B4C007D06B5 /* BlockViewController.m */; };
+		442356F621B6C4F600F56B8E /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442AECD220BA8B4C007D06B5 /* BlockViewController.m */; };
 		4457D03C2073D35A00B30934 /* LXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457D03B2073D35A00B30934 /* LXControl.m */; };
 		44705EAE2078832F00610649 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 44705EAD2078832F00610649 /* Person.m */; };
 		44C575FB205E6C790058D457 /* linuxObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C575FA205E6C790058D457 /* linuxObj.m */; };
@@ -1501,6 +1501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442356F621B6C4F600F56B8E /* BlockViewController.m in Sources */,
 				85BFF0B82170502A00500C98 /* MasonryViewController.m in Sources */,
 				8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */,
 				853DF08D218C5BC100E00E5E /* MaxMatchSegmentation.cpp in Sources */,
@@ -1535,7 +1536,6 @@
 				852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */,
 				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
-				442AECD320BA8B4C007D06B5 /* BlockViewController.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
 				8509A613213A26C100901832 /* middleViewController.m in Sources */,

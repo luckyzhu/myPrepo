@@ -24,11 +24,43 @@
      
      */
     //1.1 写一个block 取其父类的父类，结果是NSObject
-    NSLog(@"111---%@",[[[[^(){
-        NSLog(@"1111----");
-    } class] superclass] superclass] superclass]);
+//    NSLog(@"111---%@",[[[[^(){
+//        NSLog(@"1111----");
+//    } class] superclass] superclass] superclass]);
     
-
+    
+    
+    //2. 不访问auto变量的block 是__NSGlobalBlock__
+//    NSLog(@"3333-----%@",[^(){
+//        NSLog(@"block----------");
+//    } class]);
+    
+    /*
+     3. 访问auto变量的block __NSStackBlock__
+     3. 访问auto变量的block copy之后是 __NSMallocBlock__
+     */
+    
+    int age = 10;
+    NSLog(@"3333-----%@",[^(){
+        NSLog(@"age----%d",age);
+    } class]);
+    
+    NSLog(@"4444-----%@",[[^(){
+        NSLog(@"age----%d",age);
+    } copy] class]);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 
