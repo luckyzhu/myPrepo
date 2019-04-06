@@ -29,7 +29,10 @@
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
+/*
+ https://www.jianshu.com/p/730ed07c988e
 
+ */
 /**
  Returns a percent-escaped string following RFC 3986 for a query string key or value.
  RFC 3986 states that the following characters are "reserved" characters.

@@ -5,7 +5,7 @@
 //  Created by ZhuLuxi on 2017/11/20.
 //  Copyright © 2017年 LX. All rights reserved.
 //
-
+#import "drawViewController.h"
 #import "openCCViewController.h"
 #import "NSArrayViewController.h"
 #import "AppDelegate.h"
@@ -26,6 +26,10 @@
 #import "subViewController.h"
 #import "testViewController.h"
 #import "weiyiEnumViewController.h"
+#import "UICameraViewController.h"
+#import "OCUseSwiftViewController.h"
+#import "summary-Swift.h"
+
 
 @interface AppDelegate ()
 
@@ -39,9 +43,10 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[BlockViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[AFNViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    NSLog(@"22222");
 
     return YES;
 }

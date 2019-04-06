@@ -10,7 +10,7 @@
 #import "testTableViewController.h"
 #import "testTableViewCell.h"
 
-@interface testTableViewController ()
+@interface testTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -18,7 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+//    self.tableView.editing = YES;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+
+//    [self.tableView setEditing:YES animated:YES];
+
     UIView *superView = [[UIView alloc]init];
     superView.backgroundColor = [UIColor redColor];
     self.tableView.tableHeaderView = superView;
@@ -48,6 +54,8 @@
     }];
     
     [self.tableView layoutIfNeeded];
+
+
 }
 
 
@@ -65,7 +73,7 @@
     testTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (cell == nil) {
-        cell = [[testTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+        cell = [[testTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.textLabel.text = [NSString stringWithFormat:@"测试数据－－－－－%zd",indexPath.row];
@@ -76,14 +84,36 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
+
+    NSIndexPath *testIndexPath = [NSIndexPath indexPathForRow:100 inSection:0];
+    NSLog(@"1111----%@",testIndexPath);
+
+    [tableView scrollToRowAtIndexPath:testIndexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 44;
     
 }
+
+//-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return YES;
+//}
+
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+
+ NSLog(@"moveRowAtIndexPath-----fromIndex--%@-----toIndex---%@",sourceIndexPath,destinationIndexPath);
+
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleInsert;
+}
+
 
 
 @end

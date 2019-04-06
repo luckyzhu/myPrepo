@@ -19,7 +19,7 @@
     [super viewDidLoad];
 
     drawView *view = [drawView new];
-    view.frame = CGRectMake(30, 100, 300, 100);
+    view.frame = self.view.bounds;
     view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:view];
 

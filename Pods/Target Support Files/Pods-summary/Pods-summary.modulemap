@@ -1,0 +1,6 @@
+module Pods_summary {
+  umbrella header "Pods-summary-umbrella.h"
+
+  export *
+  module * { export * }
+}

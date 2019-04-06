@@ -173,7 +173,9 @@ NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {
 @end
 
 #pragma mark -
-
+/*
+ 方法名组成的数组
+ */
 static NSArray * AFHTTPRequestSerializerObservedKeyPaths() {
     static NSArray *_AFHTTPRequestSerializerObservedKeyPaths = nil;
     static dispatch_once_t onceToken;
@@ -193,12 +195,21 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
 @property (readwrite, nonatomic, copy) AFQueryStringSerializationBlock queryStringSerialization;
 @end
 
+/*
+ https://blog.csdn.net/tsunamier/article/details/53466973
+ 1>用于创建完备的HTTP请求对象（NSURLRequest）
+ 包括设置好请求方式、请求头域、请求体，以及请求的一些配置，例如是否使用默认的cookie方案、是否支持蜂窝移动等
+ */
 @implementation AFHTTPRequestSerializer
 
 + (instancetype)serializer {
     return [[self alloc] init];
 }
-
+/*
+ 初始化做的事情:
+ 1>  指定编码为UTF-8
+ 2>  构建请求头可变字典，指定Accept-Language和User-Agent
+ */
 - (instancetype)init {
     self = [super init];
     if (!self) {
