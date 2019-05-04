@@ -23,7 +23,7 @@
 		44F502681FC32F0E00B10720 /* summaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F502671FC32F0E00B10720 /* summaryUITests.m */; };
 		8509A613213A26C100901832 /* middleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A612213A26C100901832 /* middleViewController.m */; };
 		8509A616213C364A00901832 /* UIViewController+headerAndFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */; };
-		850C9F4221A7E80B0077BFDC /* app全局弹出的页面分析.md in Resources */ = {isa = PBXBuildFile; fileRef = 850C9F4121A7E80B0077BFDC /* app全局弹出的页面分析.md */; };
+		850C9F4221A7E80B0077BFDC /* 下载腾讯视频.md in Resources */ = {isa = PBXBuildFile; fileRef = 850C9F4121A7E80B0077BFDC /* 下载腾讯视频.md */; };
 		8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513E8C22074C7B0004BD362 /* NSArray+Extension.m */; };
 		85165F78205FA13A0071D431 /* DSYM.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F77205FA13A0071D431 /* DSYM.m */; };
 		85165F7A205FC13D0071D431 /* NSInvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C542010A42600FDF043 /* NSInvocationViewController.m */; };
@@ -254,7 +254,7 @@
 		8509A612213A26C100901832 /* middleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = middleViewController.m; sourceTree = "<group>"; };
 		8509A614213C364A00901832 /* UIViewController+headerAndFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+headerAndFooter.h"; sourceTree = "<group>"; };
 		8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+headerAndFooter.m"; sourceTree = "<group>"; };
-		850C9F4121A7E80B0077BFDC /* app全局弹出的页面分析.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "app全局弹出的页面分析.md"; path = "summary/Summary/app全局弹出的页面分析.md"; sourceTree = SOURCE_ROOT; };
+		850C9F4121A7E80B0077BFDC /* 下载腾讯视频.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "下载腾讯视频.md"; path = "summary/Summary/下载腾讯视频.md"; sourceTree = SOURCE_ROOT; };
 		8513E8C12074C7B0004BD362 /* NSArray+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		8513E8C22074C7B0004BD362 /* NSArray+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		85165F76205FA13A0071D431 /* DSYM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSYM.h; sourceTree = "<group>"; };
@@ -936,7 +936,7 @@
 		85257A43217ECCDB00EDEB86 /* 项目 */ = {
 			isa = PBXGroup;
 			children = (
-				850C9F4121A7E80B0077BFDC /* app全局弹出的页面分析.md */,
+				850C9F4121A7E80B0077BFDC /* 下载腾讯视频.md */,
 				85257A44217ECD0300EDEB86 /* project.md */,
 			);
 			path = "项目";
@@ -1270,13 +1270,6 @@
 			path = testSummarySDK;
 			sourceTree = "<group>";
 		};
-		857563EE2227B58000E1AE60 /* 分类 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "分类";
-			sourceTree = "<group>";
-		};
 		85828FBC20874D7100EC116A /* knowledgeImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1364,7 +1357,6 @@
 		85CD07CF2047EF91005E0071 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				857563EE2227B58000E1AE60 /* 分类 */,
 				8526CDA621DDAC2B005C46CF /* mac 电脑相关 */,
 				851C0AD121D638880075931F /* swift */,
 				8522C64621C0E27200AA9AFD /* oc swift混编 */,
@@ -1631,7 +1623,7 @@
 			files = (
 				852727FD21E240F500AAC991 /* panl.md in Resources */,
 				853D605320C1BE0900C0CA30 /* 123.png in Resources */,
-				850C9F4221A7E80B0077BFDC /* app全局弹出的页面分析.md in Resources */,
+				850C9F4221A7E80B0077BFDC /* 下载腾讯视频.md in Resources */,
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				853DF06D218C5BC000E00E5E /* t2tw.json in Resources */,
 				851E0771215B8D4700E8E15E /* TODO.md in Resources */,

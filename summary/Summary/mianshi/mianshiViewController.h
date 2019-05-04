@@ -25,6 +25,11 @@
 
 //7.session和cookie https://blog.csdn.net/qq_30513483/article/details/51867422
 
+/*
+ 8.NSArray与NSMutableArray应该使用copy还是strong
+ https://blog.csdn.net/ZhongLv_HoneyMoon/article/details/83786248
+ */
+
 
 
 @end
