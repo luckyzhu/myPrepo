@@ -321,9 +321,6 @@
     Person *testModel = [Person new];
     [testModel setValue:@"哈哈" forKey:@"level"];
     //    NSLog(@"level的值----%@",testModel.level);
-    NSLog(@"_level的值----%@",testModel->_level);
-    NSLog(@"isLevel的值----%@",testModel->isLevel);
-    NSLog(@"_isLevel的值----%@",testModel->_isLevel);
 }
 
 

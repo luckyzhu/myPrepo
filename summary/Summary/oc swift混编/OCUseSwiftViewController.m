@@ -27,8 +27,8 @@
 //    BBAECaculateYAxisSpaceTool *obj = [BBAECaculateYAxisSpaceTool new];
 //    NSArray *array = [obj computeAxisValuesWithMin:minValue max:maxValue];
 
-    NSArray *array = [BBAECaculateYAxisSpaceTool computeAxisValuesWithMin:minValue max:maxValue];
-    NSLog(@"array----%@",array);
+//    NSArray *array = [BBAECaculateYAxisSpaceTool computeAxisValuesWithMin:minValue max:maxValue];
+//    NSLog(@"array----%@",array);
 
 }
 

@@ -96,4 +96,36 @@
 }
 
 
+//制作SDK遇到的问题:
+-(void)testOne{
+
+    /*
+     遇到的问题:
+     1>  SDK 能编译成功 在demo里运行不了。
+     缺失文件的引用 也有可能出现这种情况。
+
+     2> OC 与 swift 混编
+     2.1> BBAE-Swift 桥接文件运行BBAE 没有问题 但BBAESDK编译有问题
+     解决这个问题的办法:
+     源码仓库导入文件这样写:
+     BBAE和SDK 分开编译
+     SDK 这样引用:  #import <BBAESDK/BBAESDK-Swift.h>
+     Swift文件 要声明@objc public class BBAECaculateYAxisSpaceTool:NSObject 注意：添加了public 关键字
+     2.2> sdk引用的三方库找不到
+     首先pod install 一下
+     2.2.1> linked  frameworks and libraries 引用.a文件。libpods-BBAESDK.a等文件.SDK要应用的三方库
+     2.2.2> file —xcode 设置用legacy build system(新版)
+
+     2.3>
+     Undefined symbols for architecture x86_64:
+     "_OBJC_CLASS_$_BBAEGuidePageSlideView", referenced from:
+     objc-class-ref in BBAESDK(BBAENewPageGuideViewController.o)
+     .h 或者 .m 文件没有被引用
+
+     2.4> 工程测试的时候 注意把远程里的sdk彻底删除。
+     */
+    
+}
+
+
 @end

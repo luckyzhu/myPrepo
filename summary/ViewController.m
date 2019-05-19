@@ -10,15 +10,6 @@
 #import "Student.h"
 #import "Person.h"
 #import "subPerson.h"
-
-
-//@interface Student:NSObject
-//{
-//    NSString *_name;
-//    int _age;
-//    
-//}
-//@end
 #import <AVFoundation/AVFoundation.h>
 #import  "AFNetworking.h"
 #import <objc/runtime.h>
@@ -35,8 +26,11 @@
 #import "BBAESlideShowView.h"
 #import "BannerScrollView.h"
 #import "BBAESlideIntervalView.h"
+#import "LXTestView.h"
+#import "subViewController.h"
 
-@interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,BBAESlideShowViewDelegate>
+
+@interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,BBAESlideShowViewDelegate,LXTestViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray *array;
 @property (nonatomic,weak) UITableView *tableView;
@@ -137,44 +131,71 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [button setTitle:@"按钮一" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+
+    self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+    UIButton *button = [[UIButton alloc]init];
+    button.frame = CGRectMake(100, 100, 40, 40);
+//    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"edit_open"] forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor blueColor];
     [self.view addSubview:button];
-    
-    
+
+    UIButton *button2 = [[UIButton alloc]init];
+    button2.frame = CGRectMake(100, 150, 40, 40);
+//    [button2 setTitle:@"按钮2" forState:UIControlStateNormal];
+    [button2 setImage:[UIImage imageNamed:@"home_packup_open"] forState:UIControlStateNormal];
+    button2.titleLabel.textColor = [UIColor blueColor];
+    [self.view addSubview:button2];
+
+    UIButton *button3 = [[UIButton alloc]init];
+    button3.frame = CGRectMake(100, 200, 40, 40);
+//    [button3 setTitle:@"按钮3" forState:UIControlStateNormal];
+    [button3 setImage:[UIImage imageNamed:@"position_show"] forState:UIControlStateNormal];
+    button3.titleLabel.textColor = [UIColor blueColor];
+    [self.view addSubview:button3];
+
+
+
     return;
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"第一个vc dismiss" object:nil];
-
-
-
-    return;
-
-    NSArray *imageArray =  @[
-                             @"http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg",
-                             @"http://img.zcool.cn/community/01f09e577b85450000012e7e182cf0.jpg@1280w_1l_2o_100sh.jpg",
-                             @"http://img.zcool.cn/community/0125fd5770dfa50000018c1b486f15.jpg@1280w_1l_2o_100sh.jpg",
-                             @"http://img05.tooopen.com/images/20141217/sy_77493739982.jpg",
-                             @"http://img.zcool.cn/community/01102d57d161e80000012e7e57d0c9.jpg@1280w_1l_2o_100sh.jpg",
-                             @"http://pic.58pic.com/58pic/15/57/84/70H58PICCJt_1024.jpg",
-                             @"http://pic38.nipic.com/20140212/17942401_101320663138_2.jpg",
-                             ];
-
-//    BannerScrollView *slideView = [[BannerScrollView alloc]initWithImageUrls:imageArray clickBlock:^(NSInteger index) {
+    NSString *tempStr = @"被覆盖的提示B:Hello, world. *This* is  - [百度](bbae://optionpackage?type=available)  <br/>1. **Layouting** - Interfacing withCoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,#一级标题\n##二级标题\n###三级标题\n####四级标题\n#####五级标题\n######六级标题\n **this**  \n *inputText*  \n>> 引用  \n[链接](https://github.com/iwasrobbed)  \n被覆盖的提示B:Hello, world. *This* is  - [百度](bbae://optionpackage?type=available)  <br/>1. **Layouting** - Interfacing withCoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,#一级标题\n##二级标题\n###三级标题\n####四级标题\n#####五级标题\n######六级标题\n **this**  \n *inputText*  \n>> 引用  \n[链接](https://github.com/iwasrobbed)  \nr/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,被覆盖的提示B:Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText,#一级标题\n##二级标题\n###三级标题\n####四级标题\n#####五级标题\n######六级标题\n **this**  \n *inputText*  \n>> 引用  \n[链接](https://github.com/iwasrobbed)";
+    LXTestView *testView = [[LXTestView alloc]initWithDealTipViewType:BBAEDealTipAlterViewType_Default showStr:tempStr useMd:NO];
+    testView.delegate = self;
+    [testView show];
+    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 //
-//        NSLog(@"index---%zd",index);
-//    }];
+//    NSDate *startDate = [dateFormatter dateFromString:@"2019-5-9 23:59:00"];
+//    NSDate *endDate = [dateFormatter dateFromString:@"2019-5-10 00:00:00"];
+//    NSCalendar *calendar = [NSCalendar currentCalendar];
+//
+//    NSDateComponents *components = [calendar components:NSCalendarUnitMinute fromDate:startDate toDate:endDate options:0];
+//
+//    NSLog(@"差值---%zd",components.minute);
 
-    BBAESlideIntervalView *slideView = [[BBAESlideIntervalView alloc]initWithCGSize:CGSizeMake(375, 200) dataArray:imageArray];
-    [self.view addSubview:slideView];
-    [slideView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_top).offset(100);
-        make.left.right.mas_equalTo(self.view).offset(0);
-        make.height.mas_equalTo(@200);
-    }];
+//    NSArray *imageArray =  @[
+//                             @"http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg",
+//                             @"http://img.zcool.cn/community/01f09e577b85450000012e7e182cf0.jpg@1280w_1l_2o_100sh.jpg",
+//                             @"http://img.zcool.cn/community/0125fd5770dfa50000018c1b486f15.jpg@1280w_1l_2o_100sh.jpg",
+//                             @"http://img05.tooopen.com/images/20141217/sy_77493739982.jpg",
+//                             @"http://img.zcool.cn/community/01102d57d161e80000012e7e57d0c9.jpg@1280w_1l_2o_100sh.jpg",
+//                             @"http://pic.58pic.com/58pic/15/57/84/70H58PICCJt_1024.jpg",
+//                             @"http://pic38.nipic.com/20140212/17942401_101320663138_2.jpg",
+//                             ];
+//
+////    BannerScrollView *slideView = [[BannerScrollView alloc]initWithImageUrls:imageArray clickBlock:^(NSInteger index) {
+////
+////        NSLog(@"index---%zd",index);
+////    }];
+//
+//    BBAESlideIntervalView *slideView = [[BBAESlideIntervalView alloc]initWithCGSize:CGSizeMake(375, 200) dataArray:imageArray];
+//    [self.view addSubview:slideView];
+//    [slideView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.view.mas_top).offset(100);
+//        make.left.right.mas_equalTo(self.view).offset(0);
+//        make.height.mas_equalTo(@200);
+//    }];
 
 //    BBAESlideShowView *slideView = [[BBAESlideShowView alloc]initWithCGSize:CGSizeMake(self.view.frame.size.width, 200) dataArray:imageArray];
 ////    slideView.hasPageControl = YES;
@@ -189,6 +210,25 @@
 -(void)slideShowViewDidClick:(NSInteger)index{
 
     NSLog(@"点击的是第%zd个图片...",index);
+}
+
+-(void)leftButtonClick:(BBAEDealTipAlterViewType)dealType{
+
+    NSLog(@"leftButtonClick");
+}
+
+-(void)rightButtonClick:(BBAEDealTipAlterViewType)dealType{
+    NSLog(@"rightButtonClick");
+}
+
+-(void)alertView2DidClickLink:(NSURL *)URL inRange:(NSRange)characterRange{
+
+    NSLog(@"alertView2DidClickLink");
+
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+
+    subViewController *subVc = [[subViewController alloc]init];
+    [self.navigationController pushViewController:subVc animated:YES];
 }
 
 CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float centerY ,float x ,float y ,float angle)

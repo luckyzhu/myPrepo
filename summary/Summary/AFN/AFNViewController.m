@@ -6,11 +6,13 @@
 //  Copyright © 2018年 LX. All rights reserved.
 //
 
+
 #import "AFNViewController.h"
 #import <AFNetworking.h>
 #import "markdown_lib.h"
 #import "markdown_peg.h"
 #import "Masonry.h"
+#import "summary-Swift.h"
 
 @interface AFNViewController ()<UITextViewDelegate>
 @property (nonatomic,strong) NSOperationQueue  *queue;
@@ -81,6 +83,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSString *tempStr = @"     1 2  3     ";
+    //去掉前后空格和换行
+//    NSCharacterSet  *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+//    tempStr = [tempStr stringByTrimmingCharactersInSet:set];
+    tempStr = [tempStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+
+    NSLog(@"tempStr----%@",tempStr);
+
+
+
+//    NSLog(@"333-----%@",[BBAESDK sharedInstance]);
 //    UIView *superView = [UIView new];
 //
 //    UIImageView *settingImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"auto"]];
@@ -92,6 +105,14 @@
 //        make.size.mas_equalTo(CGSizeMake(settingImage.frame.size.width, settingImage.frame.size.height));
 //    }];
 
+
+
+
+//    [self test2];
+    [self test1];
+}
+
+-(void)test1{
     //markdown 格式转属性字符串
     /*
      AttributedMarkdown 框架
@@ -110,29 +131,32 @@
     NSDictionary *pAttributes = @{
                                   NSFontAttributeName : paragraphFont,
                                   NSParagraphStyleAttributeName : pParagraphStyle,
+                                  NSForegroundColorAttributeName :[UIColor redColor],
                                   };
 
     [attributes setObject:pAttributes forKey:@(PARA)];
 
     // h1
     UIFont *h1Font = [UIFont fontWithName:@"AvenirNext-Bold" size:24.0];
-    [attributes setObject:@{NSFontAttributeName : h1Font} forKey:@(H1)];
+    [attributes setObject:@{NSFontAttributeName : h1Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H1)];
 
     // h2
     UIFont *h2Font = [UIFont fontWithName:@"AvenirNext-Bold" size:18.0];
-    [attributes setObject:@{NSFontAttributeName : h2Font} forKey:@(H2)];
+    [attributes setObject:@{NSFontAttributeName : h2Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H2)];
 
     // h3
     UIFont *h3Font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:17.0];
-    [attributes setObject:@{NSFontAttributeName : h3Font} forKey:@(H3)];
+    [attributes setObject:@{NSFontAttributeName : h3Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H3)];
 
-    // em
+    // em  斜体
     UIFont *emFont = [UIFont fontWithName:@"AvenirNext-MediumItalic" size:15.0];
-    [attributes setObject:@{NSFontAttributeName : emFont} forKey:@(EMPH)];
-
-    // strong
-    UIFont *strongFont = [UIFont fontWithName:@"AvenirNext-Bold" size:15.0];
-    [attributes setObject:@{NSFontAttributeName : strongFont} forKey:@(STRONG)];
+//    CGAffineTransform matrix =CGAffineTransformMake(1, 0, tanf(30 * (CGFloat)M_PI / 180), 1, 0, 0);//设置反射。倾斜角度。
+//    UIFontDescriptor *desc = [ UIFontDescriptor fontDescriptorWithName :[UIFont systemFontOfSize:14].fontName matrix :matrix];//取得系统字符并设置反射。14
+//    UIFont *emFont = [UIFont fontWithDescriptor:desc size:14];
+    [attributes setObject:@{NSFontAttributeName : emFont,NSForegroundColorAttributeName :[UIColor cyanColor]} forKey:@(EMPH)];
+     // strong
+    UIFont *strongFont = [UIFont systemFontOfSize:35];
+    [attributes setObject:@{NSFontAttributeName : strongFont,NSForegroundColorAttributeName :[UIColor yellowColor]} forKey:@(STRONG)];
 
     // ul
     NSMutableParagraphStyle* listParagraphStyle = [[NSMutableParagraphStyle alloc]init];
@@ -143,10 +167,6 @@
     NSMutableParagraphStyle* listItemParagraphStyle = [[NSMutableParagraphStyle alloc]init];
     listItemParagraphStyle.headIndent = 16.0;
     [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listItemParagraphStyle} forKey:@(LISTITEM)];
-
-    // a
-    UIColor *linkColor = [UIColor blueColor];
-    [attributes setObject:@{NSForegroundColorAttributeName : linkColor} forKey:@(LINK)];
 
     // blockquote
     NSMutableParagraphStyle* blockquoteParagraphStyle = [[NSMutableParagraphStyle alloc]init];
@@ -163,23 +183,57 @@
     [attributes setObject:@{NSFontAttributeName : verbatimFont, NSParagraphStyleAttributeName : verbatimParagraphStyle} forKey:@(VERBATIM)];
 
 
-//    NSError* error;
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"README" ofType:@"markdown"];
-//    NSString* inputText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
-//    NSString* inputText =  @"- [Rob Phillips](https://github.com/iwasrobbed)"; <br/>
-    NSString* inputText =  @"Hello, world. *This* is  - [百度](https://www.baidu.com)  <br/>1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML ![avatar](https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=dog%20picture&step_word=&hs=2&pn=1&spn=0&di=67470099620&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=2022767672%2C792259952&os=2275055259%2C1928930628&simid=3339461201%2C154105304&adpicid=0&lpn=0&ln=814&fr=&fmq=1553601713773_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2Fanimal-world.com%2Fdogs%2FHound-Dog-Breeds%2Fimages%2FBeagle2WDHo_Ap6D.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3F152f_z%26e3Bwgt4ws-o56s1_z%26e3Bv54AzdH3F152fAzdH3FH57g1-D52-B6jj1fAzdH3FH57g1D52B6jj1f_z%26e3Brir&gsm=0&rpstart=0&rpnum=0&islist=&querylist=&force=undefined)code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextView`, `DTAttributedLabel` and `DTAttributedTextCell`.Hello, world. *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextView`, `DTAttributedLabel` and `DTAttributedTextCell`.Hello, world. *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextView`, `DTAttributedLabel` and `DTAttributedTextCell`.Hello, world. *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code 2. **User Interface** - UI-related classes render these objects, specifically `DTAttributedTextVie *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code *This* is  - [百度](https://www.baidu.com)  1. **Layouting** - Interfacing with CoreText, generating attributed strings from HTML code" ;
+    //    NSError* error;
+    //    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"README" ofType:@"markdown"];
+    //    NSString* inputText = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
+    //    NSString* inputText =  @"- [Rob Phillips](https://github.com/iwasrobbed)"; <br/>
+    //    图片格式 https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&fm=27&gp=0.jpg
+    //
+    //    标题
+    //    NSString* inputText =  @"*This is freedom * freedome";
+    //
+    //    加粗
+    //    NSString* inputText =  @"**This is freedom** freedome";
+    //
+    //    斜体
+    //    NSString* inputText =  @"*This is freedom* freedome";
+    //
+    //    删除线
+    //    NSString* inputText =  @"1. 123 2. 3323 3. 44123";
+
+    //    NSString* inputText =  @"#一级标题  **this** *inputText* attributesattributes >引用- [Rob Phillips](https://github.com/iwasrobbed) - [Rob Phillips](https://github.com/iwasrobbed)- [Rob Phillips](https://github.com/iwasrobbed)- [Rob Phillips](https://github.com/iwasrobbed)";
+    //
+    //    NSString *inputText = @"**this**  jjj</br></br></br></br>  *inputText* <br />[链接](https://github.com/iwasrobbed) **this**  jjj</br></br></br></br>  *inputText* <br />[链接](https://github.com/iwasrobbed) **this**  jjj</br></br></br></br>  *inputText* <br />[链接](https://github.com/iwasrobbed)";
+
+    //    连续两个以上空格+回车
+    //    //![mahua](mahua-logo.jpg)
+    NSString *inputText = @" 哈哈哈哈\n# 一级标题\n## 二级标题\n### 三级标题\n#### 四级标题\n##### 五级标题\n###### 六级标题\n **this** **哈哈哈**  \n *inputText*  \n*汉字需要斜体*  \n  >引用  \n[链接](https://github.com/iwasrobbed)  \n";
+
+    //      NSString *inputText = @"hhahahhahh哈哈哈哈哈哈哈";
+
+
+
+    //链接
+    //    NSString* inputText =  @"- [Rob Phillips](https://github.com/iwasrobbed)";
+
+    //引用
+    //    NSString* inputText =  @" this is yingyong";
+
     NSMutableAttributedString* attr_out = markdown_to_attr_string(inputText,0,attributes);
     self.string = attr_out;
 
-
+    /*
+     支持的md格式:
+     H1, H2, H3, H4, H5, H6, 加粗,斜体，链接，引用
+     */
     UITextView *textView = [[UITextView alloc]init];
-    textView.attributedText = self.string;
+    textView.attributedText = attr_out;
     textView.delegate = self;
-//    textView.frame = CGRectMake(0,100, self.view.frame.size.width, 50);
+    //    textView.frame = CGRectMake(0,100, self.view.frame.size.width, 50);
     textView.scrollEnabled = NO;
     textView.editable = NO;
     textView.backgroundColor = [UIColor lightGrayColor];
-    textView.textAlignment = NSTextAlignmentCenter;
+    //    textView.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:textView];
     self.textView = textView;
 
@@ -203,56 +257,65 @@
 
 
 
-//
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
-//    [self.textView addGestureRecognizer:tap];
+    //
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
+    [self.textView addGestureRecognizer:tap];
 
 
+    UILabel *testLabel = [[UILabel alloc]init];
+    testLabel.text = @"您的升级申请已提交";
+    testLabel.textColor = [UIColor redColor];
+    testLabel.frame = CGRectMake(0, self.view.frame.size.height-78, self.view.frame.size.width, 78);
+    testLabel.textAlignment = NSTextAlignmentCenter;
+    CGAffineTransform matrix2 =CGAffineTransformMake(1, 0, tanf(15 * (CGFloat)M_PI / 180), 1, 0, 0);//设置反射。倾斜角度。
+    UIFontDescriptor *desc2 = [ UIFontDescriptor fontDescriptorWithName :[UIFont systemFontOfSize:14].fontName matrix :matrix2];//取得系统字符并设置反射。
+    testLabel.font = [ UIFont fontWithDescriptor :desc2 size :14];
+    [self.view addSubview:testLabel];
 
-//    UIButton *button = [[UIButton alloc]init];
-//    button.frame = CGRectMake(100, 400, 50, 50);
-//    [button setTitle:@"按钮" forState:UIControlStateNormal];
-//    button.titleLabel.textColor = [UIColor redColor];
-//    button.backgroundColor = [UIColor blueColor];
-//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-//    button.exclusiveTouch = YES;
-//    [self.view addSubview:button];
-//
-//    self.queue = [[NSOperationQueue alloc]init];
-//    dispatch_queue_t queue = dispatch_queue_create("123", DISPATCH_QUEUE_SERIAL);
-//    self.serialQueue = queue;
-//
-//    self.taskArray = [NSMutableArray array];
-//
-//   self.session = [AFHTTPSessionManager manager];
 
+    //    UIButton *button = [[UIButton alloc]init];
+    //    button.frame = CGRectMake(100, 400, 50, 50);
+    //    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    //    button.titleLabel.textColor = [UIColor redColor];
+    //    button.backgroundColor = [UIColor blueColor];
+    //    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    //    button.exclusiveTouch = YES;
+    //    [self.view addSubview:button];
+    //
+    //    self.queue = [[NSOperationQueue alloc]init];
+    //    dispatch_queue_t queue = dispatch_queue_create("123", DISPATCH_QUEUE_SERIAL);
+    //    self.serialQueue = queue;
+    //
+    //    self.taskArray = [NSMutableArray array];
+    //
+    //   self.session = [AFHTTPSessionManager manager];
 
 }
 
-//-(void)handleTap:(UITapGestureRecognizer*)tap
-//{
+-(void)handleTap:(UITapGestureRecognizer*)tap
+{
+
+    NSLog(@"9999");
+    UITextRange *characterRange = [self.textView characterRangeAtPoint:[tap locationInView:self.textView]];
+    NSInteger startOffset = [self.textView offsetFromPosition:self.textView.beginningOfDocument toPosition:characterRange.start];
+    NSInteger endOffset = [self.textView offsetFromPosition:self.textView.beginningOfDocument toPosition:characterRange.end];
+    NSRange offsetRange = NSMakeRange(startOffset, endOffset - startOffset);
+    [self.string enumerateAttributesInRange:offsetRange options:0 usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
+        NSURL *link = [attrs objectForKey:@"attributedMarkdownURL"];
+        if (link) {
+            NSLog(@"%@",link);
+            [[UIApplication sharedApplication] openURL:link];
+        }
+    }];
+}
+
+//- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction NS_AVAILABLE_IOS(10_0){
 //
-//    NSLog(@"9999");
-//    UITextRange *characterRange = [self.textView characterRangeAtPoint:[tap locationInView:self.textView]];
-//    NSInteger startOffset = [self.textView offsetFromPosition:self.textView.beginningOfDocument toPosition:characterRange.start];
-//    NSInteger endOffset = [self.textView offsetFromPosition:self.textView.beginningOfDocument toPosition:characterRange.end];
-//    NSRange offsetRange = NSMakeRange(startOffset, endOffset - startOffset);
-//    [self.string enumerateAttributesInRange:offsetRange options:0 usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop) {
-//        NSURL *link = [attrs objectForKey:@"attributedMarkdownURL"];
-//        if (link) {
-//            NSLog(@"%@",link);
-//            [[UIApplication sharedApplication] openURL:link];
-//        }
-//    }];
+//
+//    NSLog(@"shouldInteractWithURL---%@",URL);
+//    return YES;
+//
 //}
-
-- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction NS_AVAILABLE_IOS(10_0){
-
-
-    NSLog(@"shouldInteractWithURL---%@",URL);
-    return YES;
-
-}
 -(void)testCode{
 
     //        NSDictionary *dict = @{
