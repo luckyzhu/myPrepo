@@ -170,7 +170,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "579610105.08224"
+                  timestampString = "581337148.384781"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -185,7 +185,7 @@
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "579610105.0853159"
+                  timestampString = "581337148.3878241"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -384,22 +384,6 @@
             startingLineNumber = "508"
             endingLineNumber = "508"
             landmarkName = "-init"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "summary/Summary/AFN/AFNViewController.m"
-            timestampString = "577100952.928899"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-btnClick"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

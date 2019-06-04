@@ -122,65 +122,65 @@
     NSMutableDictionary* attributes = [[NSMutableDictionary alloc]init];
 
     // p
-
-    UIFont *paragraphFont = [UIFont fontWithName:@"AvenirNext-Medium" size:15.0];
-    NSMutableParagraphStyle* pParagraphStyle = [[NSMutableParagraphStyle alloc]init];
-
-    pParagraphStyle.paragraphSpacing = 12;
-    pParagraphStyle.paragraphSpacingBefore = 12;
-    NSDictionary *pAttributes = @{
-                                  NSFontAttributeName : paragraphFont,
-                                  NSParagraphStyleAttributeName : pParagraphStyle,
-                                  NSForegroundColorAttributeName :[UIColor redColor],
-                                  };
-
-    [attributes setObject:pAttributes forKey:@(PARA)];
-
-    // h1
-    UIFont *h1Font = [UIFont fontWithName:@"AvenirNext-Bold" size:24.0];
-    [attributes setObject:@{NSFontAttributeName : h1Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H1)];
-
-    // h2
-    UIFont *h2Font = [UIFont fontWithName:@"AvenirNext-Bold" size:18.0];
-    [attributes setObject:@{NSFontAttributeName : h2Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H2)];
-
-    // h3
-    UIFont *h3Font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:17.0];
-    [attributes setObject:@{NSFontAttributeName : h3Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H3)];
-
-    // em  斜体
-    UIFont *emFont = [UIFont fontWithName:@"AvenirNext-MediumItalic" size:15.0];
-//    CGAffineTransform matrix =CGAffineTransformMake(1, 0, tanf(30 * (CGFloat)M_PI / 180), 1, 0, 0);//设置反射。倾斜角度。
-//    UIFontDescriptor *desc = [ UIFontDescriptor fontDescriptorWithName :[UIFont systemFontOfSize:14].fontName matrix :matrix];//取得系统字符并设置反射。14
-//    UIFont *emFont = [UIFont fontWithDescriptor:desc size:14];
-    [attributes setObject:@{NSFontAttributeName : emFont,NSForegroundColorAttributeName :[UIColor cyanColor]} forKey:@(EMPH)];
-     // strong
-    UIFont *strongFont = [UIFont systemFontOfSize:35];
-    [attributes setObject:@{NSFontAttributeName : strongFont,NSForegroundColorAttributeName :[UIColor yellowColor]} forKey:@(STRONG)];
-
-    // ul
-    NSMutableParagraphStyle* listParagraphStyle = [[NSMutableParagraphStyle alloc]init];
-    listParagraphStyle.headIndent = 16.0;
-    [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listParagraphStyle} forKey:@(BULLETLIST)];
-
-    // li
-    NSMutableParagraphStyle* listItemParagraphStyle = [[NSMutableParagraphStyle alloc]init];
-    listItemParagraphStyle.headIndent = 16.0;
-    [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listItemParagraphStyle} forKey:@(LISTITEM)];
-
-    // blockquote
-    NSMutableParagraphStyle* blockquoteParagraphStyle = [[NSMutableParagraphStyle alloc]init];
-    blockquoteParagraphStyle.headIndent = 16.0;
-    blockquoteParagraphStyle.tailIndent = 16.0;
-    blockquoteParagraphStyle.firstLineHeadIndent = 16.0;
-    [attributes setObject:@{NSFontAttributeName : [emFont fontWithSize:18.0], NSParagraphStyleAttributeName : pParagraphStyle} forKey:@(BLOCKQUOTE)];
-
-    // verbatim (code)
-    NSMutableParagraphStyle* verbatimParagraphStyle = [[NSMutableParagraphStyle alloc]init];
-    verbatimParagraphStyle.headIndent = 12.0;
-    verbatimParagraphStyle.firstLineHeadIndent = 12.0;
-    UIFont *verbatimFont = [UIFont fontWithName:@"CourierNewPSMT" size:14.0];
-    [attributes setObject:@{NSFontAttributeName : verbatimFont, NSParagraphStyleAttributeName : verbatimParagraphStyle} forKey:@(VERBATIM)];
+//
+//    UIFont *paragraphFont = [UIFont fontWithName:@"AvenirNext-Medium" size:15.0];
+//    NSMutableParagraphStyle* pParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+//
+//    pParagraphStyle.paragraphSpacing = 12;
+//    pParagraphStyle.paragraphSpacingBefore = 12;
+//    NSDictionary *pAttributes = @{
+//                                  NSFontAttributeName : paragraphFont,
+//                                  NSParagraphStyleAttributeName : pParagraphStyle,
+//                                  NSForegroundColorAttributeName :[UIColor redColor],
+//                                  };
+//
+//    [attributes setObject:pAttributes forKey:@(PARA)];
+//
+//    // h1
+//    UIFont *h1Font = [UIFont fontWithName:@"AvenirNext-Bold" size:24.0];
+//    [attributes setObject:@{NSFontAttributeName : h1Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H1)];
+//
+//    // h2
+//    UIFont *h2Font = [UIFont fontWithName:@"AvenirNext-Bold" size:18.0];
+//    [attributes setObject:@{NSFontAttributeName : h2Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H2)];
+//
+//    // h3
+//    UIFont *h3Font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:17.0];
+//    [attributes setObject:@{NSFontAttributeName : h3Font,NSForegroundColorAttributeName :[UIColor greenColor]} forKey:@(H3)];
+//
+//    // em  斜体
+//    UIFont *emFont = [UIFont fontWithName:@"AvenirNext-MediumItalic" size:15.0];
+////    CGAffineTransform matrix =CGAffineTransformMake(1, 0, tanf(30 * (CGFloat)M_PI / 180), 1, 0, 0);//设置反射。倾斜角度。
+////    UIFontDescriptor *desc = [ UIFontDescriptor fontDescriptorWithName :[UIFont systemFontOfSize:14].fontName matrix :matrix];//取得系统字符并设置反射。14
+////    UIFont *emFont = [UIFont fontWithDescriptor:desc size:14];
+//    [attributes setObject:@{NSFontAttributeName : emFont,NSForegroundColorAttributeName :[UIColor cyanColor]} forKey:@(EMPH)];
+//     // strong
+//    UIFont *strongFont = [UIFont systemFontOfSize:35];
+//    [attributes setObject:@{NSFontAttributeName : strongFont,NSForegroundColorAttributeName :[UIColor yellowColor]} forKey:@(STRONG)];
+//
+//    // ul
+//    NSMutableParagraphStyle* listParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+//    listParagraphStyle.headIndent = 16.0;
+//    [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listParagraphStyle} forKey:@(BULLETLIST)];
+//
+//    // li
+//    NSMutableParagraphStyle* listItemParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+//    listItemParagraphStyle.headIndent = 16.0;
+//    [attributes setObject:@{NSFontAttributeName : paragraphFont, NSParagraphStyleAttributeName : listItemParagraphStyle} forKey:@(LISTITEM)];
+//
+//    // blockquote
+//    NSMutableParagraphStyle* blockquoteParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+//    blockquoteParagraphStyle.headIndent = 16.0;
+//    blockquoteParagraphStyle.tailIndent = 16.0;
+//    blockquoteParagraphStyle.firstLineHeadIndent = 16.0;
+//    [attributes setObject:@{NSFontAttributeName : [emFont fontWithSize:18.0], NSParagraphStyleAttributeName : pParagraphStyle} forKey:@(BLOCKQUOTE)];
+//
+//    // verbatim (code)
+//    NSMutableParagraphStyle* verbatimParagraphStyle = [[NSMutableParagraphStyle alloc]init];
+//    verbatimParagraphStyle.headIndent = 12.0;
+//    verbatimParagraphStyle.firstLineHeadIndent = 12.0;
+//    UIFont *verbatimFont = [UIFont fontWithName:@"CourierNewPSMT" size:14.0];
+//    [attributes setObject:@{NSFontAttributeName : verbatimFont, NSParagraphStyleAttributeName : verbatimParagraphStyle} forKey:@(VERBATIM)];
 
 
     //    NSError* error;
@@ -207,7 +207,7 @@
 
     //    连续两个以上空格+回车
     //    //![mahua](mahua-logo.jpg)
-    NSString *inputText = @" 哈哈哈哈\n# 一级标题\n## 二级标题\n### 三级标题\n#### 四级标题\n##### 五级标题\n###### 六级标题\n **this** **哈哈哈**  \n *inputText*  \n*汉字需要斜体*  \n  >引用  \n[链接](https://github.com/iwasrobbed)  \n";
+    NSString *inputText = @" 哈哈哈哈\n# 一级标题\n## 二级标题\n### 三级标题\n#### 四级标题\n##### 五级标题\n###### 六级标题\n **this** **哈哈哈**  \n *inputText*  \n*汉字需要斜体*  \n  >引用  \n[链接](https://github.com/iwasrobbed)";
 
     //      NSString *inputText = @"hhahahhahh哈哈哈哈哈哈哈";
 

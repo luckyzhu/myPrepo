@@ -14,9 +14,9 @@
 //    NSLog(@"Student---initialize");
 //}
 
-- (void)subPersonTestMethod{
-    NSLog(@"Student---subPersonTestMethod");
-}
+//- (void)subPersonTestMethod{
+//    NSLog(@"Student---subPersonTestMethod");
+//}
 
 
 

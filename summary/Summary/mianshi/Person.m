@@ -23,11 +23,7 @@
     NSLog(@"Person----initialize");
 
 }
--(NSString *)name
-{
-    NSLog(@"name的get方法");
-    return _name;
-}
+
 //默认是YES.如果返回NO，找不到key直接调用setValue:forUndefinedKey方法
 +(BOOL)accessInstanceVariablesDirectly
 {

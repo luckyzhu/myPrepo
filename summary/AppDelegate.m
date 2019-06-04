@@ -31,6 +31,7 @@
 #import "OCUseSwiftViewController.h"
 #import "summary-Swift.h"
 #import "LXTestView.h"
+#import "shortCutViewController.h"
 
 
 
@@ -50,7 +51,6 @@
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    NSLog(@"22222");
 
     return YES;
 }
