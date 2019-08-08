@@ -1,0 +1,28 @@
+{
+  "name": "BBAEDebugModule",
+  "version": "1.0.0",
+  "summary": "I am BBAEDebugModule!!",
+  "homepage": "https://www.bbae.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "598416667@qq.com": "luxi.zhu@alphayee.com"
+  },
+  "source": {
+    "git": "https://github.com/luckyzhu/BBAEDebugTool.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BBAEDebugModule/Classes/**/*",
+  "dependencies": {
+    "FLEX": [
+      "~> 3.0.0"
+    ]
+  },
+  "public_header_files": "BBAEDebugModule/Classes/*.h",
+  "frameworks": "UIKit"
+}

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 LX. All rights reserved.
 //
 
-
+#import <WebKit/WebKit.h>
 #import "AFNViewController.h"
 #import <AFNetworking.h>
 #import "markdown_lib.h"
@@ -14,7 +14,12 @@
 #import "Masonry.h"
 #import "summary-Swift.h"
 
-@interface AFNViewController ()<UITextViewDelegate>
+
+@interface AFNViewController ()<UITextViewDelegate,WKUIDelegate,WKNavigationDelegate>
+{
+    WKWebView *_webView;
+
+}
 @property (nonatomic,strong) NSOperationQueue  *queue;
 @property (nonatomic,strong) dispatch_queue_t serialQueue;
 @property (nonatomic,strong) AFHTTPSessionManager *session;
@@ -83,15 +88,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *tempStr = @"     1 2  3     ";
-    //去掉前后空格和换行
-//    NSCharacterSet  *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-//    tempStr = [tempStr stringByTrimmingCharactersInSet:set];
-    tempStr = [tempStr stringByReplacingOccurrencesOfString:@" " withString:@""];
-
-    NSLog(@"tempStr----%@",tempStr);
 
 
+
+
+//    _webView = [[WKWebView alloc]init];
+//    [self.view addSubview:_webView];
+//    [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.view);
+//        make.right.equalTo(self.view);
+//        make.top.equalTo(self.view);
+//        make.bottom.equalTo(self.view);
+//    }];
+//    _webView.UIDelegate = self;
+//    _webView.navigationDelegate = self;
+//    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=neuSN20190607103646c50384c5&s=b"]]];
 
 //    NSLog(@"333-----%@",[BBAESDK sharedInstance]);
 //    UIView *superView = [UIView new];
@@ -109,7 +120,64 @@
 
 
 //    [self test2];
-    [self test1];
+}
+
+#pragma mark - WKNavigationDelegate
+// 页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+
+}
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
+
+}
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+
+}
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
+
+}
+// 接收到服务器跳转请求之后调用
+- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{
+
+}
+// 在收到响应后，决定是否跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
+
+    NSLog(@"1111-----%@",navigationResponse.response.URL.absoluteString);
+    //允许跳转
+    decisionHandler(WKNavigationResponsePolicyAllow);
+    //不允许跳转
+    //decisionHandler(WKNavigationResponsePolicyCancel);
+}
+// 在发送请求之前，决定是否跳转
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+
+    NSLog(@"%@",navigationAction.request.URL.absoluteString);
+    //允许跳转
+    decisionHandler(WKNavigationActionPolicyAllow);
+    //不允许跳转
+    //decisionHandler(WKNavigationActionPolicyCancel);
+}
+#pragma mark - WKUIDelegate
+// 创建一个新的WebView
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures{
+    return [[WKWebView alloc]init];
+}
+// 输入框
+- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * __nullable result))completionHandler{
+    completionHandler(@"http");
+}
+// 确认框
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler{
+    completionHandler(YES);
+}
+// 警告框
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    NSLog(@"%@",message);
+    completionHandler();
 }
 
 -(void)test1{
@@ -207,7 +275,7 @@
 
     //    连续两个以上空格+回车
     //    //![mahua](mahua-logo.jpg)
-    NSString *inputText = @" 哈哈哈哈\n# 一级标题\n## 二级标题\n### 三级标题\n#### 四级标题\n##### 五级标题\n###### 六级标题\n **this** **哈哈哈**  \n *inputText*  \n*汉字需要斜体*  \n  >引用  \n[链接](https://github.com/iwasrobbed)";
+    NSString *inputText = @"**this**    \n**哈哈哈**\n\n*inputText*\n\n*汉字需要斜体*\n\n>引用\n\n[链接](https://github.com/iwasrobbed)";
 
     //      NSString *inputText = @"hhahahhahh哈哈哈哈哈哈哈";
 

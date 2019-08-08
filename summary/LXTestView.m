@@ -96,6 +96,13 @@
     return self;
 }
 
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    NSLog(@"layoutSubviews");
+}
+
 -(void)show{
 
     [[UIApplication sharedApplication].keyWindow addSubview:self];
@@ -178,7 +185,7 @@
 
     // a
     UIColor *linkColor = [UIColor blueColor];
-    [attributes setObject:@{NSForegroundColorAttributeName : linkColor} forKey:@(LINK)];
+    [attributes setObject:@{NSForegroundColorAttributeName : linkColor,NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle),NSUnderlineColorAttributeName:linkColor} forKey:@(LINK)];
 
     // blockquote
     NSMutableParagraphStyle* blockquoteParagraphStyle = [[NSMutableParagraphStyle alloc]init];
