@@ -196,7 +196,7 @@ static void print_attr_element(NSMutableAttributedString *out, element *elt, NSD
         case LINK:;
             NSURL *url = [NSURL URLWithString:elt->contents.link->url];
             if (url) {
-                NSDictionary *linkAttibutes = @{NSLinkAttributeName: url};
+                NSDictionary *linkAttibutes = @{@"attributedMarkdownURL": url};
                 print_attr_element_list(out, elt->contents.link->label, attributes, merge(current, merge(attributes[elt->key], linkAttibutes)));
             } else {
                 NSDictionary *attributesBroken = @{NSForegroundColorAttributeName: [TARGET_PLATFORM_COLOR redColor]}; // Make this attributes[BROKEN]

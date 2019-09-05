@@ -24,6 +24,7 @@
 		85018E53228C075D00631176 /* LXTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85018E52228C075D00631176 /* LXTestView.m */; };
 		8509A613213A26C100901832 /* middleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A612213A26C100901832 /* middleViewController.m */; };
 		8509A616213C364A00901832 /* UIViewController+headerAndFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */; };
+		850C40C6231E435700790259 /* BBAEFNB.m in Sources */ = {isa = PBXBuildFile; fileRef = 850C40C5231E435700790259 /* BBAEFNB.m */; };
 		850C9F4221A7E80B0077BFDC /* 下载腾讯视频.md in Resources */ = {isa = PBXBuildFile; fileRef = 850C9F4121A7E80B0077BFDC /* 下载腾讯视频.md */; };
 		8513E7DD229BC319001E5BFA /* shortCutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513E7DC229BC319001E5BFA /* shortCutViewController.m */; };
 		8513E8C32074C7B0004BD362 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513E8C22074C7B0004BD362 /* NSArray+Extension.m */; };
@@ -135,6 +136,7 @@
 		85828FBB20874D6400EC116A /* git.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85828FBA20874D6400EC116A /* git.jpg */; };
 		85828FC02088434F00EC116A /* loginLogicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FBF2088434F00EC116A /* loginLogicViewController.m */; };
 		85828FC720886B2100EC116A /* labelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FC620886B2100EC116A /* labelViewController.m */; };
+		858D10F82313D7F80033CA04 /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 858D10F72313D7F80033CA04 /* CaculatorMaker.m */; };
 		858EBFAA20E392CB002C38F0 /* 订单逻辑.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
 		85AEE04320899D6A009C55E7 /* testControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE04220899D6A009C55E7 /* testControlViewController.m */; };
@@ -253,6 +255,8 @@
 		8509A612213A26C100901832 /* middleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = middleViewController.m; sourceTree = "<group>"; };
 		8509A614213C364A00901832 /* UIViewController+headerAndFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+headerAndFooter.h"; sourceTree = "<group>"; };
 		8509A615213C364A00901832 /* UIViewController+headerAndFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+headerAndFooter.m"; sourceTree = "<group>"; };
+		850C40C4231E435700790259 /* BBAEFNB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAEFNB.h; sourceTree = "<group>"; };
+		850C40C5231E435700790259 /* BBAEFNB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAEFNB.m; sourceTree = "<group>"; };
 		850C9F4121A7E80B0077BFDC /* 下载腾讯视频.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "下载腾讯视频.md"; path = "summary/Summary/下载腾讯视频.md"; sourceTree = SOURCE_ROOT; };
 		8513E7DB229BC319001E5BFA /* shortCutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shortCutViewController.h; sourceTree = "<group>"; };
 		8513E7DC229BC319001E5BFA /* shortCutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shortCutViewController.m; sourceTree = "<group>"; };
@@ -471,6 +475,8 @@
 		85828FBF2088434F00EC116A /* loginLogicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginLogicViewController.m; sourceTree = "<group>"; };
 		85828FC520886B2100EC116A /* labelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelViewController.h; sourceTree = "<group>"; };
 		85828FC620886B2100EC116A /* labelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = labelViewController.m; sourceTree = "<group>"; };
+		858D10F62313D7F80033CA04 /* CaculatorMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
+		858D10F72313D7F80033CA04 /* CaculatorMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "订单逻辑.pdf"; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
@@ -673,6 +679,10 @@
 				44F502461FC32F0E00B10720 /* AppDelegate.m */,
 				44F502481FC32F0E00B10720 /* ViewController.h */,
 				44F502491FC32F0E00B10720 /* ViewController.m */,
+				850C40C4231E435700790259 /* BBAEFNB.h */,
+				850C40C5231E435700790259 /* BBAEFNB.m */,
+				858D10F62313D7F80033CA04 /* CaculatorMaker.h */,
+				858D10F72313D7F80033CA04 /* CaculatorMaker.m */,
 				8513E7DB229BC319001E5BFA /* shortCutViewController.h */,
 				8513E7DC229BC319001E5BFA /* shortCutViewController.m */,
 				85018E51228C075D00631176 /* LXTestView.h */,
@@ -1597,7 +1607,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-summary/Pods-summary-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-summary/Pods-summary-resources.sh",
 				"${PODS_ROOT}/Down/Resources/DownView.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
@@ -1608,7 +1618,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-summary/Pods-summary-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-summary/Pods-summary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E40F50FD6C98B5E607BB26E8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1670,6 +1680,7 @@
 				853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */,
 				853F4AEA209A061B002AE71E /* UITextFieldViewController.m in Sources */,
 				853DF091218C5BC100E00E5E /* TextDict.cpp in Sources */,
+				850C40C6231E435700790259 /* BBAEFNB.m in Sources */,
 				85165F87205FC7C10071D431 /* subPerson.m in Sources */,
 				853DF092218C5BC100E00E5E /* DictEntry.cpp in Sources */,
 				852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */,
@@ -1698,6 +1709,7 @@
 				8549CB0B209232990007813B /* AFNViewController.m in Sources */,
 				851B90EF20BCB80100287758 /* CameraViewController.m in Sources */,
 				851C0ACD21D62B8C0075931F /* BasicUIScrollViewController.swift in Sources */,
+				858D10F82313D7F80033CA04 /* CaculatorMaker.m in Sources */,
 				851B71E421AD423B002F4EBC /* UICameraViewController.m in Sources */,
 				8566DAF921940D550081DF97 /* SUMTestView.m in Sources */,
 				85CD07D32047FAC9005E0071 /* GCDViewController.m in Sources */,

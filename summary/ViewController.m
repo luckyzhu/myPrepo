@@ -28,6 +28,8 @@
 #import "BBAESlideIntervalView.h"
 #import "LXTestView.h"
 #import "subViewController.h"
+#import "testViewController.h"
+#import "BBAEFNB.h"
 
 
 @interface ViewController()<UINavigationControllerDelegate, UIImagePickerControllerDelegate,BBAESlideShowViewDelegate,LXTestViewDelegate>
@@ -35,13 +37,11 @@
 @property (nonatomic,strong) NSMutableArray *array;
 @property (nonatomic,weak) UITableView *tableView;
 @property (nonatomic,strong) UIButton *button;
-@property (nonatomic,strong) UILabel *topLabel;
-@property (nonatomic,strong) UILabel *bottomLabel;
+
 
 @property (nonatomic,strong)UIImageView *lastImage;
 @property (nonatomic,strong)UIImageView *originImage;
 @property (nonatomic,strong) Person *person;
-
 
 
 
@@ -80,30 +80,30 @@
 //
 //}
 
+//
+//-(UILabel *)topLabel
+//{
+//    if (_topLabel == nil) {
+//        _topLabel = [[UILabel alloc]init];
+//        _topLabel.text = @"父vc的label...";
+//        _topLabel.textColor = [UIColor cyanColor];
+//        _topLabel.textAlignment = NSTextAlignmentCenter;
+//        _topLabel.backgroundColor = [UIColor lightGrayColor];
+//    }
+//    return _topLabel;
+//}
 
--(UILabel *)topLabel
-{
-    if (_topLabel == nil) {
-        _topLabel = [[UILabel alloc]init];
-        _topLabel.text = @"父vc的label...";
-        _topLabel.textColor = [UIColor cyanColor];
-        _topLabel.textAlignment = NSTextAlignmentCenter;
-        _topLabel.backgroundColor = [UIColor lightGrayColor];
-    }
-    return _topLabel;
-}
-
--(UILabel *)bottomLabel
-{
-    if (_bottomLabel == nil) {
-        _bottomLabel = [[UILabel alloc]init];
-        _bottomLabel.text = @"父vc的bottom label...";
-        _bottomLabel.textColor = [UIColor blueColor];
-        _bottomLabel.textAlignment = NSTextAlignmentCenter;
-        _bottomLabel.backgroundColor = [UIColor cyanColor];
-    }
-    return _bottomLabel;
-}
+//-(UILabel *)bottomLabel
+//{
+//    if (_bottomLabel == nil) {
+//        _bottomLabel = [[UILabel alloc]init];
+//        _bottomLabel.text = @"父vc的bottom label...";
+//        _bottomLabel.textColor = [UIColor blueColor];
+//        _bottomLabel.textAlignment = NSTextAlignmentCenter;
+//        _bottomLabel.backgroundColor = [UIColor cyanColor];
+//    }
+//    return _bottomLabel;
+//}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -128,30 +128,28 @@
     subVc.title = nil;
     [self.navigationController pushViewController:subVc animated:YES];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    Person *p = [Person new];
-    self.person = p;
-    [self.person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    NSString *tempStr = @"123.45678";
+
+    //保留两位:
+    NSString *finalStr = BBAEFNB.inputStr(tempStr).commit;
+    NSLog(@"finalStr----%@",finalStr);
 
 
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 100, 50, 50);
-    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
-    [self.view addSubview:button];
 
 }
 
 -(void)btnClick{
-    NSArray *array = @[@"111",@"222",@"333",@"444",];
-    self.person.name = array[arc4random() % array.count];
-    NSLog(@"self.person.name---%@",self.person.name);
+
+    testViewController *testVc = [[testViewController alloc]init];
+    [self.navigationController pushViewController:testVc animated:YES];
+//    NSArray *array = @[@"111",@"222",@"333",@"444",];
+//    self.person.name = array[arc4random() % array.count];
+//    NSLog(@"self.person.name---%@",self.person.name);
 }
 
 

@@ -96,6 +96,13 @@
     return self;
 }
 
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    NSLog(@"layoutSubviews");
+}
+
 -(void)show{
 
     [[UIApplication sharedApplication].keyWindow addSubview:self];
@@ -103,15 +110,21 @@
 
 -(void)leftBtnClick{
 
-    if (self.delegate && [self.delegate respondsToSelector:@selector(leftButtonClick:)]) {
-        [self.delegate leftButtonClick:self.dealType];
-    }
-
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"aaaaaaaaa---%@",self);
+        if ( [self.delegate respondsToSelector:@selector(leftButtonClick:)]) {
+            [self.delegate leftButtonClick:self.dealType];
+        }
+    });
 }
 -(void)rightBtnClick{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(rightButtonClick:)]) {
-        [self.delegate rightButtonClick:self.dealType];
-    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"bbbbbbbb---%@",self);
+        if ( [self.delegate respondsToSelector:@selector(rightButtonClick:)]) {
+            [self.delegate rightButtonClick:self.dealType];
+        }
+    });
+
 }
 -(NSMutableAttributedString *)getMdStr:(NSString *)mdStr{
 
@@ -178,7 +191,7 @@
 
     // a
     UIColor *linkColor = [UIColor blueColor];
-    [attributes setObject:@{NSForegroundColorAttributeName : linkColor} forKey:@(LINK)];
+    [attributes setObject:@{NSForegroundColorAttributeName : linkColor,NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle),NSUnderlineColorAttributeName:linkColor} forKey:@(LINK)];
 
     // blockquote
     NSMutableParagraphStyle* blockquoteParagraphStyle = [[NSMutableParagraphStyle alloc]init];
