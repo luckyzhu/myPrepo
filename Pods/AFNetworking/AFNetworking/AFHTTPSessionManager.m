@@ -159,8 +159,9 @@
                        success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
                        failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
+    //1.构建NSURLSessionDataTask
     NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"POST" URLString:URLString parameters:parameters uploadProgress:uploadProgress downloadProgress:nil success:success failure:failure];
-
+    //2.开启任务
     [dataTask resume];
 
     return dataTask;
@@ -259,6 +260,9 @@
                                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
     NSError *serializationError = nil;
+    /*1.构建request
+       设置请求行，请求头，请求体
+     */
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serializationError];
     if (serializationError) {
         if (failure) {

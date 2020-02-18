@@ -15,7 +15,7 @@
 #import "summary-Swift.h"
 
 
-@interface AFNViewController ()<UITextViewDelegate,WKUIDelegate,WKNavigationDelegate>
+@interface AFNViewController ()<UITextViewDelegate,WKUIDelegate,WKNavigationDelegate,NSSecureCoding>
 {
     WKWebView *_webView;
 
@@ -39,7 +39,7 @@
 
 - (void)btnClick{
 
-//    //1. 用原生的NSURLSession请求
+    //1. 用原生的NSURLSession请求
 //    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
 //    NSDictionary *dict = @{
 //                          @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
@@ -48,6 +48,7 @@
 //                          @"userID":@"135956817",
 //                          @"username":@"m1359568172",
 //                          };
+//
 //
 //    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
 //    request.HTTPMethod = @"POST";
@@ -61,66 +62,69 @@
 //    [task resume];
 
 
-
          //2.用AFN发送网络请求
         NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
-        AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    NSLog(@"session-----%@",session);
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    session.requestSerializer = [AFJSONRequestSerializer serializer];
+    session.requestSerializer.timeoutInterval = 30;
+    session.requestSerializer.allowsCellularAccess = NO;
 
-        NSDictionary *dict = @{
-                               @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
-                               @"usAccountID":@296,
-                               @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
-                               @"userID":@"135956817",
-                               @"username":@"m1359568172",
-                               };
-        // 执行异步任务1
-        [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSDictionary *dict = @{
+        @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+        @"usAccountID":@296,
+        @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+        @"userID":@"135956817",
+        @"username":@"m1359568172",
+    };
+    // 执行异步任务1
+    [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
-            NSLog(@"11111---%@",(NSHTTPURLResponse *)task.response);
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"error111--%@",error);
-        }];
+        NSLog(@"11111---%@",(NSHTTPURLResponse *)task.response);
 
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error111--%@",error);
+    }];
 
+    return;
+    //3.AFN测试上传
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 100;
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"text/html",@"application/json", @"text/json" ,@"text/javascript", nil];
+    [manager POST:@"https://www.baidu.com" parameters:@{@"mydic":@{
+                                                                @"key1":@"value1",
+                                                                @"key2":@"value2"
+                                                                  },
+                                                        @"myArray":@[@"v1", @"v2", @"v3"]
+    } constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+//        [formData appendPartWithFileData:[@"Data" dataUsingEncoding:NSUTF8StringEncoding]
+//                                    name:@"DataName"
+//                                fileName:@"DataFileName"
+//                                mimeType:@"data"]; //支持NSData上传
+// 支持file文件
+        NSString *theImagePath = [[NSBundle mainBundle] pathForResource:@"123" ofType:@"png"];
+//        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"shuohaobuku.mp3" ofType:nil];
+        [formData appendPartWithFileURL:[NSURL fileURLWithPath:theImagePath] name:@"filename" error:nil];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSLog(@"uploadProgress----%@",[NSProgress currentProgress]);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"success---%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"success");
+    }];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
-
-
-
-//    _webView = [[WKWebView alloc]init];
-//    [self.view addSubview:_webView];
-//    [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view);
-//        make.right.equalTo(self.view);
-//        make.top.equalTo(self.view);
-//        make.bottom.equalTo(self.view);
-//    }];
-//    _webView.UIDelegate = self;
-//    _webView.navigationDelegate = self;
-//    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=neuSN20190607103646c50384c5&s=b"]]];
-
-//    NSLog(@"333-----%@",[BBAESDK sharedInstance]);
-//    UIView *superView = [UIView new];
-//
-//    UIImageView *settingImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"auto"]];
-//    [settingImage addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(settingImageClick)]];
-//    [self.view addSubview:settingImage];
-//    [settingImage mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.mas_equalTo(self.totalAssetsLabel.centerY);
-//        make.right.mas_equalTo(tipImage.left).offset(-10);
-//        make.size.mas_equalTo(CGSizeMake(settingImage.frame.size.width, settingImage.frame.size.height));
-//    }];
-
-
-
-
-//    [self test2];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 30)];
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
+
+
 
 #pragma mark - WKNavigationDelegate
 // 页面开始加载时调用
@@ -323,32 +327,6 @@
         }];
     }
 
-
-
-    //
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)];
-    [self.textView addGestureRecognizer:tap];
-
-
-    UILabel *testLabel = [[UILabel alloc]init];
-    testLabel.text = @"您的升级申请已提交";
-    testLabel.textColor = [UIColor redColor];
-    testLabel.frame = CGRectMake(0, self.view.frame.size.height-78, self.view.frame.size.width, 78);
-    testLabel.textAlignment = NSTextAlignmentCenter;
-    CGAffineTransform matrix2 =CGAffineTransformMake(1, 0, tanf(15 * (CGFloat)M_PI / 180), 1, 0, 0);//设置反射。倾斜角度。
-    UIFontDescriptor *desc2 = [ UIFontDescriptor fontDescriptorWithName :[UIFont systemFontOfSize:14].fontName matrix :matrix2];//取得系统字符并设置反射。
-    testLabel.font = [ UIFont fontWithDescriptor :desc2 size :14];
-    [self.view addSubview:testLabel];
-
-
-    //    UIButton *button = [[UIButton alloc]init];
-    //    button.frame = CGRectMake(100, 400, 50, 50);
-    //    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    //    button.titleLabel.textColor = [UIColor redColor];
-    //    button.backgroundColor = [UIColor blueColor];
-    //    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    //    button.exclusiveTouch = YES;
-    //    [self.view addSubview:button];
     //
     //    self.queue = [[NSOperationQueue alloc]init];
     //    dispatch_queue_t queue = dispatch_queue_create("123", DISPATCH_QUEUE_SERIAL);

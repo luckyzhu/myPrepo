@@ -34,6 +34,9 @@
 {
     [super drawRect:rect];
 
+    NSLog(@"drawRect");
+
+
     CGContextRef ct = UIGraphicsGetCurrentContext();
 
 

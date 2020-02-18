@@ -66,6 +66,10 @@ FOUNDATION_EXPORT NSString * AFQueryStringFromParameters(NSDictionary *parameter
 @protocol AFURLRequestSerialization <NSObject, NSSecureCoding, NSCopying>
 
 /**
+ 构建request 设置request的各种属性
+ 1.设置请求方法
+ 2.设置请求头
+ 3.设置请求体
  Returns a request with the specified parameters encoded into a copy of the original request.
 
  @param request The original request.

@@ -36,6 +36,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "44F5023E1FC32F0E00B10720"
+            BuildableName = "summary.app"
+            BlueprintName = "summary"
+            ReferencedContainer = "container:summary.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -58,17 +67,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44F5023E1FC32F0E00B10720"
-            BuildableName = "summary.app"
-            BlueprintName = "summary"
-            ReferencedContainer = "container:summary.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -90,8 +88,13 @@
             ReferencedContainer = "container:summary.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disabled"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

@@ -15,6 +15,9 @@
 
 @property (nonatomic,copy) NSString *classNo;
 
+
+@property (nonatomic,assign) NSInteger skip;
+
 - (void)subPersonTestMethod;
 
 @end

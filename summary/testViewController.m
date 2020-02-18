@@ -239,21 +239,21 @@
      */
 
 
-    NSLog(@"11---%@",[NSTimeZone systemTimeZone]);
-    NSLog(@"22---%@",[NSTimeZone localTimeZone]);
-    NSLog(@"33---%@",[NSTimeZone defaultTimeZone]);
-
-
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 400, 50, 50);
-    [button setTitle:@"按钮" forState:UIControlStateNormal];
-    button.titleLabel.textColor = [UIColor redColor];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
-    [self.view addSubview:button];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(timeZoneChanged) name:NSSystemTimeZoneDidChangeNotification object:nil];
+//    NSLog(@"11---%@",[NSTimeZone systemTimeZone]);
+//    NSLog(@"22---%@",[NSTimeZone localTimeZone]);
+//    NSLog(@"33---%@",[NSTimeZone defaultTimeZone]);
+//
+//
+//    UIButton *button = [[UIButton alloc]init];
+//    button.frame = CGRectMake(100, 400, 50, 50);
+//    [button setTitle:@"按钮" forState:UIControlStateNormal];
+//    button.titleLabel.textColor = [UIColor redColor];
+//    button.backgroundColor = [UIColor blueColor];
+//    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+//    button.exclusiveTouch = YES;
+//    [self.view addSubview:button];
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(timeZoneChanged) name:NSSystemTimeZoneDidChangeNotification object:nil];
 
     //
 //    [NSTimeZone resetSystemTimeZone];

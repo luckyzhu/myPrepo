@@ -114,7 +114,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
     BOOL responseIsValid = YES;
     NSError *validationError = nil;
 
-    if (response && [response isKindOfClass:[NSHTTPURLResponse class]]) {
+    if (response && [response isKindOfClass:[NSHTTPURLResponse class]]) {//contenttype不在默认的范围内，抛错
         if (self.acceptableContentTypes && ![self.acceptableContentTypes containsObject:[response MIMEType]] &&
             !([response MIMEType] == nil && [data length] == 0)) {
 
@@ -134,7 +134,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
             responseIsValid = NO;
         }
 
-        if (self.acceptableStatusCodes && ![self.acceptableStatusCodes containsIndex:(NSUInteger)response.statusCode] && [response URL]) {
+        if (self.acceptableStatusCodes && ![self.acceptableStatusCodes containsIndex:(NSUInteger)response.statusCode] && [response URL]) {//状态码不在默认范围内(200,300)，抛错
             NSMutableDictionary *mutableUserInfo = [@{
                                                NSLocalizedDescriptionKey: [NSString stringWithFormat:NSLocalizedStringFromTable(@"Request failed: %@ (%ld)", @"AFNetworking", nil), [NSHTTPURLResponse localizedStringForStatusCode:response.statusCode], (long)response.statusCode],
                                                NSURLErrorFailingURLErrorKey:[response URL],
@@ -231,11 +231,11 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 }
 
 #pragma mark - AFURLResponseSerialization
-
+//利用系统的NSJSONSerialization 解析NSData。
 - (id)responseObjectForResponse:(NSURLResponse *)response
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error
-{
+{     // 验证响应，看看是否是 默认的请求类型 默认的状态码
     if (![self validateResponse:(NSHTTPURLResponse *)response data:data error:error]) {
         if (!error || AFErrorOrUnderlyingErrorHasCodeInDomain(*error, NSURLErrorCannotDecodeContentData, AFURLResponseSerializationErrorDomain)) {
             return nil;
@@ -247,7 +247,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
     // Workaround for behavior of Rails to return a single space for `head :ok` (a workaround for a bug in Safari), which is not interpreted as valid input by NSJSONSerialization.
     // See https://github.com/rails/rails/issues/1742
     BOOL isSpace = [data isEqualToData:[NSData dataWithBytes:" " length:1]];
-    if (data.length > 0 && !isSpace) {
+    if (data.length > 0 && !isSpace) {//解析data
         responseObject = [NSJSONSerialization JSONObjectWithData:data options:self.readingOptions error:&serializationError];
     } else {
         return nil;
@@ -671,7 +671,9 @@ static UIImage * AFInflatedImageFromResponseWithDataAtScale(NSHTTPURLResponse *r
     }
 
 #if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
-    if (self.automaticallyInflatesResponseImage) {
+   /*现在的网络图像PNG和JPG都是压缩格式，需要把它们解压转成bitmap后才能渲染到屏幕上，如果不做任何处理，当你把UIImage赋给UIImageView，在渲染之前底层会判断到UIImage对象未解压，没有bitmap数据，这时会在主线程对图片进行解压操作，再渲染到屏幕上。这个解压操作是比较耗时的，如果任由它在主线程做，可能会导致速度慢UI卡顿的问题。
+     */
+    if (self.automaticallyInflatesResponseImage) { //图像数据解压
         return AFInflatedImageFromResponseWithDataAtScale((NSHTTPURLResponse *)response, data, self.imageScale);
     } else {
         return AFImageWithDataAtScale(data, self.imageScale);

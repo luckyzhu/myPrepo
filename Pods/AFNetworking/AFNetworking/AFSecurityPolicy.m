@@ -39,7 +39,7 @@ _out:
     return nil;
 }
 #endif
-
+//服务端证书公钥和本地证书公钥进行比对
 static BOOL AFSecKeyIsEqualToKey(SecKeyRef key1, SecKeyRef key2) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH || TARGET_OS_TV
     return [(__bridge id)key1 isEqual:(__bridge id)key2];
@@ -94,6 +94,8 @@ static BOOL AFServerTrustIsValid(SecTrustRef serverTrust) {
     SecTrustResultType result;
     __Require_noErr_Quiet(SecTrustEvaluate(serverTrust, &result), _out);
 
+    //kSecTrustResultUnspecified:证书验证成功，但是用户没有明确指出信任此证书
+    //kSecTrustResultProceed:用户选择信任此证书
     isValid = (result == kSecTrustResultUnspecified || result == kSecTrustResultProceed);
 
 _out:
@@ -150,7 +152,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
 
 @interface AFSecurityPolicy()
 @property (readwrite, nonatomic, assign) AFSSLPinningMode SSLPinningMode;
-@property (readwrite, nonatomic, strong) NSSet *pinnedPublicKeys;
+@property (readwrite, nonatomic, strong) NSSet *pinnedPublicKeys; //本地的公钥
 @end
 
 @implementation AFSecurityPolicy
@@ -221,7 +223,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
             }
             [mutablePinnedPublicKeys addObject:publicKey];
         }
-        self.pinnedPublicKeys = [NSSet setWithSet:mutablePinnedPublicKeys];
+        self.pinnedPublicKeys = [NSSet setWithSet:mutablePinnedPublicKeys]; // 取出本地的公钥
     } else {
         self.pinnedPublicKeys = nil;
     }
@@ -255,7 +257,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
     SecTrustSetPolicies(serverTrust, (__bridge CFArrayRef)policies);
 
     if (self.SSLPinningMode == AFSSLPinningModeNone) {
-        return self.allowInvalidCertificates || AFServerTrustIsValid(serverTrust);
+        return self.allowInvalidCertificates || AFServerTrustIsValid(serverTrust); // 证书校验
     } else if (!AFServerTrustIsValid(serverTrust) && !self.allowInvalidCertificates) {
         return NO;
     }
@@ -266,7 +268,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
             return NO;
         case AFSSLPinningModeCertificate: {
             NSMutableArray *pinnedCertificates = [NSMutableArray array];
-            for (NSData *certificateData in self.pinnedCertificates) {
+            for (NSData *certificateData in self.pinnedCertificates) {//遍历本地的证书列表
                 [pinnedCertificates addObject:(__bridge_transfer id)SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificateData)];
             }
             SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)pinnedCertificates);

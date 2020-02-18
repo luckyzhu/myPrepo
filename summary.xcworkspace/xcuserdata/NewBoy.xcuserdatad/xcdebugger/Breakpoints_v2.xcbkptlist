@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "79EE3B0B-6268-4853-B8A9-BB2D7604C1B8"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "190EEA35-4A23-4765-9C7D-4EFB5E6F731A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -22,6 +24,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "BD0646D9-3747-4466-904F-227CE090372C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -38,38 +41,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
-            timestampString = "573386050.535805"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1304"
-            endingLineNumber = "1304"
-            landmarkName = "AFJSONRequestSerializer"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "summary/Summary/Camera/BBAECutomCameraViewController.m"
-            timestampString = "549563110.303381"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "-leftBtnImageClick"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
+            uuid = "73D7350C-7661-4AC5-8C1D-AD0ACD1B5D39"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -86,6 +58,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "B1EA1D1B-242E-4CD9-879E-34220F0C8388"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -102,6 +75,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0CDE713C-6AB4-4BBE-8BEE-58B8A7A8B95A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -118,6 +92,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0B03E3F7-8284-4257-8E5C-4210A4B95496"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -134,6 +109,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "819536D2-5F09-4579-A506-E06BC9DB33F4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -150,6 +126,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "E6B7E83A-659A-43CA-8711-CCB3E45F9E90"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -163,29 +140,29 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "E6B7E83A-659A-43CA-8711-CCB3E45F9E90 - b74699d47c3d9aaf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[mianshiViewController viewDidLoad]"
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "589342420.369908"
+                  urlString = "file:///Users/NewBoy/Desktop/Mine/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
                   endingLineNumber = "90"
-                  offsetFromSymbolStart = "492">
+                  offsetFromSymbolStart = "470">
                </Location>
                <Location
+                  uuid = "E6B7E83A-659A-43CA-8711-CCB3E45F9E90 - eb95f3e5142fdae8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__36-[mianshiViewController viewDidLoad]_block_invoke"
                   moduleName = "summary"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/NewBoy/Desktop/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
-                  timestampString = "589342420.3727371"
+                  urlString = "file:///Users/NewBoy/Desktop/Mine/demo_github/myPrepo/summary/Summary/mianshi/mianshiViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -198,11 +175,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "B69CECDC-6735-4E2E-B1D4-99950F602720"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "summary/subViewController.m"
-            timestampString = "579609054.566921"
+            timestampString = "592737888.809705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -214,6 +192,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "B4991B2C-773C-4660-B9F0-6F28688B12B9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -230,6 +209,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "4226C7FE-904F-4F07-B0AA-459CCA9D6922"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -246,6 +226,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "6A5BAC9D-55FB-4011-B985-75C50741BCE7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -262,6 +243,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D6D700B7-4EA9-4874-B53C-8F93962722F5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -278,6 +260,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "80A9241C-C230-4C9E-860C-245E4E372446"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -294,6 +277,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "2722C592-3D81-4215-BBF7-62B80F0B676B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -310,6 +294,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "34D2E688-213B-4BB7-9373-DBB6B3A3B033"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -326,6 +311,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "8B6B00AA-9E24-4F6B-8B18-71FD19A6D2E0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -342,6 +328,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "C353B28A-CF3C-4B09-B271-2C746228E326"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -358,32 +345,99 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "A5CE88EB-2897-42EA-81A0-4480E591E232"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-            timestampString = "589109736.2277189"
+            filePath = "summary/ViewController.m"
+            timestampString = "595763035.66098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
-            landmarkName = "-init"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "-getSub:andLevel:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "952AFEAF-086E-4C65-89F2-4BD226340F95"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
-            timestampString = "573386872.913434"
+            filePath = "summary/ViewController.m"
+            timestampString = "595763035.6611969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "543"
-            endingLineNumber = "543"
-            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCC1B2BA-DE34-43C9-877A-BBA0436B15C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "summary/ViewController.m"
+            timestampString = "595763035.66125"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A40FBADA-09FB-4DBE-A89A-9062C755E174"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "341"
+            endingLineNumber = "341"
+            landmarkName = "-encodeWithCoder:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79369DBC-0D89-4D14-A488-F27B795F2368"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-GET:parameters:progress:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42496840-28DA-4966-B935-A297E05D1D88"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLResponseSerialization.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "-responseObjectForResponse:data:error:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

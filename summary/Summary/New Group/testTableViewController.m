@@ -9,8 +9,17 @@
 #import "Masonry.h"
 #import "testTableViewController.h"
 #import "testTableViewCell.h"
+#import "Student.h"
+#import "MJExtension.h"
+#import <arpa/inet.h>
+#import <resolv.h>
+#import <netdb.h>
 
 @interface testTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,assign) NSInteger count;
+@property (nonatomic,strong) NSConditionLock *lock;
+@property (nonatomic,strong) dispatch_group_t downloadGroup;
 
 @end
 
@@ -19,45 +28,88 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    self.tableView.editing = YES;
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
 
-//    [self.tableView setEditing:YES animated:YES];
+    Boolean result,bResolved;
+    CFHostRef hostRef;
+    CFArrayRef addresses = NULL;
+    NSMutableArray * ipsArr = [[NSMutableArray alloc] init];
 
-    UIView *superView = [[UIView alloc]init];
-    superView.backgroundColor = [UIColor redColor];
-    self.tableView.tableHeaderView = superView;
-    [superView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.width.mas_equalTo(self.tableView);
-    }];
-    
-    UILabel *label = [[UILabel alloc]init];
-    label.text = @"我是label我是label我是label我是label我是label我是label我是label我是label我是label我是label我是label我是label";
-    label.numberOfLines = 0;
-    label.textColor = [UIColor blueColor];
-    label.font = [UIFont systemFontOfSize:13];
-    label.textAlignment = NSTextAlignmentCenter;
-    [superView addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.mas_equalTo(superView);
-    }];
-    
-    UIView *bottomView = [[UIView alloc]init];
-    bottomView.backgroundColor = [UIColor lightGrayColor];
-    [superView addSubview:bottomView];
-    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(label.mas_bottom).offset(100);
-        make.left.right.mas_equalTo(superView);
-        make.height.mas_equalTo(@40);
-        make.bottom.mas_equalTo(superView.mas_bottom);
-    }];
-    
-    [self.tableView layoutIfNeeded];
+    CFStringRef hostNameRef = CFStringCreateWithCString(kCFAllocatorDefault, "www.bbae.com", kCFStringEncodingASCII);
 
+    hostRef = CFHostCreateWithName(kCFAllocatorDefault, hostNameRef);
+    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+    result = CFHostStartInfoResolution(hostRef, kCFHostAddresses, NULL);
+    if (result == TRUE) {
+        addresses = CFHostGetAddressing(hostRef, &result);
+    }
+    bResolved = result == TRUE ? true : false;
+
+    if(bResolved)
+    {
+        struct sockaddr_in* remoteAddr;
+        for(int i = 0; i < CFArrayGetCount(addresses); i++)
+        {
+            CFDataRef saData = (CFDataRef)CFArrayGetValueAtIndex(addresses, i);
+            remoteAddr = (struct sockaddr_in*)CFDataGetBytePtr(saData);
+
+            if(remoteAddr != NULL)
+            {
+                //获取IP地址
+                char ip[16];
+                strcpy(ip, inet_ntoa(remoteAddr->sin_addr));
+                NSString * ipStr = [NSString stringWithCString:ip encoding:NSUTF8StringEncoding];
+                [ipsArr addObject:ipStr];
+            }
+        }
+    }
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    NSLog(@"33333 === ip === %@ === time cost: %0.3fs", ipsArr,end - start);
+    CFRelease(hostNameRef);
+    CFRelease(hostRef);
 
 }
 
+
+- (NSString *)getStr {
+    NSCondition *condition = [[NSCondition alloc]init];
+
+    __block BOOL isDone = NO;
+    //1. 用原生的NSURLSession请求
+    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
+    NSDictionary *dict = @{
+                           @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+                           @"usAccountID":@296,
+                           @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+                           @"userID":@"135956817",
+                           @"username":@"m1359568172",
+                           };
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    // 执行异步任务1
+    __block NSString *str = @"";
+
+    NSURLSessionDataTask *task =  [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            str = @"被更改的str";
+
+            [condition lock];
+            isDone = YES;
+            [condition signal];
+            [condition unlock];
+        dispatch_group_leave(self.downloadGroup);
+    }];
+
+    [task resume];
+
+    [condition lock];
+    while (isDone == NO) {
+        [condition wait];
+    }
+    [condition unlock];
+    return str;
+}
 
 #pragma  mark - tableView的代理方法
 
@@ -85,10 +137,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    NSIndexPath *testIndexPath = [NSIndexPath indexPathForRow:100 inSection:0];
-    NSLog(@"1111----%@",testIndexPath);
-
-    [tableView scrollToRowAtIndexPath:testIndexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

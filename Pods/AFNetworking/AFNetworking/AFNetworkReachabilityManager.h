@@ -25,10 +25,10 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 
 typedef NS_ENUM(NSInteger, AFNetworkReachabilityStatus) {
-    AFNetworkReachabilityStatusUnknown          = -1,
-    AFNetworkReachabilityStatusNotReachable     = 0,
-    AFNetworkReachabilityStatusReachableViaWWAN = 1,
-    AFNetworkReachabilityStatusReachableViaWiFi = 2,
+    AFNetworkReachabilityStatusUnknown          = -1, //未知
+    AFNetworkReachabilityStatusNotReachable     = 0, //无网络
+    AFNetworkReachabilityStatusReachableViaWWAN = 1,//蜂窝网络
+    AFNetworkReachabilityStatusReachableViaWiFi = 2,//WiFi
 };
 
 NS_ASSUME_NONNULL_BEGIN

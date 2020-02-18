@@ -18,8 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-
-
 //    UIButton *button = [[UIButton alloc]init];
 //    button.frame = CGRectMake(100, 400, 50, 50);
 //    [button setTitle:@"相机" forState:UIControlStateNormal];

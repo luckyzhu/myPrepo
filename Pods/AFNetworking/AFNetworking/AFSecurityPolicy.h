@@ -23,9 +23,9 @@
 #import <Security/Security.h>
 
 typedef NS_ENUM(NSUInteger, AFSSLPinningMode) {
-    AFSSLPinningModeNone,
-    AFSSLPinningModePublicKey,
-    AFSSLPinningModeCertificate,
+    AFSSLPinningModeNone,//完全信任服务器证书
+    AFSSLPinningModePublicKey,//只比对服务器证书和本地证书的Public Key是否一致，如果一致则信任服务器证书
+    AFSSLPinningModeCertificate,//比对服务器证书和本地证书的所有内容，完全一致则信任服务器证书
 };
 
 /**
