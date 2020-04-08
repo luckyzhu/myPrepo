@@ -10,7 +10,6 @@
 #import "subViewController.h"
 #import "firstViewController.h"
 #import "SUMTestView.h"
-#import "Student.h"
 //#import "summary-Swift.h"
 #import "LXTestView.h"
 #import "BBAEDebugViewController.h"

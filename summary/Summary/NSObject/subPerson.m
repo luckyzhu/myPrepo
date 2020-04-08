@@ -8,7 +8,6 @@
 
 #import "subPerson.h"
 #import <objc/message.h>
-#import "Student.h"
 #import "Person.h"
 
 

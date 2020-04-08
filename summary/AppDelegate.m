@@ -33,7 +33,11 @@
 #import "LXTestView.h"
 #import "shortCutViewController.h"
 #import "AnimationViewController.h"
-
+#import "NSString+Extention.h"
+#import "People.h"
+#import "Teacher.h"
+#import <UserNotifications/UserNotifications.h>
+#import "WKViewController.h"
 
 @interface AppDelegate ()
 
@@ -46,9 +50,20 @@
     // Override point for customization after application launch.
 
 
+//    CGFloat d = 0.1;
+//    CGFloat a = 0.0;
+//    CGFloat b = 0.00;
+//    CGFloat c = 0.000;
+//
+//    if (d == 0) {
+//        NSLog(@"1111");
+//    }else{
+//        NSLog(@"22222");
+//    }
+//
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[AnimationViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[CoreAnimationViewController alloc]init]];
 
     self.window.backgroundColor = [UIColor whiteColor];
 

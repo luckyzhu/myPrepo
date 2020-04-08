@@ -7,7 +7,6 @@
 //
 #import <objc/message.h>
 #import "ViewController.h"
-#import "Student.h"
 #import "Person.h"
 #import "subPerson.h"
 #import <AVFoundation/AVFoundation.h>
@@ -305,11 +304,6 @@
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = 10000;
     [imageView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
-
-
-    Student *stu = [[Student alloc]init];
-    [stu performSelector:@selector(test)];
-
 
 
 //    //遍历一个类的所有属性

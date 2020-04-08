@@ -1,23 +1,20 @@
 //
-//  Student.h
 //  summary
 //
-//  Created by NewBoy on 2018/3/19.
-//  Copyright © 2018年 LX. All rights reserved.
+//  Created by NewBoy on 2020/4/8.
+//  Copyright © 2020 LX. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Person.h"
+#import <CoreData/CoreData.h>
 
-@interface Student :Person
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic,copy) NSString *name;
-
-@property (nonatomic,copy) NSString *classNo;
-
-
-@property (nonatomic,assign) NSInteger skip;
-
-- (void)subPersonTestMethod;
-
+@interface Student : NSManagedObject
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,assign) int age;
+@property (nonatomic,strong) NSString *buySymbol;
+@property (nonatomic,assign) double moneyCount;
 @end
+
+NS_ASSUME_NONNULL_END

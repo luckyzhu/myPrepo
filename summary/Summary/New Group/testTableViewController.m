@@ -9,7 +9,6 @@
 #import "Masonry.h"
 #import "testTableViewController.h"
 #import "testTableViewCell.h"
-#import "Student.h"
 #import "MJExtension.h"
 #import <arpa/inet.h>
 #import <resolv.h>

@@ -8,6 +8,8 @@
 
 #import "AnimationViewController.h"
 #import "SUMTestView.h"
+#import <uuid/uuid.h>
+
 @interface AnimationViewController()<CAAnimationDelegate>
 @property (nonatomic,strong) UIImageView *topImageView;
 @property (nonatomic,strong) CALayer *colorLayer;
@@ -54,7 +56,9 @@
 
 }
 
+#define UUID_STR_LEN    37
 -(void)btnClick {
+
     CGFloat red = arc4random() / (CGFloat)INT_MAX;
     CGFloat green = arc4random() / (CGFloat)INT_MAX;
     CGFloat blue = arc4random() / (CGFloat)INT_MAX;
