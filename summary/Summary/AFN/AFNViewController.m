@@ -13,7 +13,8 @@
 #import "markdown_peg.h"
 #import "Masonry.h"
 #import "summary-Swift.h"
-
+#import "BTTestView.h"
+#import "YYImage.h"
 
 @interface AFNViewController ()<UITextViewDelegate,WKUIDelegate,WKNavigationDelegate,NSSecureCoding>
 {
@@ -40,50 +41,64 @@
 - (void)btnClick{
 
     //1. 用原生的NSURLSession请求
-//    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
-//    NSDictionary *dict = @{
-//                          @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
-//                          @"usAccountID":@296,
-//                          @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
-//                          @"userID":@"135956817",
-//                          @"username":@"m1359568172",
-//                          };
-//
-//
-//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-//    request.HTTPMethod = @"POST";
-//    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
-//    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-//    // 执行异步任务1
-//    NSURLSessionDataTask *task =  [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//
-//        NSLog(@"11111----%@",response);
-//    }];
-//    [task resume];
-
-
-         //2.用AFN发送网络请求
-        NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
-    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
-    session.requestSerializer = [AFJSONRequestSerializer serializer];
-    session.requestSerializer.timeoutInterval = 30;
-    session.requestSerializer.allowsCellularAccess = NO;
-
+    NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
     NSDictionary *dict = @{
-        @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
-        @"usAccountID":@296,
-        @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
-        @"userID":@"135956817",
-        @"username":@"m1359568172",
-    };
+                          @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+                          @"usAccountID":@296,
+                          @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+                          @"userID":@"135956817",
+                          @"username":@"m1359568172",
+                          };
+
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     // 执行异步任务1
-    [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+   dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    NSURLSessionDataTask *task =  [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
 
-        NSLog(@"11111---%@",(NSHTTPURLResponse *)task.response);
-
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error111--%@",error);
+       dispatch_semaphore_signal(semaphore);
     }];
+    [task resume];
+
+   dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+
+//    dispatch_queue_t queue = dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0);
+//
+//    dispatch_async(queue, ^{
+//        //2.用AFN发送网络请求
+//               NSString *urlStr = @"https://transformer-web--develop.bbaecache.com/api/v2/account/countryList";
+//           AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+//           session.requestSerializer = [AFJSONRequestSerializer serializer];
+//           session.requestSerializer.timeoutInterval = 30;
+//           session.requestSerializer.allowsCellularAccess = NO;
+//
+//           NSDictionary *dict = @{
+//               @"ticket":@"311e679f-e418-47fe-b8d5-9fc4569f25c9",
+//               @"usAccountID":@296,
+//               @"token":@"uZwKMvK8iaOrCNWztZv2jb6u25JUrTM75SyV",
+//               @"userID":@"135956817",
+//               @"username":@"m1359568172",
+//           };
+//
+//           dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//           // 执行异步任务1
+//           [session POST:urlStr parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//
+//               NSLog(@"11111---%@",(NSHTTPURLResponse *)task.response);
+//               dispatch_semaphore_signal(semaphore);
+//
+//           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//               NSLog(@"error111--%@",error);
+//               dispatch_semaphore_signal(semaphore);
+//           }];
+//
+//           NSLog(@"等待释放之前-----");
+//           dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+//           NSLog(@"等待释放之后-----");
+//    });
 
     return;
     //3.AFN测试上传
@@ -114,8 +129,31 @@
         NSLog(@"success");
     }];
 }
+
+- (UIImage *)pq_drawImageWithImageNamed:(NSString *)name {
+    //1.获取图片
+    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]];
+    //2.开启图形上下文
+    UIGraphicsBeginImageContext(image.size);
+    //3.绘制到图形上下文中
+    [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    //4.从上下文中获取图片
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    //5.关闭图形上下文
+    UIGraphicsEndImageContext();
+    //返回图片
+    return newImage;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 300, 200, 50)];
+    imageView.image = [YYImage imageNamed:@"123"];
+    [self.view addSubview:imageView];
+
+//    BTTestView *testView = [[BTTestView alloc]initWithFrame:CGRectMake(100, 300, 200, 50)];
+//    [self.view addSubview:testView];
 
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 30)];
     [button setTitle:@"按钮" forState:UIControlStateNormal];

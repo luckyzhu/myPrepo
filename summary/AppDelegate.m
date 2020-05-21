@@ -38,9 +38,12 @@
 #import "Teacher.h"
 #import <UserNotifications/UserNotifications.h>
 #import "WKViewController.h"
+#import "SDWebImageViewController.h"
+#import "People.h"
 
 @interface AppDelegate ()
-
+@property(nonatomic, strong) NSString *strongStr;
+@property(nonatomic, copy) NSString *copyyStr;
 @end
 
 @implementation AppDelegate
@@ -49,24 +52,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+    People *person = [People new];
+    person.peopleStr1 = @"快手";
 
-//    CGFloat d = 0.1;
-//    CGFloat a = 0.0;
-//    CGFloat b = 0.00;
-//    CGFloat c = 0.000;
-//
-//    if (d == 0) {
-//        NSLog(@"1111");
-//    }else{
-//        NSLog(@"22222");
-//    }
-//
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:@"1111" forKey:@"1"];
+    [dict setObject:@"2222" forKey:@"2"];
+    [dict setObject:@"3333" forKey:person];
+
+    NSLog(@"last----%@",dict);
+    NSLog(@"get----%@",[dict objectForKey:person]);
+
+
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[CoreAnimationViewController alloc]init]];
-
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[AFNViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
-
     [self.window makeKeyAndVisible];
 
     return YES;

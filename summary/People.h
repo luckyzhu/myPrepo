@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface People : NSObject
+@interface People : NSObject<NSCopying>
 @property (nonatomic,strong) NSString *peopleStr1;
 @end
 

@@ -87,7 +87,6 @@
     dispatch_queue_t queue = dispatch_queue_create("com.dispatch.serial", DISPATCH_QUEUE_SERIAL);
     //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
-        NSLog(@"111111");
     });
     dispatch_async(queue, ^{
         NSLog(@"2222");

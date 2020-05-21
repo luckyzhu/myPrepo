@@ -138,6 +138,7 @@
 		8549CB0B209232990007813B /* AFNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB0A209232990007813B /* AFNViewController.m */; };
 		8553442F222E7A26001CCAB2 /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8553442E222E7A26001CCAB2 /* PersonTest.m */; };
 		855BD66223D1B88E0015FDC1 /* BBAETrackProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 855BD66123D1B88D0015FDC1 /* BBAETrackProtocol.m */; };
+		855DACFE246E42FB005398FC /* SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855DACFD246E42FB005398FC /* SDWebImageViewController.m */; };
 		8566DAF921940D550081DF97 /* SUMTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8566DAF821940D550081DF97 /* SUMTestView.m */; };
 		8569A0652084FD6500652D59 /* LXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A0642084FD6500652D59 /* LXView.m */; };
 		8569A068208506B700652D59 /* LXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8569A067208506B700652D59 /* LXScrollView.m */; };
@@ -149,8 +150,12 @@
 		85828FC720886B2100EC116A /* labelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85828FC620886B2100EC116A /* labelViewController.m */; };
 		858D10F82313D7F80033CA04 /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 858D10F72313D7F80033CA04 /* CaculatorMaker.m */; };
 		858EBFAA20E392CB002C38F0 /* 订单逻辑.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */; };
+		85952C6B2458092000374C05 /* LXRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85952C672458091F00374C05 /* LXRedView.m */; };
+		85952C6C2458092000374C05 /* LXBlueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85952C6A2458092000374C05 /* LXBlueView.m */; };
+		85952C6F24580BA200374C05 /* LXSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85952C6E24580BA200374C05 /* LXSuperView.m */; };
 		8599DE9C236AD42A00351B48 /* VLSubmmitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599DE9B236AD42A00351B48 /* VLSubmmitButton.m */; };
 		859E8C582010A52800FDF043 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E8C572010A52800FDF043 /* Tool.m */; };
+		85ABB6DB2474DB0800A3D907 /* BTTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ABB6DA2474DB0800A3D907 /* BTTestView.m */; };
 		85AEE04320899D6A009C55E7 /* testControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE04220899D6A009C55E7 /* testControlViewController.m */; };
 		85B2354223CD701D0035D438 /* Velo_Wealth_EWB_Mobile_Bank_iO in Resources */ = {isa = PBXBuildFile; fileRef = 85B2354123CD701D0035D438 /* Velo_Wealth_EWB_Mobile_Bank_iO */; };
 		85BC785220BE4EF80090CD3E /* back_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85BC785120BE4EF80090CD3E /* back_white@2x.png */; };
@@ -491,6 +496,8 @@
 		8553442E222E7A26001CCAB2 /* PersonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
 		855BD65E23D1B7460015FDC1 /* BBAETrackProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAETrackProtocol.h; sourceTree = "<group>"; };
 		855BD66123D1B88D0015FDC1 /* BBAETrackProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAETrackProtocol.m; sourceTree = "<group>"; };
+		855DACFC246E42FB005398FC /* SDWebImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageViewController.h; sourceTree = "<group>"; };
+		855DACFD246E42FB005398FC /* SDWebImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageViewController.m; sourceTree = "<group>"; };
 		8566DAF721940D550081DF97 /* SUMTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUMTestView.h; sourceTree = "<group>"; };
 		8566DAF821940D550081DF97 /* SUMTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUMTestView.m; sourceTree = "<group>"; };
 		8569A0632084FD6500652D59 /* LXView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXView.h; sourceTree = "<group>"; };
@@ -510,12 +517,20 @@
 		858D10F62313D7F80033CA04 /* CaculatorMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
 		858D10F72313D7F80033CA04 /* CaculatorMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
 		858EBFA920E392CA002C38F0 /* 订单逻辑.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "订单逻辑.pdf"; sourceTree = "<group>"; };
+		85952C672458091F00374C05 /* LXRedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRedView.m; sourceTree = "<group>"; };
+		85952C682458091F00374C05 /* LXBlueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBlueView.h; sourceTree = "<group>"; };
+		85952C692458091F00374C05 /* LXRedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRedView.h; sourceTree = "<group>"; };
+		85952C6A2458092000374C05 /* LXBlueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBlueView.m; sourceTree = "<group>"; };
+		85952C6D24580BA200374C05 /* LXSuperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSuperView.h; sourceTree = "<group>"; };
+		85952C6E24580BA200374C05 /* LXSuperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSuperView.m; sourceTree = "<group>"; };
 		8599DE9A236AD42A00351B48 /* VLSubmmitButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VLSubmmitButton.h; sourceTree = "<group>"; };
 		8599DE9B236AD42A00351B48 /* VLSubmmitButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VLSubmmitButton.m; sourceTree = "<group>"; };
 		859E8C532010A42600FDF043 /* NSInvocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSInvocationViewController.h; sourceTree = "<group>"; };
 		859E8C542010A42600FDF043 /* NSInvocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSInvocationViewController.m; sourceTree = "<group>"; };
 		859E8C562010A52800FDF043 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		859E8C572010A52800FDF043 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		85ABB6D92474DB0800A3D907 /* BTTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTTestView.h; sourceTree = "<group>"; };
+		85ABB6DA2474DB0800A3D907 /* BTTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTTestView.m; sourceTree = "<group>"; };
 		85AEE04120899D6A009C55E7 /* testControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testControlViewController.h; sourceTree = "<group>"; };
 		85AEE04220899D6A009C55E7 /* testControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testControlViewController.m; sourceTree = "<group>"; };
 		85B2354123CD701D0035D438 /* Velo_Wealth_EWB_Mobile_Bank_iO */ = {isa = PBXFileReference; lastKnownFileType = file; path = Velo_Wealth_EWB_Mobile_Bank_iO; sourceTree = "<group>"; };
@@ -716,6 +731,8 @@
 				85828FBC20874D7100EC116A /* knowledgeImage */,
 				85BD1C55206CE0DD00CE865D /* Resources */,
 				44F502451FC32F0E00B10720 /* AppDelegate.h */,
+				855DACFC246E42FB005398FC /* SDWebImageViewController.h */,
+				855DACFD246E42FB005398FC /* SDWebImageViewController.m */,
 				8508A95B242C5B2C00F22277 /* People.h */,
 				8508A95C242C5B2C00F22277 /* People.m */,
 				8532029C243DCAFC00990F09 /* Student.h */,
@@ -1027,6 +1044,8 @@
 			children = (
 				852B0DA7207228B100B62367 /* CoreAnimationViewController.h */,
 				852B0DA8207228B100B62367 /* CoreAnimationViewController.m */,
+				85952C6D24580BA200374C05 /* LXSuperView.h */,
+				85952C6E24580BA200374C05 /* LXSuperView.m */,
 				852B0DAA2072290000B62367 /* testCoreAnimantionViewController.h */,
 				852B0DAB2072290000B62367 /* testCoreAnimantionViewController.m */,
 			);
@@ -1269,6 +1288,8 @@
 			children = (
 				8549CB09209232990007813B /* AFNViewController.h */,
 				8549CB0A209232990007813B /* AFNViewController.m */,
+				85ABB6D92474DB0800A3D907 /* BTTestView.h */,
+				85ABB6DA2474DB0800A3D907 /* BTTestView.m */,
 			);
 			path = AFN;
 			sourceTree = "<group>";
@@ -1310,6 +1331,10 @@
 		85BD1C55206CE0DD00CE865D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85952C682458091F00374C05 /* LXBlueView.h */,
+				85952C6A2458092000374C05 /* LXBlueView.m */,
+				85952C692458091F00374C05 /* LXRedView.h */,
+				85952C672458091F00374C05 /* LXRedView.m */,
 				85096529234CA4E0006E680B /* pingpu04.png */,
 				85099CF323336F03005BED5D /* UIColor+InkColor.h */,
 				85099CF423336F03005BED5D /* UIColor+InkColor.m */,
@@ -1754,6 +1779,7 @@
 				852BD8BD2136853A00C0EE0D /* firstViewController.m in Sources */,
 				8569A068208506B700652D59 /* LXScrollView.m in Sources */,
 				852B0DA520720A5200B62367 /* responderChainViewController.m in Sources */,
+				85ABB6DB2474DB0800A3D907 /* BTTestView.m in Sources */,
 				85165F942064E9080071D431 /* drawViewController.m in Sources */,
 				8523F14B2051448A0099531B /* NSURLSessionViewController.m in Sources */,
 				8509A613213A26C100901832 /* middleViewController.m in Sources */,
@@ -1774,6 +1800,7 @@
 				853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */,
 				8508A95D242C5B2C00F22277 /* People.m in Sources */,
 				853DED45218C416E00E00E5E /* NSArrayViewController.m in Sources */,
+				85952C6F24580BA200374C05 /* LXSuperView.m in Sources */,
 				852BD8C02136864900C0EE0D /* testViewController.m in Sources */,
 				8532029E243DCAFC00990F09 /* Student.m in Sources */,
 				853DF08B218C5BC100E00E5E /* SimpleConverter.cpp in Sources */,
@@ -1798,12 +1825,15 @@
 				85CD07D7204963D2005E0071 /* singletonClass.m in Sources */,
 				8523F147205129CD0099531B /* UIImageViewController.m in Sources */,
 				44F502471FC32F0E00B10720 /* AppDelegate.m in Sources */,
+				85952C6C2458092000374C05 /* LXBlueView.m in Sources */,
 				851B90F320BD069600287758 /* BBAECutomCameraViewController.m in Sources */,
 				853DF08C218C5BC100E00E5E /* UTF8StringSlice.cpp in Sources */,
 				85C2CF5220848EDE0088AC95 /* makeFrameViewController.m in Sources */,
+				855DACFE246E42FB005398FC /* SDWebImageViewController.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
 				85828FC02088434F00EC116A /* loginLogicViewController.m in Sources */,
 				85018E53228C075D00631176 /* LXTestView.m in Sources */,
+				85952C6B2458092000374C05 /* LXRedView.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 				853DF094218C5BC100E00E5E /* UTF8Util.cpp in Sources */,
 				851C0AD321D6389F0075931F /* swiftSummary.swift in Sources */,

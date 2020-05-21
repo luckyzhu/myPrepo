@@ -14,6 +14,10 @@ pod 'AttributedMarkdown', :git => 'https://github.com/dreamwieber/AttributedMark
 pod 'Down'
 pod 'BBAEDebugTool'
 pod 'BBAEPushSDK/MiPush' , '1.0.3'
-
+pod 'YYModel'
+pod 'YYCache'
+pod 'YYImage'
+pod 'YYWebImage'
+pod 'YYText'
 
 end

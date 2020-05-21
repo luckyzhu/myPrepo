@@ -49,6 +49,7 @@ static char TAG_ACTIVITY_SHOW;
                          completed:(nullable SDExternalCompletionBlock)completedBlock
                            context:(nullable NSDictionary *)context {
     NSString *validOperationKey = operationKey ?: NSStringFromClass([self class]);
+    //下面这行代码是保证没有当前正在进行的异步下载操作, 使它不会与即将进行的操作发生冲突
     [self sd_cancelImageLoadOperationWithKey:validOperationKey];
     objc_setAssociatedObject(self, &imageURLKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     

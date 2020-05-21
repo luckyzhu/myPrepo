@@ -10,6 +10,8 @@
 #import "testCoreAnimantionViewController.h"
 #import <CoreData/CoreData.h>
 #import "Student.h"
+#import "LXSuperView.h"
+
 
 @interface CoreAnimationViewController ()
 @property(nonatomic, strong)NSManagedObjectContext *context;
@@ -142,37 +144,45 @@ return _context;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    UIButton *button = [[UIButton alloc]init];
-    button.frame = CGRectMake(100, 100, 100, 50);
-    [button setTitle:@"插入按钮" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    button.exclusiveTouch = YES;
-    [self.view addSubview:button];
+//    UIButton *button = [[UIButton alloc]init];
+//    button.frame = CGRectMake(100, 100, 100, 50);
+//    [button setTitle:@"插入按钮" forState:UIControlStateNormal];
+//    button.backgroundColor = [UIColor redColor];
+//    [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    button.exclusiveTouch = YES;
+//    [self.view addSubview:button];
+//
+//    UIButton *button2 = [[UIButton alloc]init];
+//    button2.frame = CGRectMake(100, 200, 100, 50);
+//    [button2 setTitle:@"删除按钮" forState:UIControlStateNormal];
+//    button2.backgroundColor = [UIColor redColor];
+//    [button2 addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
+//    button2.exclusiveTouch = YES;
+//    [self.view addSubview:button2];
+//
+//    UIButton *button3 = [[UIButton alloc]init];
+//    button3.frame = CGRectMake(100, 300, 100, 50);
+//    [button3 setTitle:@"更新按钮" forState:UIControlStateNormal];
+//    button3.backgroundColor = [UIColor redColor];
+//    [button3 addTarget:self action:@selector(updateClick) forControlEvents:UIControlEventTouchUpInside];
+//    button3.exclusiveTouch = YES;
+//    [self.view addSubview:button3];
+//
+//     UIButton *button4 = [[UIButton alloc]init];
+//     button4.frame = CGRectMake(100, 400, 100, 50);
+//     [button4 setTitle:@"查询按钮" forState:UIControlStateNormal];
+//     button4.backgroundColor = [UIColor redColor];
+//     [button4 addTarget:self action:@selector(searchClick) forControlEvents:UIControlEventTouchUpInside];
+//     button4.exclusiveTouch = YES;
+//     [self.view addSubview:button4];
 
-    UIButton *button2 = [[UIButton alloc]init];
-    button2.frame = CGRectMake(100, 200, 100, 50);
-    [button2 setTitle:@"删除按钮" forState:UIControlStateNormal];
-    button2.backgroundColor = [UIColor redColor];
-    [button2 addTarget:self action:@selector(deleteClick) forControlEvents:UIControlEventTouchUpInside];
-    button2.exclusiveTouch = YES;
-    [self.view addSubview:button2];
 
-    UIButton *button3 = [[UIButton alloc]init];
-    button3.frame = CGRectMake(100, 300, 100, 50);
-    [button3 setTitle:@"更新按钮" forState:UIControlStateNormal];
-    button3.backgroundColor = [UIColor redColor];
-    [button3 addTarget:self action:@selector(updateClick) forControlEvents:UIControlEventTouchUpInside];
-    button3.exclusiveTouch = YES;
-    [self.view addSubview:button3];
+    LXSuperView *superView = [[LXSuperView alloc]init];
+    superView.backgroundColor = [UIColor lightGrayColor];
+    superView.frame = CGRectMake(0, 64, 340, 400);
+    [self.view addSubview:superView];
 
-     UIButton *button4 = [[UIButton alloc]init];
-     button4.frame = CGRectMake(100, 400, 100, 50);
-     [button4 setTitle:@"查询按钮" forState:UIControlStateNormal];
-     button4.backgroundColor = [UIColor redColor];
-     [button4 addTarget:self action:@selector(searchClick) forControlEvents:UIControlEventTouchUpInside];
-     button4.exclusiveTouch = YES;
-     [self.view addSubview:button4];
+
 
 }
 
@@ -210,6 +220,11 @@ return _context;
     NSString *uuid2 = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     uuid2 = [uuid2 stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSLog(@"唯一标示2222-----%@",uuid2);
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    NSLog(@"3333333----");
 }
 
 
