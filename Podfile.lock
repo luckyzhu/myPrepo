@@ -30,6 +30,7 @@ PODS:
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SJObserverHelper (1.1.1)
   - SnapKit (4.2.0)
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.15.3)
   - SDWebImage (~> 4.2.0)
+  - SJObserverHelper
   - SnapKit (~> 4.2.0)
   - YYCache
   - YYImage
@@ -71,6 +73,7 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - SDWebImage
+    - SJObserverHelper
     - SnapKit
     - YYCache
     - YYImage
@@ -99,6 +102,7 @@ SPEC CHECKSUMS:
   MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SJObserverHelper: 3d82ad55a108a139a81dc8d0a36a898bdd2a5a22
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
@@ -106,6 +110,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: d60b090464d23c4ccd68aac382d9d11140c5b6af
+PODFILE CHECKSUM: 6c77476c87903a988855ffe02175be9c421287b9
 
 COCOAPODS: 1.8.4

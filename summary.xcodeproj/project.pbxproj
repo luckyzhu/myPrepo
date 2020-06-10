@@ -40,6 +40,11 @@
 		85165F942064E9080071D431 /* drawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F932064E9080071D431 /* drawViewController.m */; };
 		85165F972064E91A0071D431 /* drawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85165F962064E91A0071D431 /* drawView.m */; };
 		851728EC20592949009C17BF /* singletonClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 851728EB20592949009C17BF /* singletonClass2.m */; };
+		8519EBFA2489F30300528571 /* subLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519EBF92489F30300528571 /* subLayer.m */; };
+		8519EBFD248F33FC00528571 /* TestSingleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519EBFC248F33FC00528571 /* TestSingleObject.m */; };
+		8519EC00248F695700528571 /* LXSentinel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519EBFF248F695700528571 /* LXSentinel.m */; };
+		8519F41B2490CA6600528571 /* objc4-781.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 8519F4192490CA6500528571 /* objc4-781.tar.gz */; };
+		8519F41C2490CA6600528571 /* CF-1153.18.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 8519F41A2490CA6600528571 /* CF-1153.18.tar.gz */; };
 		851B71E421AD423B002F4EBC /* UICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B71E321AD423B002F4EBC /* UICameraViewController.m */; };
 		851B90EF20BCB80100287758 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B90EE20BCB80100287758 /* CameraViewController.m */; };
 		851B90F320BD069600287758 /* BBAECutomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851B90F220BD069600287758 /* BBAECutomCameraViewController.m */; };
@@ -136,6 +141,7 @@
 		8549CB05209231E00007813B /* AFN01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB04209231E00007813B /* AFN01.png */; };
 		8549CB07209231E60007813B /* AFN02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8549CB06209231E60007813B /* AFN02.png */; };
 		8549CB0B209232990007813B /* AFNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549CB0A209232990007813B /* AFNViewController.m */; };
+		854D217F24854A7900A086E1 /* YYTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854D217E24854A7900A086E1 /* YYTestViewController.m */; };
 		8553442F222E7A26001CCAB2 /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8553442E222E7A26001CCAB2 /* PersonTest.m */; };
 		855BD66223D1B88E0015FDC1 /* BBAETrackProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 855BD66123D1B88D0015FDC1 /* BBAETrackProtocol.m */; };
 		855DACFE246E42FB005398FC /* SDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855DACFD246E42FB005398FC /* SDWebImageViewController.m */; };
@@ -304,6 +310,14 @@
 		851728E920592692009C17BF /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		851728EA20592949009C17BF /* singletonClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = singletonClass2.h; sourceTree = "<group>"; };
 		851728EB20592949009C17BF /* singletonClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = singletonClass2.m; sourceTree = "<group>"; };
+		8519EBF82489F30300528571 /* subLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subLayer.h; sourceTree = "<group>"; };
+		8519EBF92489F30300528571 /* subLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subLayer.m; sourceTree = "<group>"; };
+		8519EBFB248F33FC00528571 /* TestSingleObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSingleObject.h; sourceTree = "<group>"; };
+		8519EBFC248F33FC00528571 /* TestSingleObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSingleObject.m; sourceTree = "<group>"; };
+		8519EBFE248F695700528571 /* LXSentinel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSentinel.h; sourceTree = "<group>"; };
+		8519EBFF248F695700528571 /* LXSentinel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSentinel.m; sourceTree = "<group>"; };
+		8519F4192490CA6500528571 /* objc4-781.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "objc4-781.tar.gz"; sourceTree = "<group>"; };
+		8519F41A2490CA6600528571 /* CF-1153.18.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "CF-1153.18.tar.gz"; sourceTree = "<group>"; };
 		851B71E221AD423B002F4EBC /* UICameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICameraViewController.h; sourceTree = "<group>"; };
 		851B71E321AD423B002F4EBC /* UICameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICameraViewController.m; sourceTree = "<group>"; };
 		851B90ED20BCB80100287758 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
@@ -492,6 +506,8 @@
 		8549CB06209231E60007813B /* AFN02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AFN02.png; sourceTree = "<group>"; };
 		8549CB09209232990007813B /* AFNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNViewController.h; sourceTree = "<group>"; };
 		8549CB0A209232990007813B /* AFNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNViewController.m; sourceTree = "<group>"; };
+		854D217D24854A7900A086E1 /* YYTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYTestViewController.h; sourceTree = "<group>"; };
+		854D217E24854A7900A086E1 /* YYTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYTestViewController.m; sourceTree = "<group>"; };
 		8553442D222E7A26001CCAB2 /* PersonTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonTest.h; sourceTree = "<group>"; };
 		8553442E222E7A26001CCAB2 /* PersonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
 		855BD65E23D1B7460015FDC1 /* BBAETrackProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAETrackProtocol.h; sourceTree = "<group>"; };
@@ -723,6 +739,7 @@
 		44F502411FC32F0E00B10720 /* summary */ = {
 			isa = PBXGroup;
 			children = (
+				8519EC012490C17D00528571 /* SourceCode */,
 				85B2354123CD701D0035D438 /* Velo_Wealth_EWB_Mobile_Bank_iO */,
 				853C666923C31B680094225B /* shuohaobuku.mp3 */,
 				853DF098218C5D1800E00E5E /* string.plist */,
@@ -733,8 +750,16 @@
 				44F502451FC32F0E00B10720 /* AppDelegate.h */,
 				855DACFC246E42FB005398FC /* SDWebImageViewController.h */,
 				855DACFD246E42FB005398FC /* SDWebImageViewController.m */,
+				854D217D24854A7900A086E1 /* YYTestViewController.h */,
+				854D217E24854A7900A086E1 /* YYTestViewController.m */,
+				8519EBF82489F30300528571 /* subLayer.h */,
+				8519EBF92489F30300528571 /* subLayer.m */,
 				8508A95B242C5B2C00F22277 /* People.h */,
 				8508A95C242C5B2C00F22277 /* People.m */,
+				8519EBFB248F33FC00528571 /* TestSingleObject.h */,
+				8519EBFC248F33FC00528571 /* TestSingleObject.m */,
+				8519EBFE248F695700528571 /* LXSentinel.h */,
+				8519EBFF248F695700528571 /* LXSentinel.m */,
 				8532029C243DCAFC00990F09 /* Student.h */,
 				8532029D243DCAFC00990F09 /* Student.m */,
 				8508A961242C5B4F00F22277 /* Teacher.h */,
@@ -899,6 +924,15 @@
 				8523F148205144750099531B /* NSURLSession */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8519EC012490C17D00528571 /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				8519F41A2490CA6600528571 /* CF-1153.18.tar.gz */,
+				8519F4192490CA6500528571 /* objc4-781.tar.gz */,
+			);
+			path = SourceCode;
 			sourceTree = "<group>";
 		};
 		851B71E121AD421D002F4EBC /* 相机 */ = {
@@ -1619,6 +1653,7 @@
 				852727FD21E240F500AAC991 /* panl.md in Resources */,
 				853D605320C1BE0900C0CA30 /* 123.png in Resources */,
 				853C666A23C31B680094225B /* shuohaobuku.mp3 in Resources */,
+				8519F41B2490CA6600528571 /* objc4-781.tar.gz in Resources */,
 				850C9F4221A7E80B0077BFDC /* 下载腾讯视频.md in Resources */,
 				85CD07C62045670E005E0071 /* yindaoye-02.png in Resources */,
 				853DF06D218C5BC000E00E5E /* t2tw.json in Resources */,
@@ -1633,6 +1668,7 @@
 				853DF06E218C5BC000E00E5E /* tw2s.json in Resources */,
 				853DF06F218C5BC000E00E5E /* hk2s.json in Resources */,
 				853DF07E218C5BC100E00E5E /* TSCharacters.txt in Resources */,
+				8519F41C2490CA6600528571 /* CF-1153.18.tar.gz in Resources */,
 				853DF075218C5BC000E00E5E /* s2t.json in Resources */,
 				85BD1C59206CE23600CE865D /* 22.jpeg in Resources */,
 				858EBFAA20E392CB002C38F0 /* 订单逻辑.pdf in Resources */,
@@ -1771,6 +1807,7 @@
 				853DF097218C5BEC00E00E5E /* openCCViewController.m in Sources */,
 				8553442F222E7A26001CCAB2 /* PersonTest.m in Sources */,
 				853EF314208D7FBD00C8CA7A /* UIViewController+getCurrentVc.m in Sources */,
+				854D217F24854A7900A086E1 /* YYTestViewController.m in Sources */,
 				853F4AEA209A061B002AE71E /* UITextFieldViewController.m in Sources */,
 				853DF091218C5BC100E00E5E /* TextDict.cpp in Sources */,
 				850C40C6231E435700790259 /* BBAEFNB.m in Sources */,
@@ -1796,6 +1833,7 @@
 				853DF086218C5BC100E00E5E /* DictGroup.cpp in Sources */,
 				44D553EE208E2847005BCA54 /* testTableViewController.m in Sources */,
 				85EC8B4424332928004E0BC9 /* WKViewController.m in Sources */,
+				8519EBFA2489F30300528571 /* subLayer.m in Sources */,
 				851B90F820BD975C00287758 /* BBAEPreviewPhotoViewController.m in Sources */,
 				853EF311208D7F6200C8CA7A /* catogoryViewController.m in Sources */,
 				8508A95D242C5B2C00F22277 /* People.m in Sources */,
@@ -1828,11 +1866,13 @@
 				85952C6C2458092000374C05 /* LXBlueView.m in Sources */,
 				851B90F320BD069600287758 /* BBAECutomCameraViewController.m in Sources */,
 				853DF08C218C5BC100E00E5E /* UTF8StringSlice.cpp in Sources */,
+				8519EC00248F695700528571 /* LXSentinel.m in Sources */,
 				85C2CF5220848EDE0088AC95 /* makeFrameViewController.m in Sources */,
 				855DACFE246E42FB005398FC /* SDWebImageViewController.m in Sources */,
 				44F502441FC32F0E00B10720 /* main.m in Sources */,
 				85828FC02088434F00EC116A /* loginLogicViewController.m in Sources */,
 				85018E53228C075D00631176 /* LXTestView.m in Sources */,
+				8519EBFD248F33FC00528571 /* TestSingleObject.m in Sources */,
 				85952C6B2458092000374C05 /* LXRedView.m in Sources */,
 				8521F7C4203047EB0073F119 /* appViewController.m in Sources */,
 				853DF094218C5BC100E00E5E /* UTF8Util.cpp in Sources */,
@@ -2012,6 +2052,10 @@
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/summary/SourceCode/objc4-781/test/gcfiles",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
 				PRODUCT_MODULE_NAME = summary;
 				PRODUCT_NAME = summary;
@@ -2044,6 +2088,10 @@
 				INFOPLIST_FILE = summary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/summary/SourceCode/objc4-781/test/gcfiles",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lxios.cn.summary;
 				PRODUCT_MODULE_NAME = summary;
 				PRODUCT_NAME = summary;

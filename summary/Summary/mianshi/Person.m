@@ -18,33 +18,33 @@
 //
 //}
 
-+(void)initialize
-{
-    NSLog(@"Person----initialize");
-
-}
-
-//默认是YES.如果返回NO，找不到key直接调用setValue:forUndefinedKey方法
-+(BOOL)accessInstanceVariablesDirectly
-{
-    NSLog(@"accessInstanceVariablesDirectly");
-    return YES;
-}
-
--(void)setValue:(id)value forUndefinedKey:(NSString *)key
-{
-    NSLog(@"找不到这个key---forUndefinedKey");
-}
-
--(id)valueForUndefinedKey:(NSString *)key{
-    NSLog(@"找不到这个key--valueForUndefinedKey");
-    return nil;
-}
-
--(void)setNilValueForKey:(NSString *)key
-{
-    NSLog(@"setNilValueForKey");
-}
+//+(void)initialize
+//{
+//    NSLog(@"Person----initialize");
+//
+//}
+//
+////默认是YES.如果返回NO，找不到key直接调用setValue:forUndefinedKey方法
+//+(BOOL)accessInstanceVariablesDirectly
+//{
+//    NSLog(@"accessInstanceVariablesDirectly");
+//    return YES;
+//}
+//
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+//{
+//    NSLog(@"找不到这个key---forUndefinedKey");
+//}
+//
+//-(id)valueForUndefinedKey:(NSString *)key{
+//    NSLog(@"找不到这个key--valueForUndefinedKey");
+//    return nil;
+//}
+//
+//-(void)setNilValueForKey:(NSString *)key
+//{
+//    NSLog(@"setNilValueForKey");
+//}
 
 
 @end

@@ -12,9 +12,9 @@
 @end
 @implementation People
 
-+ (void)load {
-    NSLog(@"111111");
-}
+//+ (void)load {
+//    NSLog(@"111111");
+//}
 
 - (id)init
 {

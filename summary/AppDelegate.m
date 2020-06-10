@@ -40,10 +40,15 @@
 #import "WKViewController.h"
 #import "SDWebImageViewController.h"
 #import "People.h"
+#import "YYTestViewController.h"
+#import "singletonClass.h"
+#import "TestSingleObject.h"
 
 @interface AppDelegate ()
 @property(nonatomic, strong) NSString *strongStr;
 @property(nonatomic, copy) NSString *copyyStr;
+@property (atomic, weak) NSString *target;
+
 @end
 
 @implementation AppDelegate
@@ -51,21 +56,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
-    People *person = [People new];
-    person.peopleStr1 = @"快手";
-
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setValue:@"1111" forKey:@"1"];
-    [dict setObject:@"2222" forKey:@"2"];
-    [dict setObject:@"3333" forKey:person];
-
-    NSLog(@"last----%@",dict);
-    NSLog(@"get----%@",[dict objectForKey:person]);
-
-
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[AFNViewController alloc]init]];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[SDWebImageViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 

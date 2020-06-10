@@ -19,5 +19,6 @@ pod 'YYCache'
 pod 'YYImage'
 pod 'YYWebImage'
 pod 'YYText'
+pod 'SJObserverHelper'
 
 end

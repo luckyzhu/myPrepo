@@ -317,7 +317,7 @@
 //    free(properties);
 
     unsigned int count;
-    Ivar *ivarList = class_copyIvarList(NSClassFromString(@"UIKBKeyView"), &count);
+    Ivar *ivarList = class_copyIvarList(NSClassFromString(@"UITextField"), &count);
     for (int i = 0; i < count; i++) {
         Ivar ivar = ivarList[i];
         NSLog(@"该类的成员变量----%s", ivar_getName(ivar));
@@ -791,10 +791,10 @@ CGAffineTransform  GetCGAffineTransformRotateAroundPoint(float centerX, float ce
 }
 
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo{
-
-    NSLog(@"1111111");
-}
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo{
+//
+//    NSLog(@"1111111");
+//}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
 

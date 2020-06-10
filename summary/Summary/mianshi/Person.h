@@ -10,8 +10,10 @@
 
 @interface Person : NSObject
 
-@property(nonatomic,copy)  NSString *name;
-@property(nonatomic,assign)  int  age;
+@property(nonatomic,copy)  NSString *  name;
+@property(nonatomic,copy)  NSString *  age;
+@property(nonatomic,copy)  NSString *  classNo;
+@property(nonatomic,copy)  NSString *  sex;
 
 
 

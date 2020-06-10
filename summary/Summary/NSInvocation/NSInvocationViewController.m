@@ -86,7 +86,7 @@
 
 - (int )methodTest:(int)num1 num2:(int )num2 num3:(int)num3{
 
-    NSLog(@"111111");
+//    NSLog(@"111111");
     return num1 + num2 + num3;
 }
 

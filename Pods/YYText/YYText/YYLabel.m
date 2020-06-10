@@ -86,7 +86,7 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
     [self _setLayoutNeedRedraw];
 }
 
-- (void)_setLayoutNeedRedraw {
+- (void)_setLayoutNeedRedraw {//重绘
     [self.layer setNeedsDisplay];
 }
 
@@ -375,7 +375,7 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
     }
 }
 
-- (void)_initLabel {
+- (void)_initLabel {//设置一些默认的值
     ((YYTextAsyncLayer *)self.layer).displaysAsynchronously = NO;
     self.layer.contentsScale = [UIScreen mainScreen].scale;
     self.contentMode = UIViewContentModeRedraw;
@@ -424,7 +424,7 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
     return [YYTextAsyncLayer class];
 }
 
-- (void)setFrame:(CGRect)frame {
+- (void)setFrame:(CGRect)frame {//重写了setFrame
     CGSize oldSize = self.bounds.size;
     [super setFrame:frame];
     CGSize newSize = self.bounds.size;
@@ -636,41 +636,41 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
 #pragma mark - Properties
 
 - (void)setText:(NSString *)text {
-    if (_text == text || [_text isEqualToString:text]) return;
-    _text = text.copy;
+    if (_text == text || [_text isEqualToString:text]) return; //防止多次赋值
+    _text = text.copy;// 接收text
     BOOL needAddAttributes = _innerText.length == 0 && text.length > 0;
     [_innerText replaceCharactersInRange:NSMakeRange(0, _innerText.length) withString:text ? text : @""];
-    [_innerText yy_removeDiscontinuousAttributesInRange:NSMakeRange(0, _innerText.length)];
-    if (needAddAttributes) {
-        _innerText.yy_font = _font;
-        _innerText.yy_color = _textColor;
-        _innerText.yy_shadow = [self _shadowFromProperties];
-        _innerText.yy_alignment = _textAlignment;
-        switch (_lineBreakMode) {
-            case NSLineBreakByWordWrapping:
-            case NSLineBreakByCharWrapping:
-            case NSLineBreakByClipping: {
-                _innerText.yy_lineBreakMode = _lineBreakMode;
-            } break;
-            case NSLineBreakByTruncatingHead:
-            case NSLineBreakByTruncatingTail:
-            case NSLineBreakByTruncatingMiddle: {
-                _innerText.yy_lineBreakMode = NSLineBreakByWordWrapping;
-            } break;
-            default: break;
-        }
-    }
-    if ([_textParser parseText:_innerText selectedRange:NULL]) {
-        [self _updateOuterTextProperties];
-    }
-    if (!_ignoreCommonProperties) {
-        if (_displaysAsynchronously && _clearContentsBeforeAsynchronouslyDisplay) {
-            [self _clearContents];
-        }
-        [self _setLayoutNeedUpdate];
-        [self _endTouch];
-        [self invalidateIntrinsicContentSize];
-    }
+//    [_innerText yy_removeDiscontinuousAttributesInRange:NSMakeRange(0, _innerText.length)];
+//    if (needAddAttributes) {
+//        _innerText.yy_font = _font;
+//        _innerText.yy_color = _textColor;
+//        _innerText.yy_shadow = [self _shadowFromProperties];
+//        _innerText.yy_alignment = _textAlignment;
+//        switch (_lineBreakMode) {
+//            case NSLineBreakByWordWrapping:
+//            case NSLineBreakByCharWrapping:
+//            case NSLineBreakByClipping: {
+//                _innerText.yy_lineBreakMode = _lineBreakMode;
+//            } break;
+//            case NSLineBreakByTruncatingHead:
+//            case NSLineBreakByTruncatingTail:
+//            case NSLineBreakByTruncatingMiddle: {
+//                _innerText.yy_lineBreakMode = NSLineBreakByWordWrapping;
+//            } break;
+//            default: break;
+//        }
+//    }
+//    if ([_textParser parseText:_innerText selectedRange:NULL]) {
+//        [self _updateOuterTextProperties];
+//    }
+//    if (!_ignoreCommonProperties) {
+//        if (_displaysAsynchronously && _clearContentsBeforeAsynchronouslyDisplay) {
+//            [self _clearContents];
+//        }
+//        [self _setLayoutNeedUpdate];
+//        [self _endTouch];
+//        [self invalidateIntrinsicContentSize];
+//    }
 }
 
 - (void)setFont:(UIFont *)font {
@@ -1155,7 +1155,7 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
             return;
         }
         [layer removeAnimationForKey:@"contents"];
-        
+
         __strong YYLabel *view = (YYLabel *)layer.delegate;
         if (!view) return;
         if (view->_state.layoutNeedUpdate && layoutUpdated) {

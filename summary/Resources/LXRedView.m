@@ -11,9 +11,14 @@
 @implementation LXRedView
 
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+-(void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
 
-    NSLog(@"redred");
+    NSDictionary *dict = @{
+        NSFontAttributeName : [UIFont systemFontOfSize:20],
+        NSForegroundColorAttributeName : [UIColor blueColor],
+    };
+    [@"123" drawInRect:self.bounds withAttributes:dict];
 }
 
 @end

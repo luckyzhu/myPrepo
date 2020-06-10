@@ -8,6 +8,8 @@
 
 #import "SDWebImageViewController.h"
 #import "UIImageView+WebCache.h"
+#import "YYTestViewController.h"
+
 @interface SDWebImageViewController ()
 
 @end
@@ -26,6 +28,31 @@
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 200, 200, 100)];
     [imageView sd_setImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:holderImage];
     [self.view addSubview:imageView];
+
+    UIButton *button = [[UIButton alloc]init];
+    button.frame = CGRectMake(100, 400, 50, 50);
+    [button setTitle:@"按钮" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor redColor];
+    button.backgroundColor = [UIColor blueColor];
+    [button addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    button.exclusiveTouch = YES;
+    [self.view addSubview:button];
+
+
+}
+
+- (void)btnClick {
+
+    YYTestViewController *vc = [[YYTestViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"test通知" object:nil];
+
 }
 
 
